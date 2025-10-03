@@ -951,3 +951,321 @@ with open('document.pdf', 'rb') as f:
 ---
 
 如有任何问题或建议，请联系我们的技术支持团队：support@shrimp-agent.com
+ 
+---
+
+## 统一接口规范（约定）
+
+为保证跨子系统（MCP、Orchestrator、Adapters、Observability）一致性，所有新接口应遵循以下约定。
+
+- 请求头
+  - `Authorization: Bearer <jwt>`（必需，除公开接口外）
+  - `X-Request-Id: <uuid>`（可选，链路追踪）
+  - `Content-Type: application/json`（默认）
+  - `Accept-Language: zh-CN|en-US`（可选，影响文本生成与错误消息语言）
+
+- 时间与 ID
+  - 时间戳统一为 ISO 8601 UTC：`YYYY-MM-DDTHH:mm:ssZ`
+  - 资源 ID 推荐使用 `uuid`，可选带前缀：`wf_...`、`run_...`、`adp_...`
+
+- 成功响应包（Envelope）
+```json
+{
+  "status": "success",
+  "data": {},
+  "meta": {
+    "pagination": { "limit": 20, "offset": 0, "total": 123, "has_next": true },
+    "elapsed_ms": 123,
+    "version": "v1"
+  },
+  "request_id": "uuid",
+  "trace_id": "trace-abc"
+}
+```
+
+- 错误响应包（统一结构）
+```json
+{
+  "status": "error",
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Validation failed",
+    "details": [{ "field": "email", "message": "Invalid email format" }]
+  },
+  "request_id": "uuid",
+  "trace_id": "trace-abc"
+}
+```
+
+- 分页与排序
+  - 列表接口统一采用 `limit` 与 `offset`；兼容接收 `page` 与 `size`，返回以 `pagination.limit/offset/total/has_next` 为准。
+  - 排序统一：`sort.field`、`sort.order`（`asc|desc`）。
+
+- 过滤器（Filters）
+  - 采用结构化对象，例如：
+```json
+{
+  "filters": {
+    "tags": ["important"],
+    "date_range": { "start": "2024-01-01", "end": "2024-12-31" }
+  }
+}
+```
+
+- 速率限制（响应头）
+  - `X-RateLimit-Limit`、`X-RateLimit-Remaining`、`X-RateLimit-Reset`、`X-RateLimit-Window`
+
+---
+
+## MCP 与工作流/适配/观测端点（统一示例）
+
+以下端点用于支撑项目路线图中的 Context Engineering、Multimodal/GraphicRAG、Orchestrator 工作流、Service Adapters 和 Observability。
+
+### 7. MCP：Context Engineering
+
+#### 7.1 扩展与约束上下文
+
+```http
+POST /mcp/context/expand
+```
+
+请求体：
+```json
+{
+  "messages": [
+    { "role": "user", "content": "帮我分析用户增长" }
+  ],
+  "system": "你是资深数据分析师",
+  "instructions": ["避免幻觉", "引用来源"],
+  "memory": { "enable": true, "window": 5 },
+  "language": "zh-CN"
+}
+```
+
+响应示例：
+```json
+{
+  "status": "success",
+  "data": {
+    "expanded_messages": [
+      { "role": "system", "content": "分析时需引用数据来源" },
+      { "role": "user", "content": "请从渠道、留存、转化三个维度分析" }
+    ],
+    "tags": ["analysis", "constraints"],
+    "constraints": ["no_hallucination", "cite_sources"]
+  },
+  "request_id": "uuid"
+}
+```
+
+### 8. MCP：检索（Multimodal/Hybrid/Graph）
+
+#### 8.1 统一检索入口
+
+```http
+POST /mcp/retrieve
+```
+
+请求体：
+```json
+{
+  "query": "机器学习基础",
+  "strategy": "hybrid", 
+  "top_k": 10,
+  "filters": { "tags": ["ml"], "file_type": ["application/pdf"] },
+  "language": "zh-CN",
+  "include_content": true
+}
+```
+
+响应示例：
+```json
+{
+  "status": "success",
+  "data": {
+    "items": [
+      {
+        "document": { "id": "uuid", "title": "ML Basics" },
+        "chunk": { "id": "uuid", "content": "相关片段..." },
+        "score": 0.92,
+        "source": { "type": "vector", "index": "default" }
+      }
+    ],
+    "total": 50
+  },
+  "meta": { "elapsed_ms": 145 },
+  "request_id": "uuid"
+}
+```
+
+### 9. MCP：图构建（GraphicRAG）
+
+#### 9.1 从文档/检索结果构建知识图
+
+```http
+POST /mcp/graph/build
+```
+
+请求体：
+```json
+{
+  "source_ids": ["doc_uuid1", "doc_uuid2"],
+  "builder": "llm",
+  "schema": { "node_types": ["Entity", "Concept"], "edge_types": ["relates_to"] },
+  "options": { "dedupe": true, "min_confidence": 0.6 }
+}
+```
+
+响应示例：
+```json
+{
+  "status": "success",
+  "data": {
+    "graph_id": "graph_abc",
+    "nodes": [{ "id": "n1", "type": "Entity", "label": "机器学习" }],
+    "edges": [{ "id": "e1", "type": "relates_to", "from": "n1", "to": "n2" }],
+    "stats": { "node_count": 120, "edge_count": 210 }
+  },
+  "request_id": "uuid"
+}
+```
+
+### 10. Orchestrator：工作流
+
+#### 10.1 创建工作流
+
+```http
+POST /workflows
+```
+
+请求体（DSL 摘要，完整见 `docs/WORKFLOW.md`）：
+```json
+{
+  "name": "检索-推理-执行",
+  "version": "1",
+  "inputs": { "question": { "type": "string" } },
+  "nodes": [
+    { "id": "ret", "type": "retriever", "params": { "top_k": 8 } },
+    { "id": "rsn", "type": "reasoner", "params": { "model": "gpt-4" } },
+    { "id": "exe", "type": "executor" }
+  ],
+  "edges": [ { "from": "ret", "to": "rsn" }, { "from": "rsn", "to": "exe" } ]
+}
+```
+
+响应：
+```json
+{ "status": "success", "data": { "workflow_id": "wf_123" } }
+```
+
+#### 10.2 运行工作流
+
+```http
+POST /workflows/{workflow_id}/run
+```
+
+请求体：
+```json
+{ "inputs": { "question": "什么是机器学习？" }, "stream": true }
+```
+
+响应：
+```json
+{ "status": "success", "data": { "run_id": "run_456", "stream_url": "wss://.../workflows/runs/run_456/stream" } }
+```
+
+#### 10.3 查询运行状态
+
+```http
+GET /workflows/runs/{run_id}/status
+```
+
+响应：
+```json
+{
+  "status": "success",
+  "data": { "state": "running", "current_node": "rsn", "started_at": "2024-01-01T00:00:00Z" }
+}
+```
+
+### 11. Service Adapters：服务适配
+
+#### 11.1 列出支持的提供方
+
+```http
+GET /adapters/providers
+```
+
+响应：
+```json
+{
+  "status": "success",
+  "data": [
+    { "id": "openai", "name": "OpenAI", "services": ["chat", "embeddings"] },
+    { "id": "azure_openai", "name": "Azure OpenAI", "services": ["chat", "embeddings"] }
+  ]
+}
+```
+
+#### 11.2 注册适配器凭据
+
+```http
+POST /adapters/register
+```
+
+请求体：
+```json
+{
+  "provider": "openai",
+  "label": "个人账号",
+  "credentials": { "api_key": "sk-..." },
+  "scopes": ["chat", "embeddings"],
+  "visibility": "private"
+}
+```
+
+响应：
+```json
+{ "status": "success", "data": { "adapter_id": "adp_789" } }
+```
+
+#### 11.3 校验适配器连通性
+
+```http
+POST /adapters/{adapter_id}/validate
+```
+
+响应：
+```json
+{ "status": "success", "data": { "reachable": true, "latency_ms": 230 } }
+```
+
+#### 11.4 列出与删除适配器
+
+```http
+GET /adapters
+DELETE /adapters/{adapter_id}
+```
+
+### 12. Observability：观测与追踪
+
+#### 12.1 指标与日志
+
+```http
+GET /observability/metrics
+GET /observability/logs
+GET /observability/traces
+```
+
+响应示例（metrics）：
+```json
+{
+  "status": "success",
+  "data": {
+    "workflows": { "runs": 123, "avg_latency_ms": 850 },
+    "retriever": { "qps": 15, "avg_score": 0.78 }
+  }
+}
+```
+
+---
