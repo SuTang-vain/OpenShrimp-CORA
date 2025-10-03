@@ -1,6 +1,6 @@
-# Shrimp Agent V2（Open-Shrimp）
+# Open-Shrimp
 
-🦐 下一代智能搜索与知识管理平台（MCP 集成 + RAG + 图检索）
+🦐 全新交互的下一代智能搜索与知识管理平台（MCP 集成 + RAG + 图检索）
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
@@ -32,6 +32,34 @@
 - M2（下周）：Prompt Lab 与模板库上线；支持变量注入与评估；CAMEL 多代理最小闭环（Define → Retrieve → Draft → Evaluate）。
 - M3（2–3 周）：GraphRAG 基础版（构建/查询/解释），图谱页面联动；工作流画布初版（节点配置与持久化）。
 - M4（4 周）：全局观测与审计；权限与密钥管理完善；性能优化与中文检索全量验证（similarity/MMR/semantic_hybrid）。
+
+## 子系统划分与 MCP 设计（摘要）
+
+- Context Engineering MCP（上下文工程）
+  - 职责：提示词模板管理、变量注入、策略（few-shot、cot、plan→solve）、对话记忆聚合与个性化偏好。
+  - 接口：`GET /api/prompts/templates`、`POST /api/prompts/render`、`POST /api/prompts/evaluate`、`POST /api/context/profile`。
+
+- Multimodal RAG MCP（多模态检索）
+  - 职责：文档/图片/PDF/OCR/网页快照的切片、索引、重排与生成；支持 `semantic_hybrid`、`mmr`。
+  - 接口：`POST /api/documents/upload`（已有）、`POST /api/rag/index`、`POST /api/query`（已有）、`GET /api/rag/stats`（建议强化）。
+
+- GraphicRAG MCP（图谱增强检索）
+  - 职责：实体/关系抽取、Neo4j 存储、图检索与边解释、图+文本融合（GraphRAG）。
+  - 接口：`POST /api/graph/build`、`GET /api/graph/nodes|edges`、`POST /api/graph/query`（自然语言→Cypher）、`POST /api/graph/explain`。
+
+- Agent Orchestrator MCP（CAMEL 多代理编排）
+  - 职责：Planner / PromptEngineer / Retriever / GraphBuilder / Executor / Evaluator 协作，定义与执行工作流。
+  - 接口：`POST /api/agents/workflow/define`、`POST /api/agents/workflow/execute`、`GET /api/agents/workflow/status`。
+
+- Service Adapter MCP（服务适配）
+  - 职责：统一管理第三方服务配置与连通性测试（LLM、Firecrawl、Neo4j、Ollama/LM Studio）。
+  - 接口：`GET /api/services/providers`、`POST /api/services/credentials`、`GET /api/services/status|test`。
+
+- Observability MCP（观测与度量）
+  - 职责：检索链路时延、缓存命中率（embedding cache）、索引规模、图查询耗时、代理对话步数与失败率。
+  - 接口：`GET /api/rag/stats`（继续完善）、`GET /api/agents/stats`、`GET /api/graph/stats`。
+
+完整设计详见 `docs/MCP.md`。
 
 ## 仓库与分支策略
 
