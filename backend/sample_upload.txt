@@ -1,0 +1,1 @@
+Hello world content for RAG engine test. This is a demo document.

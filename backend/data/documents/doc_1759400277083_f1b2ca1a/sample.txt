@@ -1,0 +1,1 @@
+This is a sample document for auto processing test. It has multiple sentences. Let's see how it chunks and embeds.

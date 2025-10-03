@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.coverage
+.coverage.*
+coverage/
+
+# Virtual environments
+backend/.venv/
+.venv/
+venv/
+
+# Logs and temp
+*.log
+logs/
+tmp/
+*.tmp
+
+# Data artifacts
+data/faiss_index/
+data/faiss_metadata.db
+data/logs/
+data/uploads/
+data/backups/
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/coverage/
+.DS_Store
+Thumbs.db
+
+# Environment / secrets
+.env
+.env.*
+credentials.json
+*.enc
+
+# Vite / build caches
+.vite/

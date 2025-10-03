@@ -1,0 +1,90 @@
+{
+  "documents": {
+    "doc_1759423862474_18bd4a91": {
+      "doc_id": "doc_1759423862474_18bd4a91",
+      "filename": "中文测试文档.md",
+      "original_filename": "中文测试文档.md",
+      "content_type": "text/markdown",
+      "file_path": "data\\documents\\doc_1759423862474_18bd4a91\\中文测试文档.md",
+      "file_size": 718,
+      "upload_time": "2025-10-03T00:51:02.475985",
+      "user_id": null,
+      "status": "processed",
+      "processing_attempts": 1,
+      "chunks_count": 1,
+      "metadata": {
+        "author": "测试用户",
+        "title": "中文搜索功能验证",
+        "description": "用于验证中文检索与元数据显示",
+        "source": "本地测试",
+        "language": "zh-CN",
+        "tags": [
+          "中文",
+          "测试",
+          "搜索"
+        ]
+      },
+      "tags": [
+        "中文",
+        "测试",
+        "搜索"
+      ],
+      "language": "zh-CN",
+      "processing_time": 0.195878,
+      "chunking_strategy": "sentence",
+      "chunk_size": 1000,
+      "chunk_overlap": 200,
+      "processed_time": "2025-10-03T00:51:02.672278"
+    },
+    "doc_1759423930506_18bd4a91": {
+      "doc_id": "doc_1759423930506_18bd4a91",
+      "filename": "中文测试文档.md",
+      "original_filename": "中文测试文档.md",
+      "content_type": "text/markdown",
+      "file_path": "data\\documents\\doc_1759423930506_18bd4a91\\中文测试文档.md",
+      "file_size": 718,
+      "upload_time": "2025-10-03T00:52:10.507824",
+      "user_id": null,
+      "status": "processed",
+      "processing_attempts": 2,
+      "chunks_count": 1,
+      "metadata": {
+        "author": "测试用户",
+        "title": "中文搜索功能验证",
+        "description": "用于验证中文检索与元数据显示",
+        "source": "本地测试",
+        "language": "zh-CN",
+        "tags": [
+          "中文",
+          "测试",
+          "搜索"
+        ]
+      },
+      "tags": [
+        "中文",
+        "测试",
+        "搜索"
+      ],
+      "language": "zh-CN",
+      "processing_time": 0.203463,
+      "chunking_strategy": "sentence",
+      "chunk_size": 1000,
+      "chunk_overlap": 200,
+      "processed_time": "2025-10-03T16:08:52.338417"
+    }
+  },
+  "stats": {
+    "total_documents": 2,
+    "total_chunks": 3,
+    "total_size": 1436,
+    "processing_success": 3,
+    "processing_failed": 0,
+    "format_distribution": {
+      ".md": 2
+    },
+    "processing_time": {
+      "text": 0.617666
+    }
+  },
+  "last_updated": "2025-10-03T16:08:52.338417"
+}

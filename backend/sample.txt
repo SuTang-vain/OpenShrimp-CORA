@@ -1,0 +1,1 @@
+This is a small test document about AI agents and RAG vectorization. It contains several sentences to be chunked and embedded.

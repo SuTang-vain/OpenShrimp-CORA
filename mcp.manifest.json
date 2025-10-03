@@ -1,0 +1,21 @@
+{
+  "name": "shrimp-agent-v2",
+  "version": "0.1.0",
+  "base_url": "http://127.0.0.1:8000/api",
+  "routes": {
+    "info": "/api/mcp/info",
+    "capabilities": "/api/mcp/capabilities",
+    "health": "/health"
+  },
+  "capabilities": [
+    "rag.query",
+    "documents.upload",
+    "rag.embedding.switch",
+    "rag.stats"
+  ],
+  "planned_capabilities": [
+    "graph.build",
+    "graph.query",
+    "services.credentials"
+  ]
+}

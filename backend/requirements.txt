@@ -1,0 +1,97 @@
+# FastAPI 核心依赖
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# 数据库相关
+sqlalchemy==2.0.23
+alembic==1.13.1
+psycopg2-binary==2.9.9
+aiosqlite==0.19.0
+
+# Redis 缓存
+redis==5.0.1
+aioredis==2.0.1
+
+# 认证和安全
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# HTTP 客户端
+httpx==0.25.2
+aiohttp==3.9.1
+requests==2.31.0
+
+# 文档处理
+python-docx==1.1.0
+PyPDF2==3.0.1
+pdfplumber==0.10.3
+markdown==3.5.1
+beautifulsoup4==4.12.2
+lxml==4.9.3
+
+# 机器学习和向量处理
+numpy==1.24.4
+scipy==1.11.4
+scikit-learn==1.3.2
+sentence-transformers==2.2.2
+faiss-cpu==1.7.4
+chromadb==0.4.18
+
+# OpenAI API
+openai==1.3.7
+tiktoken==0.5.2
+
+# 自然语言处理
+nltk==3.8.1
+jieba==0.42.1
+spacy==3.7.2
+
+# 异步任务
+celery==5.3.4
+flower==2.0.1
+
+# 监控和日志
+prometheus-client==0.19.0
+structlog==23.2.0
+loguru==0.7.2
+
+# 配置管理
+python-dotenv==1.0.0
+PyYAML==6.0.1
+toml==0.10.2
+
+# 工具库
+click==8.1.7
+rich==13.7.0
+tqdm==4.66.1
+python-dateutil==2.8.2
+pytz==2023.3
+
+# 测试相关
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+httpx==0.25.2
+factory-boy==3.3.0
+
+# 开发工具
+black==23.11.0
+isort==5.12.0
+flake8==6.1.0
+mypy==1.7.1
+pre-commit==3.6.0
+
+# 部署相关
+gunicorn==21.2.0
+gevent==23.9.1
+
+# 其他工具
+pillow==10.1.0
+qrcode==7.4.2
+python-barcode==0.16.1
+# excel-writer==1.0.0  # 包有问题，暂时注释
+openpyxl==3.1.2
+neo4j==5.23.0

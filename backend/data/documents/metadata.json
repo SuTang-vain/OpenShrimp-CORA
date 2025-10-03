@@ -1,0 +1,190 @@
+{
+  "documents": {
+    "doc_1759398720842_4e1fc50b": {
+      "doc_id": "doc_1759398720842_4e1fc50b",
+      "filename": "sample.txt",
+      "original_filename": "sample.txt",
+      "content_type": "text/plain",
+      "file_path": "data\\documents\\doc_1759398720842_4e1fc50b\\sample.txt",
+      "file_size": 140,
+      "upload_time": "2025-10-02T17:52:00.843562",
+      "user_id": null,
+      "status": "failed",
+      "processing_attempts": 1,
+      "chunks_count": 0,
+      "metadata": {
+        "language": "en",
+        "tags": [
+          "demo"
+        ]
+      },
+      "tags": [
+        "demo"
+      ],
+      "language": "en",
+      "error_message": "RAGEngine.add_document() got an unexpected keyword argument 'config'",
+      "failed_time": "2025-10-02T17:52:00.848567"
+    },
+    "doc_1759399460730_34fa3f7a": {
+      "doc_id": "doc_1759399460730_34fa3f7a",
+      "filename": "sample.txt",
+      "original_filename": "sample.txt",
+      "content_type": "text/plain",
+      "file_path": "data\\documents\\doc_1759399460730_34fa3f7a\\sample.txt",
+      "file_size": 128,
+      "upload_time": "2025-10-02T18:04:20.731977",
+      "user_id": null,
+      "status": "failed",
+      "processing_attempts": 1,
+      "chunks_count": 1,
+      "metadata": {
+        "language": "en",
+        "tags": [
+          "demo"
+        ]
+      },
+      "tags": [
+        "demo"
+      ],
+      "language": "en",
+      "processing_time": 0.211631,
+      "chunking_strategy": "sentence",
+      "chunk_size": 1000,
+      "chunk_overlap": 200,
+      "processed_time": "2025-10-02T18:04:20.943608",
+      "error_message": "'text'",
+      "failed_time": "2025-10-02T18:04:20.943608"
+    },
+    "doc_1759399854817_c00c40f1": {
+      "doc_id": "doc_1759399854817_c00c40f1",
+      "filename": "hello_doc.txt",
+      "original_filename": "hello_doc.txt",
+      "content_type": "application/octet-stream",
+      "file_path": "data\\documents\\doc_1759399854817_c00c40f1\\hello_doc.txt",
+      "file_size": 44,
+      "upload_time": "2025-10-02T18:10:54.818975",
+      "user_id": null,
+      "status": "failed",
+      "processing_attempts": 1,
+      "chunks_count": 1,
+      "metadata": {
+        "title": "hello",
+        "tags": [
+          "demo"
+        ],
+        "language": "auto"
+      },
+      "tags": [
+        "demo"
+      ],
+      "language": "auto",
+      "processing_time": 0.225031,
+      "chunking_strategy": "sentence",
+      "chunk_size": 1000,
+      "chunk_overlap": 200,
+      "processed_time": "2025-10-02T18:10:55.044006",
+      "error_message": "'text'",
+      "failed_time": "2025-10-02T18:10:55.044006"
+    },
+    "doc_1759400277083_f1b2ca1a": {
+      "doc_id": "doc_1759400277083_f1b2ca1a",
+      "filename": "sample.txt",
+      "original_filename": "sample.txt",
+      "content_type": "application/octet-stream",
+      "file_path": "data\\documents\\doc_1759400277083_f1b2ca1a\\sample.txt",
+      "file_size": 116,
+      "upload_time": "2025-10-02T18:17:57.083854",
+      "user_id": null,
+      "status": "failed",
+      "processing_attempts": 1,
+      "chunks_count": 1,
+      "metadata": {
+        "language": "en",
+        "tags": [
+          "test",
+          "auto"
+        ],
+        "title": "Auto Process Test"
+      },
+      "tags": [
+        "test",
+        "auto"
+      ],
+      "language": "en",
+      "processing_time": 0.217844,
+      "chunking_strategy": "sentence",
+      "chunk_size": 1000,
+      "chunk_overlap": 200,
+      "processed_time": "2025-10-02T18:17:57.302699",
+      "error_message": "'text'",
+      "failed_time": "2025-10-02T18:17:57.302699"
+    },
+    "doc_1759414688882_f03dd6a3": {
+      "doc_id": "doc_1759414688882_f03dd6a3",
+      "filename": "sample_upload.txt",
+      "original_filename": "sample_upload.txt",
+      "content_type": "application/octet-stream",
+      "file_path": "data\\documents\\doc_1759414688882_f03dd6a3\\sample_upload.txt",
+      "file_size": 67,
+      "upload_time": "2025-10-02T22:18:08.883185",
+      "user_id": null,
+      "status": "failed",
+      "processing_attempts": 1,
+      "chunks_count": 1,
+      "metadata": {
+        "title": "ps upload",
+        "tags": [
+          "demo"
+        ],
+        "language": "en"
+      },
+      "tags": [
+        "demo"
+      ],
+      "language": "en",
+      "processing_time": 0.220899,
+      "chunking_strategy": "sentence",
+      "chunk_size": 1000,
+      "chunk_overlap": 200,
+      "processed_time": "2025-10-02T22:18:09.105085",
+      "error_message": "'text'",
+      "failed_time": "2025-10-02T22:18:09.105085"
+    },
+    "doc_1759415355521_db30bb81": {
+      "doc_id": "doc_1759415355521_db30bb81",
+      "filename": "sample_upload_cli.txt",
+      "original_filename": "sample_upload_cli.txt",
+      "content_type": "text/plain",
+      "file_path": "data\\documents\\doc_1759415355521_db30bb81\\sample_upload_cli.txt",
+      "file_size": 58,
+      "upload_time": "2025-10-02T22:29:15.523409",
+      "user_id": null,
+      "status": "uploaded",
+      "processing_attempts": 0,
+      "chunks_count": 0,
+      "metadata": {
+        "title": "CLI Upload",
+        "tags": [
+          "demo"
+        ],
+        "language": "en"
+      },
+      "tags": [
+        "demo"
+      ],
+      "language": "en"
+    }
+  },
+  "stats": {
+    "total_documents": 5,
+    "total_chunks": 4,
+    "total_size": 495,
+    "processing_success": 4,
+    "processing_failed": 5,
+    "format_distribution": {
+      ".txt": 5
+    },
+    "processing_time": {}
+  },
+  "last_updated": "2025-10-02T22:29:15.523409"
+}

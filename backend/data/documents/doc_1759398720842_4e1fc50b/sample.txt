@@ -1,0 +1,1 @@
+This is a simple document for vectorization. It contains sentences for chunking.\nAdding another line to create multiple chunks if needed.
