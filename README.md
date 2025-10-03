@@ -8,6 +8,12 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-00a393.svg)](https://fastapi.tiangolo.com/)
 [![Vite+React](https://img.shields.io/badge/Vite%2BReact-18+-61dafb.svg)](https://vitejs.dev/)
 
+## 项目概述
+
+- 目标：以 CAMEL 框架为基底，构建“多代理协作 + Graphic RAG + 提示词可视化”的白盒交互系统，支持用户通过可视化工作流补齐工程所需材料，并由系统自动完成“Define（合理定义与定位）→ 构建工作流 → 执行”的闭环。
+- 核心思想：以工具化视角把 RAG、知识图谱、提示词工程、服务适配和多代理编排拆解为可插拔的 MCP 子系统，既能独立演化，又能统一编排。
+- 可行性：后端 API 已运行稳定，RAG 基础链路可用；前端存在资源报错但不影响 API 验证，可在迭代中修复。中文语义检索需优化嵌入模型与分块策略，属于可控工程问题。
+
 ## 愿景与未来目标（Roadmap）
 
 - MCP 集成增量（`feature/mcp-rag`）：统一工具/能力暴露，RAG 流水线接入 MCP 客户端。
@@ -19,6 +25,41 @@
 - 性能与可观测性：缓存与并发优化、指标采集（Prometheus）、统一日志与追踪。
 - 测试与质量：后端 `pytest`、前端 `jest`，提升覆盖率与端到端联测。
 - 发布与版本：`release/<version>` + Tag（如 `v2.1.0`），自动生成变更日志与发布说明。
+
+## 开发阶段（Milestones）
+
+- M1（本周）：服务适配页后端接口打底（保存/连接测试）；中文友好嵌入切换与重新索引；强化 `rag/stats` 指标（embedding cache 命中率、查询延时 p50/p95、索引规模）。
+- M2（下周）：Prompt Lab 与模板库上线；支持变量注入与评估；CAMEL 多代理最小闭环（Define → Retrieve → Draft → Evaluate）。
+- M3（2–3 周）：GraphRAG 基础版（构建/查询/解释），图谱页面联动；工作流画布初版（节点配置与持久化）。
+- M4（4 周）：全局观测与审计；权限与密钥管理完善；性能优化与中文检索全量验证（similarity/MMR/semantic_hybrid）。
+
+## 子系统划分与 MCP 设计（摘要）
+
+- Context Engineering MCP（上下文工程）
+  - 职责：提示词模板管理、变量注入、策略（few-shot、cot、plan→solve）、对话记忆聚合与个性化偏好。
+  - 接口：`GET /api/prompts/templates`、`POST /api/prompts/render`、`POST /api/prompts/evaluate`、`POST /api/context/profile`。
+
+- Multimodal RAG MCP（多模态检索）
+  - 职责：文档/图片/PDF/OCR/网页快照的切片、索引、重排与生成；支持 `semantic_hybrid`、`mmr`。
+  - 接口：`POST /api/documents/upload`（已有）、`POST /api/rag/index`、`POST /api/query`（已有）、`GET /api/rag/stats`（建议强化）。
+
+- GraphicRAG MCP（图谱增强检索）
+  - 职责：实体/关系抽取、Neo4j 存储、图检索与边解释、图+文本融合（GraphRAG）。
+  - 接口：`POST /api/graph/build`、`GET /api/graph/nodes|edges`、`POST /api/graph/query`（自然语言→Cypher）、`POST /api/graph/explain`。
+
+- Agent Orchestrator MCP（CAMEL 多代理编排）
+  - 职责：Planner / PromptEngineer / Retriever / GraphBuilder / Executor / Evaluator 协作，定义与执行工作流。
+  - 接口：`POST /api/agents/workflow/define`、`POST /api/agents/workflow/execute`、`GET /api/agents/workflow/status`。
+
+- Service Adapter MCP（服务适配）
+  - 职责：统一管理第三方服务配置与连通性测试（LLM、Firecrawl、Neo4j、Ollama/LM Studio）。
+  - 接口：`GET /api/services/providers`、`POST /api/services/credentials`、`GET /api/services/status|test`。
+
+- Observability MCP（观测与度量）
+  - 职责：检索链路时延、缓存命中率（embedding cache）、索引规模、图查询耗时、代理对话步数与失败率。
+  - 接口：`GET /api/rag/stats`（继续完善）、`GET /api/agents/stats`、`GET /api/graph/stats`。
+
+完整设计详见 `docs/MCP.md`。
 
 ## 仓库与分支策略
 
@@ -113,7 +154,7 @@ GitHub Actions 已启用：
 ## 致谢与许可证
 
 - 许可证：MIT（见 `LICENSE`）
-- 感谢 FastAPI、React、Tailwind、Camel-AI 等开源生态
+- 感谢 FastAPI、React、Tailwind 等开源生态
 
 ---
 
