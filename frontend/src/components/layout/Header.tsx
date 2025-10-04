@@ -156,7 +156,7 @@ const Header: React.FC<HeaderProps> = ({
               className="flex items-center space-x-2 font-bold text-xl text-gradient"
             >
               <img src={logo} alt="OpenShrimp" className="w-8 h-8 rounded-lg object-contain" />
-              <span className="hidden sm:block">KrillNet</span>
+          <span className="hidden sm:block">CORA</span>
             </Link
             >
           </div>

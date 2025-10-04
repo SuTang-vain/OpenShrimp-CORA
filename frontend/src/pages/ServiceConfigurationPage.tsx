@@ -192,7 +192,7 @@ const ServiceConfigurationPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>服务配置 - KrillNet</title>
+  <title>服务配置 - CORA</title>
         <meta name="description" content="配置和管理外部服务集成" />
       </Helmet>
 

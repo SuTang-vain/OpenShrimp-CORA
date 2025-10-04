@@ -256,7 +256,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       <div className="p-4 border-t">
         {!collapsed && (
           <div className="text-xs text-muted-foreground space-y-1">
-            <p>KrillNet v2.0.0</p>
+        <p>CORA v2.0.0</p>
             <p>© 2024 Shrimp Team</p>
           </div>
         )}
