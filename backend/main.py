@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Shrimp Agent v2 FastAPI主应用
-现代化的智能搜索和RAG系统后端
+KrillNet FastAPI 主应用
+OpenShrimp 的智能搜索与 RAG 系统后端
 
 运行环境: Python 3.11+
 依赖: fastapi, uvicorn, pydantic, asyncio
@@ -63,7 +63,7 @@ services: Dict[str, Any] = {}
 async def lifespan(app: FastAPI):
     """应用生命周期管理"""
     # 启动时初始化
-    logger.info("正在启动 Shrimp Agent v2...")
+    logger.info("正在启动 KrillNet...")
     
     try:
         # 加载配置
@@ -138,7 +138,7 @@ async def lifespan(app: FastAPI):
         if not all(health_checks.values()):
             logger.warning(f"部分服务健康检查失败: {health_checks}")
         
-        logger.info("Shrimp Agent v2 启动完成")
+        logger.info("KrillNet 启动完成")
         
         yield
         
@@ -148,7 +148,7 @@ async def lifespan(app: FastAPI):
     
     finally:
         # 关闭时清理
-        logger.info("正在关闭 Shrimp Agent v2...")
+        logger.info("正在关闭 KrillNet...")
         
         # 清理服务（兼容同步/异步 close 方法）
         for service_name, service in services.items():
@@ -164,7 +164,7 @@ async def lifespan(app: FastAPI):
                 logger.error(f"关闭服务 {service_name} 失败: {e}")
         
         services.clear()
-        logger.info("Shrimp Agent v2 已关闭")
+        logger.info("KrillNet 已关闭")
 
 
 async def perform_health_checks() -> Dict[str, bool]:
@@ -194,8 +194,8 @@ async def perform_health_checks() -> Dict[str, bool]:
 
 # 创建FastAPI应用
 app = FastAPI(
-    title="Shrimp Agent v2 API",
-    description="现代化的智能搜索和RAG系统",
+    title="KrillNet API",
+    description="OpenShrimp 的智能搜索与 RAG 系统",
     version="2.0.0",
     docs_url=None,  # 禁用默认文档
     redoc_url=None,  # 禁用默认ReDoc
