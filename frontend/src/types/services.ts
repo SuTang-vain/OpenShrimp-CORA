@@ -35,6 +35,8 @@ export interface BaseServiceConfig {
   status: ServiceStatus
   lastTested?: Date
   errorMessage?: string
+  // 绑定后端服务提供方标识（用于凭据保存与连通性测试）
+  providerId?: string
 }
 
 /**

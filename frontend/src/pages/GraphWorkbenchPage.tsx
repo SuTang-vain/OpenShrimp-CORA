@@ -5,6 +5,8 @@ import { Sparkles, Network, Play, RefreshCcw, Info, Settings, Download, ZoomIn, 
 
 import { agentsApi, type GraphRAGRequest, type GraphNode, type GraphEdge } from '@/api/agents'
 import { cn } from '@/utils/cn'
+import { useConfigStore } from '@/stores/configStore'
+import { ServiceType, ServiceStatus } from '@/types/services'
 
 interface GraphData {
   nodes: GraphNode[]
@@ -33,6 +35,12 @@ const GraphWorkbenchPage: React.FC = () => {
   const [graphSource, setGraphSource] = useState<string>('none')
   const [graph, setGraph] = useState<GraphData>({ nodes: [], edges: [] })
   const [isFullscreen, setIsFullscreen] = useState(false)
+
+  // 图谱服务（Neo4j）配置检测
+  const { services } = useConfigStore()
+  const kgService = (services || []).find((s) => s.type === ServiceType.KNOWLEDGE_GRAPH)
+  const isKgConfigured = !!kgService
+  const isKgConnected = kgService?.status === ServiceStatus.CONNECTED
 
   useEffect(() => {
     if (!cyRef.current) return
@@ -222,6 +230,22 @@ const GraphWorkbenchPage: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* 配置缺失提示 */}
+      {(!isKgConfigured || !isKgConnected) && (
+        <div className="mx-6 mb-4 bg-amber-50 border border-amber-200 rounded-lg p-4">
+          <div className="flex items-start space-x-3">
+            <Info className="h-5 w-5 text-amber-600 mt-0.5" />
+            <div className="text-amber-800">
+              <p className="font-medium">图谱服务未完成配置或未连接，部分功能不可用。</p>
+              <p className="text-sm mt-1 text-amber-700">请前往“服务配置”页完成 Neo4j（Aura 或本地）配置，并测试连通性。</p>
+              <div className="mt-3">
+                <a href="/services" className="btn btn-outline btn-sm">前往服务配置</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className={cn(
         "grid gap-6",
