@@ -1,4 +1,4 @@
-# OpenShrimp KrillNet
+# OpenShrimp CORA
 
 🦐 全新下一代智能搜索与知识管理平台（MCP 集成 + RAG + 图检索）
 

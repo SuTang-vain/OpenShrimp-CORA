@@ -159,7 +159,7 @@ const HomePage: React.FC = () => {
             </h1>
 
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              基于先进的 AI 技术，KrillNet 为您提供智能化的文档搜索和管理解决方案，
+    基于先进的 AI 技术，CORA 为您提供智能化的文档搜索和管理解决方案，
               让知识触手可及，让工作更加高效。
             </p>
 
@@ -297,7 +297,7 @@ const HomePage: React.FC = () => {
                 {
                   step: '01',
                   title: '注册账户',
-                  description: '创建您的免费账户，开始使用 KrillNet',
+    description: '创建您的免费账户，开始使用 CORA',
                 },
                 {
                   step: '02',

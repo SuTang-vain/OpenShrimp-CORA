@@ -104,7 +104,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <img src={logo} alt="OpenShrimp" className="w-8 h-8 rounded-lg object-contain" />
-            <span className="font-bold text-xl text-gradient">KrillNet</span>
+        <span className="font-bold text-xl text-gradient">CORA</span>
               </div>
               
               <p className="text-muted-foreground text-sm mb-6 max-w-sm">

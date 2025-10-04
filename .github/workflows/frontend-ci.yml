@@ -5,17 +5,18 @@ on:
     branches:
       - main
       - develop
-      - 'feature/**'
       - 'release/**'
+      - 'feature/**'
   pull_request:
     branches:
       - main
       - develop
-      - 'feature/**'
       - 'release/**'
+      - 'feature/**'
+  workflow_dispatch:
 
 jobs:
-  build-and-test:
+  build-frontend:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -24,19 +25,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Use Node.js 18
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
 
       - name: Install dependencies
-        run: |
-          npm ci
+        run: npm ci
 
-      - name: Build
-        run: |
-          npm run build
-
-      - name: Test
+      - name: Run tests (allow none)
+        env:
+          CI: true
         run: |
           npm test -- --passWithNoTests
+
+      - name: Build
+        run: npm run build

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-KrillNet FastAPI 主应用
+ CORA FastAPI 主应用
 OpenShrimp 的智能搜索与 RAG 系统后端
 
 运行环境: Python 3.11+
@@ -65,9 +65,10 @@ services: Dict[str, Any] = {}
 async def lifespan(app: FastAPI):
     """应用生命周期管理"""
     # 启动时初始化
-    logger.info("正在启动 KrillNet...")
+    logger.info("正在启动 CORA...")
     
     try:
+
         # 加载配置
         settings = get_settings()
         
@@ -148,7 +149,7 @@ async def lifespan(app: FastAPI):
         if not all(health_checks.values()):
             logger.warning(f"部分服务健康检查失败: {health_checks}")
         
-        logger.info("KrillNet 启动完成")
+        logger.info("CORA 启动完成")
         
         yield
         
@@ -158,7 +159,7 @@ async def lifespan(app: FastAPI):
     
     finally:
         # 关闭时清理
-        logger.info("正在关闭 KrillNet...")
+        logger.info("正在关闭 CORA...")
         
         # 清理服务（兼容同步/异步 close 方法）
         for service_name, service in services.items():
@@ -174,13 +175,13 @@ async def lifespan(app: FastAPI):
                 logger.error(f"关闭服务 {service_name} 失败: {e}")
         
         services.clear()
-        logger.info("KrillNet 已关闭")
+        logger.info("CORA 已关闭")
 
 
 async def perform_health_checks() -> Dict[str, bool]:
     """执行健康检查"""
-    health_status = {}
-    
+    health_status: Dict[str, bool] = {}
+
     # 检查LLM管理器
     if 'llm_manager' in services:
         try:
@@ -189,7 +190,7 @@ async def perform_health_checks() -> Dict[str, bool]:
         except Exception as e:
             logger.error(f"LLM管理器健康检查失败: {e}")
             health_status['llm_manager'] = False
-    
+
     # 检查RAG引擎
     if 'rag_engine' in services:
         try:
@@ -198,13 +199,13 @@ async def perform_health_checks() -> Dict[str, bool]:
         except Exception as e:
             logger.error(f"RAG引擎健康检查失败: {e}")
             health_status['rag_engine'] = False
-    
+
     return health_status
 
 
 # 创建FastAPI应用
 app = FastAPI(
-    title="KrillNet API",
+    title="CORA API",
     description="OpenShrimp 的智能搜索与 RAG 系统",
     version="2.0.0",
     docs_url=None,  # 禁用默认文档
