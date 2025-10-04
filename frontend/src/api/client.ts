@@ -158,8 +158,12 @@ class ApiClient {
           break
 
         case 500:
-          // 服务器内部错误
-          toast.error('服务器内部错误，请稍后再试')
+          // 服务器内部错误：优先提取后端提供的具体错误信息
+          {
+            const err = (data as any)
+            const msg = err?.message || err?.error?.message || (typeof err?.error === 'string' ? err.error : undefined) || '服务器内部错误，请稍后再试'
+            toast.error(msg)
+          }
           break
 
         case 502:
@@ -170,17 +174,25 @@ class ApiClient {
           break
 
         default: {
-          // 其他错误
-          const errorMessage = (data as any)?.message || (data as any)?.error || '请求失败'
-          toast.error(errorMessage)
+          // 其他错误：兼容 error 为对象的场景
+          const err = (data as any)
+          let errorMessage = err?.message
+          if (!errorMessage) {
+            const e = err?.error
+            if (typeof e === 'string') errorMessage = e
+            else if (e && typeof e === 'object') errorMessage = e.message || JSON.stringify(e)
+          }
+          toast.error(errorMessage || '请求失败')
           break
         }
       }
 
       // 返回格式化的错误响应
+      const err = (data as any)
+      const normalizedMessage = err?.message || err?.error?.message || (typeof err?.error === 'string' ? err.error : undefined) || '请求失败'
       const apiError: ApiResponse = {
         success: false,
-        error: (data as any)?.message || (data as any)?.error || '请求失败',
+        error: normalizedMessage,
         code: status,
         data: data,
       }
