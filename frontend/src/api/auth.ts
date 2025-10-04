@@ -58,7 +58,14 @@ class AuthApi {
    */
   async register(userData: RegisterRequest): Promise<ApiResponse<RegisterResponse>> {
     try {
-      const response = await apiClient.post<RegisterResponse>('/auth/register', userData)
+      // 后端期望 confirm_password（下划线），前端是 confirmPassword（驼峰）
+      const payload = {
+        username: userData.username,
+        email: userData.email,
+        password: userData.password,
+        confirm_password: userData.confirmPassword,
+      }
+      const response = await apiClient.post<RegisterResponse>('/auth/register', payload)
       
       // 注册成功后设置 token
       if (response.success && response.data?.token) {

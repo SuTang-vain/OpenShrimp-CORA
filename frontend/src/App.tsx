@@ -13,6 +13,7 @@ import RegisterPage from '@/pages/RegisterPage'
 import NotFoundPage from '@/pages/NotFoundPage'
 import LoginPage from '@/pages/LoginPage'
 import DashboardPage from '@/pages/DashboardPage'
+import GraphWorkbenchPage from '@/pages/GraphWorkbenchPage'
 
 // Hooks
 import { useThemeStore } from '@/stores/themeStore'
@@ -93,6 +94,9 @@ function App() {
 
           {/* 控制台页面（需鉴权） */}
           <Route path="/dashboard" element={<DashboardPage />} />
+
+          {/* 图谱工作台页面 */}
+          <Route path="/graph" element={<GraphWorkbenchPage />} />
 
           {/* 404 页面 */}
           <Route path="/404" element={<NotFoundPage />} />

@@ -80,6 +80,20 @@ const DashboardPage: React.FC = () => {
           </div>
         </Link>
 
+        {/* 图谱工作台 */}
+        <Link to="/graph" className="group block bg-card border rounded-xl p-5 hover:border-primary transition-colors">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <Search className="h-6 w-6 text-primary" />
+              <div>
+                <h2 className="text-lg font-semibold">图谱工作台</h2>
+                <p className="text-sm text-muted-foreground">触发 GraphRAG 并高亮子图</p>
+              </div>
+            </div>
+            <span className="text-xs text-muted-foreground group-hover:text-primary">前往</span>
+          </div>
+        </Link>
+
         {/* 统计概览 */}
         <div className="bg-card border rounded-xl p-5">
           <div className="flex items-center space-x-3 mb-4">
