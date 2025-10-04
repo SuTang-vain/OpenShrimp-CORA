@@ -1,8 +1,8 @@
-# Shrimp Agent V2 API 文档
+# KrillNet API 文档
 
 ## 概述
 
-Shrimp Agent V2 提供了完整的 RESTful API 和 WebSocket API，支持智能搜索、文档管理、用户认证等核心功能。
+KrillNet 提供了完整的 RESTful API 和 WebSocket API，支持智能搜索、文档管理、用户认证等核心功能。
 
 ## 基础信息
 

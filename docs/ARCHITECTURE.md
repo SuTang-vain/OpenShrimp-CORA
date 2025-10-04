@@ -1,4 +1,4 @@
-# Shrimp Agent V2 架构文档
+# KrillNet 架构文档
 
 ## 概述
 
