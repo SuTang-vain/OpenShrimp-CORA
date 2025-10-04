@@ -33,6 +33,7 @@ from backend.api.routes.mcp import router as mcp_router
 from backend.api.routes.graph import router as graph_router
 from backend.api.routes.services import router as services_router
 from backend.infrastructure.graph.neo4j_client import Neo4jClient
+from backend.infrastructure.graph.memory_graph import MemoryGraphStore
 
 # 导入中间件
 from backend.api.middleware.auth import AuthMiddleware
@@ -93,6 +94,14 @@ async def lifespan(app: FastAPI):
                 logger.info("Neo4j 凭据未配置或连接失败，跳过图数据库客户端初始化")
         except Exception as e:
             logger.warning(f"Neo4j 客户端初始化异常: {e}")
+
+        # 初始化内存图谱（ContextGraph MCP 的内存实现）
+        try:
+            context_graph = MemoryGraphStore()
+            services['context_graph'] = context_graph
+            logger.info("内存图谱（ContextGraph）已初始化")
+        except Exception as e:
+            logger.warning(f"内存图谱初始化异常: {e}")
         
         # 初始化服务管理器
         agent_manager = AgentServiceManager()
