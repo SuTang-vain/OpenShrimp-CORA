@@ -1,6 +1,6 @@
 # OpenShrimp CORA
 
-🦐 全新下一代智能搜索与知识管理平台（MCP 集成 + RAG + 图检索）
+全新一代智能搜索与知识管理平台（MCP 集成 + RAG + 图检索）
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
