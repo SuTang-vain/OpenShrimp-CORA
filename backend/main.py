@@ -32,6 +32,7 @@ from backend.api.routes.embedding import router as embedding_router
 from backend.api.routes.mcp import router as mcp_router
 from backend.api.routes.graph import router as graph_router
 from backend.api.routes.services import router as services_router
+from backend.api.routes.debug import router as debug_router
 from backend.infrastructure.graph.neo4j_client import Neo4jClient
 from backend.infrastructure.graph.memory_graph import MemoryGraphStore
 
@@ -393,6 +394,12 @@ app.include_router(
     documents_router,
     prefix="/api",
     tags=["文档管理"]
+)
+
+app.include_router(
+    debug_router,
+    prefix="/api",
+    tags=["调试"]
 )
 
 app.include_router(

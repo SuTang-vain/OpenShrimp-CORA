@@ -265,10 +265,22 @@ export const useConfigStore = create<ConfigState>()(
       },
 
       updateService: (id, updates) => {
-        set((state) => ({
-          services: state.services.map(service =>
-            service.id === id ? { ...service, ...updates } : service
-          )
+        set((state): Partial<ConfigState> => ({
+          services: state.services.map((service) => {
+            if (service.id !== id) return service
+            switch (service.type) {
+              case ServiceType.LLM:
+                return { ...service, ...(updates as Partial<LLMServiceConfig>) }
+              case ServiceType.WEB_CRAWLER:
+                return { ...service, ...(updates as Partial<WebCrawlerServiceConfig>) }
+              case ServiceType.KNOWLEDGE_GRAPH:
+                return { ...service, ...(updates as Partial<KnowledgeGraphServiceConfig>) }
+              case ServiceType.LOCAL_MODEL:
+                return { ...service, ...(updates as Partial<LocalModelServiceConfig>) }
+              default:
+                return service
+            }
+          }) as ServiceConfig[]
         }))
       },
 

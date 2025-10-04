@@ -495,7 +495,8 @@ class DocumentService:
         
         # 从RAG引擎获取块
         if self.rag_engine:
-            chunks = await self.rag_engine.vector_store.get_chunks_by_doc_id(doc_id)
+            # 统一使用向量存储的 list_chunks 接口按 doc_id 过滤
+            chunks = await self.rag_engine.vector_store.list_chunks(doc_id=doc_id)
             return chunks
         else:
             return []
