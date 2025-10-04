@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Heart, Github, Mail, ExternalLink } from 'lucide-react'
 
 import { cn } from '@/utils/cn'
-import logo from '@/assets/OpenShrimp.jpg'
+import logo from '@/assets/Open-Shrimp.jpg'
 
 /**
  * 底部组件属性
@@ -104,7 +104,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <img src={logo} alt="OpenShrimp" className="w-8 h-8 rounded-lg object-contain" />
-                <span className="font-bold text-xl text-gradient">Shrimp Agent</span>
+            <span className="font-bold text-xl text-gradient">KrillNet</span>
               </div>
               
               <p className="text-muted-foreground text-sm mb-6 max-w-sm">

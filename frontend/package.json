@@ -23,6 +23,7 @@
     "@types/react-syntax-highlighter": "^15.5.11",
     "axios": "^1.6.2",
     "clsx": "^2.0.0",
+    "cytoscape": "^3.33.1",
     "date-fns": "^2.30.0",
     "framer-motion": "^10.16.16",
     "lucide-react": "^0.294.0",

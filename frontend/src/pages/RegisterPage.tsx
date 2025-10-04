@@ -213,7 +213,7 @@ const RegisterPage: React.FC = () => {
             <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
             <h1 className="text-2xl font-bold text-gray-900 mb-2">注册成功！</h1>
             <p className="text-gray-600">
-              欢迎加入 Shrimp Agent，正在为您跳转到首页...
+              欢迎加入 KrillNet，正在为您跳转到首页...
             </p>
           </div>
           <div className="flex items-center justify-center">
@@ -231,7 +231,7 @@ const RegisterPage: React.FC = () => {
         {/* 头部 */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-white text-center">
           <h1 className="text-2xl font-bold mb-2">创建账户</h1>
-          <p className="text-blue-100">加入 Shrimp Agent，开启智能搜索之旅</p>
+          <p className="text-blue-100">加入 KrillNet，开启智能搜索之旅</p>
         </div>
 
         {/* 表单内容 */}

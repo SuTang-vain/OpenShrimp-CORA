@@ -19,7 +19,7 @@ import {
 import { useAuth } from '@/stores/authStore'
 import { useThemeStore } from '@/stores/themeStore'
 import { cn } from '@/utils/cn'
-import logo from '@/assets/OpenShrimp.jpg'
+import logo from '@/assets/Open-Shrimp.jpg'
 
 /**
  * 头部组件属性
@@ -156,7 +156,7 @@ const Header: React.FC<HeaderProps> = ({
               className="flex items-center space-x-2 font-bold text-xl text-gradient"
             >
               <img src={logo} alt="OpenShrimp" className="w-8 h-8 rounded-lg object-contain" />
-              <span className="hidden sm:block">Shrimp Agent</span>
+              <span className="hidden sm:block">KrillNet</span>
             </Link
             >
           </div>

@@ -15,11 +15,12 @@ import {
   ChevronLeft,
   ChevronRight,
   Cog,
+  Network,
 } from 'lucide-react'
 
 import { useAuth } from '@/stores/authStore'
 import { cn } from '@/utils/cn'
-import logo from '@/assets/OpenShrimp.jpg'
+import logo from '@/assets/Open-Shrimp.jpg'
 
 /**
  * 侧边栏组件属性
@@ -59,6 +60,13 @@ const navigationItems: NavItem[] = [
     label: '智能搜索',
     icon: Search,
     href: '/search',
+  },
+  {
+    id: 'graph',
+    label: '图谱工作台',
+    icon: Network,
+    href: '/graph',
+    requireAuth: true,
   },
   {
     id: 'documents',
@@ -248,7 +256,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       <div className="p-4 border-t">
         {!collapsed && (
           <div className="text-xs text-muted-foreground space-y-1">
-            <p>Shrimp Agent v2.0.0</p>
+            <p>KrillNet v2.0.0</p>
             <p>© 2024 Shrimp Team</p>
           </div>
         )}
