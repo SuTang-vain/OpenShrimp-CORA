@@ -280,7 +280,7 @@ const GraphWorkbenchPage: React.FC = () => {
                   onChange={(e) => setForm((f) => ({ ...f, mode: e.target.value as any }))}
                 >
                   <option value="neighbors">邻居节点</option>
-                  <option value="shortest">最短路径</option>
+                  <option value="shortest_path">最短路径</option>
                   <option value="subgraph">子图</option>
                 </select>
               </div>
@@ -323,7 +323,7 @@ const GraphWorkbenchPage: React.FC = () => {
               </div>
             </div>
 
-            {form.mode === 'shortest' && (
+            {form.mode === 'shortest_path' && (
               <div className="grid grid-cols-2 gap-3 p-3 bg-muted/30 rounded-lg">
                 <div>
                   <label className="block text-xs font-medium mb-1">起点节点</label>

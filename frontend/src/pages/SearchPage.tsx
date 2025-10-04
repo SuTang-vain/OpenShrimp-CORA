@@ -134,6 +134,8 @@ const SearchPage: React.FC = () => {
     if (transcript.trim()) {
       setQuery(transcript)
       setSearchParams({ q: transcript.trim() })
+      // 直接触发搜索，避免仅同步URL参数导致不执行
+      performSearch(transcript.trim())
       setShowVoiceInput(false)
     }
   }
@@ -144,6 +146,8 @@ const SearchPage: React.FC = () => {
   const handleHistoryItemClick = (item: any) => {
     setQuery(item.query)
     setSearchParams({ q: item.query })
+    // 直接触发搜索，确保点击历史项立即有结果
+    performSearch(item.query)
     setShowHistory(false)
   }
 
@@ -184,6 +188,8 @@ const SearchPage: React.FC = () => {
     setQuery(suggestion)
     setShowSuggestions(false)
     setSearchParams({ q: suggestion })
+    // 直接触发搜索，确保选择建议后立即查询
+    performSearch(suggestion)
   }
 
   /**
