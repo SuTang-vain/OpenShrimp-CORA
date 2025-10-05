@@ -1,0 +1,2383 @@
+﻿2025-10-05T08:21:17.6228527Z ##[group]Run npm test -- --coverage=false --passWithNoTests
+2025-10-05T08:21:17.6229190Z [36;1mnpm test -- --coverage=false --passWithNoTests[0m
+2025-10-05T08:21:17.6273080Z shell: /usr/bin/bash -e {0}
+2025-10-05T08:21:17.6273460Z env:
+2025-10-05T08:21:17.6273704Z   CI: true
+2025-10-05T08:21:17.6273964Z ##[endgroup]
+2025-10-05T08:21:17.7662869Z 
+2025-10-05T08:21:20.6238468Z ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+2025-10-05T08:21:20.6239530Z > shrimp-agent-frontend@2.0.0 test
+2025-10-05T08:21:20.6252662Z > jest --coverage=false --passWithNoTests
+2025-10-05T08:21:20.6253129Z 
+2025-10-05T08:21:20.6253378Z transform: {
+2025-10-05T08:21:20.6254027Z     <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+2025-10-05T08:21:20.6271569Z },
+2025-10-05T08:21:20.6272808Z See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+2025-10-05T08:21:20.6274760Z ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+2025-10-05T08:21:20.6275979Z transform: {
+2025-10-05T08:21:20.6283976Z     <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+2025-10-05T08:21:20.6284663Z },
+2025-10-05T08:21:20.6285508Z See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+2025-10-05T08:21:22.5517096Z   console.warn
+2025-10-05T08:21:22.5520065Z     ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+2025-10-05T08:21:22.5521906Z 
+2025-10-05T08:21:22.5522743Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T08:21:22.5523678Z      [90m 225 |[39m     }
+2025-10-05T08:21:22.5525954Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T08:21:22.5527746Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T08:21:22.5528295Z      [90m 227 |[39m   }
+2025-10-05T08:21:22.5528712Z      [90m 228 |[39m })
+2025-10-05T08:21:22.5529116Z      [90m 229 |[39m[0m
+2025-10-05T08:21:22.5529333Z 
+2025-10-05T08:21:22.5529592Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T08:21:22.5530242Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T08:21:22.5531058Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T08:21:22.5532200Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:26:5)
+2025-10-05T08:21:22.5533402Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T08:21:22.5534491Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T08:21:22.5535652Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T08:21:22.5537052Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T08:21:22.5538295Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T08:21:22.5539520Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T08:21:22.5540727Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T08:21:22.5541826Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T08:21:22.5542762Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T08:21:22.5543594Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T08:21:22.5544378Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T08:21:22.5545267Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T08:21:22.5546725Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T08:21:22.5547509Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T08:21:22.5548343Z       at renderWithRouter (src/pages/__tests__/LoginPage.test.tsx:53:16)
+2025-10-05T08:21:22.5549201Z       at Object.<anonymous> (src/pages/__tests__/LoginPage.test.tsx:63:5)
+2025-10-05T08:21:22.5549666Z 
+2025-10-05T08:21:22.5573015Z   console.warn
+2025-10-05T08:21:22.5576805Z     ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+2025-10-05T08:21:22.5578404Z 
+2025-10-05T08:21:22.5578790Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T08:21:22.5579351Z      [90m 225 |[39m     }
+2025-10-05T08:21:22.5580317Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T08:21:22.5581228Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T08:21:22.5581766Z      [90m 227 |[39m   }
+2025-10-05T08:21:22.5582169Z      [90m 228 |[39m })
+2025-10-05T08:21:22.5582571Z      [90m 229 |[39m[0m
+2025-10-05T08:21:22.5582793Z 
+2025-10-05T08:21:22.5583048Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T08:21:22.5583678Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T08:21:22.5584304Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T08:21:22.5687502Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:37:5)
+2025-10-05T08:21:22.5688821Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T08:21:22.5689949Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T08:21:22.5691495Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T08:21:22.5692679Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T08:21:22.5693897Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T08:21:22.5695089Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T08:21:22.5696229Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T08:21:22.5697540Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T08:21:22.5698485Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T08:21:22.5699287Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T08:21:22.5700066Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T08:21:22.5700928Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T08:21:22.5701844Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T08:21:22.5702649Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T08:21:22.5703459Z       at renderWithRouter (src/pages/__tests__/LoginPage.test.tsx:53:16)
+2025-10-05T08:21:22.5704254Z       at Object.<anonymous> (src/pages/__tests__/LoginPage.test.tsx:63:5)
+2025-10-05T08:21:22.5704690Z 
+2025-10-05T08:21:22.5963502Z   console.warn
+2025-10-05T08:21:22.5966068Z     ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+2025-10-05T08:21:22.5968355Z 
+2025-10-05T08:21:22.5968742Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T08:21:22.5969317Z      [90m 225 |[39m     }
+2025-10-05T08:21:22.5970264Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T08:21:22.5971196Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T08:21:22.5971742Z      [90m 227 |[39m   }
+2025-10-05T08:21:22.5972214Z      [90m 228 |[39m })
+2025-10-05T08:21:22.5972779Z      [90m 229 |[39m[0m
+2025-10-05T08:21:22.5973025Z 
+2025-10-05T08:21:22.5973300Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T08:21:22.5974004Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T08:21:22.5974845Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T08:21:22.5976084Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:26:5)
+2025-10-05T08:21:22.5977622Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T08:21:22.5978828Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T08:21:22.5980105Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T08:21:22.5981421Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T08:21:22.5982772Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T08:21:22.5984203Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T08:21:22.5985407Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T08:21:22.5986754Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T08:21:22.5987730Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T08:21:22.5988911Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T08:21:22.5989756Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T08:21:22.5990708Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T08:21:22.5991713Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T08:21:22.5992616Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T08:21:22.5993505Z       at renderWithRouter (src/pages/__tests__/HomePage.test.tsx:27:16)
+2025-10-05T08:21:22.5994361Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:42:5)
+2025-10-05T08:21:22.5994818Z 
+2025-10-05T08:21:22.6106030Z   console.warn
+2025-10-05T08:21:22.6113132Z     ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+2025-10-05T08:21:22.6114794Z 
+2025-10-05T08:21:22.6115199Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T08:21:22.6115809Z      [90m 225 |[39m     }
+2025-10-05T08:21:22.6116955Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T08:21:22.6117889Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T08:21:22.6118451Z      [90m 227 |[39m   }
+2025-10-05T08:21:22.6118890Z      [90m 228 |[39m })
+2025-10-05T08:21:22.6119337Z      [90m 229 |[39m[0m
+2025-10-05T08:21:22.6119580Z 
+2025-10-05T08:21:22.6119842Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T08:21:22.6120479Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T08:21:22.6121215Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T08:21:22.6122807Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:37:5)
+2025-10-05T08:21:22.6124020Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T08:21:22.6125117Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T08:21:22.6126477Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T08:21:22.6127722Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T08:21:22.6128995Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T08:21:22.6130174Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T08:21:22.6131328Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T08:21:22.6132460Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T08:21:22.6133376Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T08:21:22.6134281Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T08:21:22.6135061Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T08:21:22.6135939Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T08:21:22.6137071Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T08:21:22.6137912Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T08:21:22.6155848Z       at renderWithRouter (src/pages/__tests__/HomePage.test.tsx:27:16)
+2025-10-05T08:21:22.6157064Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:42:5)
+2025-10-05T08:21:22.6157554Z 
+2025-10-05T08:21:22.8580981Z PASS src/pages/__tests__/LoginPage.test.tsx
+2025-10-05T08:21:22.8600809Z   LoginPage Component
+2025-10-05T08:21:22.8601572Z     ✓ 应该正确渲染基本元素 (225 ms)
+2025-10-05T08:21:22.8602089Z     ✓ 应该进行表单校验并提示错误 (56 ms)
+2025-10-05T08:21:22.8602586Z     ✓ 应该支持显示/隐藏密码 (27 ms)
+2025-10-05T08:21:22.8603035Z     ✓ 应该支持记住我切换 (32 ms)
+2025-10-05T08:21:22.8603563Z     ✓ 登录成功后应导航到 /dashboard (41 ms)
+2025-10-05T08:21:22.8604252Z     ✓ 登录失败时应显示错误反馈且不导航 (36 ms)
+2025-10-05T08:21:22.8604588Z 
+2025-10-05T08:21:23.1067626Z   console.error
+2025-10-05T08:21:23.1078067Z     登录失败: Error: 网络错误
+2025-10-05T08:21:23.1079230Z         at Object.<anonymous> (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/src/api/__tests__/authApi.test.ts:50:19)
+2025-10-05T08:21:23.1080961Z         at Promise.then.completed (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/utils.js:298:28)
+2025-10-05T08:21:23.1082100Z         at new Promise (<anonymous>)
+2025-10-05T08:21:23.1083256Z         at callAsyncCircusFn (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/utils.js:231:10)
+2025-10-05T08:21:23.1084954Z         at _callCircusTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:316:40)
+2025-10-05T08:21:23.1086216Z         at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-05T08:21:23.1087649Z         at _runTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:252:3)
+2025-10-05T08:21:23.1089271Z         at _runTestsForDescribeBlock (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:126:9)
+2025-10-05T08:21:23.1091066Z         at _runTestsForDescribeBlock (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:121:9)
+2025-10-05T08:21:23.1092639Z         at run (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:71:3)
+2025-10-05T08:21:23.1094603Z         at runAndTransformResultsToJestFormat (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+2025-10-05T08:21:23.1097570Z         at jestAdapter (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+2025-10-05T08:21:23.1099490Z         at runTestInternal (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/runTest.js:367:16)
+2025-10-05T08:21:23.1101179Z         at runTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/runTest.js:444:34)
+2025-10-05T08:21:23.1102805Z         at Object.worker (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/testWorker.js:106:12)
+2025-10-05T08:21:23.1103649Z 
+2025-10-05T08:21:23.1104030Z     [0m [90m 214 |[39m       [36mreturn[39m
+2025-10-05T08:21:23.1104537Z      [90m 215 |[39m     }
+2025-10-05T08:21:23.1105435Z     [31m[1m>[22m[39m[90m 216 |[39m     originalError[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T08:21:23.1106453Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T08:21:23.1107164Z      [90m 217 |[39m   }
+2025-10-05T08:21:23.1107598Z      [90m 218 |[39m
+2025-10-05T08:21:23.1108447Z      [90m 219 |[39m   console[33m.[39mwarn [33m=[39m ([33m...[39margs[33m:[39m any[]) [33m=>[39m {[0m
+2025-10-05T08:21:23.1108976Z 
+2025-10-05T08:21:23.1109278Z       at console.error (src/setupTests.ts:216:19)
+2025-10-05T08:21:23.1109867Z       at AuthApi.login (src/api/auth.ts:51:15)
+2025-10-05T08:21:23.1110510Z       at Object.<anonymous> (src/api/__tests__/authApi.test.ts:53:5)
+2025-10-05T08:21:23.1110931Z 
+2025-10-05T08:21:23.1145332Z   console.error
+2025-10-05T08:21:23.1147411Z     登出失败: Error: 服务器错误
+2025-10-05T08:21:23.1148436Z         at Object.<anonymous> (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/src/api/__tests__/authApi.test.ts:92:19)
+2025-10-05T08:21:23.1151315Z         at Promise.then.completed (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/utils.js:298:28)
+2025-10-05T08:21:23.1152473Z         at new Promise (<anonymous>)
+2025-10-05T08:21:23.1153664Z         at callAsyncCircusFn (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/utils.js:231:10)
+2025-10-05T08:21:23.1155466Z         at _callCircusTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:316:40)
+2025-10-05T08:21:23.1157031Z         at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-05T08:21:23.1158299Z         at _runTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:252:3)
+2025-10-05T08:21:23.1160009Z         at _runTestsForDescribeBlock (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:126:9)
+2025-10-05T08:21:23.1161913Z         at _runTestsForDescribeBlock (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:121:9)
+2025-10-05T08:21:23.1163601Z         at run (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:71:3)
+2025-10-05T08:21:23.1165734Z         at runAndTransformResultsToJestFormat (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+2025-10-05T08:21:23.1168315Z         at jestAdapter (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+2025-10-05T08:21:23.1170235Z         at runTestInternal (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/runTest.js:367:16)
+2025-10-05T08:21:23.1171942Z         at runTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/runTest.js:444:34)
+2025-10-05T08:21:23.1173950Z         at Object.worker (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/testWorker.js:106:12)
+2025-10-05T08:21:23.1174822Z 
+2025-10-05T08:21:23.1175218Z     [0m [90m 214 |[39m       [36mreturn[39m
+2025-10-05T08:21:23.1175781Z      [90m 215 |[39m     }
+2025-10-05T08:21:23.1176912Z     [31m[1m>[22m[39m[90m 216 |[39m     originalError[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T08:21:23.1177866Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T08:21:23.1178424Z      [90m 217 |[39m   }
+2025-10-05T08:21:23.1178822Z      [90m 218 |[39m
+2025-10-05T08:21:23.1179693Z      [90m 219 |[39m   console[33m.[39mwarn [33m=[39m ([33m...[39margs[33m:[39m any[]) [33m=>[39m {[0m
+2025-10-05T08:21:23.1180260Z 
+2025-10-05T08:21:23.1180589Z       at console.error (src/setupTests.ts:216:19)
+2025-10-05T08:21:23.1181163Z       at AuthApi.logout (src/api/auth.ts:94:15)
+2025-10-05T08:21:23.1181852Z       at Object.<anonymous> (src/api/__tests__/authApi.test.ts:95:5)
+2025-10-05T08:21:23.1182273Z 
+2025-10-05T08:21:23.1228934Z   console.error
+2025-10-05T08:21:23.1231623Z     获取用户信息失败: Error: 401 Unauthorized
+2025-10-05T08:21:23.1234306Z         at Object.<anonymous> (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/src/api/__tests__/authApi.test.ts:130:21)
+2025-10-05T08:21:23.1237975Z         at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-05T08:21:23.1239967Z 
+2025-10-05T08:21:23.1241593Z     [0m [90m 214 |[39m       [36mreturn[39m
+2025-10-05T08:21:23.1243551Z      [90m 215 |[39m     }
+2025-10-05T08:21:23.1248424Z     [31m[1m>[22m[39m[90m 216 |[39m     originalError[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T08:21:23.1250772Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T08:21:23.1252582Z      [90m 217 |[39m   }
+2025-10-05T08:21:23.1254247Z      [90m 218 |[39m
+2025-10-05T08:21:23.1264184Z      [90m 219 |[39m   console[33m.[39mwarn [33m=[39m ([33m...[39margs[33m:[39m any[]) [33m=>[39m {[0m
+2025-10-05T08:21:23.1264760Z 
+2025-10-05T08:21:23.1265008Z       at console.error (src/setupTests.ts:216:19)
+2025-10-05T08:21:23.1265608Z       at AuthApi.getCurrentUser (src/api/auth.ts:130:15)
+2025-10-05T08:21:23.1266233Z       at AuthApi.validateToken (src/api/auth.ts:357:24)
+2025-10-05T08:21:23.1267150Z       at Object.<anonymous> (src/api/__tests__/authApi.test.ts:133:5)
+2025-10-05T08:21:23.1267583Z 
+2025-10-05T08:21:23.1374170Z   console.error
+2025-10-05T08:21:23.1375583Z     检查权限失败: Error: network error
+2025-10-05T08:21:23.1377015Z         at Object.<anonymous> (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/src/api/__tests__/authApi.test.ts:146:20)
+2025-10-05T08:21:23.1378259Z         at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-05T08:21:23.1378806Z 
+2025-10-05T08:21:23.1379154Z     [0m [90m 214 |[39m       [36mreturn[39m
+2025-10-05T08:21:23.1379719Z      [90m 215 |[39m     }
+2025-10-05T08:21:23.1380598Z     [31m[1m>[22m[39m[90m 216 |[39m     originalError[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T08:21:23.1381444Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T08:21:23.1381953Z      [90m 217 |[39m   }
+2025-10-05T08:21:23.1382326Z      [90m 218 |[39m
+2025-10-05T08:21:23.1383138Z      [90m 219 |[39m   console[33m.[39mwarn [33m=[39m ([33m...[39margs[33m:[39m any[]) [33m=>[39m {[0m
+2025-10-05T08:21:23.1383646Z 
+2025-10-05T08:21:23.1383882Z       at console.error (src/setupTests.ts:216:19)
+2025-10-05T08:21:23.1384476Z       at AuthApi.hasPermission (src/api/auth.ts:386:15)
+2025-10-05T08:21:23.1385164Z       at Object.<anonymous> (src/api/__tests__/authApi.test.ts:148:5)
+2025-10-05T08:21:23.1385606Z 
+2025-10-05T08:21:23.1404885Z PASS src/api/__tests__/authApi.test.ts
+2025-10-05T08:21:23.1405350Z   AuthApi
+2025-10-05T08:21:23.1405847Z     ✓ login 成功时设置 token 并返回响应 (1 ms)
+2025-10-05T08:21:23.1406996Z     ✓ login 失败时抛出错误，不崩溃 (27 ms)
+2025-10-05T08:21:23.1407502Z     ✓ register 成功时设置 token (1 ms)
+2025-10-05T08:21:23.1408013Z     ✓ logout 成功时清除 token (1 ms)
+2025-10-05T08:21:23.1408546Z     ✓ logout 失败时也应清除 token 并抛错 (7 ms)
+2025-10-05T08:21:23.1409135Z     ✓ refreshToken 成功时更新 token (2 ms)
+2025-10-05T08:21:23.1409699Z     ✓ getCurrentUser 应调用 /auth/me
+2025-10-05T08:21:23.1410626Z     ✓ validateToken 在成功时返回 true，失败返回 false (5 ms)
+2025-10-05T08:21:23.1411205Z     ✓ hasPermission 正确返回布尔值 (14 ms)
+2025-10-05T08:21:23.1411384Z 
+2025-10-05T08:21:23.2135433Z FAIL src/pages/__tests__/HomePage.test.tsx
+2025-10-05T08:21:23.2136065Z   HomePage Component
+2025-10-05T08:21:23.2137162Z     ✕ 应该正确渲染首页内容 (156 ms)
+2025-10-05T08:21:23.2137667Z     ✕ 应该显示统计数据 (35 ms)
+2025-10-05T08:21:23.2138126Z     ✓ 应该显示功能特性 (33 ms)
+2025-10-05T08:21:23.2138574Z     ✕ 应该显示快速开始步骤 (27 ms)
+2025-10-05T08:21:23.2139051Z     ✕ 应该处理搜索表单提交 (31 ms)
+2025-10-05T08:21:23.2139512Z     ✓ 应该处理空搜索提交 (102 ms)
+2025-10-05T08:21:23.2140052Z     ✕ 应该处理键盘事件 (27 ms)
+2025-10-05T08:21:23.2140496Z     ✕ 应该正确处理认证状态 (21 ms)
+2025-10-05T08:21:23.2140941Z     ✕ 应该正确处理未认证状态 (33 ms)
+2025-10-05T08:21:23.2141399Z     ✕ 应该支持无障碍访问 (60 ms)
+2025-10-05T08:21:23.2141858Z     ✕ 应该正确处理响应式设计 (30 ms)
+2025-10-05T08:21:23.2142320Z     ✕ 应该正确处理动画效果 (22 ms)
+2025-10-05T08:21:23.2142768Z     ✓ 应该处理错误状态 (34 ms)
+2025-10-05T08:21:23.2142994Z 
+2025-10-05T08:21:23.2143322Z   ● HomePage Component › 应该正确渲染首页内容
+2025-10-05T08:21:23.2143626Z 
+2025-10-05T08:21:23.2145457Z     TestingLibraryElementError: Unable to find an element with the text: /智能搜索与文档管理平台/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+2025-10-05T08:21:23.2147153Z 
+2025-10-05T08:21:23.2147419Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.2148007Z     [36m<body>[39m
+2025-10-05T08:21:23.2148427Z       [36m<div>[39m
+2025-10-05T08:21:23.2148852Z         [36m<div[39m
+2025-10-05T08:21:23.2149906Z           [33mclass[39m=[32m"min-h-screen"[39m
+2025-10-05T08:21:23.2150455Z         [36m>[39m
+2025-10-05T08:21:23.2150897Z           [36m<section[39m
+2025-10-05T08:21:23.2151677Z             [33mclass[39m=[32m"relative py-20 lg:py-32 overflow-hidden"[39m
+2025-10-05T08:21:23.2152361Z           [36m>[39m
+2025-10-05T08:21:23.2152805Z             [36m<div[39m
+2025-10-05T08:21:23.2153903Z               [33mclass[39m=[32m"absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"[39m
+2025-10-05T08:21:23.2154842Z             [36m/>[39m
+2025-10-05T08:21:23.2155289Z             [36m<div[39m
+2025-10-05T08:21:23.2156247Z               [33mclass[39m=[32m"absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2157315Z             [36m/>[39m
+2025-10-05T08:21:23.2157788Z             [36m<div[39m
+2025-10-05T08:21:23.2158835Z               [33mclass[39m=[32m"absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2159715Z             [36m/>[39m
+2025-10-05T08:21:23.2160159Z             [36m<div[39m
+2025-10-05T08:21:23.2160837Z               [33mclass[39m=[32m"relative container-responsive"[39m
+2025-10-05T08:21:23.2161469Z             [36m>[39m
+2025-10-05T08:21:23.2161904Z               [36m<div[39m
+2025-10-05T08:21:23.2162596Z                 [33mclass[39m=[32m"text-center max-w-4xl mx-auto"[39m
+2025-10-05T08:21:23.2163234Z               [36m>[39m
+2025-10-05T08:21:23.2163717Z                 [36m<div[39m
+2025-10-05T08:21:23.2164301Z                   [33mclass[39m=[32m"mb-6"[39m
+2025-10-05T08:21:23.2164848Z                 [36m>[39m
+2025-10-05T08:21:23.2165347Z                   [36m<span[39m
+2025-10-05T08:21:23.2184484Z                     [33mclass[39m=[32m"inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"[39m
+2025-10-05T08:21:23.2185591Z                   [36m>[39m
+2025-10-05T08:21:23.2186764Z                     [36m<svg[39m
+2025-10-05T08:21:23.2187468Z                       [33mclass[39m=[32m"h-4 w-4 mr-2"[39m
+2025-10-05T08:21:23.2188264Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2188954Z                     [36m/>[39m
+2025-10-05T08:21:23.2189568Z                     [0m全新 v2.0 版本发布[0m
+2025-10-05T08:21:23.2190168Z                   [36m</span>[39m
+2025-10-05T08:21:23.2190731Z                 [36m</div>[39m
+2025-10-05T08:21:23.2191228Z                 [36m<h1[39m
+2025-10-05T08:21:23.2192104Z                   [33mclass[39m=[32m"text-4xl lg:text-6xl font-bold text-foreground mb-6"[39m
+2025-10-05T08:21:23.2192882Z                 [36m>[39m
+2025-10-05T08:21:23.2193417Z                   [0m智能搜索，[0m
+2025-10-05T08:21:23.2193939Z                   [36m<span[39m
+2025-10-05T08:21:23.2194577Z                     [33mclass[39m=[32m"text-gradient"[39m
+2025-10-05T08:21:23.2195161Z                   [36m>[39m
+2025-10-05T08:21:23.2195713Z                     [0m重新定义[0m
+2025-10-05T08:21:23.2196470Z                   [36m</span>[39m
+2025-10-05T08:21:23.2197053Z                   [36m<br />[39m
+2025-10-05T08:21:23.2197613Z                   [0m知识管理体验[0m
+2025-10-05T08:21:23.2198070Z                 [36m</h1>[39m
+2025-10-05T08:21:23.2198508Z                 [36m<p[39m
+2025-10-05T08:21:23.2199378Z                   [33mclass[39m=[32m"text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2200150Z                 [36m>[39m
+2025-10-05T08:21:23.2200949Z                   [0m基于先进的 AI 技术，CORA 为您提供智能化的文档搜索和管理解决方案， 让知识触手可及，让工作更加高效。[0m
+2025-10-05T08:21:23.2201657Z                 [36m</p>[39m
+2025-10-05T08:21:23.2202177Z                 [36m<div[39m
+2025-10-05T08:21:23.2202750Z                   [33mclass[39m=[32m"mb-8"[39m
+2025-10-05T08:21:23.2203305Z                 [36m>[39m
+2025-10-05T08:21:23.2203806Z                   [36m<form[39m
+2025-10-05T08:21:23.2204757Z                     [33mclass[39m=[32m"max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2205380Z                   [36m>[39m
+2025-10-05T08:21:23.2205911Z                     [36m<div[39m
+2025-10-05T08:21:23.2206757Z                       [33mclass[39m=[32m"relative"[39m
+2025-10-05T08:21:23.2207364Z                     [36m>[39m
+2025-10-05T08:21:23.2207900Z                       [36m<svg[39m
+2025-10-05T08:21:23.2226878Z                         [33mclass[39m=[32m"absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground"[39m
+2025-10-05T08:21:23.2228112Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2228878Z                       [36m/>[39m
+2025-10-05T08:21:23.2229431Z                       [36m<input[39m
+2025-10-05T08:21:23.2231218Z                         [33mclass[39m=[32m"w-full pl-12 pr-32 py-4 text-lg border border-border rounded-xl bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"[39m
+2025-10-05T08:21:23.2232854Z                         [33mplaceholder[39m=[32m"搜索任何内容..."[39m
+2025-10-05T08:21:23.2233592Z                         [33mtype[39m=[32m"text"[39m
+2025-10-05T08:21:23.2234269Z                         [33mvalue[39m=[32m""[39m
+2025-10-05T08:21:23.2234893Z                       [36m/>[39m
+2025-10-05T08:21:23.2235465Z                       [36m<button[39m
+2025-10-05T08:21:23.2236752Z                         [33mclass[39m=[32m"absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-primary btn-md"[39m
+2025-10-05T08:21:23.2237861Z                         [33mtype[39m=[32m"submit"[39m
+2025-10-05T08:21:23.2238473Z                       [36m>[39m
+2025-10-05T08:21:23.2239034Z                         [0m开始搜索[0m
+2025-10-05T08:21:23.2239622Z                       [36m</button>[39m
+2025-10-05T08:21:23.2240213Z                     [36m</div>[39m
+2025-10-05T08:21:23.2240759Z                   [36m</form>[39m
+2025-10-05T08:21:23.2241312Z                 [36m</div>[39m
+2025-10-05T08:21:23.2242132Z                 [36m<div[39m
+2025-10-05T08:21:23.2243276Z                   [33mclass[39m=[32m"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"[39m
+2025-10-05T08:21:23.2244238Z                 [36m>[39m
+2025-10-05T08:21:23.2244743Z                   [36m<a[39m
+2025-10-05T08:21:23.2245419Z                     [33mclass[39m=[32m"btn btn-primary btn-lg"[39m
+2025-10-05T08:21:23.2246198Z                     [33mhref[39m=[32m"/register"[39m
+2025-10-05T08:21:23.2246997Z                   [36m>[39m
+2025-10-05T08:21:23.2247550Z                     [0m免费注册[0m
+2025-10-05T08:21:23.2248130Z                     [36m<svg[39m
+2025-10-05T08:21:23.2248820Z                       [33mclass[39m=[32m"ml-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2249613Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2250273Z                     [36m/>[39m
+2025-10-05T08:21:23.2250826Z                   [36m</a>[39m
+2025-10-05T08:21:23.2251372Z                   [36m<button[39m
+2025-10-05T08:21:23.2252063Z                     [33mclass[39m=[32m"btn btn-outline btn-lg"[39m
+2025-10-05T08:21:23.2252791Z                   [36m>[39m
+2025-10-05T08:21:23.2253304Z                     [36m<svg[39m
+2025-10-05T08:21:23.2253926Z                       [33mclass[39m=[32m"mr-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2254655Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2255271Z                     [36m/>[39m
+2025-10-05T08:21:23.2255817Z                     [0m观看演示[0m
+2025-10-05T08:21:23.2256736Z                   [36m</button>[39m
+2025-10-05T08:21:23.2257317Z                 [36m</div>[39m
+2025-10-05T08:21:23.2257840Z               [36m</div>[39m
+2025-10-05T08:21:23.2258316Z             [36m</div>[39m
+2025-10-05T08:21:23.2258826Z           [36m</section>[39m
+2025-10-05T08:21:23.2259301Z           [36m<section[39m
+2025-10-05T08:21:23.2260194Z             [33mclass[39m=[32m"py-16 bg-muted/30"[39m
+2025-10-05T08:21:23.2260792Z           [36m>[39m
+2025-10-05T08:21:23.2261226Z             [36m<div[39m
+2025-10-05T08:21:23.2261865Z               [33mclass[39m=[32m"container-responsive"[39m
+2025-10-05T08:21:23.2262475Z             [36m>[39m
+2025-10-05T08:21:23.2262918Z               [36m<div[39m
+2025-10-05T08:21:23.2263671Z                 [33mclass[39m=[32m"grid grid-cols-2 lg:grid-cols-4 gap-8"[39m
+2025-10-05T08:21:23.2264357Z               [36m>[39m
+2025-10-05T08:21:23.2264845Z                 [36m<div[39m
+2025-10-05T08:21:23.2265451Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2266019Z                 [36m>[39m
+2025-10-05T08:21:23.2266732Z                   [36m<div[39m
+2025-10-05T08:21:23.2267912Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2268854Z                   [36m>[39m
+2025-10-05T08:21:23.2269392Z                     [36m<svg[39m
+2025-10-05T08:21:23.2270088Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2270881Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2271537Z                     [36m/>[39m
+2025-10-05T08:21:23.2272066Z                   [36m</div>[39m
+2025-10-05T08:21:23.2272591Z                   [36m<div[39m
+2025-10-05T08:21:23.2273381Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2274096Z                   [36m>[39m
+2025-10-05T08:21:23.2274619Z                     [0m10,000+[0m
+2025-10-05T08:21:23.2275156Z                   [36m</div>[39m
+2025-10-05T08:21:23.2275687Z                   [36m<div[39m
+2025-10-05T08:21:23.2276635Z                     [33mclass[39m=[32m"text-sm text-muted-foreground mb-1"[39m
+2025-10-05T08:21:23.2277336Z                   [36m>[39m
+2025-10-05T08:21:23.2277879Z                     [0m活跃用户[0m
+2025-10-05T08:21:23.2278791Z                   [36m</div>[39m
+2025-10-05T08:21:23.2279334Z                   [36m<div[39m
+2025-10-05T08:21:23.2280243Z                     [33mclass[39m=[32m"flex items-center justify-center text-xs text-green-600"[39m
+2025-10-05T08:21:23.2281050Z                   [36m>[39m
+2025-10-05T08:21:23.2281586Z                     [36m<svg[39m
+2025-10-05T08:21:23.2282222Z                       [33mclass[39m=[32m"h-3 w-3 mr-1"[39m
+2025-10-05T08:21:23.2282968Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2283605Z                     [36m/>[39m
+2025-10-05T08:21:23.2284128Z                     [0m+12%[0m
+2025-10-05T08:21:23.2284657Z                   [36m</div>[39m
+2025-10-05T08:21:23.2285194Z                 [36m</div>[39m
+2025-10-05T08:21:23.2285707Z                 [36m<div[39m
+2025-10-05T08:21:23.2286501Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2287076Z                 [36m>[39m
+2025-10-05T08:21:23.2287610Z                   [36m<div[39m
+2025-10-05T08:21:23.2288695Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2289628Z                   [36m>[39m
+2025-10-05T08:21:23.2290159Z                     [36m<svg[39m
+2025-10-05T08:21:23.2290871Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2291635Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2292247Z                     [36m/>[39m
+2025-10-05T08:21:23.2292733Z                   [36m</div>[39m
+2025-10-05T08:21:23.2293240Z                   [36m<div[39m
+2025-10-05T08:21:23.2294009Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2294636Z                   [36...
+2025-10-05T08:21:23.2294869Z 
+2025-10-05T08:21:23.2295056Z     [0m [90m 43 |[39m
+2025-10-05T08:21:23.2295813Z      [90m 44 |[39m     [90m// 检查主要标题[39m
+2025-10-05T08:21:23.2297135Z     [31m[1m>[22m[39m[90m 45 |[39m     expect(screen[33m.[39mgetByText([35m/智能搜索与文档管理平台/i[39m))[33m.[39mtoBeInTheDocument()
+2025-10-05T08:21:23.2298106Z      [90m    |[39m                   [31m[1m^[22m[39m
+2025-10-05T08:21:23.2298607Z      [90m 46 |[39m     
+2025-10-05T08:21:23.2299095Z      [90m 47 |[39m     [90m// 检查描述文本[39m
+2025-10-05T08:21:23.2300119Z      [90m 48 |[39m     expect(screen[33m.[39mgetByText([35m/基于AI的智能搜索引擎/i[39m))[33m.[39mtoBeInTheDocument()[0m
+2025-10-05T08:21:23.2300714Z 
+2025-10-05T08:21:23.2301206Z       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+2025-10-05T08:21:23.2302222Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:76:38)
+2025-10-05T08:21:23.2303206Z       at allQuery (node_modules/@testing-library/dom/dist/query-helpers.js:52:17)
+2025-10-05T08:21:23.2304091Z       at query (node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+2025-10-05T08:21:23.2304954Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:45:19)
+2025-10-05T08:21:23.2305410Z 
+2025-10-05T08:21:23.2305691Z   ● HomePage Component › 应该显示统计数据
+2025-10-05T08:21:23.2305964Z 
+2025-10-05T08:21:23.2307566Z     TestingLibraryElementError: Unable to find an element with the text: < 100ms. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+2025-10-05T08:21:23.2308913Z 
+2025-10-05T08:21:23.2309133Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.2309693Z     [36m<body>[39m
+2025-10-05T08:21:23.2310058Z       [36m<div>[39m
+2025-10-05T08:21:23.2310427Z         [36m<div[39m
+2025-10-05T08:21:23.2310933Z           [33mclass[39m=[32m"min-h-screen"[39m
+2025-10-05T08:21:23.2311408Z         [36m>[39m
+2025-10-05T08:21:23.2311783Z           [36m<section[39m
+2025-10-05T08:21:23.2312489Z             [33mclass[39m=[32m"relative py-20 lg:py-32 overflow-hidden"[39m
+2025-10-05T08:21:23.2313337Z           [36m>[39m
+2025-10-05T08:21:23.2313706Z             [36m<div[39m
+2025-10-05T08:21:23.2314692Z               [33mclass[39m=[32m"absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"[39m
+2025-10-05T08:21:23.2315519Z             [36m/>[39m
+2025-10-05T08:21:23.2315900Z             [36m<div[39m
+2025-10-05T08:21:23.2317006Z               [33mclass[39m=[32m"absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2317764Z             [36m/>[39m
+2025-10-05T08:21:23.2318169Z             [36m<div[39m
+2025-10-05T08:21:23.2319093Z               [33mclass[39m=[32m"absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2319854Z             [36m/>[39m
+2025-10-05T08:21:23.2320235Z             [36m<div[39m
+2025-10-05T08:21:23.2320848Z               [33mclass[39m=[32m"relative container-responsive"[39m
+2025-10-05T08:21:23.2321414Z             [36m>[39m
+2025-10-05T08:21:23.2321818Z               [36m<div[39m
+2025-10-05T08:21:23.2322455Z                 [33mclass[39m=[32m"text-center max-w-4xl mx-auto"[39m
+2025-10-05T08:21:23.2323012Z               [36m>[39m
+2025-10-05T08:21:23.2323448Z                 [36m<div[39m
+2025-10-05T08:21:23.2323982Z                   [33mclass[39m=[32m"mb-6"[39m
+2025-10-05T08:21:23.2324465Z                 [36m>[39m
+2025-10-05T08:21:23.2324910Z                   [36m<span[39m
+2025-10-05T08:21:23.2326034Z                     [33mclass[39m=[32m"inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"[39m
+2025-10-05T08:21:23.2327122Z                   [36m>[39m
+2025-10-05T08:21:23.2327606Z                     [36m<svg[39m
+2025-10-05T08:21:23.2328176Z                       [33mclass[39m=[32m"h-4 w-4 mr-2"[39m
+2025-10-05T08:21:23.2328852Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2329662Z                     [36m/>[39m
+2025-10-05T08:21:23.2330189Z                     [0m全新 v2.0 版本发布[0m
+2025-10-05T08:21:23.2330713Z                   [36m</span>[39m
+2025-10-05T08:21:23.2341365Z                 [36m</div>[39m
+2025-10-05T08:21:23.2341749Z                 [36m<h1[39m
+2025-10-05T08:21:23.2342376Z                   [33mclass[39m=[32m"text-4xl lg:text-6xl font-bold text-foreground mb-6"[39m
+2025-10-05T08:21:23.2342923Z                 [36m>[39m
+2025-10-05T08:21:23.2343372Z                   [0m智能搜索，[0m
+2025-10-05T08:21:23.2343818Z                   [36m<span[39m
+2025-10-05T08:21:23.2344358Z                     [33mclass[39m=[32m"text-gradient"[39m
+2025-10-05T08:21:23.2344840Z                   [36m>[39m
+2025-10-05T08:21:23.2345259Z                     [0m重新定义[0m
+2025-10-05T08:21:23.2345698Z                   [36m</span>[39m
+2025-10-05T08:21:23.2346159Z                   [36m<br />[39m
+2025-10-05T08:21:23.2346823Z                   [0m知识管理体验[0m
+2025-10-05T08:21:23.2347297Z                 [36m</h1>[39m
+2025-10-05T08:21:23.2347674Z                 [36m<p[39m
+2025-10-05T08:21:23.2348363Z                   [33mclass[39m=[32m"text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2348913Z                 [36m>[39m
+2025-10-05T08:21:23.2349576Z                   [0m基于先进的 AI 技术，CORA 为您提供智能化的文档搜索和管理解决方案， 让知识触手可及，让工作更加高效。[0m
+2025-10-05T08:21:23.2350150Z                 [36m</p>[39m
+2025-10-05T08:21:23.2350593Z                 [36m<div[39m
+2025-10-05T08:21:23.2351092Z                   [33mclass[39m=[32m"mb-8"[39m
+2025-10-05T08:21:23.2351582Z                 [36m>[39m
+2025-10-05T08:21:23.2352032Z                   [36m<form[39m
+2025-10-05T08:21:23.2352595Z                     [33mclass[39m=[32m"max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2353099Z                   [36m>[39m
+2025-10-05T08:21:23.2353545Z                     [36m<div[39m
+2025-10-05T08:21:23.2354078Z                       [33mclass[39m=[32m"relative"[39m
+2025-10-05T08:21:23.2354847Z                     [36m>[39m
+2025-10-05T08:21:23.2355298Z                       [36m<svg[39m
+2025-10-05T08:21:23.2356526Z                         [33mclass[39m=[32m"absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground"[39m
+2025-10-05T08:21:23.2357516Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2358063Z                       [36m/>[39m
+2025-10-05T08:21:23.2358549Z                       [36m<input[39m
+2025-10-05T08:21:23.2360246Z                         [33mclass[39m=[32m"w-full pl-12 pr-32 py-4 text-lg border border-border rounded-xl bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"[39m
+2025-10-05T08:21:23.2361671Z                         [33mplaceholder[39m=[32m"搜索任何内容..."[39m
+2025-10-05T08:21:23.2362249Z                         [33mtype[39m=[32m"text"[39m
+2025-10-05T08:21:23.2362782Z                         [33mvalue[39m=[32m""[39m
+2025-10-05T08:21:23.2363550Z                       [36m/>[39m
+2025-10-05T08:21:23.2364038Z                       [36m<button[39m
+2025-10-05T08:21:23.2364647Z                         [33mclass[39m=[32m"absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-primary btn-md"[39m
+2025-10-05T08:21:23.2365183Z                         [33mtype[39m=[32m"submit"[39m
+2025-10-05T08:21:23.2365496Z                       [36m>[39m
+2025-10-05T08:21:23.2365787Z                         [0m开始搜索[0m
+2025-10-05T08:21:23.2366075Z                       [36m</button>[39m
+2025-10-05T08:21:23.2366614Z                     [36m</div>[39m
+2025-10-05T08:21:23.2366913Z                   [36m</form>[39m
+2025-10-05T08:21:23.2367263Z                 [36m</div>[39m
+2025-10-05T08:21:23.2367739Z                 [36m<div[39m
+2025-10-05T08:21:23.2368727Z                   [33mclass[39m=[32m"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"[39m
+2025-10-05T08:21:23.2369546Z                 [36m>[39m
+2025-10-05T08:21:23.2369946Z                   [36m<a[39m
+2025-10-05T08:21:23.2370501Z                     [33mclass[39m=[32m"btn btn-primary btn-lg"[39m
+2025-10-05T08:21:23.2371104Z                     [33mhref[39m=[32m"/register"[39m
+2025-10-05T08:21:23.2371582Z                   [36m>[39m
+2025-10-05T08:21:23.2372011Z                     [0m免费注册[0m
+2025-10-05T08:21:23.2372438Z                     [36m<svg[39m
+2025-10-05T08:21:23.2372970Z                       [33mclass[39m=[32m"ml-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2373580Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2374106Z                     [36m/>[39m
+2025-10-05T08:21:23.2374369Z                   [36m</a>[39m
+2025-10-05T08:21:23.2374649Z                   [36m<button[39m
+2025-10-05T08:21:23.2375001Z                     [33mclass[39m=[32m"btn btn-outline btn-lg"[39m
+2025-10-05T08:21:23.2375299Z                   [36m>[39m
+2025-10-05T08:21:23.2375916Z                     [36m<svg[39m
+2025-10-05T08:21:23.2376235Z                       [33mclass[39m=[32m"mr-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2377475Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2377812Z                     [36m/>[39m
+2025-10-05T08:21:23.2378083Z                     [0m观看演示[0m
+2025-10-05T08:21:23.2378350Z                   [36m</button>[39m
+2025-10-05T08:21:23.2378627Z                 [36m</div>[39m
+2025-10-05T08:21:23.2378876Z               [36m</div>[39m
+2025-10-05T08:21:23.2379112Z             [36m</div>[39m
+2025-10-05T08:21:23.2379363Z           [36m</section>[39m
+2025-10-05T08:21:23.2379592Z           [36m<section[39m
+2025-10-05T08:21:23.2379901Z             [33mclass[39m=[32m"py-16 bg-muted/30"[39m
+2025-10-05T08:21:23.2380177Z           [36m>[39m
+2025-10-05T08:21:23.2380395Z             [36m<div[39m
+2025-10-05T08:21:23.2380712Z               [33mclass[39m=[32m"container-responsive"[39m
+2025-10-05T08:21:23.2381015Z             [36m>[39m
+2025-10-05T08:21:23.2381232Z               [36m<div[39m
+2025-10-05T08:21:23.2381610Z                 [33mclass[39m=[32m"grid grid-cols-2 lg:grid-cols-4 gap-8"[39m
+2025-10-05T08:21:23.2381953Z               [36m>[39m
+2025-10-05T08:21:23.2382197Z                 [36m<div[39m
+2025-10-05T08:21:23.2382493Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2382775Z                 [36m>[39m
+2025-10-05T08:21:23.2383025Z                   [36m<div[39m
+2025-10-05T08:21:23.2383589Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2384059Z                   [36m>[39m
+2025-10-05T08:21:23.2384312Z                     [36m<svg[39m
+2025-10-05T08:21:23.2384651Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2385038Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2385520Z                     [36m/>[39m
+2025-10-05T08:21:23.2385772Z                   [36m</div>[39m
+2025-10-05T08:21:23.2386030Z                   [36m<div[39m
+2025-10-05T08:21:23.2386643Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2387028Z                   [36m>[39m
+2025-10-05T08:21:23.2387293Z                     [0m10,000+[0m
+2025-10-05T08:21:23.2387557Z                   [36m</div>[39m
+2025-10-05T08:21:23.2387816Z                   [36m<div[39m
+2025-10-05T08:21:23.2388195Z                     [33mclass[39m=[32m"text-sm text-muted-foreground mb-1"[39m
+2025-10-05T08:21:23.2388528Z                   [36m>[39m
+2025-10-05T08:21:23.2388793Z                     [0m活跃用户[0m
+2025-10-05T08:21:23.2389049Z                   [36m</div>[39m
+2025-10-05T08:21:23.2389299Z                   [36m<div[39m
+2025-10-05T08:21:23.2389748Z                     [33mclass[39m=[32m"flex items-center justify-center text-xs text-green-600"[39m
+2025-10-05T08:21:23.2390142Z                   [36m>[39m
+2025-10-05T08:21:23.2390388Z                     [36m<svg[39m
+2025-10-05T08:21:23.2390698Z                       [33mclass[39m=[32m"h-3 w-3 mr-1"[39m
+2025-10-05T08:21:23.2391052Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2391357Z                     [36m/>[39m
+2025-10-05T08:21:23.2391611Z                     [0m+12%[0m
+2025-10-05T08:21:23.2391860Z                   [36m</div>[39m
+2025-10-05T08:21:23.2392113Z                 [36m</div>[39m
+2025-10-05T08:21:23.2392358Z                 [36m<div[39m
+2025-10-05T08:21:23.2392654Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2392931Z                 [36m>[39m
+2025-10-05T08:21:23.2393168Z                   [36m<div[39m
+2025-10-05T08:21:23.2393746Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2394348Z                   [36m>[39m
+2025-10-05T08:21:23.2394599Z                     [36m<svg[39m
+2025-10-05T08:21:23.2394935Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2395312Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2395609Z                     [36m/>[39m
+2025-10-05T08:21:23.2395861Z                   [36m</div>[39m
+2025-10-05T08:21:23.2396111Z                   [36m<div[39m
+2025-10-05T08:21:23.2396789Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2397159Z                   [36...
+2025-10-05T08:21:23.2397284Z 
+2025-10-05T08:21:23.2397774Z     [0m [90m 59 |[39m     expect(screen[33m.[39mgetByText([32m'10,000+'[39m))[33m.[39mtoBeInTheDocument()
+2025-10-05T08:21:23.2398994Z      [90m 60 |[39m     expect(screen[33m.[39mgetByText([32m'99.9%'[39m))[33m.[39mtoBeInTheDocument()
+2025-10-05T08:21:23.2400304Z     [31m[1m>[22m[39m[90m 61 |[39m     expect(screen[33m.[39mgetByText([32m'< 100ms'[39m))[33m.[39mtoBeInTheDocument()
+2025-10-05T08:21:23.2403552Z      [90m    |[39m                   [31m[1m^[22m[39m
+2025-10-05T08:21:23.2404558Z      [90m 62 |[39m     expect(screen[33m.[39mgetByText([32m'24/7'[39m))[33m.[39mtoBeInTheDocument()
+2025-10-05T08:21:23.2405352Z      [90m 63 |[39m   })
+2025-10-05T08:21:23.2405759Z      [90m 64 |[39m[0m
+2025-10-05T08:21:23.2405978Z 
+2025-10-05T08:21:23.2406737Z       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+2025-10-05T08:21:23.2407778Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:76:38)
+2025-10-05T08:21:23.2408769Z       at allQuery (node_modules/@testing-library/dom/dist/query-helpers.js:52:17)
+2025-10-05T08:21:23.2409669Z       at query (node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+2025-10-05T08:21:23.2410431Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:61:19)
+2025-10-05T08:21:23.2410939Z 
+2025-10-05T08:21:23.2411183Z   ● HomePage Component › 应该显示快速开始步骤
+2025-10-05T08:21:23.2411579Z 
+2025-10-05T08:21:23.2411997Z     TestingLibraryElementError: Found multiple elements with the text: 开始搜索
+2025-10-05T08:21:23.2412302Z 
+2025-10-05T08:21:23.2412413Z     Here are the matching elements:
+2025-10-05T08:21:23.2412572Z 
+2025-10-05T08:21:23.2412707Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.2412981Z     [36m<button[39m
+2025-10-05T08:21:23.2413505Z       [33mclass[39m=[32m"absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-primary btn-md"[39m
+2025-10-05T08:21:23.2413995Z       [33mtype[39m=[32m"submit"[39m
+2025-10-05T08:21:23.2414261Z     [36m>[39m
+2025-10-05T08:21:23.2414531Z       [0m开始搜索[0m
+2025-10-05T08:21:23.2414747Z     [36m</button>[39m
+2025-10-05T08:21:23.2414874Z 
+2025-10-05T08:21:23.2414999Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.2415264Z     [36m<h3[39m
+2025-10-05T08:21:23.2415642Z       [33mclass[39m=[32m"text-xl font-semibold text-foreground mb-2"[39m
+2025-10-05T08:21:23.2415994Z     [36m>[39m
+2025-10-05T08:21:23.2416194Z       [0m开始搜索[0m
+2025-10-05T08:21:23.2416655Z     [36m</h3>[39m
+2025-10-05T08:21:23.2416772Z 
+2025-10-05T08:21:23.2417197Z     (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+2025-10-05T08:21:23.2417619Z 
+2025-10-05T08:21:23.2417746Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.2418015Z     [36m<body>[39m
+2025-10-05T08:21:23.2418225Z       [36m<div>[39m
+2025-10-05T08:21:23.2418435Z         [36m<div[39m
+2025-10-05T08:21:23.2418708Z           [33mclass[39m=[32m"min-h-screen"[39m
+2025-10-05T08:21:23.2418982Z         [36m>[39m
+2025-10-05T08:21:23.2419193Z           [36m<section[39m
+2025-10-05T08:21:23.2419592Z             [33mclass[39m=[32m"relative py-20 lg:py-32 overflow-hidden"[39m
+2025-10-05T08:21:23.2419948Z           [36m>[39m
+2025-10-05T08:21:23.2420362Z             [36m<div[39m
+2025-10-05T08:21:23.2420922Z               [33mclass[39m=[32m"absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"[39m
+2025-10-05T08:21:23.2421390Z             [36m/>[39m
+2025-10-05T08:21:23.2421606Z             [36m<div[39m
+2025-10-05T08:21:23.2422113Z               [33mclass[39m=[32m"absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2422544Z             [36m/>[39m
+2025-10-05T08:21:23.2422765Z             [36m<div[39m
+2025-10-05T08:21:23.2423291Z               [33mclass[39m=[32m"absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2423730Z             [36m/>[39m
+2025-10-05T08:21:23.2423942Z             [36m<div[39m
+2025-10-05T08:21:23.2424292Z               [33mclass[39m=[32m"relative container-responsive"[39m
+2025-10-05T08:21:23.2424605Z             [36m>[39m
+2025-10-05T08:21:23.2424826Z               [36m<div[39m
+2025-10-05T08:21:23.2425190Z                 [33mclass[39m=[32m"text-center max-w-4xl mx-auto"[39m
+2025-10-05T08:21:23.2425508Z               [36m>[39m
+2025-10-05T08:21:23.2425753Z                 [36m<div[39m
+2025-10-05T08:21:23.2426044Z                   [33mclass[39m=[32m"mb-6"[39m
+2025-10-05T08:21:23.2426447Z                 [36m>[39m
+2025-10-05T08:21:23.2426707Z                   [36m<span[39m
+2025-10-05T08:21:23.2427331Z                     [33mclass[39m=[32m"inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"[39m
+2025-10-05T08:21:23.2427841Z                   [36m>[39m
+2025-10-05T08:21:23.2428105Z                     [36m<svg[39m
+2025-10-05T08:21:23.2428425Z                       [33mclass[39m=[32m"h-4 w-4 mr-2"[39m
+2025-10-05T08:21:23.2428800Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2429117Z                     [36m/>[39m
+2025-10-05T08:21:23.2429402Z                     [0m全新 v2.0 版本发布[0m
+2025-10-05T08:21:23.2429834Z                   [36m</span>[39m
+2025-10-05T08:21:23.2430120Z                 [36m</div>[39m
+2025-10-05T08:21:23.2430355Z                 [36m<h1[39m
+2025-10-05T08:21:23.2430790Z                   [33mclass[39m=[32m"text-4xl lg:text-6xl font-bold text-foreground mb-6"[39m
+2025-10-05T08:21:23.2431169Z                 [36m>[39m
+2025-10-05T08:21:23.2431433Z                   [0m智能搜索，[0m
+2025-10-05T08:21:23.2431706Z                   [36m<span[39m
+2025-10-05T08:21:23.2432025Z                     [33mclass[39m=[32m"text-gradient"[39m
+2025-10-05T08:21:23.2432315Z                   [36m>[39m
+2025-10-05T08:21:23.2432573Z                     [0m重新定义[0m
+2025-10-05T08:21:23.2432832Z                   [36m</span>[39m
+2025-10-05T08:21:23.2433102Z                   [36m<br />[39m
+2025-10-05T08:21:23.2433369Z                   [0m知识管理体验[0m
+2025-10-05T08:21:23.2433622Z                 [36m</h1>[39m
+2025-10-05T08:21:23.2433856Z                 [36m<p[39m
+2025-10-05T08:21:23.2434313Z                   [33mclass[39m=[32m"text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2434694Z                 [36m>[39m
+2025-10-05T08:21:23.2435096Z                   [0m基于先进的 AI 技术，CORA 为您提供智能化的文档搜索和管理解决方案， 让知识触手可及，让工作更加高效。[0m
+2025-10-05T08:21:23.2435429Z                 [36m</p>[39m
+2025-10-05T08:21:23.2435680Z                 [36m<div[39m
+2025-10-05T08:21:23.2435964Z                   [33mclass[39m=[32m"mb-8"[39m
+2025-10-05T08:21:23.2436229Z                 [36m>[39m
+2025-10-05T08:21:23.2436694Z                   [36m<form[39m
+2025-10-05T08:21:23.2437014Z                     [33mclass[39m=[32m"max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2437306Z                   [36m>[39m
+2025-10-05T08:21:23.2437561Z                     [36m<div[39m
+2025-10-05T08:21:23.2437865Z                       [33mclass[39m=[32m"relative"[39m
+2025-10-05T08:21:23.2438162Z                     [36m>[39m
+2025-10-05T08:21:23.2438428Z                       [36m<svg[39m
+2025-10-05T08:21:23.2439172Z                         [33mclass[39m=[32m"absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground"[39m
+2025-10-05T08:21:23.2439765Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2440082Z                       [36m/>[39m
+2025-10-05T08:21:23.2440349Z                       [36m<input[39m
+2025-10-05T08:21:23.2441314Z                         [33mclass[39m=[32m"w-full pl-12 pr-32 py-4 text-lg border border-border rounded-xl bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"[39m
+2025-10-05T08:21:23.2442160Z                         [33mplaceholder[39m=[32m"搜索任何内容..."[39m
+2025-10-05T08:21:23.2442505Z                         [33mtype[39m=[32m"text"[39m
+2025-10-05T08:21:23.2442837Z                         [33mvalue[39m=[32m""[39m
+2025-10-05T08:21:23.2443134Z                       [36m/>[39m
+2025-10-05T08:21:23.2443414Z                       [36m<button[39m
+2025-10-05T08:21:23.2443980Z                         [33mclass[39m=[32m"absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-primary btn-md"[39m
+2025-10-05T08:21:23.2444493Z                         [33mtype[39m=[32m"submit"[39m
+2025-10-05T08:21:23.2444794Z                       [36m>[39m
+2025-10-05T08:21:23.2445070Z                         [0m开始搜索[0m
+2025-10-05T08:21:23.2445354Z                       [36m</button>[39m
+2025-10-05T08:21:23.2445641Z                     [36m</div>[39m
+2025-10-05T08:21:23.2445914Z                   [36m</form>[39m
+2025-10-05T08:21:23.2446174Z                 [36m</div>[39m
+2025-10-05T08:21:23.2446559Z                 [36m<div[39m
+2025-10-05T08:21:23.2447156Z                   [33mclass[39m=[32m"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"[39m
+2025-10-05T08:21:23.2447649Z                 [36m>[39m
+2025-10-05T08:21:23.2447891Z                   [36m<a[39m
+2025-10-05T08:21:23.2448398Z                     [33mclass[39m=[32m"btn btn-primary btn-lg"[39m
+2025-10-05T08:21:23.2448775Z                     [33mhref[39m=[32m"/register"[39m
+2025-10-05T08:21:23.2449057Z                   [36m>[39m
+2025-10-05T08:21:23.2449314Z                     [0m免费注册[0m
+2025-10-05T08:21:23.2449579Z                     [36m<svg[39m
+2025-10-05T08:21:23.2449895Z                       [33mclass[39m=[32m"ml-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2450252Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2450567Z                     [36m/>[39m
+2025-10-05T08:21:23.2450823Z                   [36m</a>[39m
+2025-10-05T08:21:23.2451074Z                   [36m<button[39m
+2025-10-05T08:21:23.2451416Z                     [33mclass[39m=[32m"btn btn-outline btn-lg"[39m
+2025-10-05T08:21:23.2451712Z                   [36m>[39m
+2025-10-05T08:21:23.2451960Z                     [36m<svg[39m
+2025-10-05T08:21:23.2452269Z                       [33mclass[39m=[32m"mr-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2452636Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2452935Z                     [36m/>[39m
+2025-10-05T08:21:23.2453193Z                     [0m观看演示[0m
+2025-10-05T08:21:23.2453454Z                   [36m</button>[39m
+2025-10-05T08:21:23.2453727Z                 [36m</div>[39m
+2025-10-05T08:21:23.2453972Z               [36m</div>[39m
+2025-10-05T08:21:23.2454204Z             [36m</div>[39m
+2025-10-05T08:21:23.2454453Z           [36m</section>[39m
+2025-10-05T08:21:23.2454680Z           [36m<section[39m
+2025-10-05T08:21:23.2454984Z             [33mclass[39m=[32m"py-16 bg-muted/30"[39m
+2025-10-05T08:21:23.2455270Z           [36m>[39m
+2025-10-05T08:21:23.2455478Z             [36m<div[39m
+2025-10-05T08:21:23.2455803Z               [33mclass[39m=[32m"container-responsive"[39m
+2025-10-05T08:21:23.2456099Z             [36m>[39m
+2025-10-05T08:21:23.2456904Z               [36m<div[39m
+2025-10-05T08:21:23.2457944Z                 [33mclass[39m=[32m"grid grid-cols-2 lg:grid-cols-4 gap-8"[39m
+2025-10-05T08:21:23.2458574Z               [36m>[39m
+2025-10-05T08:21:23.2459041Z                 [36m<div[39m
+2025-10-05T08:21:23.2459637Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2459979Z                 [36m>[39m
+2025-10-05T08:21:23.2460243Z                   [36m<div[39m
+2025-10-05T08:21:23.2460836Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2461335Z                   [36m>[39m
+2025-10-05T08:21:23.2461603Z                     [36m<svg[39m
+2025-10-05T08:21:23.2461956Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2462387Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2462709Z                     [36m/>[39m
+2025-10-05T08:21:23.2462973Z                   [36m</div>[39m
+2025-10-05T08:21:23.2463257Z                   [36m<div[39m
+2025-10-05T08:21:23.2463675Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2464037Z                   [36m>[39m
+2025-10-05T08:21:23.2464304Z                     [0m10,000+[0m
+2025-10-05T08:21:23.2464574Z                   [36m</div>[39m
+2025-10-05T08:21:23.2464835Z                   [36m<div[39m
+2025-10-05T08:21:23.2465221Z                     [33mclass[39m=[32m"text-sm text-muted-foreground mb-1"[39m
+2025-10-05T08:21:23.2465551Z                   [36m>[39m
+2025-10-05T08:21:23.2465818Z                     [0m活跃用户[0m
+2025-10-05T08:21:23.2466081Z                   [36m</div>[39m
+2025-10-05T08:21:23.2466601Z                   [36m<div[39m
+2025-10-05T08:21:23.2467083Z                     [33mclass[39m=[32m"flex items-center justify-center text-xs text-green-600"[39m
+2025-10-05T08:21:23.2467474Z                   [36m>[39m
+2025-10-05T08:21:23.2467956Z                     [36m<svg[39m
+2025-10-05T08:21:23.2468288Z                       [33mclass[39m=[32m"h-3 w-3 mr-1"[39m
+2025-10-05T08:21:23.2468654Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2468964Z                     [36m/>[39m
+2025-10-05T08:21:23.2469214Z                     [0m+12%[0m
+2025-10-05T08:21:23.2469461Z                   [36m</div>[39m
+2025-10-05T08:21:23.2469712Z                 [36m</div>[39m
+2025-10-05T08:21:23.2469961Z                 [36m<div[39m
+2025-10-05T08:21:23.2470254Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2470543Z                 [36m>[39m
+2025-10-05T08:21:23.2470781Z                   [36m<div[39m
+2025-10-05T08:21:23.2471342Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2471805Z                   [36m>[39m
+2025-10-05T08:21:23.2472051Z                     [36m<svg[39m
+2025-10-05T08:21:23.2472401Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2472786Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2473100Z                     [36m/>[39m
+2025-10-05T08:21:23.2473354Z                   [36m</div>[39m
+2025-10-05T08:21:23.2473606Z                   [36m<div[39m
+2025-10-05T08:21:23.2473991Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2474336Z                   [36...
+2025-10-05T08:21:23.2474457Z 
+2025-10-05T08:21:23.2474832Z     [0m [90m 81 |[39m     expect(screen[33m.[39mgetByText([32m'注册账户'[39m))[33m.[39mtoBeInTheDocument()
+2025-10-05T08:21:23.2475482Z      [90m 82 |[39m     expect(screen[33m.[39mgetByText([32m'上传文档'[39m))[33m.[39mtoBeInTheDocument()
+2025-10-05T08:21:23.2476175Z     [31m[1m>[22m[39m[90m 83 |[39m     expect(screen[33m.[39mgetByText([32m'开始搜索'[39m))[33m.[39mtoBeInTheDocument()
+2025-10-05T08:21:23.2477600Z      [90m    |[39m                   [31m[1m^[22m[39m
+2025-10-05T08:21:23.2478119Z      [90m 84 |[39m   })
+2025-10-05T08:21:23.2478534Z      [90m 85 |[39m
+2025-10-05T08:21:23.2479406Z      [90m 86 |[39m   it([32m'应该处理搜索表单提交'[39m[33m,[39m [36masync[39m () [33m=>[39m {[0m
+2025-10-05T08:21:23.2479841Z 
+2025-10-05T08:21:23.2480330Z       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+2025-10-05T08:21:23.2481401Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:20:35)
+2025-10-05T08:21:23.2482410Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:23:10)
+2025-10-05T08:21:23.2483535Z       at getMultipleElementsFoundError (node_modules/@testing-library/dom/dist/query-helpers.js:55:13)
+2025-10-05T08:21:23.2484583Z       at query (node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+2025-10-05T08:21:23.2485430Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:83:19)
+2025-10-05T08:21:23.2485903Z 
+2025-10-05T08:21:23.2486221Z   ● HomePage Component › 应该处理搜索表单提交
+2025-10-05T08:21:23.2486857Z 
+2025-10-05T08:21:23.2514411Z     TestingLibraryElementError: Unable to find an element with the placeholder text of: /输入您要搜索的内容/i
+2025-10-05T08:21:23.2514959Z 
+2025-10-05T08:21:23.2515129Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.2515488Z     [36m<body>[39m
+2025-10-05T08:21:23.2515724Z       [36m<div>[39m
+2025-10-05T08:21:23.2515945Z         [36m<div[39m
+2025-10-05T08:21:23.2516233Z           [33mclass[39m=[32m"min-h-screen"[39m
+2025-10-05T08:21:23.2516760Z         [36m>[39m
+2025-10-05T08:21:23.2516983Z           [36m<section[39m
+2025-10-05T08:21:23.2517397Z             [33mclass[39m=[32m"relative py-20 lg:py-32 overflow-hidden"[39m
+2025-10-05T08:21:23.2517761Z           [36m>[39m
+2025-10-05T08:21:23.2517975Z             [36m<div[39m
+2025-10-05T08:21:23.2518534Z               [33mclass[39m=[32m"absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"[39m
+2025-10-05T08:21:23.2519215Z             [36m/>[39m
+2025-10-05T08:21:23.2519432Z             [36m<div[39m
+2025-10-05T08:21:23.2519924Z               [33mclass[39m=[32m"absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2520342Z             [36m/>[39m
+2025-10-05T08:21:23.2520553Z             [36m<div[39m
+2025-10-05T08:21:23.2521066Z               [33mclass[39m=[32m"absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2521499Z             [36m/>[39m
+2025-10-05T08:21:23.2521712Z             [36m<div[39m
+2025-10-05T08:21:23.2522060Z               [33mclass[39m=[32m"relative container-responsive"[39m
+2025-10-05T08:21:23.2522375Z             [36m>[39m
+2025-10-05T08:21:23.2522594Z               [36m<div[39m
+2025-10-05T08:21:23.2522948Z                 [33mclass[39m=[32m"text-center max-w-4xl mx-auto"[39m
+2025-10-05T08:21:23.2523265Z               [36m>[39m
+2025-10-05T08:21:23.2523522Z                 [36m<div[39m
+2025-10-05T08:21:23.2523816Z                   [33mclass[39m=[32m"mb-6"[39m
+2025-10-05T08:21:23.2524086Z                 [36m>[39m
+2025-10-05T08:21:23.2524340Z                   [36m<span[39m
+2025-10-05T08:21:23.2524972Z                     [33mclass[39m=[32m"inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"[39m
+2025-10-05T08:21:23.2525477Z                   [36m>[39m
+2025-10-05T08:21:23.2525738Z                     [36m<svg[39m
+2025-10-05T08:21:23.2526061Z                       [33mclass[39m=[32m"h-4 w-4 mr-2"[39m
+2025-10-05T08:21:23.2526635Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2526982Z                     [36m/>[39m
+2025-10-05T08:21:23.2527283Z                     [0m全新 v2.0 版本发布[0m
+2025-10-05T08:21:23.2527591Z                   [36m</span>[39m
+2025-10-05T08:21:23.2527872Z                 [36m</div>[39m
+2025-10-05T08:21:23.2528262Z                 [36m<h1[39m
+2025-10-05T08:21:23.2528707Z                   [33mclass[39m=[32m"text-4xl lg:text-6xl font-bold text-foreground mb-6"[39m
+2025-10-05T08:21:23.2529083Z                 [36m>[39m
+2025-10-05T08:21:23.2529338Z                   [0m智能搜索，[0m
+2025-10-05T08:21:23.2529604Z                   [36m<span[39m
+2025-10-05T08:21:23.2529931Z                     [33mclass[39m=[32m"text-gradient"[39m
+2025-10-05T08:21:23.2530223Z                   [36m>[39m
+2025-10-05T08:21:23.2530487Z                     [0m重新定义[0m
+2025-10-05T08:21:23.2530743Z                   [36m</span>[39m
+2025-10-05T08:21:23.2555909Z                   [36m<br />[39m
+2025-10-05T08:21:23.2556648Z                   [0m知识管理体验[0m
+2025-10-05T08:21:23.2556979Z                 [36m</h1>[39m
+2025-10-05T08:21:23.2557243Z                 [36m<p[39m
+2025-10-05T08:21:23.2557716Z                   [33mclass[39m=[32m"text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2558132Z                 [36m>[39m
+2025-10-05T08:21:23.2558548Z                   [0m基于先进的 AI 技术，CORA 为您提供智能化的文档搜索和管理解决方案， 让知识触手可及，让工作更加高效。[0m
+2025-10-05T08:21:23.2558893Z                 [36m</p>[39m
+2025-10-05T08:21:23.2559160Z                 [36m<div[39m
+2025-10-05T08:21:23.2559454Z                   [33mclass[39m=[32m"mb-8"[39m
+2025-10-05T08:21:23.2559730Z                 [36m>[39m
+2025-10-05T08:21:23.2559988Z                   [36m<form[39m
+2025-10-05T08:21:23.2560313Z                     [33mclass[39m=[32m"max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2560611Z                   [36m>[39m
+2025-10-05T08:21:23.2560871Z                     [36m<div[39m
+2025-10-05T08:21:23.2561179Z                       [33mclass[39m=[32m"relative"[39m
+2025-10-05T08:21:23.2561488Z                     [36m>[39m
+2025-10-05T08:21:23.2561753Z                       [36m<svg[39m
+2025-10-05T08:21:23.2562344Z                         [33mclass[39m=[32m"absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground"[39m
+2025-10-05T08:21:23.2563129Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2563458Z                       [36m/>[39m
+2025-10-05T08:21:23.2563734Z                       [36m<input[39m
+2025-10-05T08:21:23.2564687Z                         [33mclass[39m=[32m"w-full pl-12 pr-32 py-4 text-lg border border-border rounded-xl bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"[39m
+2025-10-05T08:21:23.2565522Z                         [33mplaceholder[39m=[32m"搜索任何内容..."[39m
+2025-10-05T08:21:23.2565874Z                         [33mtype[39m=[32m"text"[39m
+2025-10-05T08:21:23.2566210Z                         [33mvalue[39m=[32m""[39m
+2025-10-05T08:21:23.2566772Z                       [36m/>[39m
+2025-10-05T08:21:23.2567058Z                       [36m<button[39m
+2025-10-05T08:21:23.2567634Z                         [33mclass[39m=[32m"absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-primary btn-md"[39m
+2025-10-05T08:21:23.2568197Z                         [33mtype[39m=[32m"submit"[39m
+2025-10-05T08:21:23.2568501Z                       [36m>[39m
+2025-10-05T08:21:23.2568780Z                         [0m开始搜索[0m
+2025-10-05T08:21:23.2569063Z                       [36m</button>[39m
+2025-10-05T08:21:23.2569370Z                     [36m</div>[39m
+2025-10-05T08:21:23.2569638Z                   [36m</form>[39m
+2025-10-05T08:21:23.2569917Z                 [36m</div>[39m
+2025-10-05T08:21:23.2570170Z                 [36m<div[39m
+2025-10-05T08:21:23.2570780Z                   [33mclass[39m=[32m"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"[39m
+2025-10-05T08:21:23.2571271Z                 [36m>[39m
+2025-10-05T08:21:23.2571516Z                   [36m<a[39m
+2025-10-05T08:21:23.2571847Z                     [33mclass[39m=[32m"btn btn-primary btn-lg"[39m
+2025-10-05T08:21:23.2572220Z                     [33mhref[39m=[32m"/register"[39m
+2025-10-05T08:21:23.2572654Z                   [36m>[39m
+2025-10-05T08:21:23.2572911Z                     [0m免费注册[0m
+2025-10-05T08:21:23.2573176Z                     [36m<svg[39m
+2025-10-05T08:21:23.2573490Z                       [33mclass[39m=[32m"ml-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2573853Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2574164Z                     [36m/>[39m
+2025-10-05T08:21:23.2574411Z                   [36m</a>[39m
+2025-10-05T08:21:23.2574663Z                   [36m<button[39m
+2025-10-05T08:21:23.2575010Z                     [33mclass[39m=[32m"btn btn-outline btn-lg"[39m
+2025-10-05T08:21:23.2575308Z                   [36m>[39m
+2025-10-05T08:21:23.2575565Z                     [36m<svg[39m
+2025-10-05T08:21:23.2575881Z                       [33mclass[39m=[32m"mr-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2576236Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2576724Z                     [36m/>[39m
+2025-10-05T08:21:23.2576993Z                     [0m观看演示[0m
+2025-10-05T08:21:23.2577259Z                   [36m</button>[39m
+2025-10-05T08:21:23.2577537Z                 [36m</div>[39m
+2025-10-05T08:21:23.2577785Z               [36m</div>[39m
+2025-10-05T08:21:23.2578020Z             [36m</div>[39m
+2025-10-05T08:21:23.2578273Z           [36m</section>[39m
+2025-10-05T08:21:23.2578509Z           [36m<section[39m
+2025-10-05T08:21:23.2578820Z             [33mclass[39m=[32m"py-16 bg-muted/30"[39m
+2025-10-05T08:21:23.2579101Z           [36m>[39m
+2025-10-05T08:21:23.2579309Z             [36m<div[39m
+2025-10-05T08:21:23.2579623Z               [33mclass[39m=[32m"container-responsive"[39m
+2025-10-05T08:21:23.2579917Z             [36m>[39m
+2025-10-05T08:21:23.2580132Z               [36m<div[39m
+2025-10-05T08:21:23.2580520Z                 [33mclass[39m=[32m"grid grid-cols-2 lg:grid-cols-4 gap-8"[39m
+2025-10-05T08:21:23.2580855Z               [36m>[39m
+2025-10-05T08:21:23.2581230Z                 [36m<div[39m
+2025-10-05T08:21:23.2581525Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2581800Z                 [36m>[39m
+2025-10-05T08:21:23.2582045Z                   [36m<div[39m
+2025-10-05T08:21:23.2582612Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2583071Z                   [36m>[39m
+2025-10-05T08:21:23.2583325Z                     [36m<svg[39m
+2025-10-05T08:21:23.2583666Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2584045Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2584481Z                     [36m/>[39m
+2025-10-05T08:21:23.2584978Z                   [36m</div>[39m
+2025-10-05T08:21:23.2585492Z                   [36m<div[39m
+2025-10-05T08:21:23.2586240Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2587123Z                   [36m>[39m
+2025-10-05T08:21:23.2587638Z                     [0m10,000+[0m
+2025-10-05T08:21:23.2588162Z                   [36m</div>[39m
+2025-10-05T08:21:23.2588662Z                   [36m<div[39m
+2025-10-05T08:21:23.2589395Z                     [33mclass[39m=[32m"text-sm text-muted-foreground mb-1"[39m
+2025-10-05T08:21:23.2590035Z                   [36m>[39m
+2025-10-05T08:21:23.2590542Z                     [0m活跃用户[0m
+2025-10-05T08:21:23.2591044Z                   [36m</div>[39m
+2025-10-05T08:21:23.2591531Z                   [36m<div[39m
+2025-10-05T08:21:23.2592395Z                     [33mclass[39m=[32m"flex items-center justify-center text-xs text-green-600"[39m
+2025-10-05T08:21:23.2593102Z                   [36m>[39m
+2025-10-05T08:21:23.2593546Z                     [36m<svg[39m
+2025-10-05T08:21:23.2594109Z                       [33mclass[39m=[32m"h-3 w-3 mr-1"[39m
+2025-10-05T08:21:23.2595029Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2595576Z                     [36m/>[39m
+2025-10-05T08:21:23.2596031Z                     [0m+12%[0m
+2025-10-05T08:21:23.2596699Z                   [36m</div>[39m
+2025-10-05T08:21:23.2597185Z                 [36m</div>[39m
+2025-10-05T08:21:23.2597634Z                 [36m<div[39m
+2025-10-05T08:21:23.2598155Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2598647Z                 [36m>[39m
+2025-10-05T08:21:23.2599107Z                   [36m<div[39m
+2025-10-05T08:21:23.2600160Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2600998Z                   [36m>[39m
+2025-10-05T08:21:23.2601458Z                     [36m<svg[39m
+2025-10-05T08:21:23.2602068Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2602762Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2603321Z                     [36m/>[39m
+2025-10-05T08:21:23.2603788Z                   [36m</div>[39m
+2025-10-05T08:21:23.2604268Z                   [36m<div[39m
+2025-10-05T08:21:23.2604993Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2605585Z                   [36...
+2025-10-05T08:21:23.2605790Z 
+2025-10-05T08:21:23.2605965Z     [0m [90m 88 |[39m
+2025-10-05T08:21:23.2606613Z      [90m 89 |[39m     [90m// 找到搜索输入框[39m
+2025-10-05T08:21:23.2607720Z     [31m[1m>[22m[39m[90m 90 |[39m     [36mconst[39m searchInput [33m=[39m screen[33m.[39mgetByPlaceholderText([35m/输入您要搜索的内容/i[39m)
+2025-10-05T08:21:23.2608730Z      [90m    |[39m                                [31m[1m^[22m[39m
+2025-10-05T08:21:23.2610036Z      [90m 91 |[39m     [36mconst[39m searchButton [33m=[39m screen[33m.[39mgetByRole([32m'button'[39m[33m,[39m { name[33m:[39m [35m/搜索/i[39m })
+2025-10-05T08:21:23.2611280Z      [90m 92 |[39m
+2025-10-05T08:21:23.2611762Z      [90m 93 |[39m     [90m// 输入搜索内容[39m[0m
+2025-10-05T08:21:23.2612059Z 
+2025-10-05T08:21:23.2612527Z       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+2025-10-05T08:21:23.2613519Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:76:38)
+2025-10-05T08:21:23.2614466Z       at allQuery (node_modules/@testing-library/dom/dist/query-helpers.js:52:17)
+2025-10-05T08:21:23.2615338Z       at query (node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+2025-10-05T08:21:23.2616151Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:90:32)
+2025-10-05T08:21:23.2625292Z 
+2025-10-05T08:21:23.2625688Z   ● HomePage Component › 应该处理键盘事件
+2025-10-05T08:21:23.2625981Z 
+2025-10-05T08:21:23.2627687Z     TestingLibraryElementError: Unable to find an element with the placeholder text of: /输入您要搜索的内容/i
+2025-10-05T08:21:23.2628322Z 
+2025-10-05T08:21:23.2628561Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.2629049Z     [36m<body>[39m
+2025-10-05T08:21:23.2629384Z       [36m<div>[39m
+2025-10-05T08:21:23.2629727Z         [36m<div[39m
+2025-10-05T08:21:23.2630190Z           [33mclass[39m=[32m"min-h-screen"[39m
+2025-10-05T08:21:23.2630635Z         [36m>[39m
+2025-10-05T08:21:23.2631010Z           [36m<section[39m
+2025-10-05T08:21:23.2631732Z             [33mclass[39m=[32m"relative py-20 lg:py-32 overflow-hidden"[39m
+2025-10-05T08:21:23.2632326Z           [36m>[39m
+2025-10-05T08:21:23.2632692Z             [36m<div[39m
+2025-10-05T08:21:23.2633667Z               [33mclass[39m=[32m"absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"[39m
+2025-10-05T08:21:23.2634509Z             [36m/>[39m
+2025-10-05T08:21:23.2634929Z             [36m<div[39m
+2025-10-05T08:21:23.2635832Z               [33mclass[39m=[32m"absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2637165Z             [36m/>[39m
+2025-10-05T08:21:23.2637588Z             [36m<div[39m
+2025-10-05T08:21:23.2638539Z               [33mclass[39m=[32m"absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2639288Z             [36m/>[39m
+2025-10-05T08:21:23.2639689Z             [36m<div[39m
+2025-10-05T08:21:23.2640331Z               [33mclass[39m=[32m"relative container-responsive"[39m
+2025-10-05T08:21:23.2640950Z             [36m>[39m
+2025-10-05T08:21:23.2641366Z               [36m<div[39m
+2025-10-05T08:21:23.2642032Z                 [33mclass[39m=[32m"text-center max-w-4xl mx-auto"[39m
+2025-10-05T08:21:23.2642626Z               [36m>[39m
+2025-10-05T08:21:23.2643087Z                 [36m<div[39m
+2025-10-05T08:21:23.2643628Z                   [33mclass[39m=[32m"mb-6"[39m
+2025-10-05T08:21:23.2644150Z                 [36m>[39m
+2025-10-05T08:21:23.2644608Z                   [36m<span[39m
+2025-10-05T08:21:23.2645703Z                     [33mclass[39m=[32m"inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"[39m
+2025-10-05T08:21:23.2646983Z                   [36m>[39m
+2025-10-05T08:21:23.2647437Z                     [36m<svg[39m
+2025-10-05T08:21:23.2647963Z                       [33mclass[39m=[32m"h-4 w-4 mr-2"[39m
+2025-10-05T08:21:23.2648603Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2649186Z                     [36m/>[39m
+2025-10-05T08:21:23.2649728Z                     [0m全新 v2.0 版本发布[0m
+2025-10-05T08:21:23.2650262Z                   [36m</span>[39m
+2025-10-05T08:21:23.2650726Z                 [36m</div>[39m
+2025-10-05T08:21:23.2651122Z                 [36m<h1[39m
+2025-10-05T08:21:23.2651926Z                   [33mclass[39m=[32m"text-4xl lg:text-6xl font-bold text-foreground mb-6"[39m
+2025-10-05T08:21:23.2652607Z                 [36m>[39m
+2025-10-05T08:21:23.2653086Z                   [0m智能搜索，[0m
+2025-10-05T08:21:23.2653842Z                   [36m<span[39m
+2025-10-05T08:21:23.2654439Z                     [33mclass[39m=[32m"text-gradient"[39m
+2025-10-05T08:21:23.2655016Z                   [36m>[39m
+2025-10-05T08:21:23.2655615Z                     [0m重新定义[0m
+2025-10-05T08:21:23.2656140Z                   [36m</span>[39m
+2025-10-05T08:21:23.2656918Z                   [36m<br />[39m
+2025-10-05T08:21:23.2657495Z                   [0m知识管理体验[0m
+2025-10-05T08:21:23.2658009Z                 [36m</h1>[39m
+2025-10-05T08:21:23.2658480Z                 [36m<p[39m
+2025-10-05T08:21:23.2659357Z                   [33mclass[39m=[32m"text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2660117Z                 [36m>[39m
+2025-10-05T08:21:23.2660891Z                   [0m基于先进的 AI 技术，CORA 为您提供智能化的文档搜索和管理解决方案， 让知识触手可及，让工作更加高效。[0m
+2025-10-05T08:21:23.2661546Z                 [36m</p>[39m
+2025-10-05T08:21:23.2662018Z                 [36m<div[39m
+2025-10-05T08:21:23.2662564Z                   [33mclass[39m=[32m"mb-8"[39m
+2025-10-05T08:21:23.2663114Z                 [36m>[39m
+2025-10-05T08:21:23.2663592Z                   [36m<form[39m
+2025-10-05T08:21:23.2664210Z                     [33mclass[39m=[32m"max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2664756Z                   [36m>[39m
+2025-10-05T08:21:23.2665225Z                     [36m<div[39m
+2025-10-05T08:21:23.2665802Z                       [33mclass[39m=[32m"relative"[39m
+2025-10-05T08:21:23.2666572Z                     [36m>[39m
+2025-10-05T08:21:23.2667075Z                       [36m<svg[39m
+2025-10-05T08:21:23.2668152Z                         [33mclass[39m=[32m"absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground"[39m
+2025-10-05T08:21:23.2669189Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2669790Z                       [36m/>[39m
+2025-10-05T08:21:23.2670314Z                       [36m<input[39m
+2025-10-05T08:21:23.2672123Z                         [33mclass[39m=[32m"w-full pl-12 pr-32 py-4 text-lg border border-border rounded-xl bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"[39m
+2025-10-05T08:21:23.2673986Z                         [33mplaceholder[39m=[32m"搜索任何内容..."[39m
+2025-10-05T08:21:23.2674644Z                         [33mtype[39m=[32m"text"[39m
+2025-10-05T08:21:23.2675303Z                         [33mvalue[39m=[32m""[39m
+2025-10-05T08:21:23.2675895Z                       [36m/>[39m
+2025-10-05T08:21:23.2676673Z                       [36m<button[39m
+2025-10-05T08:21:23.2677735Z                         [33mclass[39m=[32m"absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-primary btn-md"[39m
+2025-10-05T08:21:23.2678714Z                         [33mtype[39m=[32m"submit"[39m
+2025-10-05T08:21:23.2679319Z                       [36m>[39m
+2025-10-05T08:21:23.2679881Z                         [0m开始搜索[0m
+2025-10-05T08:21:23.2680470Z                       [36m</button>[39m
+2025-10-05T08:21:23.2681066Z                     [36m</div>[39m
+2025-10-05T08:21:23.2681617Z                   [36m</form>[39m
+2025-10-05T08:21:23.2682166Z                 [36m</div>[39m
+2025-10-05T08:21:23.2682677Z                 [36m<div[39m
+2025-10-05T08:21:23.2683822Z                   [33mclass[39m=[32m"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"[39m
+2025-10-05T08:21:23.2684701Z                 [36m>[39m
+2025-10-05T08:21:23.2685110Z                   [36m<a[39m
+2025-10-05T08:21:23.2685679Z                     [33mclass[39m=[32m"btn btn-primary btn-lg"[39m
+2025-10-05T08:21:23.2686592Z                     [33mhref[39m=[32m"/register"[39m
+2025-10-05T08:21:23.2687144Z                   [36m>[39m
+2025-10-05T08:21:23.2687583Z                     [0m免费注册[0m
+2025-10-05T08:21:23.2688021Z                     [36m<svg[39m
+2025-10-05T08:21:23.2688558Z                       [33mclass[39m=[32m"ml-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2689387Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2689896Z                     [36m/>[39m
+2025-10-05T08:21:23.2690321Z                   [36m</a>[39m
+2025-10-05T08:21:23.2690767Z                   [36m<button[39m
+2025-10-05T08:21:23.2691347Z                     [33mclass[39m=[32m"btn btn-outline btn-lg"[39m
+2025-10-05T08:21:23.2691846Z                   [36m>[39m
+2025-10-05T08:21:23.2692263Z                     [36m<svg[39m
+2025-10-05T08:21:23.2692804Z                       [33mclass[39m=[32m"mr-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2693435Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2693934Z                     [36m/>[39m
+2025-10-05T08:21:23.2694362Z                     [0m观看演示[0m
+2025-10-05T08:21:23.2694846Z                   [36m</button>[39m
+2025-10-05T08:21:23.2695312Z                 [36m</div>[39m
+2025-10-05T08:21:23.2695768Z               [36m</div>[39m
+2025-10-05T08:21:23.2696205Z             [36m</div>[39m
+2025-10-05T08:21:23.2696817Z           [36m</section>[39m
+2025-10-05T08:21:23.2697236Z           [36m<section[39m
+2025-10-05T08:21:23.2697767Z             [33mclass[39m=[32m"py-16 bg-muted/30"[39m
+2025-10-05T08:21:23.2698265Z           [36m>[39m
+2025-10-05T08:21:23.2698638Z             [36m<div[39m
+2025-10-05T08:21:23.2699182Z               [33mclass[39m=[32m"container-responsive"[39m
+2025-10-05T08:21:23.2699677Z             [36m>[39m
+2025-10-05T08:21:23.2700037Z               [36m<div[39m
+2025-10-05T08:21:23.2700681Z                 [33mclass[39m=[32m"grid grid-cols-2 lg:grid-cols-4 gap-8"[39m
+2025-10-05T08:21:23.2701259Z               [36m>[39m
+2025-10-05T08:21:23.2701662Z                 [36m<div[39m
+2025-10-05T08:21:23.2702164Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2702628Z                 [36m>[39m
+2025-10-05T08:21:23.2703043Z                   [36m<div[39m
+2025-10-05T08:21:23.2704016Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2704986Z                   [36m>[39m
+2025-10-05T08:21:23.2705410Z                     [36m<svg[39m
+2025-10-05T08:21:23.2706000Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2706808Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2707334Z                     [36m/>[39m
+2025-10-05T08:21:23.2707782Z                   [36m</div>[39m
+2025-10-05T08:21:23.2708226Z                   [36m<div[39m
+2025-10-05T08:21:23.2708907Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2709495Z                   [36m>[39m
+2025-10-05T08:21:23.2709928Z                     [0m10,000+[0m
+2025-10-05T08:21:23.2710376Z                   [36m</div>[39m
+2025-10-05T08:21:23.2710816Z                   [36m<div[39m
+2025-10-05T08:21:23.2711471Z                     [33mclass[39m=[32m"text-sm text-muted-foreground mb-1"[39m
+2025-10-05T08:21:23.2712101Z                   [36m>[39m
+2025-10-05T08:21:23.2712538Z                     [0m活跃用户[0m
+2025-10-05T08:21:23.2712980Z                   [36m</div>[39m
+2025-10-05T08:21:23.2713433Z                   [36m<div[39m
+2025-10-05T08:21:23.2714290Z                     [33mclass[39m=[32m"flex items-center justify-center text-xs text-green-600"[39m
+2025-10-05T08:21:23.2714989Z                   [36m>[39m
+2025-10-05T08:21:23.2715444Z                     [36m<svg[39m
+2025-10-05T08:21:23.2715999Z                       [33mclass[39m=[32m"h-3 w-3 mr-1"[39m
+2025-10-05T08:21:23.2716835Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2717392Z                     [36m/>[39m
+2025-10-05T08:21:23.2717844Z                     [0m+12%[0m
+2025-10-05T08:21:23.2718306Z                   [36m</div>[39m
+2025-10-05T08:21:23.2718769Z                 [36m</div>[39m
+2025-10-05T08:21:23.2719431Z                 [36m<div[39m
+2025-10-05T08:21:23.2719973Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2720463Z                 [36m>[39m
+2025-10-05T08:21:23.2720904Z                   [36m<div[39m
+2025-10-05T08:21:23.2722007Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2722823Z                   [36m>[39m
+2025-10-05T08:21:23.2723273Z                     [36m<svg[39m
+2025-10-05T08:21:23.2723883Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2724547Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2725087Z                     [36m/>[39m
+2025-10-05T08:21:23.2725582Z                   [36m</div>[39m
+2025-10-05T08:21:23.2726036Z                   [36m<div[39m
+2025-10-05T08:21:23.2727211Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2727914Z                   [36...
+2025-10-05T08:21:23.2728132Z 
+2025-10-05T08:21:23.2728727Z     [0m [90m 118 |[39m     renderWithRouter([33m<[39m[33mHomePage[39m [33m/[39m[33m>[39m)
+2025-10-05T08:21:23.2729487Z      [90m 119 |[39m
+2025-10-05T08:21:23.2730651Z     [31m[1m>[22m[39m[90m 120 |[39m     [36mconst[39m searchInput [33m=[39m screen[33m.[39mgetByPlaceholderText([35m/输入您要搜索的内容/i[39m)
+2025-10-05T08:21:23.2731768Z      [90m     |[39m                                [31m[1m^[22m[39m
+2025-10-05T08:21:23.2732335Z      [90m 121 |[39m     
+2025-10-05T08:21:23.2732850Z      [90m 122 |[39m     [90m// 输入搜索内容[39m
+2025-10-05T08:21:23.2733995Z      [90m 123 |[39m     fireEvent[33m.[39mchange(searchInput[33m,[39m { target[33m:[39m { value[33m:[39m [32m'test query'[39m } })[0m
+2025-10-05T08:21:23.2734681Z 
+2025-10-05T08:21:23.2735149Z       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+2025-10-05T08:21:23.2736642Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:76:38)
+2025-10-05T08:21:23.2737601Z       at allQuery (node_modules/@testing-library/dom/dist/query-helpers.js:52:17)
+2025-10-05T08:21:23.2738450Z       at query (node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+2025-10-05T08:21:23.2739233Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:120:32)
+2025-10-05T08:21:23.2739666Z 
+2025-10-05T08:21:23.2740009Z   ● HomePage Component › 应该正确处理认证状态
+2025-10-05T08:21:23.2740308Z 
+2025-10-05T08:21:23.2741973Z     TestingLibraryElementError: Unable to find an element with the text: /欢迎回来/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+2025-10-05T08:21:23.2743253Z 
+2025-10-05T08:21:23.2743480Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.2743983Z     [36m<body>[39m
+2025-10-05T08:21:23.2744335Z       [36m<div>[39m
+2025-10-05T08:21:23.2744714Z         [36m<div[39m
+2025-10-05T08:21:23.2745210Z           [33mclass[39m=[32m"min-h-screen"[39m
+2025-10-05T08:21:23.2745727Z         [36m>[39m
+2025-10-05T08:21:23.2746110Z           [36m<section[39m
+2025-10-05T08:21:23.2747064Z             [33mclass[39m=[32m"relative py-20 lg:py-32 overflow-hidden"[39m
+2025-10-05T08:21:23.2747697Z           [36m>[39m
+2025-10-05T08:21:23.2748096Z             [36m<div[39m
+2025-10-05T08:21:23.2749095Z               [33mclass[39m=[32m"absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"[39m
+2025-10-05T08:21:23.2749952Z             [36m/>[39m
+2025-10-05T08:21:23.2750374Z             [36m<div[39m
+2025-10-05T08:21:23.2751317Z               [33mclass[39m=[32m"absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2752023Z             [36m/>[39m
+2025-10-05T08:21:23.2752409Z             [36m<div[39m
+2025-10-05T08:21:23.2753297Z               [33mclass[39m=[32m"absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2754335Z             [36m/>[39m
+2025-10-05T08:21:23.2754738Z             [36m<div[39m
+2025-10-05T08:21:23.2755384Z               [33mclass[39m=[32m"relative container-responsive"[39m
+2025-10-05T08:21:23.2755959Z             [36m>[39m
+2025-10-05T08:21:23.2756565Z               [36m<div[39m
+2025-10-05T08:21:23.2757241Z                 [33mclass[39m=[32m"text-center max-w-4xl mx-auto"[39m
+2025-10-05T08:21:23.2757830Z               [36m>[39m
+2025-10-05T08:21:23.2758279Z                 [36m<div[39m
+2025-10-05T08:21:23.2758837Z                   [33mclass[39m=[32m"mb-6"[39m
+2025-10-05T08:21:23.2759365Z                 [36m>[39m
+2025-10-05T08:21:23.2759828Z                   [36m<span[39m
+2025-10-05T08:21:23.2761027Z                     [33mclass[39m=[32m"inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"[39m
+2025-10-05T08:21:23.2762046Z                   [36m>[39m
+2025-10-05T08:21:23.2762575Z                     [36m<svg[39m
+2025-10-05T08:21:23.2763202Z                       [33mclass[39m=[32m"h-4 w-4 mr-2"[39m
+2025-10-05T08:21:23.2763890Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2764512Z                     [36m/>[39m
+2025-10-05T08:21:23.2765086Z                     [0m全新 v2.0 版本发布[0m
+2025-10-05T08:21:23.2765670Z                   [36m</span>[39m
+2025-10-05T08:21:23.2766220Z                 [36m</div>[39m
+2025-10-05T08:21:23.2766983Z                 [36m<h1[39m
+2025-10-05T08:21:23.2767831Z                   [33mclass[39m=[32m"text-4xl lg:text-6xl font-bold text-foreground mb-6"[39m
+2025-10-05T08:21:23.2768573Z                 [36m>[39m
+2025-10-05T08:21:23.2769093Z                   [0m智能搜索，[0m
+2025-10-05T08:21:23.2769610Z                   [36m<span[39m
+2025-10-05T08:21:23.2770221Z                     [33mclass[39m=[32m"text-gradient"[39m
+2025-10-05T08:21:23.2771106Z                   [36m>[39m
+2025-10-05T08:21:23.2771640Z                     [0m重新定义[0m
+2025-10-05T08:21:23.2772171Z                   [36m</span>[39m
+2025-10-05T08:21:23.2772695Z                   [36m<br />[39m
+2025-10-05T08:21:23.2773252Z                   [0m知识管理体验[0m
+2025-10-05T08:21:23.2773758Z                 [36m</h1>[39m
+2025-10-05T08:21:23.2774192Z                 [36m<p[39m
+2025-10-05T08:21:23.2775027Z                   [33mclass[39m=[32m"text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2775744Z                 [36m>[39m
+2025-10-05T08:21:23.2776715Z                   [0m基于先进的 AI 技术，CORA 为您提供智能化的文档搜索和管理解决方案， 让知识触手可及，让工作更加高效。[0m
+2025-10-05T08:21:23.2777384Z                 [36m</p>[39m
+2025-10-05T08:21:23.2777880Z                 [36m<div[39m
+2025-10-05T08:21:23.2778425Z                   [33mclass[39m=[32m"mb-8"[39m
+2025-10-05T08:21:23.2778929Z                 [36m>[39m
+2025-10-05T08:21:23.2779407Z                   [36m<form[39m
+2025-10-05T08:21:23.2780366Z                     [33mclass[39m=[32m"max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2780949Z                   [36m>[39m
+2025-10-05T08:21:23.2781471Z                     [36m<div[39m
+2025-10-05T08:21:23.2782092Z                       [33mclass[39m=[32m"relative"[39m
+2025-10-05T08:21:23.2782697Z                     [36m>[39m
+2025-10-05T08:21:23.2783214Z                       [36m<svg[39m
+2025-10-05T08:21:23.2784407Z                         [33mclass[39m=[32m"absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground"[39m
+2025-10-05T08:21:23.2785492Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2786124Z                       [36m/>[39m
+2025-10-05T08:21:23.2786895Z                       [36m<input[39m
+2025-10-05T08:21:23.2788718Z                         [33mclass[39m=[32m"w-full pl-12 pr-32 py-4 text-lg border border-border rounded-xl bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"[39m
+2025-10-05T08:21:23.2790354Z                         [33mplaceholder[39m=[32m"搜索任何内容..."[39m
+2025-10-05T08:21:23.2791061Z                         [33mtype[39m=[32m"text"[39m
+2025-10-05T08:21:23.2791714Z                         [33mvalue[39m=[32m""[39m
+2025-10-05T08:21:23.2792300Z                       [36m/>[39m
+2025-10-05T08:21:23.2792855Z                       [36m<button[39m
+2025-10-05T08:21:23.2793929Z                         [33mclass[39m=[32m"absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-primary btn-md"[39m
+2025-10-05T08:21:23.2794948Z                         [33mtype[39m=[32m"submit"[39m
+2025-10-05T08:21:23.2795543Z                       [36m>[39m
+2025-10-05T08:21:23.2796094Z                         [0m开始搜索[0m
+2025-10-05T08:21:23.2796880Z                       [36m</button>[39m
+2025-10-05T08:21:23.2797448Z                     [36m</div>[39m
+2025-10-05T08:21:23.2798003Z                   [36m</form>[39m
+2025-10-05T08:21:23.2798879Z                 [36m</div>[39m
+2025-10-05T08:21:23.2799376Z                 [36m<div[39m
+2025-10-05T08:21:23.2800510Z                   [33mclass[39m=[32m"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"[39m
+2025-10-05T08:21:23.2801473Z                 [36m>[39m
+2025-10-05T08:21:23.2801950Z                   [36m<a[39m
+2025-10-05T08:21:23.2802584Z                     [33mclass[39m=[32m"btn btn-primary btn-lg"[39m
+2025-10-05T08:21:23.2802916Z                     [33mhref[39m=[32m"/search"[39m
+2025-10-05T08:21:23.2803134Z                   [36m>[39m
+2025-10-05T08:21:23.2803424Z                     [0m开始使用[0m
+2025-10-05T08:21:23.2803684Z                     [36m<svg[39m
+2025-10-05T08:21:23.2804030Z                       [33mclass[39m=[32m"ml-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2804420Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2804679Z                     [36m/>[39m
+2025-10-05T08:21:23.2804951Z                   [36m</a>[39m
+2025-10-05T08:21:23.2805306Z                   [36m<button[39m
+2025-10-05T08:21:23.2805722Z                     [33mclass[39m=[32m"btn btn-outline btn-lg"[39m
+2025-10-05T08:21:23.2805943Z                   [36m>[39m
+2025-10-05T08:21:23.2806196Z                     [36m<svg[39m
+2025-10-05T08:21:23.2806832Z                       [33mclass[39m=[32m"mr-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2807223Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2807480Z                     [36m/>[39m
+2025-10-05T08:21:23.2807748Z                     [0m观看演示[0m
+2025-10-05T08:21:23.2808018Z                   [36m</button>[39m
+2025-10-05T08:21:23.2808264Z                 [36m</div>[39m
+2025-10-05T08:21:23.2808500Z               [36m</div>[39m
+2025-10-05T08:21:23.2808691Z             [36m</div>[39m
+2025-10-05T08:21:23.2808923Z           [36m</section>[39m
+2025-10-05T08:21:23.2809353Z           [36m<section[39m
+2025-10-05T08:21:23.2809721Z             [33mclass[39m=[32m"py-16 bg-muted/30"[39m
+2025-10-05T08:21:23.2809928Z           [36m>[39m
+2025-10-05T08:21:23.2810148Z             [36m<div[39m
+2025-10-05T08:21:23.2810530Z               [33mclass[39m=[32m"container-responsive"[39m
+2025-10-05T08:21:23.2810729Z             [36m>[39m
+2025-10-05T08:21:23.2810942Z               [36m<div[39m
+2025-10-05T08:21:23.2811438Z                 [33mclass[39m=[32m"grid grid-cols-2 lg:grid-cols-4 gap-8"[39m
+2025-10-05T08:21:23.2811643Z               [36m>[39m
+2025-10-05T08:21:23.2811883Z                 [36m<div[39m
+2025-10-05T08:21:23.2812411Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2812641Z                 [36m>[39m
+2025-10-05T08:21:23.2812895Z                   [36m<div[39m
+2025-10-05T08:21:23.2813705Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2813977Z                   [36m>[39m
+2025-10-05T08:21:23.2814242Z                     [36m<svg[39m
+2025-10-05T08:21:23.2814643Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2815022Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2815278Z                     [36m/>[39m
+2025-10-05T08:21:23.2815547Z                   [36m</div>[39m
+2025-10-05T08:21:23.2815800Z                   [36m<div[39m
+2025-10-05T08:21:23.2816496Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2816764Z                   [36m>[39m
+2025-10-05T08:21:23.2817025Z                     [0m10,000+[0m
+2025-10-05T08:21:23.2817294Z                   [36m</div>[39m
+2025-10-05T08:21:23.2817553Z                   [36m<div[39m
+2025-10-05T08:21:23.2818043Z                     [33mclass[39m=[32m"text-sm text-muted-foreground mb-1"[39m
+2025-10-05T08:21:23.2818280Z                   [36m>[39m
+2025-10-05T08:21:23.2818834Z                     [0m活跃用户[0m
+2025-10-05T08:21:23.2819107Z                   [36m</div>[39m
+2025-10-05T08:21:23.2819375Z                   [36m<div[39m
+2025-10-05T08:21:23.2820021Z                     [33mclass[39m=[32m"flex items-center justify-center text-xs text-green-600"[39m
+2025-10-05T08:21:23.2820273Z                   [36m>[39m
+2025-10-05T08:21:23.2820541Z                     [36m<svg[39m
+2025-10-05T08:21:23.2820911Z                       [33mclass[39m=[32m"h-3 w-3 mr-1"[39m
+2025-10-05T08:21:23.2821378Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2821651Z                     [36m/>[39m
+2025-10-05T08:21:23.2821902Z                     [0m+12%[0m
+2025-10-05T08:21:23.2822172Z                   [36m</div>[39m
+2025-10-05T08:21:23.2822426Z                 [36m</div>[39m
+2025-10-05T08:21:23.2822673Z                 [36m<div[39m
+2025-10-05T08:21:23.2823027Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2823273Z                 [36m>[39m
+2025-10-05T08:21:23.2823534Z                   [36m<div[39m
+2025-10-05T08:21:23.2824361Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2824613Z                   [36m>[39m
+2025-10-05T08:21:23.2824874Z                     [36m<svg[39m
+2025-10-05T08:21:23.2825282Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2825664Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2825944Z                     [36m/>[39m
+2025-10-05T08:21:23.2826205Z                   [36m</div>[39m
+2025-10-05T08:21:23.2826686Z                   [36m<div[39m
+2025-10-05T08:21:23.2827220Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2827444Z                   [36m>...
+2025-10-05T08:21:23.2827464Z 
+2025-10-05T08:21:23.2827912Z     [0m [90m 167 |[39m
+2025-10-05T08:21:23.2828266Z      [90m 168 |[39m     [90m// 验证已认证状态的显示[39m
+2025-10-05T08:21:23.2829092Z     [31m[1m>[22m[39m[90m 169 |[39m     expect(screen[33m.[39mgetByText([35m/欢迎回来/[39m))[33m.[39mtoBeInTheDocument()
+2025-10-05T08:21:23.2829480Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T08:21:23.2829695Z      [90m 170 |[39m   })
+2025-10-05T08:21:23.2829907Z      [90m 171 |[39m
+2025-10-05T08:21:23.2830375Z      [90m 172 |[39m   it([32m'应该正确处理未认证状态'[39m[33m,[39m () [33m=>[39m {[0m
+2025-10-05T08:21:23.2830397Z 
+2025-10-05T08:21:23.2830899Z       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+2025-10-05T08:21:23.2831402Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:76:38)
+2025-10-05T08:21:23.2831857Z       at allQuery (node_modules/@testing-library/dom/dist/query-helpers.js:52:17)
+2025-10-05T08:21:23.2832301Z       at query (node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+2025-10-05T08:21:23.2832729Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:169:19)
+2025-10-05T08:21:23.2832749Z 
+2025-10-05T08:21:23.2833109Z   ● HomePage Component › 应该正确处理未认证状态
+2025-10-05T08:21:23.2833130Z 
+2025-10-05T08:21:23.2833855Z     TestingLibraryElementError: Found multiple elements with the text: /开始使用/
+2025-10-05T08:21:23.2833957Z 
+2025-10-05T08:21:23.2834171Z     Here are the matching elements:
+2025-10-05T08:21:23.2834193Z 
+2025-10-05T08:21:23.2834412Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.2834632Z     [36m<h2[39m
+2025-10-05T08:21:23.2835204Z       [33mclass[39m=[32m"text-3xl lg:text-4xl font-bold text-foreground mb-4"[39m
+2025-10-05T08:21:23.2835419Z     [36m>[39m
+2025-10-05T08:21:23.2835638Z       [0m三步开始使用[0m
+2025-10-05T08:21:23.2835835Z     [36m</h2>[39m
+2025-10-05T08:21:23.2835850Z 
+2025-10-05T08:21:23.2836073Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.2836441Z     [36m<p[39m
+2025-10-05T08:21:23.2837176Z       [33mclass[39m=[32m"text-muted-foreground"[39m
+2025-10-05T08:21:23.2837359Z     [36m>[39m
+2025-10-05T08:21:23.2837641Z       [0m创建您的免费账户，开始使用 CORA[0m
+2025-10-05T08:21:23.2837827Z     [36m</p>[39m
+2025-10-05T08:21:23.2837842Z 
+2025-10-05T08:21:23.2838058Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.2838241Z     [36m<a[39m
+2025-10-05T08:21:23.2838596Z       [33mclass[39m=[32m"btn btn-primary btn-lg"[39m
+2025-10-05T08:21:23.2838878Z       [33mhref[39m=[32m"/register"[39m
+2025-10-05T08:21:23.2839061Z     [36m>[39m
+2025-10-05T08:21:23.2839258Z       [0m免费开始使用[0m
+2025-10-05T08:21:23.2839444Z       [36m<svg[39m
+2025-10-05T08:21:23.2839737Z         [33mclass[39m=[32m"ml-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2840057Z         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2840234Z       [36m/>[39m
+2025-10-05T08:21:23.2840408Z     [36m</a>[39m
+2025-10-05T08:21:23.2840423Z 
+2025-10-05T08:21:23.2841129Z     (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+2025-10-05T08:21:23.2841173Z 
+2025-10-05T08:21:23.2841385Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.2841583Z     [36m<body>[39m
+2025-10-05T08:21:23.2841781Z       [36m<div>[39m
+2025-10-05T08:21:23.2841974Z         [36m<div[39m
+2025-10-05T08:21:23.2842304Z           [33mclass[39m=[32m"min-h-screen"[39m
+2025-10-05T08:21:23.2842508Z         [36m>[39m
+2025-10-05T08:21:23.2842735Z           [36m<section[39m
+2025-10-05T08:21:23.2843254Z             [33mclass[39m=[32m"relative py-20 lg:py-32 overflow-hidden"[39m
+2025-10-05T08:21:23.2843467Z           [36m>[39m
+2025-10-05T08:21:23.2843677Z             [36m<div[39m
+2025-10-05T08:21:23.2844498Z               [33mclass[39m=[32m"absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"[39m
+2025-10-05T08:21:23.2844741Z             [36m/>[39m
+2025-10-05T08:21:23.2844956Z             [36m<div[39m
+2025-10-05T08:21:23.2845934Z               [33mclass[39m=[32m"absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2846167Z             [36m/>[39m
+2025-10-05T08:21:23.2846585Z             [36m<div[39m
+2025-10-05T08:21:23.2847372Z               [33mclass[39m=[32m"absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2847594Z             [36m/>[39m
+2025-10-05T08:21:23.2847806Z             [36m<div[39m
+2025-10-05T08:21:23.2848261Z               [33mclass[39m=[32m"relative container-responsive"[39m
+2025-10-05T08:21:23.2848473Z             [36m>[39m
+2025-10-05T08:21:23.2848691Z               [36m<div[39m
+2025-10-05T08:21:23.2849138Z                 [33mclass[39m=[32m"text-center max-w-4xl mx-auto"[39m
+2025-10-05T08:21:23.2849354Z               [36m>[39m
+2025-10-05T08:21:23.2849594Z                 [36m<div[39m
+2025-10-05T08:21:23.2849912Z                   [33mclass[39m=[32m"mb-6"[39m
+2025-10-05T08:21:23.2850143Z                 [36m>[39m
+2025-10-05T08:21:23.2850403Z                   [36m<span[39m
+2025-10-05T08:21:23.2851338Z                     [33mclass[39m=[32m"inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"[39m
+2025-10-05T08:21:23.2851603Z                   [36m>[39m
+2025-10-05T08:21:23.2851861Z                     [36m<svg[39m
+2025-10-05T08:21:23.2852214Z                       [33mclass[39m=[32m"h-4 w-4 mr-2"[39m
+2025-10-05T08:21:23.2852598Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2852864Z                     [36m/>[39m
+2025-10-05T08:21:23.2853172Z                     [0m全新 v2.0 版本发布[0m
+2025-10-05T08:21:23.2853418Z                   [36m</span>[39m
+2025-10-05T08:21:23.2853673Z                 [36m</div>[39m
+2025-10-05T08:21:23.2853893Z                 [36m<h1[39m
+2025-10-05T08:21:23.2854498Z                   [33mclass[39m=[32m"text-4xl lg:text-6xl font-bold text-foreground mb-6"[39m
+2025-10-05T08:21:23.2854989Z                 [36m>[39m
+2025-10-05T08:21:23.2855296Z                   [0m智能搜索，[0m
+2025-10-05T08:21:23.2855558Z                   [36m<span[39m
+2025-10-05T08:21:23.2855916Z                     [33mclass[39m=[32m"text-gradient"[39m
+2025-10-05T08:21:23.2856128Z                   [36m>[39m
+2025-10-05T08:21:23.2856607Z                     [0m重新定义[0m
+2025-10-05T08:21:23.2856905Z                   [36m</span>[39m
+2025-10-05T08:21:23.2857179Z                   [36m<br />[39m
+2025-10-05T08:21:23.2857459Z                   [0m知识管理体验[0m
+2025-10-05T08:21:23.2857710Z                 [36m</h1>[39m
+2025-10-05T08:21:23.2857927Z                 [36m<p[39m
+2025-10-05T08:21:23.2858534Z                   [33mclass[39m=[32m"text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2858755Z                 [36m>[39m
+2025-10-05T08:21:23.2859274Z                   [0m基于先进的 AI 技术，CORA 为您提供智能化的文档搜索和管理解决方案， 让知识触手可及，让工作更加高效。[0m
+2025-10-05T08:21:23.2859560Z                 [36m</p>[39m
+2025-10-05T08:21:23.2859787Z                 [36m<div[39m
+2025-10-05T08:21:23.2860108Z                   [33mclass[39m=[32m"mb-8"[39m
+2025-10-05T08:21:23.2860313Z                 [36m>[39m
+2025-10-05T08:21:23.2860572Z                   [36m<form[39m
+2025-10-05T08:21:23.2860960Z                     [33mclass[39m=[32m"max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2861184Z                   [36m>[39m
+2025-10-05T08:21:23.2861437Z                     [36m<div[39m
+2025-10-05T08:21:23.2861788Z                       [33mclass[39m=[32m"relative"[39m
+2025-10-05T08:21:23.2862050Z                     [36m>[39m
+2025-10-05T08:21:23.2862312Z                       [36m<svg[39m
+2025-10-05T08:21:23.2863179Z                         [33mclass[39m=[32m"absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground"[39m
+2025-10-05T08:21:23.2863689Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2864230Z                       [36m/>[39m
+2025-10-05T08:21:23.2864527Z                       [36m<input[39m
+2025-10-05T08:21:23.2866051Z                         [33mclass[39m=[32m"w-full pl-12 pr-32 py-4 text-lg border border-border rounded-xl bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"[39m
+2025-10-05T08:21:23.2866728Z                         [33mplaceholder[39m=[32m"搜索任何内容..."[39m
+2025-10-05T08:21:23.2867058Z                         [33mtype[39m=[32m"text"[39m
+2025-10-05T08:21:23.2867369Z                         [33mvalue[39m=[32m""[39m
+2025-10-05T08:21:23.2867640Z                       [36m/>[39m
+2025-10-05T08:21:23.2867903Z                       [36m<button[39m
+2025-10-05T08:21:23.2868674Z                         [33mclass[39m=[32m"absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-primary btn-md"[39m
+2025-10-05T08:21:23.2869034Z                         [33mtype[39m=[32m"submit"[39m
+2025-10-05T08:21:23.2869327Z                       [36m>[39m
+2025-10-05T08:21:23.2869623Z                         [0m开始搜索[0m
+2025-10-05T08:21:23.2869884Z                       [36m</button>[39m
+2025-10-05T08:21:23.2870143Z                     [36m</div>[39m
+2025-10-05T08:21:23.2870410Z                   [36m</form>[39m
+2025-10-05T08:21:23.2870661Z                 [36m</div>[39m
+2025-10-05T08:21:23.2870907Z                 [36m<div[39m
+2025-10-05T08:21:23.2871791Z                   [33mclass[39m=[32m"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"[39m
+2025-10-05T08:21:23.2872030Z                 [36m>[39m
+2025-10-05T08:21:23.2872278Z                   [36m<a[39m
+2025-10-05T08:21:23.2872683Z                     [33mclass[39m=[32m"btn btn-primary btn-lg"[39m
+2025-10-05T08:21:23.2873008Z                     [33mhref[39m=[32m"/register"[39m
+2025-10-05T08:21:23.2873240Z                   [36m>[39m
+2025-10-05T08:21:23.2873509Z                     [0m免费注册[0m
+2025-10-05T08:21:23.2874021Z                     [36m<svg[39m
+2025-10-05T08:21:23.2874386Z                       [33mclass[39m=[32m"ml-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2874759Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2875010Z                     [36m/>[39m
+2025-10-05T08:21:23.2875246Z                   [36m</a>[39m
+2025-10-05T08:21:23.2875489Z                   [36m<button[39m
+2025-10-05T08:21:23.2875892Z                     [33mclass[39m=[32m"btn btn-outline btn-lg"[39m
+2025-10-05T08:21:23.2876115Z                   [36m>[39m
+2025-10-05T08:21:23.2876585Z                     [36m<svg[39m
+2025-10-05T08:21:23.2876954Z                       [33mclass[39m=[32m"mr-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2877319Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2877588Z                     [36m/>[39m
+2025-10-05T08:21:23.2877849Z                     [0m观看演示[0m
+2025-10-05T08:21:23.2878118Z                   [36m</button>[39m
+2025-10-05T08:21:23.2878397Z                 [36m</div>[39m
+2025-10-05T08:21:23.2878632Z               [36m</div>[39m
+2025-10-05T08:21:23.2878821Z             [36m</div>[39m
+2025-10-05T08:21:23.2879076Z           [36m</section>[39m
+2025-10-05T08:21:23.2879290Z           [36m<section[39m
+2025-10-05T08:21:23.2879650Z             [33mclass[39m=[32m"py-16 bg-muted/30"[39m
+2025-10-05T08:21:23.2879858Z           [36m>[39m
+2025-10-05T08:21:23.2880069Z             [36m<div[39m
+2025-10-05T08:21:23.2880466Z               [33mclass[39m=[32m"container-responsive"[39m
+2025-10-05T08:21:23.2880658Z             [36m>[39m
+2025-10-05T08:21:23.2880865Z               [36m<div[39m
+2025-10-05T08:21:23.2881363Z                 [33mclass[39m=[32m"grid grid-cols-2 lg:grid-cols-4 gap-8"[39m
+2025-10-05T08:21:23.2881559Z               [36m>[39m
+2025-10-05T08:21:23.2881768Z                 [36m<div[39m
+2025-10-05T08:21:23.2882082Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2882520Z                 [36m>[39m
+2025-10-05T08:21:23.2882769Z                   [36m<div[39m
+2025-10-05T08:21:23.2883637Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2883849Z                   [36m>[39m
+2025-10-05T08:21:23.2884089Z                     [36m<svg[39m
+2025-10-05T08:21:23.2884461Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2884815Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2885060Z                     [36m/>[39m
+2025-10-05T08:21:23.2885296Z                   [36m</div>[39m
+2025-10-05T08:21:23.2885527Z                   [36m<div[39m
+2025-10-05T08:21:23.2886025Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2886217Z                   [36m>[39m
+2025-10-05T08:21:23.2886725Z                     [0m10,000+[0m
+2025-10-05T08:21:23.2886969Z                   [36m</div>[39m
+2025-10-05T08:21:23.2887203Z                   [36m<div[39m
+2025-10-05T08:21:23.2887715Z                     [33mclass[39m=[32m"text-sm text-muted-foreground mb-1"[39m
+2025-10-05T08:21:23.2887942Z                   [36m>[39m
+2025-10-05T08:21:23.2888216Z                     [0m活跃用户[0m
+2025-10-05T08:21:23.2888495Z                   [36m</div>[39m
+2025-10-05T08:21:23.2888746Z                   [36m<div[39m
+2025-10-05T08:21:23.2889395Z                     [33mclass[39m=[32m"flex items-center justify-center text-xs text-green-600"[39m
+2025-10-05T08:21:23.2889622Z                   [36m>[39m
+2025-10-05T08:21:23.2889897Z                     [36m<svg[39m
+2025-10-05T08:21:23.2890271Z                       [33mclass[39m=[32m"h-3 w-3 mr-1"[39m
+2025-10-05T08:21:23.2890640Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2890908Z                     [36m/>[39m
+2025-10-05T08:21:23.2891447Z                     [0m+12%[0m
+2025-10-05T08:21:23.2891903Z                   [36m</div>[39m
+2025-10-05T08:21:23.2892167Z                 [36m</div>[39m
+2025-10-05T08:21:23.2892425Z                 [36m<div[39m
+2025-10-05T08:21:23.2892768Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2892992Z                 [36m>[39m
+2025-10-05T08:21:23.2893239Z                   [36m<div[39m
+2025-10-05T08:21:23.2894216Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2894450Z                   [36m>[39m
+2025-10-05T08:21:23.2894701Z                     [36m<svg[39m
+2025-10-05T08:21:23.2895091Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2895443Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2895670Z                     [36m/>[39m
+2025-10-05T08:21:23.2895924Z                   [36m</div>[39m
+2025-10-05T08:21:23.2896186Z                   [36m<div[39m
+2025-10-05T08:21:23.2896917Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2897129Z                   [36...
+2025-10-05T08:21:23.2897147Z 
+2025-10-05T08:21:23.2897333Z     [0m [90m 197 |[39m
+2025-10-05T08:21:23.2897651Z      [90m 198 |[39m     [90m// 验证未认证状态的显示[39m
+2025-10-05T08:21:23.2898427Z     [31m[1m>[22m[39m[90m 199 |[39m     expect(screen[33m.[39mgetByText([35m/开始使用/[39m))[33m.[39mtoBeInTheDocument()
+2025-10-05T08:21:23.2898804Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T08:21:23.2899018Z      [90m 200 |[39m   })
+2025-10-05T08:21:23.2899204Z      [90m 201 |[39m
+2025-10-05T08:21:23.2899659Z      [90m 202 |[39m   it([32m'应该支持无障碍访问'[39m[33m,[39m () [33m=>[39m {[0m
+2025-10-05T08:21:23.2899678Z 
+2025-10-05T08:21:23.2900204Z       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+2025-10-05T08:21:23.2900944Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:20:35)
+2025-10-05T08:21:23.2901444Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:23:10)
+2025-10-05T08:21:23.2902058Z       at getMultipleElementsFoundError (node_modules/@testing-library/dom/dist/query-helpers.js:55:13)
+2025-10-05T08:21:23.2902484Z       at query (node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+2025-10-05T08:21:23.2902874Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:199:19)
+2025-10-05T08:21:23.2902890Z 
+2025-10-05T08:21:23.2903206Z   ● HomePage Component › 应该支持无障碍访问
+2025-10-05T08:21:23.2903234Z 
+2025-10-05T08:21:23.2903825Z     TestingLibraryElementError: Unable to find a label with the text of: /搜索/i
+2025-10-05T08:21:23.2903842Z 
+2025-10-05T08:21:23.2904056Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.2904263Z     [36m<body>[39m
+2025-10-05T08:21:23.2904463Z       [36m<div>[39m
+2025-10-05T08:21:23.2904689Z         [36m<div[39m
+2025-10-05T08:21:23.2905030Z           [33mclass[39m=[32m"min-h-screen"[39m
+2025-10-05T08:21:23.2905219Z         [36m>[39m
+2025-10-05T08:21:23.2905432Z           [36m<section[39m
+2025-10-05T08:21:23.2905923Z             [33mclass[39m=[32m"relative py-20 lg:py-32 overflow-hidden"[39m
+2025-10-05T08:21:23.2906107Z           [36m>[39m
+2025-10-05T08:21:23.2906557Z             [36m<div[39m
+2025-10-05T08:21:23.2907331Z               [33mclass[39m=[32m"absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"[39m
+2025-10-05T08:21:23.2907510Z             [36m/>[39m
+2025-10-05T08:21:23.2907704Z             [36m<div[39m
+2025-10-05T08:21:23.2908405Z               [33mclass[39m=[32m"absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2908602Z             [36m/>[39m
+2025-10-05T08:21:23.2908787Z             [36m<div[39m
+2025-10-05T08:21:23.2909516Z               [33mclass[39m=[32m"absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2909973Z             [36m/>[39m
+2025-10-05T08:21:23.2910170Z             [36m<div[39m
+2025-10-05T08:21:23.2910597Z               [33mclass[39m=[32m"relative container-responsive"[39m
+2025-10-05T08:21:23.2910808Z             [36m>[39m
+2025-10-05T08:21:23.2911011Z               [36m<div[39m
+2025-10-05T08:21:23.2911440Z                 [33mclass[39m=[32m"text-center max-w-4xl mx-auto"[39m
+2025-10-05T08:21:23.2911657Z               [36m>[39m
+2025-10-05T08:21:23.2911892Z                 [36m<div[39m
+2025-10-05T08:21:23.2912205Z                   [33mclass[39m=[32m"mb-6"[39m
+2025-10-05T08:21:23.2912390Z                 [36m>[39m
+2025-10-05T08:21:23.2912625Z                   [36m<span[39m
+2025-10-05T08:21:23.2913458Z                     [33mclass[39m=[32m"inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"[39m
+2025-10-05T08:21:23.2913685Z                   [36m>[39m
+2025-10-05T08:21:23.2913935Z                     [36m<svg[39m
+2025-10-05T08:21:23.2914269Z                       [33mclass[39m=[32m"h-4 w-4 mr-2"[39m
+2025-10-05T08:21:23.2914603Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2914836Z                     [36m/>[39m
+2025-10-05T08:21:23.2915106Z                     [0m全新 v2.0 版本发布[0m
+2025-10-05T08:21:23.2915342Z                   [36m</span>[39m
+2025-10-05T08:21:23.2915563Z                 [36m</div>[39m
+2025-10-05T08:21:23.2915748Z                 [36m<h1[39m
+2025-10-05T08:21:23.2916494Z                   [33mclass[39m=[32m"text-4xl lg:text-6xl font-bold text-foreground mb-6"[39m
+2025-10-05T08:21:23.2916713Z                 [36m>[39m
+2025-10-05T08:21:23.2916950Z                   [0m智能搜索，[0m
+2025-10-05T08:21:23.2917193Z                   [36m<span[39m
+2025-10-05T08:21:23.2917534Z                     [33mclass[39m=[32m"text-gradient"[39m
+2025-10-05T08:21:23.2918001Z                   [36m>[39m
+2025-10-05T08:21:23.2918243Z                     [0m重新定义[0m
+2025-10-05T08:21:23.2918472Z                   [36m</span>[39m
+2025-10-05T08:21:23.2918694Z                   [36m<br />[39m
+2025-10-05T08:21:23.2918942Z                   [0m知识管理体验[0m
+2025-10-05T08:21:23.2919169Z                 [36m</h1>[39m
+2025-10-05T08:21:23.2919363Z                 [36m<p[39m
+2025-10-05T08:21:23.2919945Z                   [33mclass[39m=[32m"text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2920143Z                 [36m>[39m
+2025-10-05T08:21:23.2920644Z                   [0m基于先进的 AI 技术，CORA 为您提供智能化的文档搜索和管理解决方案， 让知识触手可及，让工作更加高效。[0m
+2025-10-05T08:21:23.2920911Z                 [36m</p>[39m
+2025-10-05T08:21:23.2921155Z                 [36m<div[39m
+2025-10-05T08:21:23.2921554Z                   [33mclass[39m=[32m"mb-8"[39m
+2025-10-05T08:21:23.2921761Z                 [36m>[39m
+2025-10-05T08:21:23.2922002Z                   [36m<form[39m
+2025-10-05T08:21:23.2922429Z                     [33mclass[39m=[32m"max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2922647Z                   [36m>[39m
+2025-10-05T08:21:23.2922905Z                     [36m<div[39m
+2025-10-05T08:21:23.2923244Z                       [33mclass[39m=[32m"relative"[39m
+2025-10-05T08:21:23.2923492Z                     [36m>[39m
+2025-10-05T08:21:23.2923755Z                       [36m<svg[39m
+2025-10-05T08:21:23.2924555Z                         [33mclass[39m=[32m"absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground"[39m
+2025-10-05T08:21:23.2924940Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2925198Z                       [36m/>[39m
+2025-10-05T08:21:23.2925463Z                       [36m<input[39m
+2025-10-05T08:21:23.2927202Z                         [33mclass[39m=[32m"w-full pl-12 pr-32 py-4 text-lg border border-border rounded-xl bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"[39m
+2025-10-05T08:21:23.2927885Z                         [33mplaceholder[39m=[32m"搜索任何内容..."[39m
+2025-10-05T08:21:23.2928222Z                         [33mtype[39m=[32m"text"[39m
+2025-10-05T08:21:23.2928555Z                         [33mvalue[39m=[32m""[39m
+2025-10-05T08:21:23.2928804Z                       [36m/>[39m
+2025-10-05T08:21:23.2929077Z                       [36m<button[39m
+2025-10-05T08:21:23.2929857Z                         [33mclass[39m=[32m"absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-primary btn-md"[39m
+2025-10-05T08:21:23.2930200Z                         [33mtype[39m=[32m"submit"[39m
+2025-10-05T08:21:23.2930447Z                       [36m>[39m
+2025-10-05T08:21:23.2930710Z                         [0m开始搜索[0m
+2025-10-05T08:21:23.2930986Z                       [36m</button>[39m
+2025-10-05T08:21:23.2931233Z                     [36m</div>[39m
+2025-10-05T08:21:23.2931478Z                   [36m</form>[39m
+2025-10-05T08:21:23.2931753Z                 [36m</div>[39m
+2025-10-05T08:21:23.2932011Z                 [36m<div[39m
+2025-10-05T08:21:23.2932904Z                   [33mclass[39m=[32m"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"[39m
+2025-10-05T08:21:23.2933263Z                 [36m>[39m
+2025-10-05T08:21:23.2933493Z                   [36m<a[39m
+2025-10-05T08:21:23.2933906Z                     [33mclass[39m=[32m"btn btn-primary btn-lg"[39m
+2025-10-05T08:21:23.2934241Z                     [33mhref[39m=[32m"/register"[39m
+2025-10-05T08:21:23.2934446Z                   [36m>[39m
+2025-10-05T08:21:23.2934712Z                     [0m免费注册[0m
+2025-10-05T08:21:23.2934954Z                     [36m<svg[39m
+2025-10-05T08:21:23.2935291Z                       [33mclass[39m=[32m"ml-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2935668Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2935909Z                     [36m/>[39m
+2025-10-05T08:21:23.2936661Z                   [36m</a>[39m
+2025-10-05T08:21:23.2936895Z                   [36m<button[39m
+2025-10-05T08:21:23.2937271Z                     [33mclass[39m=[32m"btn btn-outline btn-lg"[39m
+2025-10-05T08:21:23.2937476Z                   [36m>[39m
+2025-10-05T08:21:23.2937703Z                     [36m<svg[39m
+2025-10-05T08:21:23.2938038Z                       [33mclass[39m=[32m"mr-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2938396Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2938639Z                     [36m/>[39m
+2025-10-05T08:21:23.2938888Z                     [0m观看演示[0m
+2025-10-05T08:21:23.2939163Z                   [36m</button>[39m
+2025-10-05T08:21:23.2939406Z                 [36m</div>[39m
+2025-10-05T08:21:23.2939639Z               [36m</div>[39m
+2025-10-05T08:21:23.2939844Z             [36m</div>[39m
+2025-10-05T08:21:23.2940077Z           [36m</section>[39m
+2025-10-05T08:21:23.2940279Z           [36m<section[39m
+2025-10-05T08:21:23.2940634Z             [33mclass[39m=[32m"py-16 bg-muted/30"[39m
+2025-10-05T08:21:23.2940814Z           [36m>[39m
+2025-10-05T08:21:23.2941012Z             [36m<div[39m
+2025-10-05T08:21:23.2941391Z               [33mclass[39m=[32m"container-responsive"[39m
+2025-10-05T08:21:23.2941573Z             [36m>[39m
+2025-10-05T08:21:23.2941777Z               [36m<div[39m
+2025-10-05T08:21:23.2942257Z                 [33mclass[39m=[32m"grid grid-cols-2 lg:grid-cols-4 gap-8"[39m
+2025-10-05T08:21:23.2942454Z               [36m>[39m
+2025-10-05T08:21:23.2942680Z                 [36m<div[39m
+2025-10-05T08:21:23.2942998Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2943204Z                 [36m>[39m
+2025-10-05T08:21:23.2943449Z                   [36m<div[39m
+2025-10-05T08:21:23.2944259Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2944474Z                   [36m>[39m
+2025-10-05T08:21:23.2944972Z                     [36m<svg[39m
+2025-10-05T08:21:23.2945386Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2945757Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2945997Z                     [36m/>[39m
+2025-10-05T08:21:23.2946249Z                   [36m</div>[39m
+2025-10-05T08:21:23.2946705Z                   [36m<div[39m
+2025-10-05T08:21:23.2947226Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2947439Z                   [36m>[39m
+2025-10-05T08:21:23.2947689Z                     [0m10,000+[0m
+2025-10-05T08:21:23.2947932Z                   [36m</div>[39m
+2025-10-05T08:21:23.2948174Z                   [36m<div[39m
+2025-10-05T08:21:23.2948641Z                     [33mclass[39m=[32m"text-sm text-muted-foreground mb-1"[39m
+2025-10-05T08:21:23.2948844Z                   [36m>[39m
+2025-10-05T08:21:23.2949159Z                     [0m活跃用户[0m
+2025-10-05T08:21:23.2949416Z                   [36m</div>[39m
+2025-10-05T08:21:23.2949659Z                   [36m<div[39m
+2025-10-05T08:21:23.2950270Z                     [33mclass[39m=[32m"flex items-center justify-center text-xs text-green-600"[39m
+2025-10-05T08:21:23.2950490Z                   [36m>[39m
+2025-10-05T08:21:23.2950752Z                     [36m<svg[39m
+2025-10-05T08:21:23.2951113Z                       [33mclass[39m=[32m"h-3 w-3 mr-1"[39m
+2025-10-05T08:21:23.2951493Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2951744Z                     [36m/>[39m
+2025-10-05T08:21:23.2951987Z                     [0m+12%[0m
+2025-10-05T08:21:23.2952247Z                   [36m</div>[39m
+2025-10-05T08:21:23.2952482Z                 [36m</div>[39m
+2025-10-05T08:21:23.2952711Z                 [36m<div[39m
+2025-10-05T08:21:23.2953048Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.2953484Z                 [36m>[39m
+2025-10-05T08:21:23.2953726Z                   [36m<div[39m
+2025-10-05T08:21:23.2954542Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.2954747Z                   [36m>[39m
+2025-10-05T08:21:23.2955000Z                     [36m<svg[39m
+2025-10-05T08:21:23.2955387Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.2955744Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2955989Z                     [36m/>[39m
+2025-10-05T08:21:23.2956234Z                   [36m</div>[39m
+2025-10-05T08:21:23.2956728Z                   [36m<div[39m
+2025-10-05T08:21:23.2957245Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.2957443Z                   [36...
+2025-10-05T08:21:23.2957461Z 
+2025-10-05T08:21:23.2957652Z     [0m [90m 208 |[39m
+2025-10-05T08:21:23.2957969Z      [90m 209 |[39m     [90m// 检查表单标签[39m
+2025-10-05T08:21:23.2958794Z     [31m[1m>[22m[39m[90m 210 |[39m     [36mconst[39m searchInput [33m=[39m screen[33m.[39mgetByLabelText([35m/搜索/i[39m)
+2025-10-05T08:21:23.2959185Z      [90m     |[39m                                [31m[1m^[22m[39m
+2025-10-05T08:21:23.2959620Z      [90m 211 |[39m     expect(searchInput)[33m.[39mtoBeInTheDocument()
+2025-10-05T08:21:23.2959804Z      [90m 212 |[39m
+2025-10-05T08:21:23.2960120Z      [90m 213 |[39m     [90m// 检查按钮可访问性[39m[0m
+2025-10-05T08:21:23.2960136Z 
+2025-10-05T08:21:23.2960620Z       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+2025-10-05T08:21:23.2961133Z       at getElementError (node_modules/@testing-library/dom/dist/queries/label-text.js:111:38)
+2025-10-05T08:21:23.2961556Z       at allQuery (node_modules/@testing-library/dom/dist/query-helpers.js:52:17)
+2025-10-05T08:21:23.2961959Z       at query (node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+2025-10-05T08:21:23.2962585Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:210:32)
+2025-10-05T08:21:23.2962603Z 
+2025-10-05T08:21:23.2962926Z   ● HomePage Component › 应该正确处理响应式设计
+2025-10-05T08:21:23.2962952Z 
+2025-10-05T08:21:23.2964679Z     TestingLibraryElementError: Unable to find an element with the text: /智能搜索与文档管理平台/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+2025-10-05T08:21:23.2964709Z 
+2025-10-05T08:21:23.2964925Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.2965141Z     [36m<body>[39m
+2025-10-05T08:21:23.2965313Z       [36m<div>[39m
+2025-10-05T08:21:23.2965499Z         [36m<div[39m
+2025-10-05T08:21:23.2965801Z           [33mclass[39m=[32m"min-h-screen"[39m
+2025-10-05T08:21:23.2965975Z         [36m>[39m
+2025-10-05T08:21:23.2966183Z           [36m<section[39m
+2025-10-05T08:21:23.2966941Z             [33mclass[39m=[32m"relative py-20 lg:py-32 overflow-hidden"[39m
+2025-10-05T08:21:23.2967137Z           [36m>[39m
+2025-10-05T08:21:23.2967346Z             [36m<div[39m
+2025-10-05T08:21:23.2968122Z               [33mclass[39m=[32m"absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"[39m
+2025-10-05T08:21:23.2968344Z             [36m/>[39m
+2025-10-05T08:21:23.2968537Z             [36m<div[39m
+2025-10-05T08:21:23.2969216Z               [33mclass[39m=[32m"absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2969413Z             [36m/>[39m
+2025-10-05T08:21:23.2969592Z             [36m<div[39m
+2025-10-05T08:21:23.2970301Z               [33mclass[39m=[32m"absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.2970503Z             [36m/>[39m
+2025-10-05T08:21:23.2970685Z             [36m<div[39m
+2025-10-05T08:21:23.2971107Z               [33mclass[39m=[32m"relative container-responsive"[39m
+2025-10-05T08:21:23.2971593Z             [36m>[39m
+2025-10-05T08:21:23.2971806Z               [36m<div[39m
+2025-10-05T08:21:23.2972233Z                 [33mclass[39m=[32m"text-center max-w-4xl mx-auto"[39m
+2025-10-05T08:21:23.2972419Z               [36m>[39m
+2025-10-05T08:21:23.2972648Z                 [36m<div[39m
+2025-10-05T08:21:23.2972953Z                   [33mclass[39m=[32m"mb-6"[39m
+2025-10-05T08:21:23.2973155Z                 [36m>[39m
+2025-10-05T08:21:23.2973404Z                   [36m<span[39m
+2025-10-05T08:21:23.2974297Z                     [33mclass[39m=[32m"inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"[39m
+2025-10-05T08:21:23.2974507Z                   [36m>[39m
+2025-10-05T08:21:23.2974759Z                     [36m<svg[39m
+2025-10-05T08:21:23.2975109Z                       [33mclass[39m=[32m"h-4 w-4 mr-2"[39m
+2025-10-05T08:21:23.2975465Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2975732Z                     [36m/>[39m
+2025-10-05T08:21:23.2976028Z                     [0m全新 v2.0 版本发布[0m
+2025-10-05T08:21:23.2976487Z                   [36m</span>[39m
+2025-10-05T08:21:23.2976734Z                 [36m</div>[39m
+2025-10-05T08:21:23.2976926Z                 [36m<h1[39m
+2025-10-05T08:21:23.2977501Z                   [33mclass[39m=[32m"text-4xl lg:text-6xl font-bold text-foreground mb-6"[39m
+2025-10-05T08:21:23.2977714Z                 [36m>[39m
+2025-10-05T08:21:23.2977966Z                   [0m智能搜索，[0m
+2025-10-05T08:21:23.2978216Z                   [36m<span[39m
+2025-10-05T08:21:23.2978562Z                     [33mclass[39m=[32m"text-gradient"[39m
+2025-10-05T08:21:23.2978760Z                   [36m>[39m
+2025-10-05T08:21:23.2979018Z                     [0m重新定义[0m
+2025-10-05T08:21:23.2979271Z                   [36m</span>[39m
+2025-10-05T08:21:23.2979530Z                   [36m<br />[39m
+2025-10-05T08:21:23.2980083Z                   [0m知识管理体验[0m
+2025-10-05T08:21:23.2980342Z                 [36m</h1>[39m
+2025-10-05T08:21:23.2980560Z                 [36m<p[39m
+2025-10-05T08:21:23.2981173Z                   [33mclass[39m=[32m"text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2981404Z                 [36m>[39m
+2025-10-05T08:21:23.2981911Z                   [0m基于先进的 AI 技术，CORA 为您提供智能化的文档搜索和管理解决方案， 让知识触手可及，让工作更加高效。[0m
+2025-10-05T08:21:23.2982156Z                 [36m</p>[39m
+2025-10-05T08:21:23.2982387Z                 [36m<div[39m
+2025-10-05T08:21:23.2982772Z                   [33mclass[39m=[32m"mb-8"[39m
+2025-10-05T08:21:23.2983021Z                 [36m>[39m
+2025-10-05T08:21:23.2983275Z                   [36m<form[39m
+2025-10-05T08:21:23.2983653Z                     [33mclass[39m=[32m"max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.2983856Z                   [36m>[39m
+2025-10-05T08:21:23.2984121Z                     [36m<div[39m
+2025-10-05T08:21:23.2984473Z                       [33mclass[39m=[32m"relative"[39m
+2025-10-05T08:21:23.2984760Z                     [36m>[39m
+2025-10-05T08:21:23.2985020Z                       [36m<svg[39m
+2025-10-05T08:21:23.2985844Z                         [33mclass[39m=[32m"absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground"[39m
+2025-10-05T08:21:23.2986218Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2986787Z                       [36m/>[39m
+2025-10-05T08:21:23.2987046Z                       [36m<input[39m
+2025-10-05T08:21:23.2988567Z                         [33mclass[39m=[32m"w-full pl-12 pr-32 py-4 text-lg border border-border rounded-xl bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"[39m
+2025-10-05T08:21:23.2988984Z                         [33mplaceholder[39m=[32m"搜索任何内容..."[39m
+2025-10-05T08:21:23.2989316Z                         [33mtype[39m=[32m"text"[39m
+2025-10-05T08:21:23.2989865Z                         [33mvalue[39m=[32m""[39m
+2025-10-05T08:21:23.2990127Z                       [36m/>[39m
+2025-10-05T08:21:23.2990412Z                       [36m<button[39m
+2025-10-05T08:21:23.2991191Z                         [33mclass[39m=[32m"absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-primary btn-md"[39m
+2025-10-05T08:21:23.2991551Z                         [33mtype[39m=[32m"submit"[39m
+2025-10-05T08:21:23.2991802Z                       [36m>[39m
+2025-10-05T08:21:23.2992064Z                         [0m开始搜索[0m
+2025-10-05T08:21:23.2992338Z                       [36m</button>[39m
+2025-10-05T08:21:23.2992575Z                     [36m</div>[39m
+2025-10-05T08:21:23.2992810Z                   [36m</form>[39m
+2025-10-05T08:21:23.2993052Z                 [36m</div>[39m
+2025-10-05T08:21:23.2993286Z                 [36m<div[39m
+2025-10-05T08:21:23.2994122Z                   [33mclass[39m=[32m"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"[39m
+2025-10-05T08:21:23.2994349Z                 [36m>[39m
+2025-10-05T08:21:23.2994561Z                   [36m<a[39m
+2025-10-05T08:21:23.2994949Z                     [33mclass[39m=[32m"btn btn-primary btn-lg"[39m
+2025-10-05T08:21:23.2995255Z                     [33mhref[39m=[32m"/register"[39m
+2025-10-05T08:21:23.2995444Z                   [36m>[39m
+2025-10-05T08:21:23.2995689Z                     [0m免费注册[0m
+2025-10-05T08:21:23.2995917Z                     [36m<svg[39m
+2025-10-05T08:21:23.2996246Z                       [33mclass[39m=[32m"ml-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2996829Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2997073Z                     [36m/>[39m
+2025-10-05T08:21:23.2997321Z                   [36m</a>[39m
+2025-10-05T08:21:23.2997568Z                   [36m<button[39m
+2025-10-05T08:21:23.2997940Z                     [33mclass[39m=[32m"btn btn-outline btn-lg"[39m
+2025-10-05T08:21:23.2998419Z                   [36m>[39m
+2025-10-05T08:21:23.2998668Z                     [36m<svg[39m
+2025-10-05T08:21:23.2999008Z                       [33mclass[39m=[32m"mr-2 h-5 w-5"[39m
+2025-10-05T08:21:23.2999389Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.2999635Z                     [36m/>[39m
+2025-10-05T08:21:23.2999895Z                     [0m观看演示[0m
+2025-10-05T08:21:23.3000159Z                   [36m</button>[39m
+2025-10-05T08:21:23.3000403Z                 [36m</div>[39m
+2025-10-05T08:21:23.3000646Z               [36m</div>[39m
+2025-10-05T08:21:23.3000853Z             [36m</div>[39m
+2025-10-05T08:21:23.3001092Z           [36m</section>[39m
+2025-10-05T08:21:23.3001302Z           [36m<section[39m
+2025-10-05T08:21:23.3001647Z             [33mclass[39m=[32m"py-16 bg-muted/30"[39m
+2025-10-05T08:21:23.3001833Z           [36m>[39m
+2025-10-05T08:21:23.3002041Z             [36m<div[39m
+2025-10-05T08:21:23.3002408Z               [33mclass[39m=[32m"container-responsive"[39m
+2025-10-05T08:21:23.3002628Z             [36m>[39m
+2025-10-05T08:21:23.3002827Z               [36m<div[39m
+2025-10-05T08:21:23.3003306Z                 [33mclass[39m=[32m"grid grid-cols-2 lg:grid-cols-4 gap-8"[39m
+2025-10-05T08:21:23.3003514Z               [36m>[39m
+2025-10-05T08:21:23.3003738Z                 [36m<div[39m
+2025-10-05T08:21:23.3004056Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.3004257Z                 [36m>[39m
+2025-10-05T08:21:23.3004487Z                   [36m<div[39m
+2025-10-05T08:21:23.3005282Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.3005506Z                   [36m>[39m
+2025-10-05T08:21:23.3005754Z                     [36m<svg[39m
+2025-10-05T08:21:23.3006162Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.3006756Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.3007328Z                     [36m/>[39m
+2025-10-05T08:21:23.3007605Z                   [36m</div>[39m
+2025-10-05T08:21:23.3007854Z                   [36m<div[39m
+2025-10-05T08:21:23.3008398Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.3008626Z                   [36m>[39m
+2025-10-05T08:21:23.3008871Z                     [0m10,000+[0m
+2025-10-05T08:21:23.3009128Z                   [36m</div>[39m
+2025-10-05T08:21:23.3009359Z                   [36m<div[39m
+2025-10-05T08:21:23.3009835Z                     [33mclass[39m=[32m"text-sm text-muted-foreground mb-1"[39m
+2025-10-05T08:21:23.3010071Z                   [36m>[39m
+2025-10-05T08:21:23.3010420Z                     [0m活跃用户[0m
+2025-10-05T08:21:23.3010718Z                   [36m</div>[39m
+2025-10-05T08:21:23.3011076Z                   [36m<div[39m
+2025-10-05T08:21:23.3011771Z                     [33mclass[39m=[32m"flex items-center justify-center text-xs text-green-600"[39m
+2025-10-05T08:21:23.3012089Z                   [36m>[39m
+2025-10-05T08:21:23.3012590Z                     [36m<svg[39m
+2025-10-05T08:21:23.3013004Z                       [33mclass[39m=[32m"h-3 w-3 mr-1"[39m
+2025-10-05T08:21:23.3013428Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.3013778Z                     [36m/>[39m
+2025-10-05T08:21:23.3014069Z                     [0m+12%[0m
+2025-10-05T08:21:23.3014471Z                   [36m</div>[39m
+2025-10-05T08:21:23.3014923Z                 [36m</div>[39m
+2025-10-05T08:21:23.3015258Z                 [36m<div[39m
+2025-10-05T08:21:23.3015662Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.3015999Z                 [36m>[39m
+2025-10-05T08:21:23.3016647Z                   [36m<div[39m
+2025-10-05T08:21:23.3017667Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.3018318Z                   [36m>[39m
+2025-10-05T08:21:23.3018668Z                     [36m<svg[39m
+2025-10-05T08:21:23.3019199Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.3019633Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.3019992Z                     [36m/>[39m
+2025-10-05T08:21:23.3020289Z                   [36m</div>[39m
+2025-10-05T08:21:23.3020691Z                   [36m<div[39m
+2025-10-05T08:21:23.3021467Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.3021775Z                   [36...
+2025-10-05T08:21:23.3021796Z 
+2025-10-05T08:21:23.3022048Z     [0m [90m 229 |[39m
+2025-10-05T08:21:23.3022575Z      [90m 230 |[39m     [90m// 验证移动端布局[39m
+2025-10-05T08:21:23.3023468Z     [31m[1m>[22m[39m[90m 231 |[39m     expect(screen[33m.[39mgetByText([35m/智能搜索与文档管理平台/i[39m))[33m.[39mtoBeInTheDocument()
+2025-10-05T08:21:23.3024098Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T08:21:23.3024351Z      [90m 232 |[39m
+2025-10-05T08:21:23.3024701Z      [90m 233 |[39m     [90m// 测试桌面端[39m
+2025-10-05T08:21:23.3025615Z      [90m 234 |[39m     [33mObject[39m[33m.[39mdefineProperty(window[33m,[39m [32m'innerWidth'[39m[33m,[39m {[0m
+2025-10-05T08:21:23.3025645Z 
+2025-10-05T08:21:23.3026196Z       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+2025-10-05T08:21:23.3038779Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:76:38)
+2025-10-05T08:21:23.3039314Z       at allQuery (node_modules/@testing-library/dom/dist/query-helpers.js:52:17)
+2025-10-05T08:21:23.3039769Z       at query (node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+2025-10-05T08:21:23.3040177Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:231:19)
+2025-10-05T08:21:23.3040198Z 
+2025-10-05T08:21:23.3040565Z   ● HomePage Component › 应该正确处理动画效果
+2025-10-05T08:21:23.3040831Z 
+2025-10-05T08:21:23.3042641Z     TestingLibraryElementError: Unable to find an element with the text: /智能搜索与文档管理平台/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+2025-10-05T08:21:23.3042678Z 
+2025-10-05T08:21:23.3042916Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.3043152Z     [36m<body>[39m
+2025-10-05T08:21:23.3043347Z       [36m<div>[39m
+2025-10-05T08:21:23.3043553Z         [36m<div[39m
+2025-10-05T08:21:23.3043876Z           [33mclass[39m=[32m"min-h-screen"[39m
+2025-10-05T08:21:23.3044068Z         [36m>[39m
+2025-10-05T08:21:23.3044291Z           [36m<section[39m
+2025-10-05T08:21:23.3044793Z             [33mclass[39m=[32m"relative py-20 lg:py-32 overflow-hidden"[39m
+2025-10-05T08:21:23.3044993Z           [36m>[39m
+2025-10-05T08:21:23.3045211Z             [36m<div[39m
+2025-10-05T08:21:23.3046053Z               [33mclass[39m=[32m"absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"[39m
+2025-10-05T08:21:23.3046517Z             [36m/>[39m
+2025-10-05T08:21:23.3046724Z             [36m<div[39m
+2025-10-05T08:21:23.3047410Z               [33mclass[39m=[32m"absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.3047605Z             [36m/>[39m
+2025-10-05T08:21:23.3047783Z             [36m<div[39m
+2025-10-05T08:21:23.3048462Z               [33mclass[39m=[32m"absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"[39m
+2025-10-05T08:21:23.3048666Z             [36m/>[39m
+2025-10-05T08:21:23.3048841Z             [36m<div[39m
+2025-10-05T08:21:23.3049236Z               [33mclass[39m=[32m"relative container-responsive"[39m
+2025-10-05T08:21:23.3049400Z             [36m>[39m
+2025-10-05T08:21:23.3049578Z               [36m<div[39m
+2025-10-05T08:21:23.3049967Z                 [33mclass[39m=[32m"text-center max-w-4xl mx-auto"[39m
+2025-10-05T08:21:23.3050386Z               [36m>[39m
+2025-10-05T08:21:23.3050617Z                 [36m<div[39m
+2025-10-05T08:21:23.3050919Z                   [33mclass[39m=[32m"mb-6"[39m
+2025-10-05T08:21:23.3051100Z                 [36m>[39m
+2025-10-05T08:21:23.3051334Z                   [36m<span[39m
+2025-10-05T08:21:23.3052215Z                     [33mclass[39m=[32m"inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"[39m
+2025-10-05T08:21:23.3052408Z                   [36m>[39m
+2025-10-05T08:21:23.3052637Z                     [36m<svg[39m
+2025-10-05T08:21:23.3052960Z                       [33mclass[39m=[32m"h-4 w-4 mr-2"[39m
+2025-10-05T08:21:23.3053311Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.3053540Z                     [36m/>[39m
+2025-10-05T08:21:23.3053822Z                     [0m全新 v2.0 版本发布[0m
+2025-10-05T08:21:23.3054081Z                   [36m</span>[39m
+2025-10-05T08:21:23.3054357Z                 [36m</div>[39m
+2025-10-05T08:21:23.3054562Z                 [36m<h1[39m
+2025-10-05T08:21:23.3055164Z                   [33mclass[39m=[32m"text-4xl lg:text-6xl font-bold text-foreground mb-6"[39m
+2025-10-05T08:21:23.3055367Z                 [36m>[39m
+2025-10-05T08:21:23.3055609Z                   [0m智能搜索，[0m
+2025-10-05T08:21:23.3055844Z                   [36m<span[39m
+2025-10-05T08:21:23.3056183Z                     [33mclass[39m=[32m"text-gradient"[39m
+2025-10-05T08:21:23.3056725Z                   [36m>[39m
+2025-10-05T08:21:23.3057001Z                     [0m重新定义[0m
+2025-10-05T08:21:23.3057262Z                   [36m</span>[39m
+2025-10-05T08:21:23.3057508Z                   [36m<br />[39m
+2025-10-05T08:21:23.3057756Z                   [0m知识管理体验[0m
+2025-10-05T08:21:23.3057988Z                 [36m</h1>[39m
+2025-10-05T08:21:23.3058191Z                 [36m<p[39m
+2025-10-05T08:21:23.3058762Z                   [33mclass[39m=[32m"text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.3059226Z                 [36m>[39m
+2025-10-05T08:21:23.3059766Z                   [0m基于先进的 AI 技术，CORA 为您提供智能化的文档搜索和管理解决方案， 让知识触手可及，让工作更加高效。[0m
+2025-10-05T08:21:23.3060039Z                 [36m</p>[39m
+2025-10-05T08:21:23.3060268Z                 [36m<div[39m
+2025-10-05T08:21:23.3060598Z                   [33mclass[39m=[32m"mb-8"[39m
+2025-10-05T08:21:23.3060820Z                 [36m>[39m
+2025-10-05T08:21:23.3061093Z                   [36m<form[39m
+2025-10-05T08:21:23.3061463Z                     [33mclass[39m=[32m"max-w-2xl mx-auto"[39m
+2025-10-05T08:21:23.3061667Z                   [36m>[39m
+2025-10-05T08:21:23.3061923Z                     [36m<div[39m
+2025-10-05T08:21:23.3062263Z                       [33mclass[39m=[32m"relative"[39m
+2025-10-05T08:21:23.3062507Z                     [36m>[39m
+2025-10-05T08:21:23.3062765Z                       [36m<svg[39m
+2025-10-05T08:21:23.3063691Z                         [33mclass[39m=[32m"absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground"[39m
+2025-10-05T08:21:23.3064310Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.3064550Z                       [36m/>[39m
+2025-10-05T08:21:23.3064804Z                       [36m<input[39m
+2025-10-05T08:21:23.3066511Z                         [33mclass[39m=[32m"w-full pl-12 pr-32 py-4 text-lg border border-border rounded-xl bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"[39m
+2025-10-05T08:21:23.3066895Z                         [33mplaceholder[39m=[32m"搜索任何内容..."[39m
+2025-10-05T08:21:23.3067173Z                         [33mtype[39m=[32m"text"[39m
+2025-10-05T08:21:23.3067467Z                         [33mvalue[39m=[32m""[39m
+2025-10-05T08:21:23.3067706Z                       [36m/>[39m
+2025-10-05T08:21:23.3067972Z                       [36m<button[39m
+2025-10-05T08:21:23.3068781Z                         [33mclass[39m=[32m"absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-primary btn-md"[39m
+2025-10-05T08:21:23.3069115Z                         [33mtype[39m=[32m"submit"[39m
+2025-10-05T08:21:23.3069352Z                       [36m>[39m
+2025-10-05T08:21:23.3069583Z                         [0m开始搜索[0m
+2025-10-05T08:21:23.3069849Z                       [36m</button>[39m
+2025-10-05T08:21:23.3070095Z                     [36m</div>[39m
+2025-10-05T08:21:23.3070344Z                   [36m</form>[39m
+2025-10-05T08:21:23.3070589Z                 [36m</div>[39m
+2025-10-05T08:21:23.3070821Z                 [36m<div[39m
+2025-10-05T08:21:23.3071684Z                   [33mclass[39m=[32m"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"[39m
+2025-10-05T08:21:23.3071908Z                 [36m>[39m
+2025-10-05T08:21:23.3072131Z                   [36m<a[39m
+2025-10-05T08:21:23.3072528Z                     [33mclass[39m=[32m"btn btn-primary btn-lg"[39m
+2025-10-05T08:21:23.3073121Z                     [33mhref[39m=[32m"/register"[39m
+2025-10-05T08:21:23.3073336Z                   [36m>[39m
+2025-10-05T08:21:23.3073604Z                     [0m免费注册[0m
+2025-10-05T08:21:23.3073845Z                     [36m<svg[39m
+2025-10-05T08:21:23.3074178Z                       [33mclass[39m=[32m"ml-2 h-5 w-5"[39m
+2025-10-05T08:21:23.3074559Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.3074811Z                     [36m/>[39m
+2025-10-05T08:21:23.3075068Z                   [36m</a>[39m
+2025-10-05T08:21:23.3075333Z                   [36m<button[39m
+2025-10-05T08:21:23.3075757Z                     [33mclass[39m=[32m"btn btn-outline btn-lg"[39m
+2025-10-05T08:21:23.3075976Z                   [36m>[39m
+2025-10-05T08:21:23.3076217Z                     [36m<svg[39m
+2025-10-05T08:21:23.3076847Z                       [33mclass[39m=[32m"mr-2 h-5 w-5"[39m
+2025-10-05T08:21:23.3077232Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.3077380Z                     [36m/>[39m
+2025-10-05T08:21:23.3077531Z                     [0m观看演示[0m
+2025-10-05T08:21:23.3077672Z                   [36m</button>[39m
+2025-10-05T08:21:23.3077796Z                 [36m</div>[39m
+2025-10-05T08:21:23.3077923Z               [36m</div>[39m
+2025-10-05T08:21:23.3078031Z             [36m</div>[39m
+2025-10-05T08:21:23.3078152Z           [36m</section>[39m
+2025-10-05T08:21:23.3078275Z           [36m<section[39m
+2025-10-05T08:21:23.3078463Z             [33mclass[39m=[32m"py-16 bg-muted/30"[39m
+2025-10-05T08:21:23.3078564Z           [36m>[39m
+2025-10-05T08:21:23.3078678Z             [36m<div[39m
+2025-10-05T08:21:23.3078884Z               [33mclass[39m=[32m"container-responsive"[39m
+2025-10-05T08:21:23.3078993Z             [36m>[39m
+2025-10-05T08:21:23.3079096Z               [36m<div[39m
+2025-10-05T08:21:23.3079357Z                 [33mclass[39m=[32m"grid grid-cols-2 lg:grid-cols-4 gap-8"[39m
+2025-10-05T08:21:23.3079693Z               [36m>[39m
+2025-10-05T08:21:23.3079815Z                 [36m<div[39m
+2025-10-05T08:21:23.3079987Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.3080094Z                 [36m>[39m
+2025-10-05T08:21:23.3080214Z                   [36m<div[39m
+2025-10-05T08:21:23.3080654Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.3080766Z                   [36m>[39m
+2025-10-05T08:21:23.3080889Z                     [36m<svg[39m
+2025-10-05T08:21:23.3081102Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.3081286Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.3081405Z                     [36m/>[39m
+2025-10-05T08:21:23.3081533Z                   [36m</div>[39m
+2025-10-05T08:21:23.3081652Z                   [36m<div[39m
+2025-10-05T08:21:23.3081933Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.3082043Z                   [36m>[39m
+2025-10-05T08:21:23.3082171Z                     [0m10,000+[0m
+2025-10-05T08:21:23.3082302Z                   [36m</div>[39m
+2025-10-05T08:21:23.3082422Z                   [36m<div[39m
+2025-10-05T08:21:23.3082665Z                     [33mclass[39m=[32m"text-sm text-muted-foreground mb-1"[39m
+2025-10-05T08:21:23.3082774Z                   [36m>[39m
+2025-10-05T08:21:23.3082946Z                     [0m活跃用户[0m
+2025-10-05T08:21:23.3083075Z                   [36m</div>[39m
+2025-10-05T08:21:23.3083200Z                   [36m<div[39m
+2025-10-05T08:21:23.3083538Z                     [33mclass[39m=[32m"flex items-center justify-center text-xs text-green-600"[39m
+2025-10-05T08:21:23.3083646Z                   [36m>[39m
+2025-10-05T08:21:23.3083771Z                     [36m<svg[39m
+2025-10-05T08:21:23.3083949Z                       [33mclass[39m=[32m"h-3 w-3 mr-1"[39m
+2025-10-05T08:21:23.3084266Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.3084387Z                     [36m/>[39m
+2025-10-05T08:21:23.3084506Z                     [0m+12%[0m
+2025-10-05T08:21:23.3084635Z                   [36m</div>[39m
+2025-10-05T08:21:23.3084755Z                 [36m</div>[39m
+2025-10-05T08:21:23.3084874Z                 [36m<div[39m
+2025-10-05T08:21:23.3085051Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T08:21:23.3085153Z                 [36m>[39m
+2025-10-05T08:21:23.3085278Z                   [36m<div[39m
+2025-10-05T08:21:23.3085704Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T08:21:23.3085809Z                   [36m>[39m
+2025-10-05T08:21:23.3085938Z                     [36m<svg[39m
+2025-10-05T08:21:23.3086140Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T08:21:23.3086586Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T08:21:23.3086726Z                     [36m/>[39m
+2025-10-05T08:21:23.3086852Z                   [36m</div>[39m
+2025-10-05T08:21:23.3086979Z                   [36m<div[39m
+2025-10-05T08:21:23.3087248Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T08:21:23.3087351Z                   [36...
+2025-10-05T08:21:23.3087360Z 
+2025-10-05T08:21:23.3087551Z     [0m [90m 249 |[39m     [90m// 验证动画组件存在[39m
+2025-10-05T08:21:23.3087805Z      [90m 250 |[39m     [90m// 由于我们模拟了 framer-motion，这里主要验证组件渲染[39m
+2025-10-05T08:21:23.3088264Z     [31m[1m>[22m[39m[90m 251 |[39m     expect(screen[33m.[39mgetByText([35m/智能搜索与文档管理平台/i[39m))[33m.[39mtoBeInTheDocument()
+2025-10-05T08:21:23.3088449Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T08:21:23.3088553Z      [90m 252 |[39m   })
+2025-10-05T08:21:23.3088670Z      [90m 253 |[39m
+2025-10-05T08:21:23.3089299Z      [90m 254 |[39m   it([32m'应该处理错误状态'[39m[33m,[39m () [33m=>[39m {[0m
+2025-10-05T08:21:23.3089320Z 
+2025-10-05T08:21:23.3089780Z       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+2025-10-05T08:21:23.3090218Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:76:38)
+2025-10-05T08:21:23.3090624Z       at allQuery (node_modules/@testing-library/dom/dist/query-helpers.js:52:17)
+2025-10-05T08:21:23.3090986Z       at query (node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+2025-10-05T08:21:23.3091320Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:251:19)
+2025-10-05T08:21:23.3091332Z 
+2025-10-05T08:21:23.3267259Z   console.warn
+2025-10-05T08:21:23.3270140Z     ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+2025-10-05T08:21:23.3270218Z 
+2025-10-05T08:21:23.3270645Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T08:21:23.3271222Z      [90m 225 |[39m     }
+2025-10-05T08:21:23.3272690Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T08:21:23.3273372Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T08:21:23.3274192Z      [90m 227 |[39m   }
+2025-10-05T08:21:23.3275152Z      [90m 228 |[39m })
+2025-10-05T08:21:23.3276090Z      [90m 229 |[39m[0m
+2025-10-05T08:21:23.3277078Z 
+2025-10-05T08:21:23.3278526Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T08:21:23.3280061Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T08:21:23.3281591Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T08:21:23.3283494Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:26:5)
+2025-10-05T08:21:23.3285624Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T08:21:23.3287607Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T08:21:23.3289478Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T08:21:23.3291429Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T08:21:23.3291912Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T08:21:23.3292351Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T08:21:23.3292662Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T08:21:23.3292949Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T08:21:23.3293161Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T08:21:23.3293387Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T08:21:23.3293579Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T08:21:23.3293870Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T08:21:23.3294105Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T08:21:23.3294316Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T08:21:23.3294528Z       at renderWithRouter (src/components/__tests__/Layout.test.tsx:18:16)
+2025-10-05T08:21:23.3294754Z       at Object.<anonymous> (src/components/__tests__/Layout.test.tsx:65:5)
+2025-10-05T08:21:23.3294765Z 
+2025-10-05T08:21:23.3312164Z   console.warn
+2025-10-05T08:21:23.3313761Z     ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+2025-10-05T08:21:23.3314016Z 
+2025-10-05T08:21:23.3314219Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T08:21:23.3314351Z      [90m 225 |[39m     }
+2025-10-05T08:21:23.3314723Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T08:21:23.3314914Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T08:21:23.3315027Z      [90m 227 |[39m   }
+2025-10-05T08:21:23.3315130Z      [90m 228 |[39m })
+2025-10-05T08:21:23.3315244Z      [90m 229 |[39m[0m
+2025-10-05T08:21:23.3315253Z 
+2025-10-05T08:21:23.3315392Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T08:21:23.3315585Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T08:21:23.3315807Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T08:21:23.3316206Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:37:5)
+2025-10-05T08:21:23.3316713Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T08:21:23.3317027Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T08:21:23.3317351Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T08:21:23.3317701Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T08:21:23.3318032Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T08:21:23.3318334Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T08:21:23.3318624Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T08:21:23.3319051Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T08:21:23.3319247Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T08:21:23.3319465Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T08:21:23.3319644Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T08:21:23.3319908Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T08:21:23.3320127Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T08:21:23.3320334Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T08:21:23.3320549Z       at renderWithRouter (src/components/__tests__/Layout.test.tsx:18:16)
+2025-10-05T08:21:23.3320762Z       at Object.<anonymous> (src/components/__tests__/Layout.test.tsx:65:5)
+2025-10-05T08:21:23.3320778Z 
+2025-10-05T08:21:23.3874906Z FAIL src/components/__tests__/Layout.test.tsx
+2025-10-05T08:21:23.3876775Z   Layout Component
+2025-10-05T08:21:23.3877745Z     ✓ 应该正确渲染布局组件 (20 ms)
+2025-10-05T08:21:23.3878311Z     ✓ 应该能够切换侧边栏状态 (5 ms)
+2025-10-05T08:21:23.3880463Z     ✓ 应该在移动端正确处理侧边栏 (2 ms)
+2025-10-05T08:21:23.3880915Z     ✓ 应该正确处理键盘导航 (4 ms)
+2025-10-05T08:21:23.3881313Z     ✓ 应该支持无障碍访问 (9 ms)
+2025-10-05T08:21:23.3881703Z     ✕ 应该正确处理响应式设计 (6 ms)
+2025-10-05T08:21:23.3881912Z 
+2025-10-05T08:21:23.3882191Z   ● Layout Component › 应该正确处理响应式设计
+2025-10-05T08:21:23.3882456Z 
+2025-10-05T08:21:23.3882978Z     TestingLibraryElementError: Found multiple elements by: [data-testid="sidebar"]
+2025-10-05T08:21:23.3883574Z 
+2025-10-05T08:21:23.3883757Z     Here are the matching elements:
+2025-10-05T08:21:23.3884030Z 
+2025-10-05T08:21:23.3884240Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.3884699Z     [36m<aside[39m
+2025-10-05T08:21:23.3885179Z       [33mdata-collapsed[39m=[32m"false"[39m
+2025-10-05T08:21:23.3886235Z       [33mdata-testid[39m=[32m"sidebar"[39m
+2025-10-05T08:21:23.3886933Z     [36m/>[39m
+2025-10-05T08:21:23.3887120Z 
+2025-10-05T08:21:23.3887327Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.3887805Z     [36m<aside[39m
+2025-10-05T08:21:23.3888289Z       [33mdata-collapsed[39m=[32m"false"[39m
+2025-10-05T08:21:23.3888848Z       [33mdata-testid[39m=[32m"sidebar"[39m
+2025-10-05T08:21:23.3889288Z     [36m/>[39m
+2025-10-05T08:21:23.3889465Z 
+2025-10-05T08:21:23.3890127Z     (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+2025-10-05T08:21:23.3890793Z 
+2025-10-05T08:21:23.3891003Z     Ignored nodes: comments, script, style
+2025-10-05T08:21:23.3891453Z     [36m<body>[39m
+2025-10-05T08:21:23.3891806Z       [36m<div>[39m
+2025-10-05T08:21:23.3892156Z         [36m<div[39m
+2025-10-05T08:21:23.3892780Z           [33mclass[39m=[32m"min-h-screen bg-background flex flex-col"[39m
+2025-10-05T08:21:23.3893370Z         [36m>[39m
+2025-10-05T08:21:23.3893722Z           [36m<header[39m
+2025-10-05T08:21:23.3894197Z             [33mdata-testid[39m=[32m"header"[39m
+2025-10-05T08:21:23.3894653Z           [36m>[39m
+2025-10-05T08:21:23.3895011Z             [36m<button[39m
+2025-10-05T08:21:23.3895573Z               [33mdata-testid[39m=[32m"toggle-sidebar"[39m
+2025-10-05T08:21:23.3896066Z             [36m>[39m
+2025-10-05T08:21:23.3896680Z               [0mToggle Sidebar[0m
+2025-10-05T08:21:23.3897156Z             [36m</button>[39m
+2025-10-05T08:21:23.3897563Z           [36m</header>[39m
+2025-10-05T08:21:23.3897947Z           [36m<div[39m
+2025-10-05T08:21:23.3898471Z             [33mclass[39m=[32m"flex flex-1 relative"[39m
+2025-10-05T08:21:23.3898950Z           [36m>[39m
+2025-10-05T08:21:23.3899309Z             [36m<div[39m
+2025-10-05T08:21:23.3900190Z               [33mclass[39m=[32m"hidden lg:block relative z-10 transition-all duration-300 ease-in-out w-64"[39m
+2025-10-05T08:21:23.3901140Z             [36m>[39m
+2025-10-05T08:21:23.3901543Z               [36m<aside[39m
+2025-10-05T08:21:23.3902074Z                 [33mdata-collapsed[39m=[32m"false"[39m
+2025-10-05T08:21:23.3902676Z                 [33mdata-testid[39m=[32m"sidebar"[39m
+2025-10-05T08:21:23.3903147Z               [36m/>[39m
+2025-10-05T08:21:23.3903528Z             [36m</div>[39m
+2025-10-05T08:21:23.3903909Z             [36m<main[39m
+2025-10-05T08:21:23.3904735Z               [33mclass[39m=[32m"flex-1 flex flex-col min-h-0 transition-all duration-300 ease-in-out"[39m
+2025-10-05T08:21:23.3905412Z             [36m>[39m
+2025-10-05T08:21:23.3905787Z               [36m<div[39m
+2025-10-05T08:21:23.3906498Z                 [33mclass[39m=[32m"flex-1 overflow-auto"[39m
+2025-10-05T08:21:23.3907001Z               [36m>[39m
+2025-10-05T08:21:23.3907420Z                 [36m<div[39m
+2025-10-05T08:21:23.3908030Z                   [33mclass[39m=[32m"container-responsive py-6"[39m
+2025-10-05T08:21:23.3908566Z                 [36m>[39m
+2025-10-05T08:21:23.3908994Z                   [36m<div[39m
+2025-10-05T08:21:23.3909510Z                     [33mclass[39m=[32m"min-h-full"[39m
+2025-10-05T08:21:23.3909991Z                   [36m>[39m
+2025-10-05T08:21:23.3910433Z                     [36m<div>[39m
+2025-10-05T08:21:23.3910990Z                       [0mTest Content[0m
+2025-10-05T08:21:23.3911484Z                     [36m</div>[39m
+2025-10-05T08:21:23.3911946Z                   [36m</div>[39m
+2025-10-05T08:21:23.3912430Z                 [36m</div>[39m
+2025-10-05T08:21:23.3912871Z               [36m</div>[39m
+2025-10-05T08:21:23.3913291Z               [36m<footer[39m
+2025-10-05T08:21:23.3913810Z                 [33mdata-testid[39m=[32m"footer"[39m
+2025-10-05T08:21:23.3914279Z               [36m>[39m
+2025-10-05T08:21:23.3914676Z                 [0mFooter[0m
+2025-10-05T08:21:23.3915115Z               [36m</footer>[39m
+2025-10-05T08:21:23.3915732Z             [36m</main>[39m
+2025-10-05T08:21:23.3916121Z           [36m</div>[39m
+2025-10-05T08:21:23.3916711Z           [36m<div[39m
+2025-10-05T08:21:23.3917175Z             [33mclass[39m=[32m"sr-only"[39m
+2025-10-05T08:21:23.3917611Z           [36m>[39m
+2025-10-05T08:21:23.3917966Z             [36m<div[39m
+2025-10-05T08:21:23.3918451Z               [33maria-atomic[39m=[32m"true"[39m
+2025-10-05T08:21:23.3919020Z               [33maria-live[39m=[32m"polite"[39m
+2025-10-05T08:21:23.3919465Z             [36m>[39m
+2025-10-05T08:21:23.3919920Z               [0m按 Ctrl+K 打开搜索[0m
+2025-10-05T08:21:23.3920359Z             [36m</div>[39m
+2025-10-05T08:21:23.3920742Z           [36m</div>[39m
+2025-10-05T08:21:23.3921116Z         [36m</div>[39m
+2025-10-05T08:21:23.3921474Z       [36m</div>[39m
+2025-10-05T08:21:23.3921820Z       [36m<div>[39m
+2025-10-05T08:21:23.3922172Z         [36m<div[39m
+2025-10-05T08:21:23.3922789Z           [33mclass[39m=[32m"min-h-screen bg-background flex flex-col"[39m
+2025-10-05T08:21:23.3923371Z         [36m>[39m
+2025-10-05T08:21:23.3923720Z           [36m<header[39m
+2025-10-05T08:21:23.3924197Z             [33mdata-testid[39m=[32m"header"[39m
+2025-10-05T08:21:23.3924639Z           [36m>[39m
+2025-10-05T08:21:23.3925005Z             [36m<button[39m
+2025-10-05T08:21:23.3925551Z               [33mdata-testid[39m=[32m"toggle-sidebar"[39m
+2025-10-05T08:21:23.3926046Z             [36m>[39m
+2025-10-05T08:21:23.3926642Z               [0mToggle Sidebar[0m
+2025-10-05T08:21:23.3927108Z             [36m</button>[39m
+2025-10-05T08:21:23.3927520Z           [36m</header>[39m
+2025-10-05T08:21:23.3927905Z           [36m<div[39m
+2025-10-05T08:21:23.3928429Z             [33mclass[39m=[32m"flex flex-1 relative"[39m
+2025-10-05T08:21:23.3928910Z           [36m>[39m
+2025-10-05T08:21:23.3929258Z             [36m<div[39m
+2025-10-05T08:21:23.3930086Z               [33mclass[39m=[32m"hidden lg:block relative z-10 transition-all duration-300 ease-in-out w-64"[39m
+2025-10-05T08:21:23.3931024Z             [36m>[39m
+2025-10-05T08:21:23.3931424Z               [36m<aside[39m
+2025-10-05T08:21:23.3931958Z                 [33mdata-collapsed[39m=[32m"false"[39m
+2025-10-05T08:21:23.3932548Z                 [33mdata-testid[39m=[32m"sidebar"[39m
+2025-10-05T08:21:23.3933016Z               [36m/>[39m
+2025-10-05T08:21:23.3933401Z             [36m</div>[39m
+2025-10-05T08:21:23.3933779Z             [36m<main[39m
+2025-10-05T08:21:23.3934594Z               [33mclass[39m=[32m"flex-1 flex flex-col min-h-0 transition-all duration-300 ease-in-out"[39m
+2025-10-05T08:21:23.3935284Z             [36m>[39m
+2025-10-05T08:21:23.3935637Z               [36m<div[39m
+2025-10-05T08:21:23.3936178Z                 [33mclass[39m=[32m"flex-1 overflow-auto"[39m
+2025-10-05T08:21:23.3937232Z               [36m>[39m
+2025-10-05T08:21:23.3937666Z                 [36m<div[39m
+2025-10-05T08:21:23.3938267Z                   [33mclass[39m=[32m"container-responsive py-6"[39m
+2025-10-05T08:21:23.3938823Z                 [36m>[39m
+2025-10-05T08:21:23.3939248Z                   [36m<div[39m
+2025-10-05T08:21:23.3939775Z                     [33mclass[39m=[32m"min-h-full"[39m
+2025-10-05T08:21:23.3940243Z                   [36m>[39m
+2025-10-05T08:21:23.3940685Z                     [36m<div>[39m
+2025-10-05T08:21:23.3941178Z                       [0mTest Content[0m
+2025-10-05T08:21:23.3941675Z                     [36m</div>[39m
+2025-10-05T08:21:23.3942143Z                   [36m</div>[39m
+2025-10-05T08:21:23.3942596Z                 [36m</div>[39m
+2025-10-05T08:21:23.3943021Z               [36m</div>[39m
+2025-10-05T08:21:23.3943505Z               [36m<footer[39m
+2025-10-05T08:21:23.3944035Z                 [33mdata-testid[39m=[32m"footer"[39m
+2025-10-05T08:21:23.3944514Z               [36m>[39m
+2025-10-05T08:21:23.3944934Z                 [0mFooter[0m
+2025-10-05T08:21:23.3945369Z               [36m</footer>[39m
+2025-10-05T08:21:23.3946017Z             [36m</main>[39m
+2025-10-05T08:21:23.3946608Z           [36m</div>[39m
+2025-10-05T08:21:23.3947001Z           [36m<div[39m
+2025-10-05T08:21:23.3947472Z             [33mclass[39m=[32m"sr-only"[39m
+2025-10-05T08:21:23.3947915Z           [36m>[39m
+2025-10-05T08:21:23.3948268Z             [36m<div[39m
+2025-10-05T08:21:23.3948741Z               [33maria-atomic[39m=[32m"true"[39m
+2025-10-05T08:21:23.3949315Z               [33maria-live[39m=[32m"polite"[39m
+2025-10-05T08:21:23.3949779Z             [36m>[39m
+2025-10-05T08:21:23.3950228Z               [0m按 Ctrl+K 打开搜索[0m
+2025-10-05T08:21:23.3950660Z             [36m</div>[39m
+2025-10-05T08:21:23.3951049Z           [36m</div>[39m
+2025-10-05T08:21:23.3951412Z         [36m</div>[39m
+2025-10-05T08:21:23.3951780Z       [36m</div>[39m
+2025-10-05T08:21:23.3952129Z     [36m</body>[39m
+2025-10-05T08:21:23.3952331Z 
+2025-10-05T08:21:23.3952505Z     [0m [90m 170 |[39m
+2025-10-05T08:21:23.3953033Z      [90m 171 |[39m       [90m// 验证在不同尺寸下的布局[39m
+2025-10-05T08:21:23.3954087Z     [31m[1m>[22m[39m[90m 172 |[39m       expect(screen[33m.[39mgetByTestId([32m'sidebar'[39m))[33m.[39mtoBeInTheDocument()
+2025-10-05T08:21:23.3955017Z      [90m     |[39m                     [31m[1m^[22m[39m
+2025-10-05T08:21:23.3955500Z      [90m 173 |[39m     })
+2025-10-05T08:21:23.3955929Z      [90m 174 |[39m   })
+2025-10-05T08:21:23.3956477Z      [90m 175 |[39m })[0m
+2025-10-05T08:21:23.3956706Z 
+2025-10-05T08:21:23.3957162Z       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+2025-10-05T08:21:23.3958109Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:20:35)
+2025-10-05T08:21:23.3959043Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:23:10)
+2025-10-05T08:21:23.3960099Z       at getMultipleElementsFoundError (node_modules/@testing-library/dom/dist/query-helpers.js:55:13)
+2025-10-05T08:21:23.3961071Z       at query (node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+2025-10-05T08:21:23.3961972Z       at src/components/__tests__/Layout.test.tsx:172:21
+2025-10-05T08:21:23.3962540Z           at Array.forEach (<anonymous>)
+2025-10-05T08:21:23.3963174Z       at Object.<anonymous> (src/components/__tests__/Layout.test.tsx:153:15)
+2025-10-05T08:21:23.3963601Z 
+2025-10-05T08:21:23.4142136Z Test Suites: 2 failed, 2 passed, 4 total
+2025-10-05T08:21:23.4142957Z Tests:       11 failed, 23 passed, 34 total
+2025-10-05T08:21:23.4143319Z Snapshots:   0 total
+2025-10-05T08:21:23.4143532Z Time:        3.748 s
+2025-10-05T08:21:23.4143737Z Ran all test suites.
+2025-10-05T08:21:23.4683674Z ##[error]Process completed with exit code 1.

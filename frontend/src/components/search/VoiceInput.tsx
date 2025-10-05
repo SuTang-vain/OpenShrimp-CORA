@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useState, useEffect, useRef, useCallback } from 'react'
-// import { motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import {
   Mic,
   MicOff,

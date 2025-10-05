@@ -61,6 +61,7 @@ const DocumentsPage: React.FC = () => {
     loading,
     selectedDocuments,
     loadDocuments,
+    uploadDocuments,
     deleteDocument,
     batchDeleteDocuments,
     toggleDocumentSelection
@@ -90,9 +91,15 @@ const DocumentsPage: React.FC = () => {
   /**
    * 处理文档上传完成
    */
-  const handleUploadComplete = (files: File[]) => {
-    toast.success(`成功上传 ${files.length} 个文件`)
-    setShowUpload(false)
+  const handleUploadComplete = async (files: File[]) => {
+    try {
+      await uploadDocuments(files)
+      toast.success(`成功上传 ${files.length} 个文件`)
+    } catch (err) {
+      toast.error('上传失败，请稍后重试')
+    } finally {
+      setShowUpload(false)
+    }
   }
 
   /**

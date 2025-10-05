@@ -1,0 +1,1281 @@
+﻿2025-10-05T09:15:51.3149896Z Current runner version: '2.328.0'
+2025-10-05T09:15:51.3177026Z ##[group]Runner Image Provisioner
+2025-10-05T09:15:51.3177870Z Hosted Compute Agent
+2025-10-05T09:15:51.3178379Z Version: 20250912.392
+2025-10-05T09:15:51.3179050Z Commit: d921fda672a98b64f4f82364647e2f10b2267d0b
+2025-10-05T09:15:51.3179792Z Build Date: 2025-09-12T15:23:14Z
+2025-10-05T09:15:51.3180599Z ##[endgroup]
+2025-10-05T09:15:51.3181186Z ##[group]Operating System
+2025-10-05T09:15:51.3181794Z Ubuntu
+2025-10-05T09:15:51.3182270Z 24.04.3
+2025-10-05T09:15:51.3182680Z LTS
+2025-10-05T09:15:51.3183265Z ##[endgroup]
+2025-10-05T09:15:51.3183719Z ##[group]Runner Image
+2025-10-05T09:15:51.3184305Z Image: ubuntu-24.04
+2025-10-05T09:15:51.3184834Z Version: 20250929.60.1
+2025-10-05T09:15:51.3185826Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250929.60/images/ubuntu/Ubuntu2404-Readme.md
+2025-10-05T09:15:51.3187432Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250929.60
+2025-10-05T09:15:51.3188380Z ##[endgroup]
+2025-10-05T09:15:51.3189514Z ##[group]GITHUB_TOKEN Permissions
+2025-10-05T09:15:51.3191829Z Contents: read
+2025-10-05T09:15:51.3192412Z Metadata: read
+2025-10-05T09:15:51.3192926Z Packages: read
+2025-10-05T09:15:51.3193377Z ##[endgroup]
+2025-10-05T09:15:51.3195813Z Secret source: Actions
+2025-10-05T09:15:51.3196502Z Prepare workflow directory
+2025-10-05T09:15:51.3575515Z Prepare all required actions
+2025-10-05T09:15:51.3612848Z Getting action download info
+2025-10-05T09:15:51.6770710Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-10-05T09:15:51.7656092Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2025-10-05T09:15:51.9354480Z Complete job name: build-frontend
+2025-10-05T09:15:52.0011662Z ##[group]Run actions/checkout@v4
+2025-10-05T09:15:52.0012467Z with:
+2025-10-05T09:15:52.0012883Z   repository: SuTang-vain/OpenShrimp-CORA
+2025-10-05T09:15:52.0013578Z   token: ***
+2025-10-05T09:15:52.0013977Z   ssh-strict: true
+2025-10-05T09:15:52.0014361Z   ssh-user: git
+2025-10-05T09:15:52.0014758Z   persist-credentials: true
+2025-10-05T09:15:52.0015189Z   clean: true
+2025-10-05T09:15:52.0015590Z   sparse-checkout-cone-mode: true
+2025-10-05T09:15:52.0016053Z   fetch-depth: 1
+2025-10-05T09:15:52.0016540Z   fetch-tags: false
+2025-10-05T09:15:52.0016922Z   show-progress: true
+2025-10-05T09:15:52.0017323Z   lfs: false
+2025-10-05T09:15:52.0017685Z   submodules: false
+2025-10-05T09:15:52.0018074Z   set-safe-directory: true
+2025-10-05T09:15:52.0018723Z ##[endgroup]
+2025-10-05T09:15:52.1098876Z Syncing repository: SuTang-vain/OpenShrimp-CORA
+2025-10-05T09:15:52.1102152Z ##[group]Getting Git version info
+2025-10-05T09:15:52.1103533Z Working directory is '/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA'
+2025-10-05T09:15:52.1105311Z [command]/usr/bin/git version
+2025-10-05T09:15:52.1173902Z git version 2.51.0
+2025-10-05T09:15:52.1200845Z ##[endgroup]
+2025-10-05T09:15:52.1214703Z Temporarily overriding HOME='/home/runner/work/_temp/f6803bf0-f174-4371-9960-da34aeadb091' before making global git config changes
+2025-10-05T09:15:52.1216423Z Adding repository directory to the temporary git global config as a safe directory
+2025-10-05T09:15:52.1227531Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA
+2025-10-05T09:15:52.1264579Z Deleting the contents of '/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA'
+2025-10-05T09:15:52.1268227Z ##[group]Initializing the repository
+2025-10-05T09:15:52.1272516Z [command]/usr/bin/git init /home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA
+2025-10-05T09:15:52.1348605Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-10-05T09:15:52.1350537Z hint: is subject to change. To configure the initial branch name to use in all
+2025-10-05T09:15:52.1351575Z hint: of your new repositories, which will suppress this warning, call:
+2025-10-05T09:15:52.1352240Z hint:
+2025-10-05T09:15:52.1352743Z hint: 	git config --global init.defaultBranch <name>
+2025-10-05T09:15:52.1353948Z hint:
+2025-10-05T09:15:52.1354745Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-10-05T09:15:52.1355735Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-10-05T09:15:52.1356423Z hint:
+2025-10-05T09:15:52.1356807Z hint: 	git branch -m <name>
+2025-10-05T09:15:52.1357246Z hint:
+2025-10-05T09:15:52.1357928Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-10-05T09:15:52.1359358Z Initialized empty Git repository in /home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/.git/
+2025-10-05T09:15:52.1365170Z [command]/usr/bin/git remote add origin https://github.com/SuTang-vain/OpenShrimp-CORA
+2025-10-05T09:15:52.1403136Z ##[endgroup]
+2025-10-05T09:15:52.1403842Z ##[group]Disabling automatic garbage collection
+2025-10-05T09:15:52.1407125Z [command]/usr/bin/git config --local gc.auto 0
+2025-10-05T09:15:52.1434832Z ##[endgroup]
+2025-10-05T09:15:52.1435507Z ##[group]Setting up auth
+2025-10-05T09:15:52.1441809Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-10-05T09:15:52.1470964Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-10-05T09:15:52.1808916Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-10-05T09:15:52.1839112Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-10-05T09:15:52.2060331Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-10-05T09:15:52.2101262Z ##[endgroup]
+2025-10-05T09:15:52.2101988Z ##[group]Fetching the repository
+2025-10-05T09:15:52.2109789Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +f097b5c98e1ca8b01a2453e561d1dab723ee2384:refs/remotes/origin/main
+2025-10-05T09:15:52.5060186Z From https://github.com/SuTang-vain/OpenShrimp-CORA
+2025-10-05T09:15:52.5061612Z  * [new ref]         f097b5c98e1ca8b01a2453e561d1dab723ee2384 -> origin/main
+2025-10-05T09:15:52.5089652Z ##[endgroup]
+2025-10-05T09:15:52.5090921Z ##[group]Determining the checkout info
+2025-10-05T09:15:52.5092115Z ##[endgroup]
+2025-10-05T09:15:52.5096679Z [command]/usr/bin/git sparse-checkout disable
+2025-10-05T09:15:52.5138417Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-10-05T09:15:52.5164715Z ##[group]Checking out the ref
+2025-10-05T09:15:52.5168353Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-10-05T09:15:52.5397261Z Switched to a new branch 'main'
+2025-10-05T09:15:52.5399150Z branch 'main' set up to track 'origin/main'.
+2025-10-05T09:15:52.5406521Z ##[endgroup]
+2025-10-05T09:15:52.5441276Z [command]/usr/bin/git log -1 --format=%H
+2025-10-05T09:15:52.5462472Z f097b5c98e1ca8b01a2453e561d1dab723ee2384
+2025-10-05T09:15:52.5685791Z ##[group]Run actions/setup-node@v4
+2025-10-05T09:15:52.5686309Z with:
+2025-10-05T09:15:52.5686654Z   node-version: 20
+2025-10-05T09:15:52.5687031Z   cache: npm
+2025-10-05T09:15:52.5687473Z   cache-dependency-path: frontend/package-lock.json
+2025-10-05T09:15:52.5688019Z   always-auth: false
+2025-10-05T09:15:52.5688411Z   check-latest: false
+2025-10-05T09:15:52.5689029Z   token: ***
+2025-10-05T09:15:52.5689395Z ##[endgroup]
+2025-10-05T09:15:52.7430866Z Found in cache @ /opt/hostedtoolcache/node/20.19.5/x64
+2025-10-05T09:15:52.7434856Z ##[group]Environment details
+2025-10-05T09:15:53.0640189Z node: v20.19.5
+2025-10-05T09:15:53.0640670Z npm: 10.8.2
+2025-10-05T09:15:53.0640924Z yarn: 1.22.22
+2025-10-05T09:15:53.0641586Z ##[endgroup]
+2025-10-05T09:15:53.0661384Z [command]/opt/hostedtoolcache/node/20.19.5/x64/bin/npm config get cache
+2025-10-05T09:15:53.2055120Z /home/runner/.npm
+2025-10-05T09:15:53.3326482Z npm cache is not found
+2025-10-05T09:15:53.3470428Z ##[group]Run npm ci
+2025-10-05T09:15:53.3470803Z [36;1mnpm ci[0m
+2025-10-05T09:15:53.3512724Z shell: /usr/bin/bash -e {0}
+2025-10-05T09:15:53.3513041Z ##[endgroup]
+2025-10-05T09:15:58.2529469Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2025-10-05T09:15:59.3632126Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2025-10-05T09:15:59.4971538Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-10-05T09:15:59.9180460Z npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+2025-10-05T09:16:00.3416199Z npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+2025-10-05T09:16:00.7045746Z npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2025-10-05T09:16:00.7298867Z npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2025-10-05T09:16:03.7028665Z npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2025-10-05T09:16:08.5156096Z 
+2025-10-05T09:16:08.5158017Z added 955 packages, and audited 956 packages in 15s
+2025-10-05T09:16:08.5158898Z 
+2025-10-05T09:16:08.5159311Z 271 packages are looking for funding
+2025-10-05T09:16:08.5160412Z   run `npm fund` for details
+2025-10-05T09:16:08.5252741Z 
+2025-10-05T09:16:08.5253462Z 5 moderate severity vulnerabilities
+2025-10-05T09:16:08.5253896Z 
+2025-10-05T09:16:08.5254410Z To address all issues (including breaking changes), run:
+2025-10-05T09:16:08.5255129Z   npm audit fix --force
+2025-10-05T09:16:08.5255421Z 
+2025-10-05T09:16:08.5255661Z Run `npm audit` for details.
+2025-10-05T09:16:08.5615192Z ##[group]Run npm test -- --coverage=false --passWithNoTests
+2025-10-05T09:16:08.5615646Z [36;1mnpm test -- --coverage=false --passWithNoTests[0m
+2025-10-05T09:16:08.5651731Z shell: /usr/bin/bash -e {0}
+2025-10-05T09:16:08.5651974Z env:
+2025-10-05T09:16:08.5652128Z   CI: true
+2025-10-05T09:16:08.5652297Z ##[endgroup]
+2025-10-05T09:16:08.7013461Z 
+2025-10-05T09:16:08.7014010Z > shrimp-agent-frontend@2.0.0 test
+2025-10-05T09:16:08.7014559Z > jest --coverage=false --passWithNoTests
+2025-10-05T09:16:08.7014799Z 
+2025-10-05T09:16:11.5408310Z ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+2025-10-05T09:16:11.5411196Z transform: {
+2025-10-05T09:16:11.5411851Z     <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+2025-10-05T09:16:11.5412469Z },
+2025-10-05T09:16:11.5413290Z See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+2025-10-05T09:16:11.5417802Z ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+2025-10-05T09:16:11.5418732Z transform: {
+2025-10-05T09:16:11.5419353Z     <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+2025-10-05T09:16:11.5420165Z },
+2025-10-05T09:16:11.5420994Z See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+2025-10-05T09:16:13.4561872Z   console.warn
+2025-10-05T09:16:13.4573317Z     ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+2025-10-05T09:16:13.4575064Z 
+2025-10-05T09:16:13.4575576Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T09:16:13.4576183Z      [90m 225 |[39m     }
+2025-10-05T09:16:13.4577133Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:16:13.4578622Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T09:16:13.4579252Z      [90m 227 |[39m   }
+2025-10-05T09:16:13.4579661Z      [90m 228 |[39m })
+2025-10-05T09:16:13.4580314Z      [90m 229 |[39m[0m
+2025-10-05T09:16:13.4580557Z 
+2025-10-05T09:16:13.4580821Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T09:16:13.4581488Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T09:16:13.4582295Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T09:16:13.4583512Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:26:5)
+2025-10-05T09:16:13.4584790Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T09:16:13.4585891Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T09:16:13.4587129Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T09:16:13.4588406Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T09:16:13.4589681Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T09:16:13.4591098Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T09:16:13.4592246Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T09:16:13.4593385Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T09:16:13.4594311Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T09:16:13.4595138Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T09:16:13.4595935Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T09:16:13.4597157Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T09:16:13.4598171Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T09:16:13.4599060Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T09:16:13.4599918Z       at renderWithRouter (src/pages/__tests__/LoginPage.test.tsx:53:16)
+2025-10-05T09:16:13.4600996Z       at Object.<anonymous> (src/pages/__tests__/LoginPage.test.tsx:63:5)
+2025-10-05T09:16:13.4601472Z 
+2025-10-05T09:16:13.4667325Z   console.warn
+2025-10-05T09:16:13.4670164Z     ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+2025-10-05T09:16:13.4671976Z 
+2025-10-05T09:16:13.4672524Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T09:16:13.4673441Z      [90m 225 |[39m     }
+2025-10-05T09:16:13.4674532Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:16:13.4675613Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T09:16:13.4677384Z      [90m 227 |[39m   }
+2025-10-05T09:16:13.4677964Z      [90m 228 |[39m })
+2025-10-05T09:16:13.4678575Z      [90m 229 |[39m[0m
+2025-10-05T09:16:13.4678962Z 
+2025-10-05T09:16:13.4679394Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T09:16:13.4680426Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T09:16:13.4681445Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T09:16:13.4682814Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:37:5)
+2025-10-05T09:16:13.4684327Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T09:16:13.4685527Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T09:16:13.4687159Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T09:16:13.4689284Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T09:16:13.4690679Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T09:16:13.4691849Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T09:16:13.4692968Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T09:16:13.4694040Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T09:16:13.4694941Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T09:16:13.4791505Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T09:16:13.4792355Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T09:16:13.4793197Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T09:16:13.4794107Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T09:16:13.4794931Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T09:16:13.4795745Z       at renderWithRouter (src/pages/__tests__/LoginPage.test.tsx:53:16)
+2025-10-05T09:16:13.4796531Z       at Object.<anonymous> (src/pages/__tests__/LoginPage.test.tsx:63:5)
+2025-10-05T09:16:13.4796963Z 
+2025-10-05T09:16:13.5213511Z   console.warn
+2025-10-05T09:16:13.5216541Z     ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+2025-10-05T09:16:13.5218548Z 
+2025-10-05T09:16:13.5218973Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T09:16:13.5219517Z      [90m 225 |[39m     }
+2025-10-05T09:16:13.5220612Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:16:13.5221531Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T09:16:13.5222066Z      [90m 227 |[39m   }
+2025-10-05T09:16:13.5222623Z      [90m 228 |[39m })
+2025-10-05T09:16:13.5223161Z      [90m 229 |[39m[0m
+2025-10-05T09:16:13.5223381Z 
+2025-10-05T09:16:13.5223637Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T09:16:13.5224562Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T09:16:13.5225539Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T09:16:13.5226880Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:26:5)
+2025-10-05T09:16:13.5228355Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T09:16:13.5229643Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T09:16:13.5231244Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T09:16:13.5232714Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T09:16:13.5234169Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T09:16:13.5235580Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T09:16:13.5236967Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T09:16:13.5238282Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T09:16:13.5239425Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T09:16:13.5316751Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T09:16:13.5317599Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T09:16:13.5318507Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T09:16:13.5319459Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T09:16:13.5320620Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T09:16:13.5321476Z       at renderWithRouter (src/pages/__tests__/HomePage.test.tsx:27:16)
+2025-10-05T09:16:13.5322285Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:42:5)
+2025-10-05T09:16:13.5322738Z 
+2025-10-05T09:16:13.5335106Z   console.warn
+2025-10-05T09:16:13.5338506Z     ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+2025-10-05T09:16:13.5366013Z 
+2025-10-05T09:16:13.5366446Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T09:16:13.5366982Z      [90m 225 |[39m     }
+2025-10-05T09:16:13.5367850Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:16:13.5368711Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T09:16:13.5369216Z      [90m 227 |[39m   }
+2025-10-05T09:16:13.5369611Z      [90m 228 |[39m })
+2025-10-05T09:16:13.5370188Z      [90m 229 |[39m[0m
+2025-10-05T09:16:13.5370408Z 
+2025-10-05T09:16:13.5370652Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T09:16:13.5371317Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T09:16:13.5372380Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T09:16:13.5373545Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:37:5)
+2025-10-05T09:16:13.5374754Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T09:16:13.5375830Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T09:16:13.5376989Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T09:16:13.5378217Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T09:16:13.5379551Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T09:16:13.5380998Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T09:16:13.5382191Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T09:16:13.5383298Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T09:16:13.5384034Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T09:16:13.5384509Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T09:16:13.5384940Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T09:16:13.5385493Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T09:16:13.5386140Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T09:16:13.5386611Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T09:16:13.5387084Z       at renderWithRouter (src/pages/__tests__/HomePage.test.tsx:27:16)
+2025-10-05T09:16:13.5387558Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:42:5)
+2025-10-05T09:16:13.5387818Z 
+2025-10-05T09:16:13.7907256Z PASS src/pages/__tests__/LoginPage.test.tsx
+2025-10-05T09:16:13.7920886Z   LoginPage Component
+2025-10-05T09:16:13.7921616Z     ✓ 应该正确渲染基本元素 (218 ms)
+2025-10-05T09:16:13.7922113Z     ✓ 应该进行表单校验并提示错误 (75 ms)
+2025-10-05T09:16:13.7922617Z     ✓ 应该支持显示/隐藏密码 (26 ms)
+2025-10-05T09:16:13.7923065Z     ✓ 应该支持记住我切换 (21 ms)
+2025-10-05T09:16:13.7923591Z     ✓ 登录成功后应导航到 /dashboard (55 ms)
+2025-10-05T09:16:13.7924154Z     ✓ 登录失败时应显示错误反馈且不导航 (38 ms)
+2025-10-05T09:16:13.7924411Z 
+2025-10-05T09:16:13.9586622Z   console.error
+2025-10-05T09:16:13.9588726Z     登录失败: Error: 网络错误
+2025-10-05T09:16:13.9591350Z         at Object.<anonymous> (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/src/api/__tests__/authApi.test.ts:50:19)
+2025-10-05T09:16:13.9594459Z         at Promise.then.completed (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/utils.js:298:28)
+2025-10-05T09:16:13.9596906Z         at new Promise (<anonymous>)
+2025-10-05T09:16:13.9599408Z         at callAsyncCircusFn (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/utils.js:231:10)
+2025-10-05T09:16:13.9602667Z         at _callCircusTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:316:40)
+2025-10-05T09:16:13.9605378Z         at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-05T09:16:13.9607987Z         at _runTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:252:3)
+2025-10-05T09:16:13.9611166Z         at _runTestsForDescribeBlock (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:126:9)
+2025-10-05T09:16:13.9614144Z         at _runTestsForDescribeBlock (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:121:9)
+2025-10-05T09:16:13.9617399Z         at run (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:71:3)
+2025-10-05T09:16:13.9619826Z         at runAndTransformResultsToJestFormat (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+2025-10-05T09:16:13.9622492Z         at jestAdapter (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+2025-10-05T09:16:13.9624449Z         at runTestInternal (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/runTest.js:367:16)
+2025-10-05T09:16:13.9626165Z         at runTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/runTest.js:444:34)
+2025-10-05T09:16:13.9627858Z         at Object.worker (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/testWorker.js:106:12)
+2025-10-05T09:16:13.9628756Z 
+2025-10-05T09:16:13.9629155Z     [0m [90m 214 |[39m       [36mreturn[39m
+2025-10-05T09:16:13.9629705Z      [90m 215 |[39m     }
+2025-10-05T09:16:13.9630828Z     [31m[1m>[22m[39m[90m 216 |[39m     originalError[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:16:13.9631713Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T09:16:13.9632490Z      [90m 217 |[39m   }
+2025-10-05T09:16:13.9632923Z      [90m 218 |[39m
+2025-10-05T09:16:13.9633785Z      [90m 219 |[39m   console[33m.[39mwarn [33m=[39m ([33m...[39margs[33m:[39m any[]) [33m=>[39m {[0m
+2025-10-05T09:16:13.9634329Z 
+2025-10-05T09:16:13.9634579Z       at console.error (src/setupTests.ts:216:19)
+2025-10-05T09:16:13.9635157Z       at AuthApi.login (src/api/auth.ts:51:15)
+2025-10-05T09:16:13.9635826Z       at Object.<anonymous> (src/api/__tests__/authApi.test.ts:53:5)
+2025-10-05T09:16:13.9636263Z 
+2025-10-05T09:16:13.9659559Z   console.error
+2025-10-05T09:16:13.9660621Z     登出失败: Error: 服务器错误
+2025-10-05T09:16:13.9662995Z         at Object.<anonymous> (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/src/api/__tests__/authApi.test.ts:92:19)
+2025-10-05T09:16:13.9665418Z         at Promise.then.completed (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/utils.js:298:28)
+2025-10-05T09:16:13.9667779Z         at new Promise (<anonymous>)
+2025-10-05T09:16:13.9668991Z         at callAsyncCircusFn (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/utils.js:231:10)
+2025-10-05T09:16:13.9670903Z         at _callCircusTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:316:40)
+2025-10-05T09:16:13.9672225Z         at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-05T09:16:13.9689854Z         at _runTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:252:3)
+2025-10-05T09:16:13.9691836Z         at _runTestsForDescribeBlock (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:126:9)
+2025-10-05T09:16:13.9693743Z         at _runTestsForDescribeBlock (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:121:9)
+2025-10-05T09:16:13.9695366Z         at run (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:71:3)
+2025-10-05T09:16:13.9697456Z         at runAndTransformResultsToJestFormat (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+2025-10-05T09:16:13.9699823Z         at jestAdapter (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+2025-10-05T09:16:13.9701989Z         at runTestInternal (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/runTest.js:367:16)
+2025-10-05T09:16:13.9703896Z         at runTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/runTest.js:444:34)
+2025-10-05T09:16:13.9705577Z         at Object.worker (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/testWorker.js:106:12)
+2025-10-05T09:16:13.9706443Z 
+2025-10-05T09:16:13.9706815Z     [0m [90m 214 |[39m       [36mreturn[39m
+2025-10-05T09:16:13.9707314Z      [90m 215 |[39m     }
+2025-10-05T09:16:13.9708234Z     [31m[1m>[22m[39m[90m 216 |[39m     originalError[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:16:13.9709118Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T09:16:13.9709628Z      [90m 217 |[39m   }
+2025-10-05T09:16:13.9710217Z      [90m 218 |[39m
+2025-10-05T09:16:13.9711094Z      [90m 219 |[39m   console[33m.[39mwarn [33m=[39m ([33m...[39margs[33m:[39m any[]) [33m=>[39m {[0m
+2025-10-05T09:16:13.9711633Z 
+2025-10-05T09:16:13.9711875Z       at console.error (src/setupTests.ts:216:19)
+2025-10-05T09:16:13.9712458Z       at AuthApi.logout (src/api/auth.ts:94:15)
+2025-10-05T09:16:13.9713133Z       at Object.<anonymous> (src/api/__tests__/authApi.test.ts:95:5)
+2025-10-05T09:16:13.9713554Z 
+2025-10-05T09:16:13.9730499Z   console.error
+2025-10-05T09:16:13.9733079Z     获取用户信息失败: Error: 401 Unauthorized
+2025-10-05T09:16:13.9738146Z         at Object.<anonymous> (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/src/api/__tests__/authApi.test.ts:130:21)
+2025-10-05T09:16:13.9741106Z         at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-05T09:16:13.9741636Z 
+2025-10-05T09:16:13.9741997Z     [0m [90m 214 |[39m       [36mreturn[39m
+2025-10-05T09:16:13.9742528Z      [90m 215 |[39m     }
+2025-10-05T09:16:13.9743420Z     [31m[1m>[22m[39m[90m 216 |[39m     originalError[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:16:13.9744303Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T09:16:13.9744820Z      [90m 217 |[39m   }
+2025-10-05T09:16:13.9745226Z      [90m 218 |[39m
+2025-10-05T09:16:13.9746402Z      [90m 219 |[39m   console[33m.[39mwarn [33m=[39m ([33m...[39margs[33m:[39m any[]) [33m=>[39m {[0m
+2025-10-05T09:16:13.9746948Z 
+2025-10-05T09:16:13.9747195Z       at console.error (src/setupTests.ts:216:19)
+2025-10-05T09:16:13.9747807Z       at AuthApi.getCurrentUser (src/api/auth.ts:130:15)
+2025-10-05T09:16:13.9748464Z       at AuthApi.validateToken (src/api/auth.ts:357:24)
+2025-10-05T09:16:13.9749171Z       at Object.<anonymous> (src/api/__tests__/authApi.test.ts:133:5)
+2025-10-05T09:16:13.9749599Z 
+2025-10-05T09:16:13.9811475Z   console.error
+2025-10-05T09:16:13.9811866Z     检查权限失败: Error: network error
+2025-10-05T09:16:13.9812510Z         at Object.<anonymous> (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/src/api/__tests__/authApi.test.ts:146:20)
+2025-10-05T09:16:13.9813233Z         at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-05T09:16:13.9813517Z 
+2025-10-05T09:16:13.9813699Z     [0m [90m 214 |[39m       [36mreturn[39m
+2025-10-05T09:16:13.9813985Z      [90m 215 |[39m     }
+2025-10-05T09:16:13.9814464Z     [31m[1m>[22m[39m[90m 216 |[39m     originalError[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:16:13.9814932Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T09:16:13.9815211Z      [90m 217 |[39m   }
+2025-10-05T09:16:13.9815418Z      [90m 218 |[39m
+2025-10-05T09:16:13.9815892Z      [90m 219 |[39m   console[33m.[39mwarn [33m=[39m ([33m...[39margs[33m:[39m any[]) [33m=>[39m {[0m
+2025-10-05T09:16:13.9816196Z 
+2025-10-05T09:16:13.9816340Z       at console.error (src/setupTests.ts:216:19)
+2025-10-05T09:16:13.9816681Z       at AuthApi.hasPermission (src/api/auth.ts:386:15)
+2025-10-05T09:16:13.9817082Z       at Object.<anonymous> (src/api/__tests__/authApi.test.ts:148:5)
+2025-10-05T09:16:13.9817323Z 
+2025-10-05T09:16:13.9831814Z PASS src/api/__tests__/authApi.test.ts
+2025-10-05T09:16:13.9833102Z   AuthApi
+2025-10-05T09:16:13.9834154Z     ✓ login 成功时设置 token 并返回响应 (1 ms)
+2025-10-05T09:16:13.9834801Z     ✓ login 失败时抛出错误，不崩溃 (13 ms)
+2025-10-05T09:16:13.9835095Z     ✓ register 成功时设置 token (1 ms)
+2025-10-05T09:16:13.9835396Z     ✓ logout 成功时清除 token (2 ms)
+2025-10-05T09:16:13.9835682Z     ✓ logout 失败时也应清除 token 并抛错 (5 ms)
+2025-10-05T09:16:13.9835985Z     ✓ refreshToken 成功时更新 token (1 ms)
+2025-10-05T09:16:13.9836303Z     ✓ getCurrentUser 应调用 /auth/me (1 ms)
+2025-10-05T09:16:13.9836870Z     ✓ validateToken 在成功时返回 true，失败返回 false (4 ms)
+2025-10-05T09:16:13.9837213Z     ✓ hasPermission 正确返回布尔值 (9 ms)
+2025-10-05T09:16:13.9837376Z 
+2025-10-05T09:16:14.1228463Z   console.warn
+2025-10-05T09:16:14.1231227Z     ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+2025-10-05T09:16:14.1233913Z 
+2025-10-05T09:16:14.1234340Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T09:16:14.1234902Z      [90m 225 |[39m     }
+2025-10-05T09:16:14.1235778Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:16:14.1236623Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T09:16:14.1237122Z      [90m 227 |[39m   }
+2025-10-05T09:16:14.1237511Z      [90m 228 |[39m })
+2025-10-05T09:16:14.1237893Z      [90m 229 |[39m[0m
+2025-10-05T09:16:14.1238111Z 
+2025-10-05T09:16:14.1238350Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T09:16:14.1238994Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T09:16:14.1239745Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T09:16:14.1241145Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:26:5)
+2025-10-05T09:16:14.1242351Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T09:16:14.1243814Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T09:16:14.1244988Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T09:16:14.1246235Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T09:16:14.1247502Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T09:16:14.1248704Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T09:16:14.1249851Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T09:16:14.1251151Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T09:16:14.1252077Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T09:16:14.1252908Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T09:16:14.1253685Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T09:16:14.1254568Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T09:16:14.1255513Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T09:16:14.1256363Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T09:16:14.1257213Z       at renderWithRouter (src/components/__tests__/Layout.test.tsx:19:16)
+2025-10-05T09:16:14.1258051Z       at Object.<anonymous> (src/components/__tests__/Layout.test.tsx:66:5)
+2025-10-05T09:16:14.1258503Z 
+2025-10-05T09:16:14.1283205Z   console.warn
+2025-10-05T09:16:14.1285629Z     ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+2025-10-05T09:16:14.1287144Z 
+2025-10-05T09:16:14.1287497Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T09:16:14.1287988Z      [90m 225 |[39m     }
+2025-10-05T09:16:14.1288839Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:16:14.1289726Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T09:16:14.1290530Z      [90m 227 |[39m   }
+2025-10-05T09:16:14.1290946Z      [90m 228 |[39m })
+2025-10-05T09:16:14.1291354Z      [90m 229 |[39m[0m
+2025-10-05T09:16:14.1291570Z 
+2025-10-05T09:16:14.1291826Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T09:16:14.1292496Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T09:16:14.1293262Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T09:16:14.1294450Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:37:5)
+2025-10-05T09:16:14.1295636Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T09:16:14.1296758Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T09:16:14.1297987Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T09:16:14.1299236Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T09:16:14.1300814Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T09:16:14.1302030Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T09:16:14.1303193Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T09:16:14.1304309Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T09:16:14.1305506Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T09:16:14.1306350Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T09:16:14.1307158Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T09:16:14.1308077Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T09:16:14.1309018Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T09:16:14.1309885Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T09:16:14.1310963Z       at renderWithRouter (src/components/__tests__/Layout.test.tsx:19:16)
+2025-10-05T09:16:14.1311828Z       at Object.<anonymous> (src/components/__tests__/Layout.test.tsx:66:5)
+2025-10-05T09:16:14.1312313Z 
+2025-10-05T09:16:14.1785428Z FAIL src/components/__tests__/Layout.test.tsx
+2025-10-05T09:16:14.1786023Z   Layout Component
+2025-10-05T09:16:14.1786739Z     ✓ 应该正确渲染布局组件 (21 ms)
+2025-10-05T09:16:14.1787175Z     ✓ 应该能够切换侧边栏状态 (4 ms)
+2025-10-05T09:16:14.1787597Z     ✓ 应该在移动端正确处理侧边栏 (2 ms)
+2025-10-05T09:16:14.1788015Z     ✓ 应该正确处理键盘导航 (2 ms)
+2025-10-05T09:16:14.1788450Z     ✓ 应该支持无障碍访问 (9 ms)
+2025-10-05T09:16:14.1788695Z     ✕ 应该正确处理响应式设计 (6 ms)
+2025-10-05T09:16:14.1788823Z 
+2025-10-05T09:16:14.1788990Z   ● Layout Component › 应该正确处理响应式设计
+2025-10-05T09:16:14.1789162Z 
+2025-10-05T09:16:14.1789455Z     TestingLibraryElementError: Found multiple elements by: [data-testid="sidebar"]
+2025-10-05T09:16:14.1789779Z 
+2025-10-05T09:16:14.1789899Z     Here are the matching elements:
+2025-10-05T09:16:14.1790407Z 
+2025-10-05T09:16:14.1790542Z     Ignored nodes: comments, script, style
+2025-10-05T09:16:14.1790839Z     [36m<aside[39m
+2025-10-05T09:16:14.1791138Z       [33mdata-collapsed[39m=[32m"false"[39m
+2025-10-05T09:16:14.1791477Z       [33mdata-testid[39m=[32m"sidebar"[39m
+2025-10-05T09:16:14.1792056Z     [36m/>[39m
+2025-10-05T09:16:14.1792182Z 
+2025-10-05T09:16:14.1792315Z     Ignored nodes: comments, script, style
+2025-10-05T09:16:14.1792594Z     [36m<aside[39m
+2025-10-05T09:16:14.1792877Z       [33mdata-collapsed[39m=[32m"false"[39m
+2025-10-05T09:16:14.1793221Z       [33mdata-testid[39m=[32m"sidebar"[39m
+2025-10-05T09:16:14.1793477Z     [36m/>[39m
+2025-10-05T09:16:14.1793577Z 
+2025-10-05T09:16:14.1794014Z     (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+2025-10-05T09:16:14.1794420Z 
+2025-10-05T09:16:14.1794542Z     Ignored nodes: comments, script, style
+2025-10-05T09:16:14.1794803Z     [36m<body>[39m
+2025-10-05T09:16:14.1795012Z       [36m<div>[39m
+2025-10-05T09:16:14.1795216Z         [36m<div[39m
+2025-10-05T09:16:14.1795590Z           [33mclass[39m=[32m"min-h-screen bg-background flex flex-col"[39m
+2025-10-05T09:16:14.1795925Z         [36m>[39m
+2025-10-05T09:16:14.1796134Z           [36m<header[39m
+2025-10-05T09:16:14.1796430Z             [33mdata-testid[39m=[32m"header"[39m
+2025-10-05T09:16:14.1796699Z           [36m>[39m
+2025-10-05T09:16:14.1796906Z             [36m<button[39m
+2025-10-05T09:16:14.1797231Z               [33mdata-testid[39m=[32m"toggle-sidebar"[39m
+2025-10-05T09:16:14.1797518Z             [36m>[39m
+2025-10-05T09:16:14.1797763Z               [0mToggle Sidebar[0m
+2025-10-05T09:16:14.1798037Z             [36m</button>[39m
+2025-10-05T09:16:14.1798268Z           [36m</header>[39m
+2025-10-05T09:16:14.1798495Z           [36m<div[39m
+2025-10-05T09:16:14.1798796Z             [33mclass[39m=[32m"flex flex-1 relative"[39m
+2025-10-05T09:16:14.1799071Z           [36m>[39m
+2025-10-05T09:16:14.1799278Z             [36m<div[39m
+2025-10-05T09:16:14.1799792Z               [33mclass[39m=[32m"hidden lg:block relative z-10 transition-all duration-300 ease-in-out w-64"[39m
+2025-10-05T09:16:14.1800503Z             [36m>[39m
+2025-10-05T09:16:14.1800750Z               [36m<aside[39m
+2025-10-05T09:16:14.1801215Z                 [33mdata-collapsed[39m=[32m"false"[39m
+2025-10-05T09:16:14.1801572Z                 [33mdata-testid[39m=[32m"sidebar"[39m
+2025-10-05T09:16:14.1801848Z               [36m/>[39m
+2025-10-05T09:16:14.1802067Z             [36m</div>[39m
+2025-10-05T09:16:14.1802295Z             [36m<main[39m
+2025-10-05T09:16:14.1802780Z               [33mclass[39m=[32m"flex-1 flex flex-col min-h-0 transition-all duration-300 ease-in-out"[39m
+2025-10-05T09:16:14.1803181Z             [36m>[39m
+2025-10-05T09:16:14.1803394Z               [36m<div[39m
+2025-10-05T09:16:14.1803711Z                 [33mclass[39m=[32m"flex-1 overflow-auto"[39m
+2025-10-05T09:16:14.1804002Z               [36m>[39m
+2025-10-05T09:16:14.1804246Z                 [36m<div[39m
+2025-10-05T09:16:14.1804594Z                   [33mclass[39m=[32m"container-responsive py-6"[39m
+2025-10-05T09:16:14.1804905Z                 [36m>[39m
+2025-10-05T09:16:14.1805152Z                   [36m<div[39m
+2025-10-05T09:16:14.1805455Z                     [33mclass[39m=[32m"min-h-full"[39m
+2025-10-05T09:16:14.1805732Z                   [36m>[39m
+2025-10-05T09:16:14.1805981Z                     [36m<div>[39m
+2025-10-05T09:16:14.1806268Z                       [0mTest Content[0m
+2025-10-05T09:16:14.1806557Z                     [36m</div>[39m
+2025-10-05T09:16:14.1806819Z                   [36m</div>[39m
+2025-10-05T09:16:14.1807080Z                 [36m</div>[39m
+2025-10-05T09:16:14.1807328Z               [36m</div>[39m
+2025-10-05T09:16:14.1807573Z               [36m<footer[39m
+2025-10-05T09:16:14.1807875Z                 [33mdata-testid[39m=[32m"footer"[39m
+2025-10-05T09:16:14.1808142Z               [36m>[39m
+2025-10-05T09:16:14.1808378Z                 [0mFooter[0m
+2025-10-05T09:16:14.1808630Z               [36m</footer>[39m
+2025-10-05T09:16:14.1808891Z             [36m</main>[39m
+2025-10-05T09:16:14.1809113Z           [36m</div>[39m
+2025-10-05T09:16:14.1809443Z           [36m<div[39m
+2025-10-05T09:16:14.1809725Z             [33mclass[39m=[32m"sr-only"[39m
+2025-10-05T09:16:14.1810103Z           [36m>[39m
+2025-10-05T09:16:14.1810319Z             [36m<div[39m
+2025-10-05T09:16:14.1810602Z               [33maria-atomic[39m=[32m"true"[39m
+2025-10-05T09:16:14.1810929Z               [33maria-live[39m=[32m"polite"[39m
+2025-10-05T09:16:14.1811196Z             [36m>[39m
+2025-10-05T09:16:14.1811467Z               [0m按 Ctrl+K 打开搜索[0m
+2025-10-05T09:16:14.1811726Z             [36m</div>[39m
+2025-10-05T09:16:14.1811954Z           [36m</div>[39m
+2025-10-05T09:16:14.1812170Z         [36m</div>[39m
+2025-10-05T09:16:14.1812386Z       [36m</div>[39m
+2025-10-05T09:16:14.1812584Z       [36m<div>[39m
+2025-10-05T09:16:14.1812788Z         [36m<div[39m
+2025-10-05T09:16:14.1813155Z           [33mclass[39m=[32m"min-h-screen bg-background flex flex-col"[39m
+2025-10-05T09:16:14.1813481Z         [36m>[39m
+2025-10-05T09:16:14.1813696Z           [36m<header[39m
+2025-10-05T09:16:14.1813985Z             [33mdata-testid[39m=[32m"header"[39m
+2025-10-05T09:16:14.1814241Z           [36m>[39m
+2025-10-05T09:16:14.1814453Z             [36m<button[39m
+2025-10-05T09:16:14.1814769Z               [33mdata-testid[39m=[32m"toggle-sidebar"[39m
+2025-10-05T09:16:14.1815057Z             [36m>[39m
+2025-10-05T09:16:14.1815302Z               [0mToggle Sidebar[0m
+2025-10-05T09:16:14.1815567Z             [36m</button>[39m
+2025-10-05T09:16:14.1815800Z           [36m</header>[39m
+2025-10-05T09:16:14.1816023Z           [36m<div[39m
+2025-10-05T09:16:14.1816315Z             [33mclass[39m=[32m"flex flex-1 relative"[39m
+2025-10-05T09:16:14.1816591Z           [36m>[39m
+2025-10-05T09:16:14.1816789Z             [36m<div[39m
+2025-10-05T09:16:14.1817307Z               [33mclass[39m=[32m"hidden lg:block relative z-10 transition-all duration-300 ease-in-out w-64"[39m
+2025-10-05T09:16:14.1817735Z             [36m>[39m
+2025-10-05T09:16:14.1817964Z               [36m<aside[39m
+2025-10-05T09:16:14.1818393Z                 [33mdata-collapsed[39m=[32m"false"[39m
+2025-10-05T09:16:14.1818745Z                 [33mdata-testid[39m=[32m"sidebar"[39m
+2025-10-05T09:16:14.1819015Z               [36m/>[39m
+2025-10-05T09:16:14.1819237Z             [36m</div>[39m
+2025-10-05T09:16:14.1819460Z             [36m<main[39m
+2025-10-05T09:16:14.1820063Z               [33mclass[39m=[32m"flex-1 flex flex-col min-h-0 transition-all duration-300 ease-in-out"[39m
+2025-10-05T09:16:14.1820478Z             [36m>[39m
+2025-10-05T09:16:14.1820689Z               [36m<div[39m
+2025-10-05T09:16:14.1821002Z                 [33mclass[39m=[32m"flex-1 overflow-auto"[39m
+2025-10-05T09:16:14.1821293Z               [36m>[39m
+2025-10-05T09:16:14.1821530Z                 [36m<div[39m
+2025-10-05T09:16:14.1821872Z                   [33mclass[39m=[32m"container-responsive py-6"[39m
+2025-10-05T09:16:14.1822179Z                 [36m>[39m
+2025-10-05T09:16:14.1822417Z                   [36m<div[39m
+2025-10-05T09:16:14.1822723Z                     [33mclass[39m=[32m"min-h-full"[39m
+2025-10-05T09:16:14.1822997Z                   [36m>[39m
+2025-10-05T09:16:14.1823241Z                     [36m<div>[39m
+2025-10-05T09:16:14.1823522Z                       [0mTest Content[0m
+2025-10-05T09:16:14.1823805Z                     [36m</div>[39m
+2025-10-05T09:16:14.1824066Z                   [36m</div>[39m
+2025-10-05T09:16:14.1824326Z                 [36m</div>[39m
+2025-10-05T09:16:14.1824571Z               [36m</div>[39m
+2025-10-05T09:16:14.1824817Z               [36m<footer[39m
+2025-10-05T09:16:14.1825117Z                 [33mdata-testid[39m=[32m"footer"[39m
+2025-10-05T09:16:14.1825383Z               [36m>[39m
+2025-10-05T09:16:14.1825616Z                 [0mFooter[0m
+2025-10-05T09:16:14.1825865Z               [36m</footer>[39m
+2025-10-05T09:16:14.1826100Z             [36m</main>[39m
+2025-10-05T09:16:14.1826325Z           [36m</div>[39m
+2025-10-05T09:16:14.1826657Z           [36m<div[39m
+2025-10-05T09:16:14.1826940Z             [33mclass[39m=[32m"sr-only"[39m
+2025-10-05T09:16:14.1827198Z           [36m>[39m
+2025-10-05T09:16:14.1827397Z             [36m<div[39m
+2025-10-05T09:16:14.1827677Z               [33maria-atomic[39m=[32m"true"[39m
+2025-10-05T09:16:14.1828003Z               [33maria-live[39m=[32m"polite"[39m
+2025-10-05T09:16:14.1828257Z             [36m>[39m
+2025-10-05T09:16:14.1828523Z               [0m按 Ctrl+K 打开搜索[0m
+2025-10-05T09:16:14.1828775Z             [36m</div>[39m
+2025-10-05T09:16:14.1828995Z           [36m</div>[39m
+2025-10-05T09:16:14.1829209Z         [36m</div>[39m
+2025-10-05T09:16:14.1829413Z       [36m</div>[39m
+2025-10-05T09:16:14.1829620Z     [36m</body>[39m
+2025-10-05T09:16:14.1829729Z 
+2025-10-05T09:16:14.1829836Z     [0m [90m 175 |[39m
+2025-10-05T09:16:14.1830398Z      [90m 176 |[39m       [90m// 验证在不同尺寸下的布局[39m
+2025-10-05T09:16:14.1831032Z     [31m[1m>[22m[39m[90m 177 |[39m       expect(screen[33m.[39mgetByTestId([32m'sidebar'[39m))[33m.[39mtoBeInTheDocument()
+2025-10-05T09:16:14.1831585Z      [90m     |[39m                     [31m[1m^[22m[39m
+2025-10-05T09:16:14.1831866Z      [90m 178 |[39m     })
+2025-10-05T09:16:14.1832088Z      [90m 179 |[39m   })
+2025-10-05T09:16:14.1832309Z      [90m 180 |[39m })[0m
+2025-10-05T09:16:14.1832431Z 
+2025-10-05T09:16:14.1832699Z       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+2025-10-05T09:16:14.1833253Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:20:35)
+2025-10-05T09:16:14.1833799Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:23:10)
+2025-10-05T09:16:14.1834409Z       at getMultipleElementsFoundError (node_modules/@testing-library/dom/dist/query-helpers.js:55:13)
+2025-10-05T09:16:14.1834979Z       at query (node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+2025-10-05T09:16:14.1835390Z       at src/components/__tests__/Layout.test.tsx:177:21
+2025-10-05T09:16:14.1835862Z           at Array.forEach (<anonymous>)
+2025-10-05T09:16:14.1836236Z       at Object.<anonymous> (src/components/__tests__/Layout.test.tsx:158:15)
+2025-10-05T09:16:14.1836491Z 
+2025-10-05T09:16:15.0672919Z FAIL src/pages/__tests__/HomePage.test.tsx
+2025-10-05T09:16:15.0673519Z   HomePage Component
+2025-10-05T09:16:15.0674216Z     ✓ 应该正确渲染首页内容 (220 ms)
+2025-10-05T09:16:15.0674652Z     ✓ 应该显示统计数据 (31 ms)
+2025-10-05T09:16:15.0675068Z     ✓ 应该显示功能特性 (49 ms)
+2025-10-05T09:16:15.0675479Z     ✓ 应该显示快速开始步骤 (23 ms)
+2025-10-05T09:16:15.0675992Z     ✓ 应该处理搜索表单提交 (60 ms)
+2025-10-05T09:16:15.0676400Z     ✓ 应该处理空搜索提交 (39 ms)
+2025-10-05T09:16:15.0676845Z     ✕ 应该处理键盘事件 (1031 ms)
+2025-10-05T09:16:15.0677276Z     ✕ 应该正确处理认证状态 (21 ms)
+2025-10-05T09:16:15.0677703Z     ✓ 应该正确处理未认证状态 (18 ms)
+2025-10-05T09:16:15.0678157Z     ✓ 应该支持无障碍访问 (37 ms)
+2025-10-05T09:16:15.0678581Z     ✕ 应该正确处理响应式设计 (48 ms)
+2025-10-05T09:16:15.0679031Z     ✓ 应该正确处理动画效果 (17 ms)
+2025-10-05T09:16:15.0679520Z     ✓ 应该处理错误状态 (11 ms)
+2025-10-05T09:16:15.0679741Z 
+2025-10-05T09:16:15.0680230Z   ● HomePage Component › 应该处理键盘事件
+2025-10-05T09:16:15.0680489Z 
+2025-10-05T09:16:15.0680741Z     expect(jest.fn()).toHaveBeenCalledWith(...expected)
+2025-10-05T09:16:15.0681073Z 
+2025-10-05T09:16:15.0681280Z     Expected: "/search?q=test%20query"
+2025-10-05T09:16:15.0681538Z 
+2025-10-05T09:16:15.0681656Z     Number of calls: 0
+2025-10-05T09:16:15.0681839Z 
+2025-10-05T09:16:15.0682018Z     Ignored nodes: comments, script, style
+2025-10-05T09:16:15.0682438Z     [36m<html>[39m
+2025-10-05T09:16:15.0682742Z       [36m<head />[39m
+2025-10-05T09:16:15.0683076Z       [36m<body>[39m
+2025-10-05T09:16:15.0683383Z         [36m<div>[39m
+2025-10-05T09:16:15.0683697Z           [36m<div[39m
+2025-10-05T09:16:15.0684167Z             [33mclass[39m=[32m"min-h-screen"[39m
+2025-10-05T09:16:15.0684625Z           [36m>[39m
+2025-10-05T09:16:15.0685031Z             [36m<section[39m
+2025-10-05T09:16:15.0686181Z               [33mclass[39m=[32m"relative py-20 lg:py-32 overflow-hidden"[39m
+2025-10-05T09:16:15.0686810Z             [36m>[39m
+2025-10-05T09:16:15.0687186Z               [36m<div[39m
+2025-10-05T09:16:15.0688190Z                 [33mclass[39m=[32m"absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"[39m
+2025-10-05T09:16:15.0688990Z               [36m/>[39m
+2025-10-05T09:16:15.0689377Z               [36m<div[39m
+2025-10-05T09:16:15.0690442Z                 [33mclass[39m=[32m"absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"[39m
+2025-10-05T09:16:15.0691179Z               [36m/>[39m
+2025-10-05T09:16:15.0691571Z               [36m<div[39m
+2025-10-05T09:16:15.0692488Z                 [33mclass[39m=[32m"absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"[39m
+2025-10-05T09:16:15.0693243Z               [36m/>[39m
+2025-10-05T09:16:15.0693625Z               [36m<div[39m
+2025-10-05T09:16:15.0694235Z                 [33mclass[39m=[32m"relative container-responsive"[39m
+2025-10-05T09:16:15.0694794Z               [36m>[39m
+2025-10-05T09:16:15.0695210Z                 [36m<div[39m
+2025-10-05T09:16:15.0695822Z                   [33mclass[39m=[32m"text-center max-w-4xl mx-auto"[39m
+2025-10-05T09:16:15.0696358Z                 [36m>[39m
+2025-10-05T09:16:15.0696777Z                   [36m<div[39m
+2025-10-05T09:16:15.0697282Z                     [33mclass[39m=[32m"mb-6"[39m
+2025-10-05T09:16:15.0697753Z                   [36m>[39m
+2025-10-05T09:16:15.0698193Z                     [36m<span[39m
+2025-10-05T09:16:15.0699310Z                       [33mclass[39m=[32m"inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"[39m
+2025-10-05T09:16:15.0700576Z                     [36m>[39m
+2025-10-05T09:16:15.0701069Z                       [36m<svg[39m
+2025-10-05T09:16:15.0701720Z                         [33mclass[39m=[32m"h-4 w-4 mr-2"[39m
+2025-10-05T09:16:15.0702392Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0703188Z                       [36m/>[39m
+2025-10-05T09:16:15.0703730Z                       [0m全新 v2.0 版本发布[0m
+2025-10-05T09:16:15.0704239Z                     [36m</span>[39m
+2025-10-05T09:16:15.0704724Z                   [36m</div>[39m
+2025-10-05T09:16:15.0705204Z                   [36m<h1[39m
+2025-10-05T09:16:15.0705985Z                     [33mclass[39m=[32m"text-4xl lg:text-6xl font-bold text-foreground mb-6"[39m
+2025-10-05T09:16:15.0706627Z                   [36m>[39m
+2025-10-05T09:16:15.0707087Z                     [0m智能搜索，[0m
+2025-10-05T09:16:15.0707556Z                     [36m<span[39m
+2025-10-05T09:16:15.0708121Z                       [33mclass[39m=[32m"text-gradient"[39m
+2025-10-05T09:16:15.0708650Z                     [36m>[39m
+2025-10-05T09:16:15.0709096Z                       [0m重新定义[0m
+2025-10-05T09:16:15.0709579Z                     [36m</span>[39m
+2025-10-05T09:16:15.0710292Z                     [36m<br />[39m
+2025-10-05T09:16:15.0710796Z                     [0m知识管理体验[0m
+2025-10-05T09:16:15.0711256Z                   [36m</h1>[39m
+2025-10-05T09:16:15.0711713Z                   [36m<p[39m
+2025-10-05T09:16:15.0712492Z                     [33mclass[39m=[32m"text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"[39m
+2025-10-05T09:16:15.0713148Z                   [36m>[39m
+2025-10-05T09:16:15.0713853Z                     [0m基于先进的 AI 技术，CORA 为您提供智能化的文档搜索和管理解决方案， 让知识触手可及，让工作更加高效。[0m
+2025-10-05T09:16:15.0714469Z                   [36m</p>[39m
+2025-10-05T09:16:15.0714914Z                   [36m<div[39m
+2025-10-05T09:16:15.0715419Z                     [33mclass[39m=[32m"mb-8"[39m
+2025-10-05T09:16:15.0715888Z                   [36m>[39m
+2025-10-05T09:16:15.0716319Z                     [36m<form[39m
+2025-10-05T09:16:15.0716893Z                       [33mclass[39m=[32m"max-w-2xl mx-auto"[39m
+2025-10-05T09:16:15.0717426Z                     [36m>[39m
+2025-10-05T09:16:15.0718070Z                       [36m<div[39m
+2025-10-05T09:16:15.0718648Z                         [33mclass[39m=[32m"relative"[39m
+2025-10-05T09:16:15.0719167Z                       [36m>[39m
+2025-10-05T09:16:15.0719625Z                         [36m<svg[39m
+2025-10-05T09:16:15.0720849Z                           [33mclass[39m=[32m"absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground"[39m
+2025-10-05T09:16:15.0721827Z                           [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0722374Z                         [36m/>[39m
+2025-10-05T09:16:15.0722877Z                         [36m<input[39m
+2025-10-05T09:16:15.0724595Z                           [33mclass[39m=[32m"w-full pl-12 pr-32 py-4 text-lg border border-border rounded-xl bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"[39m
+2025-10-05T09:16:15.0726064Z                           [33mplaceholder[39m=[32m"搜索任何内容..."[39m
+2025-10-05T09:16:15.0726689Z                           [33mtype[39m=[32m"text"[39m
+2025-10-05T09:16:15.0727575Z                           [33mvalue[39m=[32m"test query"[39m
+2025-10-05T09:16:15.0728099Z                         [36m/>[39m
+2025-10-05T09:16:15.0728588Z                         [36m<button[39m
+2025-10-05T09:16:15.0729601Z                           [33mclass[39m=[32m"absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-primary btn-md"[39m
+2025-10-05T09:16:15.0730682Z                           [33mtype[39m=[32m"submit"[39m
+2025-10-05T09:16:15.0731215Z                         [36m>[39m
+2025-10-05T09:16:15.0731709Z                           [0m开始搜索[0m
+2025-10-05T09:16:15.0732213Z                         [36m</button>[39m
+2025-10-05T09:16:15.0732715Z                       [36m</div>[39m
+2025-10-05T09:16:15.0733192Z                     [36m</form>[39m
+2025-10-05T09:16:15.0733658Z                   [36m</div>[39m
+2025-10-05T09:16:15.0734111Z                   [36m<div[39m
+2025-10-05T09:16:15.0735181Z                     [33mclass[39m=[32m"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"[39m
+2025-10-05T09:16:15.0736030Z                   [36m>[39m
+2025-10-05T09:16:15.0736470Z                     [36m<a[39m
+2025-10-05T09:16:15.0737062Z                       [33mclass[39m=[32m"btn btn-primary btn-lg"[39m
+2025-10-05T09:16:15.0737706Z                       [33mhref[39m=[32m"/register"[39m
+2025-10-05T09:16:15.0738227Z                     [36m>[39m
+2025-10-05T09:16:15.0738680Z                       [0m免费注册[0m
+2025-10-05T09:16:15.0739152Z                       [36m<svg[39m
+2025-10-05T09:16:15.0739710Z                         [33mclass[39m=[32m"ml-2 h-5 w-5"[39m
+2025-10-05T09:16:15.0740528Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0741069Z                       [36m/>[39m
+2025-10-05T09:16:15.0741525Z                     [36m</a>[39m
+2025-10-05T09:16:15.0742170Z                     [36m<button[39m
+2025-10-05T09:16:15.0742814Z                       [33mclass[39m=[32m"btn btn-outline btn-lg"[39m
+2025-10-05T09:16:15.0743365Z                     [36m>[39m
+2025-10-05T09:16:15.0743811Z                       [36m<svg[39m
+2025-10-05T09:16:15.0744367Z                         [33mclass[39m=[32m"mr-2 h-5 w-5"[39m
+2025-10-05T09:16:15.0745000Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0745603Z                       [36m/>[39m
+2025-10-05T09:16:15.0746078Z                       [0m观看演示[0m
+2025-10-05T09:16:15.0746563Z                     [36m</button>[39m
+2025-10-05T09:16:15.0747054Z                   [36m</div>[39m
+2025-10-05T09:16:15.0747494Z                 [36m</div>[39m
+2025-10-05T09:16:15.0747937Z               [36m</div>[39m
+2025-10-05T09:16:15.0748386Z             [36m</section>[39m
+2025-10-05T09:16:15.0748821Z             [36m<section[39m
+2025-10-05T09:16:15.0749385Z               [33mclass[39m=[32m"py-16 bg-muted/30"[39m
+2025-10-05T09:16:15.0749866Z             [36m>[39m
+2025-10-05T09:16:15.0750412Z               [36m<div[39m
+2025-10-05T09:16:15.0750980Z                 [33mclass[39m=[32m"container-responsive"[39m
+2025-10-05T09:16:15.0751489Z               [36m>[39m
+2025-10-05T09:16:15.0751902Z                 [36m<div[39m
+2025-10-05T09:16:15.0752578Z                   [33mclass[39m=[32m"grid grid-cols-2 lg:grid-cols-4 gap-8"[39m
+2025-10-05T09:16:15.0753161Z                 [36m>[39m
+2025-10-05T09:16:15.0753584Z                   [36m<div[39m
+2025-10-05T09:16:15.0754117Z                     [33mclass[39m=[32m"text-center"[39m
+2025-10-05T09:16:15.0754602Z                   [36m>[39m
+2025-10-05T09:16:15.0755038Z                     [36m<div[39m
+2025-10-05T09:16:15.0756045Z                       [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T09:16:15.0756876Z                     [36m>[39m
+2025-10-05T09:16:15.0757338Z                       [36m<svg[39m
+2025-10-05T09:16:15.0758548Z                         [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T09:16:15.0759369Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0759921Z                       [36m/>[39m
+2025-10-05T09:16:15.0760557Z                     [36m</div>[39m
+2025-10-05T09:16:15.0761028Z                     [36m<div[39m
+2025-10-05T09:16:15.0761789Z                       [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T09:16:15.0762415Z                     [36m>[39m
+2025-10-05T09:16:15.0762877Z                       [0m10,000+[0m
+2025-10-05T09:16:15.0763350Z                     [36m</div>[39m
+2025-10-05T09:16:15.0763808Z                     [36m<div[39m
+2025-10-05T09:16:15.0764490Z                       [33mclass[39m=[32m"text-sm text-muted-foreground mb-1"[39m
+2025-10-05T09:16:15.0765088Z                     [36m>[39m
+2025-10-05T09:16:15.0765555Z                       [0m活跃用户[0m
+2025-10-05T09:16:15.0766026Z                     [36m</div>[39m
+2025-10-05T09:16:15.0766498Z                     [36m<div[39m
+2025-10-05T09:16:15.0767319Z                       [33mclass[39m=[32m"flex items-center justify-center text-xs text-green-600"[39m
+2025-10-05T09:16:15.0768014Z                     [36m>[39m
+2025-10-05T09:16:15.0768447Z                       [36m<svg[39m
+2025-10-05T09:16:15.0769015Z                         [33mclass[39m=[32m"h-3 w-3 mr-1"[39m
+2025-10-05T09:16:15.0769659Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0770366Z                       [36m/>[39m
+2025-10-05T09:16:15.0770822Z                       [0m+12%[0m
+2025-10-05T09:16:15.0771285Z                     [36m</div>[39m
+2025-10-05T09:16:15.0771747Z                   [36m</div>[39m
+2025-10-05T09:16:15.0772204Z                   [36m<div[39m
+2025-10-05T09:16:15.0772730Z                     [33mclass[39m=[32m"text-center"[39m
+2025-10-05T09:16:15.0773408Z                   [36m>[39m
+2025-10-05T09:16:15.0773860Z                     [36m<div[39m
+2025-10-05T09:16:15.0774860Z                       [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T09:16:15.0775695Z                     [36m>[3...
+2025-10-05T09:16:15.0775926Z 
+2025-10-05T09:16:15.0776226Z     [0m [90m 131 |[39m     [90m// 验证导航被调用[39m
+2025-10-05T09:16:15.0776876Z      [90m 132 |[39m     [36mawait[39m waitFor(() [33m=>[39m {
+2025-10-05T09:16:15.0778017Z     [31m[1m>[22m[39m[90m 133 |[39m       expect(mockNavigate)[33m.[39mtoHaveBeenCalledWith([32m'/search?q=test%20query'[39m)
+2025-10-05T09:16:15.0778995Z      [90m     |[39m                            [31m[1m^[22m[39m
+2025-10-05T09:16:15.0779488Z      [90m 134 |[39m     })
+2025-10-05T09:16:15.0780141Z      [90m 135 |[39m   })
+2025-10-05T09:16:15.0780538Z      [90m 136 |[39m[0m
+2025-10-05T09:16:15.0780747Z 
+2025-10-05T09:16:15.0781012Z       at src/pages/__tests__/HomePage.test.tsx:133:28
+2025-10-05T09:16:15.0781699Z       at callback (node_modules/@testing-library/dom/dist/config.js:47:12)
+2025-10-05T09:16:15.0782524Z       at checkCallback (node_modules/@testing-library/dom/dist/wait-for.js:124:76)
+2025-10-05T09:16:15.0783381Z       at checkCallback (node_modules/@testing-library/dom/dist/wait-for.js:118:16)
+2025-10-05T09:16:15.0784298Z       at Timeout.task [as _onTimeout] (node_modules/jsdom/lib/jsdom/browser/Window.js:520:19)
+2025-10-05T09:16:15.0784805Z 
+2025-10-05T09:16:15.0785088Z   ● HomePage Component › 应该正确处理认证状态
+2025-10-05T09:16:15.0785355Z 
+2025-10-05T09:16:15.0785897Z     TestingLibraryElementError: Found multiple elements with the text: /开始使用/
+2025-10-05T09:16:15.0786411Z 
+2025-10-05T09:16:15.0786590Z     Here are the matching elements:
+2025-10-05T09:16:15.0786853Z 
+2025-10-05T09:16:15.0787062Z     Ignored nodes: comments, script, style
+2025-10-05T09:16:15.0787525Z     [36m<a[39m
+2025-10-05T09:16:15.0788056Z       [33mclass[39m=[32m"btn btn-primary btn-lg"[39m
+2025-10-05T09:16:15.0788834Z       [33mhref[39m=[32m"/search"[39m
+2025-10-05T09:16:15.0789253Z     [36m>[39m
+2025-10-05T09:16:15.0789596Z       [0m开始使用[0m
+2025-10-05T09:16:15.0790101Z       [36m<svg[39m
+2025-10-05T09:16:15.0790578Z         [33mclass[39m=[32m"ml-2 h-5 w-5"[39m
+2025-10-05T09:16:15.0791163Z         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0791625Z       [36m/>[39m
+2025-10-05T09:16:15.0791957Z     [36m</a>[39m
+2025-10-05T09:16:15.0792130Z 
+2025-10-05T09:16:15.0792344Z     Ignored nodes: comments, script, style
+2025-10-05T09:16:15.0792788Z     [36m<h2[39m
+2025-10-05T09:16:15.0793473Z       [33mclass[39m=[32m"text-3xl lg:text-4xl font-bold text-foreground mb-4"[39m
+2025-10-05T09:16:15.0794098Z     [36m>[39m
+2025-10-05T09:16:15.0794441Z       [0m三步开始使用[0m
+2025-10-05T09:16:15.0794821Z     [36m</h2>[39m
+2025-10-05T09:16:15.0794996Z 
+2025-10-05T09:16:15.0795210Z     Ignored nodes: comments, script, style
+2025-10-05T09:16:15.0795681Z     [36m<p[39m
+2025-10-05T09:16:15.0796185Z       [33mclass[39m=[32m"text-muted-foreground"[39m
+2025-10-05T09:16:15.0796660Z     [36m>[39m
+2025-10-05T09:16:15.0797069Z       [0m创建您的免费账户，开始使用 CORA[0m
+2025-10-05T09:16:15.0797464Z     [36m</p>[39m
+2025-10-05T09:16:15.0797638Z 
+2025-10-05T09:16:15.0798337Z     (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+2025-10-05T09:16:15.0799043Z 
+2025-10-05T09:16:15.0799243Z     Ignored nodes: comments, script, style
+2025-10-05T09:16:15.0799701Z     [36m<body>[39m
+2025-10-05T09:16:15.0800204Z       [36m<div>[39m
+2025-10-05T09:16:15.0800569Z         [36m<div[39m
+2025-10-05T09:16:15.0801043Z           [33mclass[39m=[32m"min-h-screen"[39m
+2025-10-05T09:16:15.0801500Z         [36m>[39m
+2025-10-05T09:16:15.0801857Z           [36m<section[39m
+2025-10-05T09:16:15.0802695Z             [33mclass[39m=[32m"relative py-20 lg:py-32 overflow-hidden"[39m
+2025-10-05T09:16:15.0803300Z           [36m>[39m
+2025-10-05T09:16:15.0803662Z             [36m<div[39m
+2025-10-05T09:16:15.0804617Z               [33mclass[39m=[32m"absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"[39m
+2025-10-05T09:16:15.0805416Z             [36m/>[39m
+2025-10-05T09:16:15.0805797Z             [36m<div[39m
+2025-10-05T09:16:15.0806642Z               [33mclass[39m=[32m"absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"[39m
+2025-10-05T09:16:15.0807345Z             [36m/>[39m
+2025-10-05T09:16:15.0807709Z             [36m<div[39m
+2025-10-05T09:16:15.0808608Z               [33mclass[39m=[32m"absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"[39m
+2025-10-05T09:16:15.0809350Z             [36m/>[39m
+2025-10-05T09:16:15.0809706Z             [36m<div[39m
+2025-10-05T09:16:15.0810483Z               [33mclass[39m=[32m"relative container-responsive"[39m
+2025-10-05T09:16:15.0811045Z             [36m>[39m
+2025-10-05T09:16:15.0811416Z               [36m<div[39m
+2025-10-05T09:16:15.0812033Z                 [33mclass[39m=[32m"text-center max-w-4xl mx-auto"[39m
+2025-10-05T09:16:15.0812577Z               [36m>[39m
+2025-10-05T09:16:15.0812990Z                 [36m<div[39m
+2025-10-05T09:16:15.0813481Z                   [33mclass[39m=[32m"mb-6"[39m
+2025-10-05T09:16:15.0813927Z                 [36m>[39m
+2025-10-05T09:16:15.0814370Z                   [36m<span[39m
+2025-10-05T09:16:15.0815478Z                     [33mclass[39m=[32m"inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"[39m
+2025-10-05T09:16:15.0816355Z                   [36m>[39m
+2025-10-05T09:16:15.0816797Z                     [36m<svg[39m
+2025-10-05T09:16:15.0817351Z                       [33mclass[39m=[32m"h-4 w-4 mr-2"[39m
+2025-10-05T09:16:15.0817989Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0818534Z                     [36m/>[39m
+2025-10-05T09:16:15.0819212Z                     [0m全新 v2.0 版本发布[0m
+2025-10-05T09:16:15.0819711Z                   [36m</span>[39m
+2025-10-05T09:16:15.0820342Z                 [36m</div>[39m
+2025-10-05T09:16:15.0820754Z                 [36m<h1[39m
+2025-10-05T09:16:15.0821526Z                   [33mclass[39m=[32m"text-4xl lg:text-6xl font-bold text-foreground mb-6"[39m
+2025-10-05T09:16:15.0822182Z                 [36m>[39m
+2025-10-05T09:16:15.0822612Z                   [0m智能搜索，[0m
+2025-10-05T09:16:15.0823063Z                   [36m<span[39m
+2025-10-05T09:16:15.0823620Z                     [33mclass[39m=[32m"text-gradient"[39m
+2025-10-05T09:16:15.0824110Z                   [36m>[39m
+2025-10-05T09:16:15.0824557Z                     [0m重新定义[0m
+2025-10-05T09:16:15.0825028Z                   [36m</span>[39m
+2025-10-05T09:16:15.0825496Z                   [36m<br />[39m
+2025-10-05T09:16:15.0825967Z                   [0m知识管理体验[0m
+2025-10-05T09:16:15.0826416Z                 [36m</h1>[39m
+2025-10-05T09:16:15.0826832Z                 [36m<p[39m
+2025-10-05T09:16:15.0827604Z                   [33mclass[39m=[32m"text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"[39m
+2025-10-05T09:16:15.0828253Z                 [36m>[39m
+2025-10-05T09:16:15.0828934Z                   [0m基于先进的 AI 技术，CORA 为您提供智能化的文档搜索和管理解决方案， 让知识触手可及，让工作更加高效。[0m
+2025-10-05T09:16:15.0829505Z                 [36m</p>[39m
+2025-10-05T09:16:15.0830081Z                 [36m<div[39m
+2025-10-05T09:16:15.0830610Z                   [33mclass[39m=[32m"mb-8"[39m
+2025-10-05T09:16:15.0831069Z                 [36m>[39m
+2025-10-05T09:16:15.0831501Z                   [36m<form[39m
+2025-10-05T09:16:15.0832077Z                     [33mclass[39m=[32m"max-w-2xl mx-auto"[39m
+2025-10-05T09:16:15.0832577Z                   [36m>[39m
+2025-10-05T09:16:15.0833028Z                     [36m<div[39m
+2025-10-05T09:16:15.0833578Z                       [33mclass[39m=[32m"relative"[39m
+2025-10-05T09:16:15.0834268Z                     [36m>[39m
+2025-10-05T09:16:15.0834761Z                       [36m<svg[39m
+2025-10-05T09:16:15.0835795Z                         [33mclass[39m=[32m"absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground"[39m
+2025-10-05T09:16:15.0836764Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0837309Z                       [36m/>[39m
+2025-10-05T09:16:15.0837790Z                       [36m<input[39m
+2025-10-05T09:16:15.0839513Z                         [33mclass[39m=[32m"w-full pl-12 pr-32 py-4 text-lg border border-border rounded-xl bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"[39m
+2025-10-05T09:16:15.0841162Z                         [33mplaceholder[39m=[32m"搜索任何内容..."[39m
+2025-10-05T09:16:15.0841769Z                         [33mtype[39m=[32m"text"[39m
+2025-10-05T09:16:15.0842335Z                         [33mvalue[39m=[32m""[39m
+2025-10-05T09:16:15.0842862Z                       [36m/>[39m
+2025-10-05T09:16:15.0843340Z                       [36m<button[39m
+2025-10-05T09:16:15.0844328Z                         [33mclass[39m=[32m"absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-primary btn-md"[39m
+2025-10-05T09:16:15.0845279Z                         [33mtype[39m=[32m"submit"[39m
+2025-10-05T09:16:15.0845902Z                       [36m>[39m
+2025-10-05T09:16:15.0846377Z                         [0m开始搜索[0m
+2025-10-05T09:16:15.0846877Z                       [36m</button>[39m
+2025-10-05T09:16:15.0847368Z                     [36m</div>[39m
+2025-10-05T09:16:15.0847842Z                   [36m</form>[39m
+2025-10-05T09:16:15.0848305Z                 [36m</div>[39m
+2025-10-05T09:16:15.0848743Z                 [36m<div[39m
+2025-10-05T09:16:15.0849793Z                   [33mclass[39m=[32m"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"[39m
+2025-10-05T09:16:15.0850808Z                 [36m>[39m
+2025-10-05T09:16:15.0851410Z                   [36m<a[39m
+2025-10-05T09:16:15.0852000Z                     [33mclass[39m=[32m"btn btn-primary btn-lg"[39m
+2025-10-05T09:16:15.0852630Z                     [33mhref[39m=[32m"/search"[39m
+2025-10-05T09:16:15.0853102Z                   [36m>[39m
+2025-10-05T09:16:15.0853553Z                     [0m开始使用[0m
+2025-10-05T09:16:15.0854004Z                     [36m<svg[39m
+2025-10-05T09:16:15.0855315Z                       [33mclass[39m=[32m"ml-2 h-5 w-5"[39m
+2025-10-05T09:16:15.0856015Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0856559Z                     [36m/>[39m
+2025-10-05T09:16:15.0857009Z                   [36m</a>[39m
+2025-10-05T09:16:15.0857503Z                   [36m<button[39m
+2025-10-05T09:16:15.0858136Z                     [33mclass[39m=[32m"btn btn-outline btn-lg"[39m
+2025-10-05T09:16:15.0858658Z                   [36m>[39m
+2025-10-05T09:16:15.0859113Z                     [36m<svg[39m
+2025-10-05T09:16:15.0859686Z                       [33mclass[39m=[32m"mr-2 h-5 w-5"[39m
+2025-10-05T09:16:15.0860502Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0861036Z                     [36m/>[39m
+2025-10-05T09:16:15.0861498Z                     [0m观看演示[0m
+2025-10-05T09:16:15.0861965Z                   [36m</button>[39m
+2025-10-05T09:16:15.0862432Z                 [36m</div>[39m
+2025-10-05T09:16:15.0862878Z               [36m</div>[39m
+2025-10-05T09:16:15.0863276Z             [36m</div>[39m
+2025-10-05T09:16:15.0863712Z           [36m</section>[39m
+2025-10-05T09:16:15.0864120Z           [36m<section[39m
+2025-10-05T09:16:15.0864656Z             [33mclass[39m=[32m"py-16 bg-muted/30"[39m
+2025-10-05T09:16:15.0865138Z           [36m>[39m
+2025-10-05T09:16:15.0865493Z             [36m<div[39m
+2025-10-05T09:16:15.0866050Z               [33mclass[39m=[32m"container-responsive"[39m
+2025-10-05T09:16:15.0866726Z             [36m>[39m
+2025-10-05T09:16:15.0867116Z               [36m<div[39m
+2025-10-05T09:16:15.0867785Z                 [33mclass[39m=[32m"grid grid-cols-2 lg:grid-cols-4 gap-8"[39m
+2025-10-05T09:16:15.0868366Z               [36m>[39m
+2025-10-05T09:16:15.0868775Z                 [36m<div[39m
+2025-10-05T09:16:15.0869291Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T09:16:15.0869770Z                 [36m>[39m
+2025-10-05T09:16:15.0870394Z                   [36m<div[39m
+2025-10-05T09:16:15.0871380Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T09:16:15.0872170Z                   [36m>[39m
+2025-10-05T09:16:15.0872619Z                     [36m<svg[39m
+2025-10-05T09:16:15.0873232Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T09:16:15.0873898Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0874447Z                     [36m/>[39m
+2025-10-05T09:16:15.0874905Z                   [36m</div>[39m
+2025-10-05T09:16:15.0875358Z                   [36m<div[39m
+2025-10-05T09:16:15.0876062Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T09:16:15.0876667Z                   [36m>[39m
+2025-10-05T09:16:15.0877106Z                     [0m10,000+[0m
+2025-10-05T09:16:15.0877571Z                   [36m</div>[39m
+2025-10-05T09:16:15.0878021Z                   [36m<div[39m
+2025-10-05T09:16:15.0878696Z                     [33mclass[39m=[32m"text-sm text-muted-foreground mb-1"[39m
+2025-10-05T09:16:15.0879272Z                   [36m>[39m
+2025-10-05T09:16:15.0879716Z                     [0m活跃用户[0m
+2025-10-05T09:16:15.0880401Z                   [36m</div>[39m
+2025-10-05T09:16:15.0904527Z                   [36m<div[39m
+2025-10-05T09:16:15.0905373Z                     [33mclass[39m=[32m"flex items-center justify-center text-xs text-green-600"[39m
+2025-10-05T09:16:15.0906076Z                   [36m>[39m
+2025-10-05T09:16:15.0906741Z                     [36m<svg[39m
+2025-10-05T09:16:15.0907313Z                       [33mclass[39m=[32m"h-3 w-3 mr-1"[39m
+2025-10-05T09:16:15.0907948Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0908473Z                     [36m/>[39m
+2025-10-05T09:16:15.0909107Z                     [0m+12%[0m
+2025-10-05T09:16:15.0909592Z                   [36m</div>[39m
+2025-10-05T09:16:15.0910239Z                 [36m</div>[39m
+2025-10-05T09:16:15.0910728Z                 [36m<div[39m
+2025-10-05T09:16:15.0911235Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T09:16:15.0911674Z                 [36m>[39m
+2025-10-05T09:16:15.0912095Z                   [36m<div[39m
+2025-10-05T09:16:15.0913047Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T09:16:15.0913836Z                   [36m>[39m
+2025-10-05T09:16:15.0914246Z                     [36m<svg[39m
+2025-10-05T09:16:15.0914805Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T09:16:15.0915407Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0915877Z                     [36m/>[39m
+2025-10-05T09:16:15.0916301Z                   [36m</div>[39m
+2025-10-05T09:16:15.0916758Z                   [36m<div[39m
+2025-10-05T09:16:15.0917462Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T09:16:15.0918025Z                   [36m>...
+2025-10-05T09:16:15.0918232Z 
+2025-10-05T09:16:15.0918427Z     [0m [90m 170 |[39m
+2025-10-05T09:16:15.0918987Z      [90m 171 |[39m     [90m// 验证已认证状态的显示（按钮“开始使用”）[39m
+2025-10-05T09:16:15.0920301Z     [31m[1m>[22m[39m[90m 172 |[39m     expect(screen[33m.[39mgetByText([35m/开始使用/[39m))[33m.[39mtoBeInTheDocument()
+2025-10-05T09:16:15.0921667Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T09:16:15.0922262Z      [90m 173 |[39m   })
+2025-10-05T09:16:15.0922658Z      [90m 174 |[39m
+2025-10-05T09:16:15.0923362Z      [90m 175 |[39m   it([32m'应该正确处理未认证状态'[39m[33m,[39m () [33m=>[39m {[0m
+2025-10-05T09:16:15.0923747Z 
+2025-10-05T09:16:15.0924245Z       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+2025-10-05T09:16:15.0925260Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:20:35)
+2025-10-05T09:16:15.0926331Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:23:10)
+2025-10-05T09:16:15.0927486Z       at getMultipleElementsFoundError (node_modules/@testing-library/dom/dist/query-helpers.js:55:13)
+2025-10-05T09:16:15.0928260Z       at query (node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+2025-10-05T09:16:15.0928766Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:172:19)
+2025-10-05T09:16:15.0929039Z 
+2025-10-05T09:16:15.0929264Z   ● HomePage Component › 应该正确处理响应式设计
+2025-10-05T09:16:15.0929444Z 
+2025-10-05T09:16:15.0929702Z     TestingLibraryElementError: Found multiple elements with the role "heading"
+2025-10-05T09:16:15.0930232Z 
+2025-10-05T09:16:15.0930346Z     Here are the matching elements:
+2025-10-05T09:16:15.0930504Z 
+2025-10-05T09:16:15.0930631Z     Ignored nodes: comments, script, style
+2025-10-05T09:16:15.0930908Z     [36m<h1[39m
+2025-10-05T09:16:15.0931332Z       [33mclass[39m=[32m"text-4xl lg:text-6xl font-bold text-foreground mb-6"[39m
+2025-10-05T09:16:15.0931691Z     [36m>[39m
+2025-10-05T09:16:15.0931910Z       [0m智能搜索，[0m
+2025-10-05T09:16:15.0932121Z       [36m<span[39m
+2025-10-05T09:16:15.0932399Z         [33mclass[39m=[32m"text-gradient"[39m
+2025-10-05T09:16:15.0932665Z       [36m>[39m
+2025-10-05T09:16:15.0932877Z         [0m重新定义[0m
+2025-10-05T09:16:15.0933083Z       [36m</span>[39m
+2025-10-05T09:16:15.0933296Z       [36m<br />[39m
+2025-10-05T09:16:15.0933503Z       [0m知识管理体验[0m
+2025-10-05T09:16:15.0933710Z     [36m</h1>[39m
+2025-10-05T09:16:15.0934008Z 
+2025-10-05T09:16:15.0934137Z     Ignored nodes: comments, script, style
+2025-10-05T09:16:15.0934400Z     [36m<h1[39m
+2025-10-05T09:16:15.0934799Z       [33mclass[39m=[32m"text-4xl lg:text-6xl font-bold text-foreground mb-6"[39m
+2025-10-05T09:16:15.0935162Z     [36m>[39m
+2025-10-05T09:16:15.0935356Z       [0m智能搜索，[0m
+2025-10-05T09:16:15.0935555Z       [36m<span[39m
+2025-10-05T09:16:15.0935821Z         [33mclass[39m=[32m"text-gradient"[39m
+2025-10-05T09:16:15.0936082Z       [36m>[39m
+2025-10-05T09:16:15.0936274Z         [0m重新定义[0m
+2025-10-05T09:16:15.0936472Z       [36m</span>[39m
+2025-10-05T09:16:15.0936678Z       [36m<br />[39m
+2025-10-05T09:16:15.0936884Z       [0m知识管理体验[0m
+2025-10-05T09:16:15.0937072Z     [36m</h1>[39m
+2025-10-05T09:16:15.0937171Z 
+2025-10-05T09:16:15.0937570Z     (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+2025-10-05T09:16:15.0937993Z 
+2025-10-05T09:16:15.0938116Z     Ignored nodes: comments, script, style
+2025-10-05T09:16:15.0938378Z     [36m<body>[39m
+2025-10-05T09:16:15.0938578Z       [36m<div>[39m
+2025-10-05T09:16:15.0938780Z         [36m<div[39m
+2025-10-05T09:16:15.0939045Z           [33mclass[39m=[32m"min-h-screen"[39m
+2025-10-05T09:16:15.0939308Z         [36m>[39m
+2025-10-05T09:16:15.0939511Z           [36m<section[39m
+2025-10-05T09:16:15.0939901Z             [33mclass[39m=[32m"relative py-20 lg:py-32 overflow-hidden"[39m
+2025-10-05T09:16:15.0940428Z           [36m>[39m
+2025-10-05T09:16:15.0940641Z             [36m<div[39m
+2025-10-05T09:16:15.0941196Z               [33mclass[39m=[32m"absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"[39m
+2025-10-05T09:16:15.0941658Z             [36m/>[39m
+2025-10-05T09:16:15.0941876Z             [36m<div[39m
+2025-10-05T09:16:15.0942512Z               [33mclass[39m=[32m"absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"[39m
+2025-10-05T09:16:15.0942938Z             [36m/>[39m
+2025-10-05T09:16:15.0943152Z             [36m<div[39m
+2025-10-05T09:16:15.0943657Z               [33mclass[39m=[32m"absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"[39m
+2025-10-05T09:16:15.0944078Z             [36m/>[39m
+2025-10-05T09:16:15.0944288Z             [36m<div[39m
+2025-10-05T09:16:15.0944632Z               [33mclass[39m=[32m"relative container-responsive"[39m
+2025-10-05T09:16:15.0944939Z             [36m>[39m
+2025-10-05T09:16:15.0945151Z               [36m<div[39m
+2025-10-05T09:16:15.0945535Z                 [33mclass[39m=[32m"text-center max-w-4xl mx-auto"[39m
+2025-10-05T09:16:15.0945846Z               [36m>[39m
+2025-10-05T09:16:15.0946083Z                 [36m<div[39m
+2025-10-05T09:16:15.0946367Z                   [33mclass[39m=[32m"mb-6"[39m
+2025-10-05T09:16:15.0946635Z                 [36m>[39m
+2025-10-05T09:16:15.0946886Z                   [36m<span[39m
+2025-10-05T09:16:15.0947516Z                     [33mclass[39m=[32m"inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"[39m
+2025-10-05T09:16:15.0948095Z                   [36m>[39m
+2025-10-05T09:16:15.0948599Z                     [36m<svg[39m
+2025-10-05T09:16:15.0949232Z                       [33mclass[39m=[32m"h-4 w-4 mr-2"[39m
+2025-10-05T09:16:15.0950126Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0950795Z                     [36m/>[39m
+2025-10-05T09:16:15.0951366Z                     [0m全新 v2.0 版本发布[0m
+2025-10-05T09:16:15.0951964Z                   [36m</span>[39m
+2025-10-05T09:16:15.0952510Z                 [36m</div>[39m
+2025-10-05T09:16:15.0952993Z                 [36m<h1[39m
+2025-10-05T09:16:15.0953863Z                   [33mclass[39m=[32m"text-4xl lg:text-6xl font-bold text-foreground mb-6"[39m
+2025-10-05T09:16:15.0954620Z                 [36m>[39m
+2025-10-05T09:16:15.0955147Z                   [0m智能搜索，[0m
+2025-10-05T09:16:15.0955944Z                   [36m<span[39m
+2025-10-05T09:16:15.0956578Z                     [33mclass[39m=[32m"text-gradient"[39m
+2025-10-05T09:16:15.0957126Z                   [36m>[39m
+2025-10-05T09:16:15.0957578Z                     [0m重新定义[0m
+2025-10-05T09:16:15.0958040Z                   [36m</span>[39m
+2025-10-05T09:16:15.0958505Z                   [36m<br />[39m
+2025-10-05T09:16:15.0958980Z                   [0m知识管理体验[0m
+2025-10-05T09:16:15.0959446Z                 [36m</h1>[39m
+2025-10-05T09:16:15.0959889Z                 [36m<p[39m
+2025-10-05T09:16:15.0960915Z                   [33mclass[39m=[32m"text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"[39m
+2025-10-05T09:16:15.0961574Z                 [36m>[39m
+2025-10-05T09:16:15.0962252Z                   [0m基于先进的 AI 技术，CORA 为您提供智能化的文档搜索和管理解决方案， 让知识触手可及，让工作更加高效。[0m
+2025-10-05T09:16:15.0962828Z                 [36m</p>[39m
+2025-10-05T09:16:15.0963320Z                 [36m<div[39m
+2025-10-05T09:16:15.0963888Z                   [33mclass[39m=[32m"mb-8"[39m
+2025-10-05T09:16:15.0964338Z                 [36m>[39m
+2025-10-05T09:16:15.0964764Z                   [36m<form[39m
+2025-10-05T09:16:15.0965335Z                     [33mclass[39m=[32m"max-w-2xl mx-auto"[39m
+2025-10-05T09:16:15.0965831Z                   [36m>[39m
+2025-10-05T09:16:15.0966270Z                     [36m<div[39m
+2025-10-05T09:16:15.0966864Z                       [33mclass[39m=[32m"relative"[39m
+2025-10-05T09:16:15.0967442Z                     [36m>[39m
+2025-10-05T09:16:15.0967938Z                       [36m<svg[39m
+2025-10-05T09:16:15.0968989Z                         [33mclass[39m=[32m"absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground"[39m
+2025-10-05T09:16:15.0970212Z                         [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0970811Z                       [36m/>[39m
+2025-10-05T09:16:15.0971565Z                       [36m<input[39m
+2025-10-05T09:16:15.0973443Z                         [33mclass[39m=[32m"w-full pl-12 pr-32 py-4 text-lg border border-border rounded-xl bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"[39m
+2025-10-05T09:16:15.0974996Z                         [33mplaceholder[39m=[32m"搜索任何内容..."[39m
+2025-10-05T09:16:15.0975695Z                         [33mtype[39m=[32m"text"[39m
+2025-10-05T09:16:15.0976328Z                         [33mvalue[39m=[32m""[39m
+2025-10-05T09:16:15.0976910Z                       [36m/>[39m
+2025-10-05T09:16:15.0977431Z                       [36m<button[39m
+2025-10-05T09:16:15.0978499Z                         [33mclass[39m=[32m"absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-primary btn-md"[39m
+2025-10-05T09:16:15.0979487Z                         [33mtype[39m=[32m"submit"[39m
+2025-10-05T09:16:15.0980310Z                       [36m>[39m
+2025-10-05T09:16:15.0980877Z                         [0m开始搜索[0m
+2025-10-05T09:16:15.0981457Z                       [36m</button>[39m
+2025-10-05T09:16:15.0982037Z                     [36m</div>[39m
+2025-10-05T09:16:15.0982550Z                   [36m</form>[39m
+2025-10-05T09:16:15.0983057Z                 [36m</div>[39m
+2025-10-05T09:16:15.0983556Z                 [36m<div[39m
+2025-10-05T09:16:15.0984656Z                   [33mclass[39m=[32m"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"[39m
+2025-10-05T09:16:15.0985548Z                 [36m>[39m
+2025-10-05T09:16:15.0986024Z                   [36m<a[39m
+2025-10-05T09:16:15.0986679Z                     [33mclass[39m=[32m"btn btn-primary btn-lg"[39m
+2025-10-05T09:16:15.0987398Z                     [33mhref[39m=[32m"/register"[39m
+2025-10-05T09:16:15.0987941Z                   [36m>[39m
+2025-10-05T09:16:15.0988444Z                     [0m免费注册[0m
+2025-10-05T09:16:15.0988958Z                     [36m<svg[39m
+2025-10-05T09:16:15.0989601Z                       [33mclass[39m=[32m"ml-2 h-5 w-5"[39m
+2025-10-05T09:16:15.0990796Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0991418Z                     [36m/>[39m
+2025-10-05T09:16:15.0991942Z                   [36m</a>[39m
+2025-10-05T09:16:15.0992275Z                   [36m<button[39m
+2025-10-05T09:16:15.0992639Z                     [33mclass[39m=[32m"btn btn-outline btn-lg"[39m
+2025-10-05T09:16:15.0992949Z                   [36m>[39m
+2025-10-05T09:16:15.0993209Z                     [36m<svg[39m
+2025-10-05T09:16:15.0993521Z                       [33mclass[39m=[32m"mr-2 h-5 w-5"[39m
+2025-10-05T09:16:15.0993885Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.0994208Z                     [36m/>[39m
+2025-10-05T09:16:15.0994481Z                     [0m观看演示[0m
+2025-10-05T09:16:15.0994750Z                   [36m</button>[39m
+2025-10-05T09:16:15.0995017Z                 [36m</div>[39m
+2025-10-05T09:16:15.0995280Z               [36m</div>[39m
+2025-10-05T09:16:15.0995522Z             [36m</div>[39m
+2025-10-05T09:16:15.0995763Z           [36m</section>[39m
+2025-10-05T09:16:15.0995991Z           [36m<section[39m
+2025-10-05T09:16:15.0996296Z             [33mclass[39m=[32m"py-16 bg-muted/30"[39m
+2025-10-05T09:16:15.0996570Z           [36m>[39m
+2025-10-05T09:16:15.0996781Z             [36m<div[39m
+2025-10-05T09:16:15.0997093Z               [33mclass[39m=[32m"container-responsive"[39m
+2025-10-05T09:16:15.0997387Z             [36m>[39m
+2025-10-05T09:16:15.0997612Z               [36m<div[39m
+2025-10-05T09:16:15.0997988Z                 [33mclass[39m=[32m"grid grid-cols-2 lg:grid-cols-4 gap-8"[39m
+2025-10-05T09:16:15.0998333Z               [36m>[39m
+2025-10-05T09:16:15.0998575Z                 [36m<div[39m
+2025-10-05T09:16:15.0998865Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T09:16:15.0999139Z                 [36m>[39m
+2025-10-05T09:16:15.0999552Z                   [36m<div[39m
+2025-10-05T09:16:15.1000564Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T09:16:15.1001320Z                   [36m>[39m
+2025-10-05T09:16:15.1001581Z                     [36m<svg[39m
+2025-10-05T09:16:15.1001933Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T09:16:15.1002332Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.1002640Z                     [36m/>[39m
+2025-10-05T09:16:15.1002897Z                   [36m</div>[39m
+2025-10-05T09:16:15.1003158Z                   [36m<div[39m
+2025-10-05T09:16:15.1003550Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T09:16:15.1003900Z                   [36m>[39m
+2025-10-05T09:16:15.1004164Z                     [0m10,000+[0m
+2025-10-05T09:16:15.1004429Z                   [36m</div>[39m
+2025-10-05T09:16:15.1004689Z                   [36m<div[39m
+2025-10-05T09:16:15.1005062Z                     [33mclass[39m=[32m"text-sm text-muted-foreground mb-1"[39m
+2025-10-05T09:16:15.1005390Z                   [36m>[39m
+2025-10-05T09:16:15.1005650Z                     [0m活跃用户[0m
+2025-10-05T09:16:15.1005900Z                   [36m</div>[39m
+2025-10-05T09:16:15.1006154Z                   [36m<div[39m
+2025-10-05T09:16:15.1006605Z                     [33mclass[39m=[32m"flex items-center justify-center text-xs text-green-600"[39m
+2025-10-05T09:16:15.1006984Z                   [36m>[39m
+2025-10-05T09:16:15.1007228Z                     [36m<svg[39m
+2025-10-05T09:16:15.1007531Z                       [33mclass[39m=[32m"h-3 w-3 mr-1"[39m
+2025-10-05T09:16:15.1007899Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.1008203Z                     [36m/>[39m
+2025-10-05T09:16:15.1008447Z                     [0m+12%[0m
+2025-10-05T09:16:15.1008698Z                   [36m</div>[39m
+2025-10-05T09:16:15.1008964Z                 [36m</div>[39m
+2025-10-05T09:16:15.1009366Z                 [36m<div[39m
+2025-10-05T09:16:15.1009667Z                   [33mclass[39m=[32m"text-center"[39m
+2025-10-05T09:16:15.1010152Z                 [36m>[39m
+2025-10-05T09:16:15.1010410Z                   [36m<div[39m
+2025-10-05T09:16:15.1010966Z                     [33mclass[39m=[32m"inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4"[39m
+2025-10-05T09:16:15.1011420Z                   [36m>[39m
+2025-10-05T09:16:15.1011667Z                     [36m<svg[39m
+2025-10-05T09:16:15.1012005Z                       [33mclass[39m=[32m"h-6 w-6 text-primary"[39m
+2025-10-05T09:16:15.1012379Z                       [33mdata-testid[39m=[32m"mock-icon"[39m
+2025-10-05T09:16:15.1012682Z                     [36m/>[39m
+2025-10-05T09:16:15.1012938Z                   [36m</div>[39m
+2025-10-05T09:16:15.1013185Z                   [36m<div[39m
+2025-10-05T09:16:15.1013582Z                     [33mclass[39m=[32m"text-3xl font-bold text-foreground mb-1"[39m
+2025-10-05T09:16:15.1013937Z                   [36...
+2025-10-05T09:16:15.1014060Z 
+2025-10-05T09:16:15.1014162Z     [0m [90m 244 |[39m
+2025-10-05T09:16:15.1014442Z      [90m 245 |[39m     [90m// 验证桌面端布局[39m
+2025-10-05T09:16:15.1015172Z     [31m[1m>[22m[39m[90m 246 |[39m     expect(screen[33m.[39mgetByRole([32m'heading'[39m[33m,[39m { level[33m:[39m [35m1[39m }))[33m.[39mtoBeInTheDocument()
+2025-10-05T09:16:15.1015778Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T09:16:15.1016058Z      [90m 247 |[39m   })
+2025-10-05T09:16:15.1016268Z      [90m 248 |[39m
+2025-10-05T09:16:15.1016671Z      [90m 249 |[39m   it([32m'应该正确处理动画效果'[39m[33m,[39m [36masync[39m () [33m=>[39m {[0m
+2025-10-05T09:16:15.1016919Z 
+2025-10-05T09:16:15.1017177Z       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+2025-10-05T09:16:15.1017863Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:20:35)
+2025-10-05T09:16:15.1018409Z       at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:23:10)
+2025-10-05T09:16:15.1019031Z       at getMultipleElementsFoundError (node_modules/@testing-library/dom/dist/query-helpers.js:55:13)
+2025-10-05T09:16:15.1019617Z       at query (node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+2025-10-05T09:16:15.1020272Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:246:19)
+2025-10-05T09:16:15.1020534Z 
+2025-10-05T09:16:15.1020705Z Test Suites: 2 failed, 2 passed, 4 total
+2025-10-05T09:16:15.1021015Z Tests:       4 failed, 30 passed, 34 total
+2025-10-05T09:16:15.1021257Z Snapshots:   0 total
+2025-10-05T09:16:15.1021451Z Time:        4.536 s
+2025-10-05T09:16:15.1021638Z Ran all test suites.
+2025-10-05T09:16:15.1411293Z ##[error]Process completed with exit code 1.
+2025-10-05T09:16:15.1504032Z Post job cleanup.
+2025-10-05T09:16:15.2417529Z [command]/usr/bin/git version
+2025-10-05T09:16:15.2452920Z git version 2.51.0
+2025-10-05T09:16:15.2497471Z Temporarily overriding HOME='/home/runner/work/_temp/e3b430c1-c61c-474f-9c13-e6d0e5b59668' before making global git config changes
+2025-10-05T09:16:15.2498911Z Adding repository directory to the temporary git global config as a safe directory
+2025-10-05T09:16:15.2504122Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA
+2025-10-05T09:16:15.2538714Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-10-05T09:16:15.2570901Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-10-05T09:16:15.2801096Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-10-05T09:16:15.2824183Z http.https://github.com/.extraheader
+2025-10-05T09:16:15.2841571Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-10-05T09:16:15.2876796Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-10-05T09:16:15.3231431Z Cleaning up orphan processes

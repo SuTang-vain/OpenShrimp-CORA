@@ -25,7 +25,15 @@ const config: Config = {
   // 转换配置
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest'
+    '^.+\\.(js|jsx)$': [
+      'babel-jest',
+      {
+        presets: [
+          ['@babel/preset-env', { targets: { node: 'current' } }],
+          ['@babel/preset-react', { runtime: 'automatic' }]
+        ]
+      }
+    ]
   },
   
   // 模块名映射（路径别名和静态资源）

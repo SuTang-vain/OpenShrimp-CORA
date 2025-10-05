@@ -15,6 +15,8 @@ import authApi from './auth'
 import searchApi from './search'
 import documentsApi from './documents'
 import settingsApi from './settings'
+import agentsApi from './agents'
+import servicesApi from './services'
 
 // 导出认证 API
 export { authApi }
@@ -32,12 +34,22 @@ export * from './documents'
 export { settingsApi }
 export * from './settings'
 
+// 导出智能体 API
+export { agentsApi }
+export * from './agents'
+
+// 导出服务适配 API
+export { servicesApi }
+export * from './services'
+
 // 统一的 API 对象
 export const api = {
   auth: authApi,
   search: searchApi,
   documents: documentsApi,
   settings: settingsApi,
+  agents: agentsApi,
+  services: servicesApi,
   client: apiClient,
 } as const
 

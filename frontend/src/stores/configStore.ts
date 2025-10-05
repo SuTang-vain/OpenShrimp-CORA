@@ -158,10 +158,13 @@ export const serviceTemplates: ServiceTemplate[] = [
     description: 'Neo4j官方云服务，提供托管的图数据库解决方案。',
     officialUrl: 'https://neo4j.com/cloud/aura',
     setupInstructions: [
-      '前往Neo4j Aura注册账号',
-      '创建新的数据库实例',
-      '获取连接URL和认证信息',
-      '将连接信息填入下方表单'
+      '前往 Neo4j Aura 注册账号并创建数据库实例',
+      '在 Aura 控制台的 Connect 页面复制连接 URL（格式：neo4j+s://<instance-id>.databases.neo4j.io）',
+      '用户名通常为 neo4j；密码为创建实例时设置的登录密码',
+      '数据库名默认为 neo4j；如使用多数据库请填写目标数据库名',
+      '在下方表单填写 connectionUrl、username、password 与可选的 database 字段并保存',
+      '点击“测试连接”验证连通性（凭据会安全保存到后端的加密存储）',
+      '如遇连接失败：检查网络是否可访问 *.databases.neo4j.io、确认未被公司防火墙阻断、并确保使用 neo4j+s 安全协议'
     ],
     defaultConfig: {
       authType: 'basic',
@@ -179,10 +182,12 @@ export const serviceTemplates: ServiceTemplate[] = [
     description: '本地部署的Neo4j数据库实例，适合开发和测试环境。',
     officialUrl: 'https://neo4j.com/download',
     setupInstructions: [
-      '下载并安装Neo4j Desktop或Community版',
-      '启动Neo4j数据库服务',
-      '配置用户名和密码',
-      '确保数据库可通过bolt://localhost:7687访问'
+      '下载并安装 Neo4j Desktop 或 Community 版本，创建并启动本地数据库',
+      '首次启动时设置管理员密码；默认用户名为 neo4j',
+      '确认监听地址为 bolt://localhost:7687（本地默认端口为 7687）',
+      '在下方表单填写 connectionUrl（如 bolt://localhost:7687）、username（neo4j）、password，以及可选的 database（默认 neo4j）',
+      '保存后点击“测试连接”，后端将尝试连接并校验基础 Schema',
+      '如测试失败：检查数据库是否已启动、端口是否开放、以及是否与后端服务在同一网络可达'
     ],
     defaultConfig: {
       connectionUrl: 'bolt://localhost:7687',
@@ -260,10 +265,22 @@ export const useConfigStore = create<ConfigState>()(
       },
 
       updateService: (id, updates) => {
-        set((state) => ({
-          services: state.services.map(service =>
-            service.id === id ? { ...service, ...updates } : service
-          )
+        set((state): Partial<ConfigState> => ({
+          services: state.services.map((service) => {
+            if (service.id !== id) return service
+            switch (service.type) {
+              case ServiceType.LLM:
+                return { ...service, ...(updates as Partial<LLMServiceConfig>) }
+              case ServiceType.WEB_CRAWLER:
+                return { ...service, ...(updates as Partial<WebCrawlerServiceConfig>) }
+              case ServiceType.KNOWLEDGE_GRAPH:
+                return { ...service, ...(updates as Partial<KnowledgeGraphServiceConfig>) }
+              case ServiceType.LOCAL_MODEL:
+                return { ...service, ...(updates as Partial<LocalModelServiceConfig>) }
+              default:
+                return service
+            }
+          }) as ServiceConfig[]
         }))
       },
 

@@ -1,0 +1,69 @@
+﻿2025-10-05T09:15:52.0011630Z ##[group]Run actions/checkout@v4
+2025-10-05T09:15:52.0012458Z with:
+2025-10-05T09:15:52.0012880Z   repository: SuTang-vain/OpenShrimp-CORA
+2025-10-05T09:15:52.0013575Z   token: ***
+2025-10-05T09:15:52.0013975Z   ssh-strict: true
+2025-10-05T09:15:52.0014358Z   ssh-user: git
+2025-10-05T09:15:52.0014755Z   persist-credentials: true
+2025-10-05T09:15:52.0015186Z   clean: true
+2025-10-05T09:15:52.0015587Z   sparse-checkout-cone-mode: true
+2025-10-05T09:15:52.0016051Z   fetch-depth: 1
+2025-10-05T09:15:52.0016536Z   fetch-tags: false
+2025-10-05T09:15:52.0016919Z   show-progress: true
+2025-10-05T09:15:52.0017320Z   lfs: false
+2025-10-05T09:15:52.0017683Z   submodules: false
+2025-10-05T09:15:52.0018071Z   set-safe-directory: true
+2025-10-05T09:15:52.0018717Z ##[endgroup]
+2025-10-05T09:15:52.1098814Z Syncing repository: SuTang-vain/OpenShrimp-CORA
+2025-10-05T09:15:52.1102126Z ##[group]Getting Git version info
+2025-10-05T09:15:52.1103436Z Working directory is '/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA'
+2025-10-05T09:15:52.1105295Z [command]/usr/bin/git version
+2025-10-05T09:15:52.1173873Z git version 2.51.0
+2025-10-05T09:15:52.1200823Z ##[endgroup]
+2025-10-05T09:15:52.1214679Z Temporarily overriding HOME='/home/runner/work/_temp/f6803bf0-f174-4371-9960-da34aeadb091' before making global git config changes
+2025-10-05T09:15:52.1216419Z Adding repository directory to the temporary git global config as a safe directory
+2025-10-05T09:15:52.1227503Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA
+2025-10-05T09:15:52.1264555Z Deleting the contents of '/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA'
+2025-10-05T09:15:52.1268213Z ##[group]Initializing the repository
+2025-10-05T09:15:52.1272501Z [command]/usr/bin/git init /home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA
+2025-10-05T09:15:52.1348576Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-10-05T09:15:52.1349901Z hint: is subject to change. To configure the initial branch name to use in all
+2025-10-05T09:15:52.1351572Z hint: of your new repositories, which will suppress this warning, call:
+2025-10-05T09:15:52.1352237Z hint:
+2025-10-05T09:15:52.1352740Z hint: 	git config --global init.defaultBranch <name>
+2025-10-05T09:15:52.1353937Z hint:
+2025-10-05T09:15:52.1354741Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-10-05T09:15:52.1355732Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-10-05T09:15:52.1356420Z hint:
+2025-10-05T09:15:52.1356803Z hint: 	git branch -m <name>
+2025-10-05T09:15:52.1357244Z hint:
+2025-10-05T09:15:52.1357924Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-10-05T09:15:52.1359346Z Initialized empty Git repository in /home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/.git/
+2025-10-05T09:15:52.1365150Z [command]/usr/bin/git remote add origin https://github.com/SuTang-vain/OpenShrimp-CORA
+2025-10-05T09:15:52.1403096Z ##[endgroup]
+2025-10-05T09:15:52.1403838Z ##[group]Disabling automatic garbage collection
+2025-10-05T09:15:52.1407110Z [command]/usr/bin/git config --local gc.auto 0
+2025-10-05T09:15:52.1434813Z ##[endgroup]
+2025-10-05T09:15:52.1435503Z ##[group]Setting up auth
+2025-10-05T09:15:52.1441788Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-10-05T09:15:52.1470942Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-10-05T09:15:52.1808871Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-10-05T09:15:52.1839080Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-10-05T09:15:52.2059723Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-10-05T09:15:52.2101241Z ##[endgroup]
+2025-10-05T09:15:52.2101983Z ##[group]Fetching the repository
+2025-10-05T09:15:52.2109761Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +f097b5c98e1ca8b01a2453e561d1dab723ee2384:refs/remotes/origin/main
+2025-10-05T09:15:52.5059910Z From https://github.com/SuTang-vain/OpenShrimp-CORA
+2025-10-05T09:15:52.5061596Z  * [new ref]         f097b5c98e1ca8b01a2453e561d1dab723ee2384 -> origin/main
+2025-10-05T09:15:52.5089631Z ##[endgroup]
+2025-10-05T09:15:52.5090912Z ##[group]Determining the checkout info
+2025-10-05T09:15:52.5092107Z ##[endgroup]
+2025-10-05T09:15:52.5096663Z [command]/usr/bin/git sparse-checkout disable
+2025-10-05T09:15:52.5138384Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-10-05T09:15:52.5164693Z ##[group]Checking out the ref
+2025-10-05T09:15:52.5168285Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-10-05T09:15:52.5397219Z Switched to a new branch 'main'
+2025-10-05T09:15:52.5399123Z branch 'main' set up to track 'origin/main'.
+2025-10-05T09:15:52.5406499Z ##[endgroup]
+2025-10-05T09:15:52.5441248Z [command]/usr/bin/git log -1 --format=%H
+2025-10-05T09:15:52.5462445Z f097b5c98e1ca8b01a2453e561d1dab723ee2384

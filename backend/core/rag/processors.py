@@ -106,6 +106,254 @@ class TextDocumentProcessor(BaseDocumentProcessor):
         # 默认报告型
         return 'report'
 
+    def _preprocess_text(self, text: str) -> str:
+        """预处理文本：规范空白与可选移除特殊字符"""
+        text = re.sub(r'\s+', ' ', text)
+        if self.config.get('remove_special_chars', False):
+            text = re.sub(r'[^\w\s\u4e00-\u9fff]', '', text)
+        return text.strip()
+
+    async def _chunk_by_fixed_size(self, text: str, document: Document) -> List[DocumentChunk]:
+        """固定大小分块"""
+        chunks: List[DocumentChunk] = []
+        start = 0
+        chunk_index = 0
+
+        while start < len(text):
+            end = start + self.chunk_size
+
+            # 如果不是最后一块，尝试在单词边界分割
+            if end < len(text):
+                space_pos = text.rfind(' ', start, end)
+                if space_pos > start:
+                    end = space_pos
+
+            chunk_content = text[start:end].strip()
+
+            if len(chunk_content) >= self.min_chunk_size:
+                chunk = DocumentChunk(
+                    content=chunk_content,
+                    chunk_id=f"{document.doc_id}_chunk_{chunk_index}",
+                    doc_id=document.doc_id,
+                    chunk_index=chunk_index,
+                    start_char=start,
+                    end_char=end,
+                    metadata={
+                        'strategy': self.strategy.value,
+                        'original_length': len(text),
+                        'chunk_length': len(chunk_content),
+                        **document.metadata
+                    },
+                    overlap_with_prev=self.chunk_overlap if chunk_index > 0 else 0
+                )
+                chunks.append(chunk)
+                chunk_index += 1
+
+            # 计算下一个块的起始位置（考虑重叠）
+            start = max(start + 1, end - self.chunk_overlap)
+
+        return chunks
+
+    async def _chunk_by_sentence(self, text: str, document: Document) -> List[DocumentChunk]:
+        """按句子分块"""
+        sentences = re.split(r'[.!?。！？]', text)
+        sentences = [s.strip() for s in sentences if s.strip()]
+
+        chunks: List[DocumentChunk] = []
+        current_chunk = ""
+        chunk_index = 0
+        start_char = 0
+
+        for sentence in sentences:
+            potential_chunk = current_chunk + sentence + "。"
+
+            if len(potential_chunk) > self.chunk_size and current_chunk:
+                chunk = DocumentChunk(
+                    content=current_chunk.strip(),
+                    chunk_id=f"{document.doc_id}_chunk_{chunk_index}",
+                    doc_id=document.doc_id,
+                    chunk_index=chunk_index,
+                    start_char=start_char,
+                    end_char=start_char + len(current_chunk),
+                    metadata={
+                        'strategy': self.strategy.value,
+                        'sentence_count': current_chunk.count('。') + current_chunk.count('.'),
+                        **document.metadata
+                    }
+                )
+                chunks.append(chunk)
+                chunk_index += 1
+                start_char += len(current_chunk)
+                current_chunk = sentence + "。"
+            else:
+                current_chunk = potential_chunk
+
+        if current_chunk.strip():
+            chunk = DocumentChunk(
+                content=current_chunk.strip(),
+                chunk_id=f"{document.doc_id}_chunk_{chunk_index}",
+                doc_id=document.doc_id,
+                chunk_index=chunk_index,
+                start_char=start_char,
+                end_char=start_char + len(current_chunk),
+                metadata={
+                    'strategy': self.strategy.value,
+                    'sentence_count': current_chunk.count('。') + current_chunk.count('.'),
+                    **document.metadata
+                }
+            )
+            chunks.append(chunk)
+
+        return chunks
+
+    async def _chunk_by_paragraph(self, text: str, document: Document) -> List[DocumentChunk]:
+        """按段落分块"""
+        paragraphs = text.split('\n\n')
+        paragraphs = [p.strip() for p in paragraphs if p.strip()]
+
+        chunks: List[DocumentChunk] = []
+        current_chunk = ""
+        chunk_index = 0
+        start_char = 0
+
+        for paragraph in paragraphs:
+            potential_chunk = current_chunk + "\n\n" + paragraph if current_chunk else paragraph
+
+            if len(potential_chunk) > self.chunk_size and current_chunk:
+                chunk = DocumentChunk(
+                    content=current_chunk.strip(),
+                    chunk_id=f"{document.doc_id}_chunk_{chunk_index}",
+                    doc_id=document.doc_id,
+                    chunk_index=chunk_index,
+                    start_char=start_char,
+                    end_char=start_char + len(current_chunk),
+                    metadata={
+                        'strategy': self.strategy.value,
+                        'paragraph_count': current_chunk.count('\n\n') + 1,
+                        **document.metadata
+                    }
+                )
+                chunks.append(chunk)
+                chunk_index += 1
+                start_char += len(current_chunk)
+                current_chunk = paragraph
+            else:
+                current_chunk = potential_chunk
+
+        if current_chunk.strip():
+            chunk = DocumentChunk(
+                content=current_chunk.strip(),
+                chunk_id=f"{document.doc_id}_chunk_{chunk_index}",
+                doc_id=document.doc_id,
+                chunk_index=chunk_index,
+                start_char=start_char,
+                end_char=start_char + len(current_chunk),
+                metadata={
+                    'strategy': self.strategy.value,
+                    'paragraph_count': current_chunk.count('\n\n') + 1,
+                    **document.metadata
+                }
+            )
+            chunks.append(chunk)
+
+        return chunks
+
+    async def _chunk_by_semantic(self, text: str, document: Document) -> List[DocumentChunk]:
+        """语义分块（简化实现）"""
+        paragraphs = text.split('\n\n')
+        semantic_chunks: List[str] = []
+
+        for paragraph in paragraphs:
+            if len(paragraph.strip()) < self.min_chunk_size:
+                continue
+            if len(paragraph) > self.chunk_size:
+                sentences = re.split(r'[.!?。！？]', paragraph)
+                current_chunk = ""
+                for sentence in sentences:
+                    if not sentence.strip():
+                        continue
+                    potential_chunk = current_chunk + sentence + "。"
+                    if len(potential_chunk) > self.chunk_size and current_chunk:
+                        semantic_chunks.append(current_chunk.strip())
+                        current_chunk = sentence + "。"
+                    else:
+                        current_chunk = potential_chunk
+                if current_chunk.strip():
+                    semantic_chunks.append(current_chunk.strip())
+            else:
+                semantic_chunks.append(paragraph.strip())
+
+        chunks: List[DocumentChunk] = []
+        start_char = 0
+        for i, chunk_content in enumerate(semantic_chunks):
+            chunk = DocumentChunk(
+                content=chunk_content,
+                chunk_id=f"{document.doc_id}_chunk_{i}",
+                doc_id=document.doc_id,
+                chunk_index=i,
+                start_char=start_char,
+                end_char=start_char + len(chunk_content),
+                metadata={
+                    'strategy': self.strategy.value,
+                    'semantic_score': 0.8,
+                    **document.metadata
+                }
+            )
+            chunks.append(chunk)
+            start_char += len(chunk_content)
+
+        return chunks
+
+    async def _chunk_recursively(self, text: str, document: Document) -> List[DocumentChunk]:
+        """递归分块"""
+        def recursive_split(text: str, separators: List[str], current_size: int) -> List[str]:
+            if len(text) <= current_size:
+                return [text] if text.strip() else []
+            if not separators:
+                return [text[i:i+current_size] for i in range(0, len(text), current_size)]
+            separator = separators[0]
+            remaining_separators = separators[1:]
+            parts = text.split(separator)
+            result: List[str] = []
+            current_chunk = ""
+            for part in parts:
+                potential_chunk = current_chunk + separator + part if current_chunk else part
+                if len(potential_chunk) <= current_size:
+                    current_chunk = potential_chunk
+                else:
+                    if current_chunk:
+                        result.extend(recursive_split(current_chunk, remaining_separators, current_size))
+                    current_chunk = part
+            if current_chunk:
+                result.extend(recursive_split(current_chunk, remaining_separators, current_size))
+            return result
+
+        separators = ['\n\n', '\n', '. ', '。', ' ']
+        text_chunks = recursive_split(text, separators, self.chunk_size)
+
+        chunks: List[DocumentChunk] = []
+        start_char = 0
+        for i, chunk_content in enumerate(text_chunks):
+            if len(chunk_content.strip()) < self.min_chunk_size:
+                continue
+            chunk = DocumentChunk(
+                content=chunk_content.strip(),
+                chunk_id=f"{document.doc_id}_chunk_{i}",
+                doc_id=document.doc_id,
+                chunk_index=i,
+                start_char=start_char,
+                end_char=start_char + len(chunk_content),
+                metadata={
+                    'strategy': self.strategy.value,
+                    'recursion_level': len(separators),
+                    **document.metadata
+                }
+            )
+            chunks.append(chunk)
+            start_char += len(chunk_content)
+
+        return chunks
+
 
 class EnhancedDocumentProcessor(BaseDocumentProcessor):
     """增强型文档处理器

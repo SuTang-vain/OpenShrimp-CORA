@@ -1,0 +1,5 @@
+2025-10-05T09:15:49.7310000Z Job is waiting for a hosted runner to come online.
+2025-10-05T09:15:49.7300000Z Requested labels: ubuntu-latest
+2025-10-05T09:15:49.7300000Z Job defined at: SuTang-vain/OpenShrimp-CORA/.github/workflows/frontend-ci.yml@refs/heads/main
+2025-10-05T09:15:49.7300000Z Waiting for a runner to pick up this job...
+2025-10-05T09:15:49.7310000Z Job is about to start running on the hosted runner: GitHub Actions 1000000108

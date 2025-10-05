@@ -3,6 +3,7 @@ from fastapi import APIRouter, Request, HTTPException
 from pydantic import BaseModel
 import re
 from backend.infrastructure.graph.neo4j_client import Neo4jClient
+from backend.infrastructure.graph.memory_graph import MemoryGraphStore
 
 
 router = APIRouter()
@@ -154,6 +155,21 @@ async def graph_build(input: GraphBuildInput, request: Request):
 
     graph = _build_graph_from_sentences(sentences, max_nodes=input.max_nodes)
 
+    # 写入内存图谱（ContextGraph）
+    services = getattr(request.state, "services", {})
+    context_graph: MemoryGraphStore | None = services.get("context_graph")  # type: ignore
+    if context_graph is None:
+        try:
+            context_graph = MemoryGraphStore()
+            services["context_graph"] = context_graph
+        except Exception:
+            context_graph = None
+    if context_graph:
+        try:
+            context_graph.ingest_graph(graph)
+        except Exception:
+            pass
+
     # 尝试写入 Neo4j（若凭据已配置）
     graph_db = services.get("graph_db")
     if graph_db is None:
@@ -186,7 +202,8 @@ async def graph_build(input: GraphBuildInput, request: Request):
 
     return {
         "graph": graph,
-        "source_id": input.source_id
+        "source_id": input.source_id,
+        "source": "memory-cooccurrence"
     }
 
 
@@ -246,10 +263,30 @@ async def graph_query(input: GraphQueryInput, request: Request):
             except Exception:
                 pass
 
-    # 回退到内存共现图
+    # 内存图谱查询（ContextGraph）
+    context_graph: MemoryGraphStore | None = services.get("context_graph")  # type: ignore
+    if context_graph:
+        try:
+            if input.mode.lower() == "shortest" and input.shortest_a and input.shortest_b:
+                graph = context_graph.shortest_path(input.shortest_a, input.shortest_b, max_hops=input.depth, relation_types=input.relation_types)
+                return {"graph": graph, "query": input.query, "source": "memory-shortest"}
+            else:
+                terms = _extract_terms(input.query)[: input.top_k]
+                graph = context_graph.query_neighbors(terms, depth=input.depth, limit=input.max_nodes, relation_types=input.relation_types)
+                return {"graph": graph, "query": input.query, "source": "memory-neighbors"}
+        except Exception:
+            # 回退到术语子图
+            try:
+                terms = _extract_terms(input.query)[: input.top_k]
+                graph = context_graph.query_subgraph_by_terms(terms, limit=input.max_nodes)
+                return {"graph": graph, "query": input.query, "source": "memory-terms"}
+            except Exception:
+                pass
+
+    # 最后回退到内存共现图（不保留状态）
     graph = _build_graph_from_sentences(sentences, max_nodes=input.max_nodes)
     return {
         "graph": graph,
         "query": input.query,
-        "source": "fallback"
+        "source": "memory-cooccurrence"
     }

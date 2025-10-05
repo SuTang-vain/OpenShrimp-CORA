@@ -23,6 +23,7 @@ import {
   ServiceConfigFormData 
 } from '@/types/services'
 import { useConfigStore } from '@/stores/configStore'
+import { servicesApi } from '@/api/services'
 
 /**
  * 服务配置卡片组件属性
@@ -79,6 +80,20 @@ const getStatusDisplay = (status: ServiceStatus) => {
 }
 
 /**
+ * 统一格式化错误信息为字符串，避免渲染对象导致 React 报错
+ */
+const formatErrorMessage = (err: any, fallback: string = '发生未知错误'): string => {
+  if (!err) return fallback
+  if (typeof err === 'string') return err
+  if (typeof err?.message === 'string') return err.message
+  try {
+    return JSON.stringify(err)
+  } catch {
+    return fallback
+  }
+}
+
+/**
  * 服务配置卡片组件
  */
 const ServiceConfigCard: React.FC<ServiceConfigCardProps> = ({
@@ -88,7 +103,7 @@ const ServiceConfigCard: React.FC<ServiceConfigCardProps> = ({
   onDelete,
   className
 }) => {
-  const { testService, updateService, removeService } = useConfigStore()
+  const { updateService, removeService } = useConfigStore()
   
   // 状态管理
   const [isExpanded, setIsExpanded] = useState(false)
@@ -97,6 +112,7 @@ const ServiceConfigCard: React.FC<ServiceConfigCardProps> = ({
   const [showPassword, setShowPassword] = useState(false)
   const [isTesting, setIsTesting] = useState(false)
   const [showDeleteDialog, setShowDeleteDialog] = useState(false)
+  const [lastTestInfo, setLastTestInfo] = useState<any>(null)
   
   // 表单数据
   const [formData, setFormData] = useState<ServiceConfigFormData>(() => {
@@ -158,7 +174,8 @@ const ServiceConfigCard: React.FC<ServiceConfigCardProps> = ({
       enabled: formData.enabled,
       status: config?.status || ServiceStatus.DISCONNECTED,
       lastTested: config?.lastTested,
-      errorMessage: config?.errorMessage
+      errorMessage: config?.errorMessage,
+      providerId: config?.providerId || (template.type === ServiceType.KNOWLEDGE_GRAPH ? 'neo4j' : template.id)
     }
 
     let serviceConfig: ServiceConfig
@@ -214,13 +231,61 @@ const ServiceConfigCard: React.FC<ServiceConfigCardProps> = ({
         return
     }
 
-    if (config) {
-      updateService(config.id, serviceConfig)
-    } else {
-      onSave?.(serviceConfig)
-    }
-    
-    setIsEditing(false)
+    // 先将凭据保存到后端安全存储，再更新本地状态
+    const credentials: Record<string, string | undefined> = (() => {
+      switch (template.type) {
+        case ServiceType.LLM:
+          return {
+            apiKey: formData.apiKey,
+            baseUrl: formData.baseUrl,
+            model: formData.model,
+            maxTokens: formData.maxTokens?.toString(),
+            temperature: formData.temperature?.toString(),
+          }
+        case ServiceType.WEB_CRAWLER:
+          return {
+            apiKey: formData.apiKey,
+            baseUrl: formData.baseUrl,
+            maxPages: formData.maxPages?.toString(),
+            timeout: formData.timeout?.toString(),
+          }
+        case ServiceType.KNOWLEDGE_GRAPH:
+          return {
+            connectionUrl: formData.connectionUrl,
+            username: formData.username,
+            password: formData.password,
+            authType: formData.authType,
+            database: formData.database,
+            apiKey: formData.apiKey,
+          }
+        case ServiceType.LOCAL_MODEL:
+          return {
+            baseUrl: formData.baseUrl,
+            healthCheckUrl: formData.healthCheckUrl,
+            apiKey: formData.apiKey,
+          }
+        default:
+          return {}
+      }
+    })()
+
+    const providerId = template.type === ServiceType.KNOWLEDGE_GRAPH ? 'neo4j' : template.id
+    servicesApi
+      .saveCredentials({ provider_id: providerId, credentials })
+      .then(() => {
+        if (config) {
+          updateService(config.id, serviceConfig)
+        } else {
+          onSave?.(serviceConfig)
+        }
+        setIsEditing(false)
+      })
+      .catch((err: any) => {
+        const msg = formatErrorMessage(err, '保存凭据失败')
+        if (config) {
+          updateService(config.id, { errorMessage: msg })
+        }
+      })
   }
 
   /**
@@ -228,10 +293,34 @@ const ServiceConfigCard: React.FC<ServiceConfigCardProps> = ({
    */
   const handleTest = async () => {
     if (!config) return
-    
     setIsTesting(true)
     try {
-      await testService(config.id)
+      const providerId = config.providerId || (template.type === ServiceType.KNOWLEDGE_GRAPH ? 'neo4j' : template.id)
+      const res = await servicesApi.testConnectivity(providerId)
+      if (res.success && res.data) {
+        const reachable = (res.data as any).reachable
+        const message = formatErrorMessage((res.data as any).message, '连接测试失败')
+        setLastTestInfo(res.data)
+        updateService(config.id, {
+          status: reachable ? ServiceStatus.CONNECTED : ServiceStatus.ERROR,
+          errorMessage: reachable ? undefined : message,
+          lastTested: new Date(),
+        })
+      } else {
+        setLastTestInfo({ reachable: false, message: (res as any)?.error })
+        updateService(config.id, {
+          status: ServiceStatus.ERROR,
+          errorMessage: formatErrorMessage((res as any)?.error, '测试失败'),
+          lastTested: new Date(),
+        })
+      }
+    } catch (error: any) {
+      setLastTestInfo({ reachable: false, message: error })
+      updateService(config.id, {
+        status: ServiceStatus.ERROR,
+        errorMessage: formatErrorMessage(error, '网络错误'),
+        lastTested: new Date(),
+      })
     } finally {
       setIsTesting(false)
     }
@@ -363,7 +452,7 @@ const ServiceConfigCard: React.FC<ServiceConfigCardProps> = ({
               className="input"
               value={formData.connectionUrl || ''}
               onChange={(e) => setFormData(prev => ({ ...prev, connectionUrl: e.target.value }))}
-              placeholder="bolt://localhost:7687"
+              placeholder="bolt://localhost:7687 或 neo4j+s://<instance-id>.databases.neo4j.io"
             />
           </div>,
           <div key="username" className="space-y-2">
@@ -537,9 +626,9 @@ const ServiceConfigCard: React.FC<ServiceConfigCardProps> = ({
                 </div>
               </div>
               
-              <div className="grid gap-4">
+              <form className="grid gap-4" onSubmit={(e) => e.preventDefault()}>
                 {renderFormFields()}
-              </div>
+              </form>
             </div>
           ) : config ? (
             <div className="space-y-4">
@@ -576,10 +665,32 @@ const ServiceConfigCard: React.FC<ServiceConfigCardProps> = ({
                     <span>{config.lastTested.toLocaleString()}</span>
                   </div>
                 )}
+                {lastTestInfo && (
+                  <div className="space-y-1">
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">测试提供方:</span>
+                      <span>{(lastTestInfo as any)?.provider_id || config?.providerId || template.id}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">连通性:</span>
+                      <span className={(lastTestInfo as any)?.reachable ? 'text-green-600' : 'text-red-600'}>
+                        {(lastTestInfo as any)?.reachable ? '可达' : '不可达'}
+                      </span>
+                    </div>
+                    {(lastTestInfo as any)?.message && (
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">测试信息:</span>
+                        <span className="text-xs">
+                          {formatErrorMessage((lastTestInfo as any)?.message, '')}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                )}
                 {config.errorMessage && (
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">错误信息:</span>
-                    <span className="text-red-500 text-xs">{config.errorMessage}</span>
+                    <span className="text-red-500 text-xs">{typeof (config.errorMessage as any) === 'string' ? config.errorMessage : formatErrorMessage(config.errorMessage)}</span>
                   </div>
                 )}
               </div>

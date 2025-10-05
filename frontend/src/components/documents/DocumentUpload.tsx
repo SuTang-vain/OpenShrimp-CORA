@@ -224,7 +224,7 @@ const DocumentUpload: React.FC<DocumentUploadProps> = ({
   /**
    * 模拟文件上传
    */
-  const uploadFile = async (uploadFile: UploadFile): Promise<void> => {
+  const uploadFile = async (uploadFile: UploadFile): Promise<File> => {
     return new Promise((resolve, reject) => {
       // 更新状态为上传中
       setUploadFiles(prev => prev.map(uf => 
@@ -256,7 +256,7 @@ const DocumentUpload: React.FC<DocumentUploadProps> = ({
           ))
           
           if (success) {
-            resolve()
+            resolve(uploadFile.file)
           } else {
             reject(new Error('上传失败'))
           }
@@ -281,24 +281,21 @@ const DocumentUpload: React.FC<DocumentUploadProps> = ({
     setIsUploading(true)
     
     try {
-      // 并发上传文件
-      await Promise.allSettled(
+      // 并发上传文件，并根据返回结果计算成功/失败
+      const results = await Promise.allSettled(
         pendingFiles.map(file => uploadFile(file))
       )
-      
-      const successFiles = uploadFiles
-        .filter(uf => uf.status === 'success')
-        .map(uf => uf.file)
-      
+      const successFiles = results
+        .filter(r => r.status === 'fulfilled')
+        .map(r => (r as PromiseFulfilledResult<File>).value)
+      const errorCount = results.filter(r => r.status === 'rejected').length
+
       if (successFiles.length > 0) {
         onUploadComplete?.(successFiles)
       }
-      
-      const errorFiles = uploadFiles.filter(uf => uf.status === 'error')
-      if (errorFiles.length > 0) {
-        onUploadError?.(`${errorFiles.length} 个文件上传失败`)
+      if (errorCount > 0) {
+        onUploadError?.(`${errorCount} 个文件上传失败`)
       }
-      
     } catch (error) {
       onUploadError?.('上传过程中发生错误')
     } finally {
