@@ -5,6 +5,12 @@
 import * as React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
+
+// 在导入组件前为认证模块提供默认 mock，避免 useAuth 未定义
+jest.mock('@/stores/authStore', () => ({
+  useAuth: jest.fn(() => ({ isAuthenticated: false, user: null })),
+}))
+
 import Layout from '../layout/Layout'
 
 // 测试工具函数

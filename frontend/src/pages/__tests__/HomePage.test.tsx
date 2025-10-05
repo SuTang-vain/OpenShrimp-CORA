@@ -5,14 +5,22 @@
 import * as React from 'react'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
-import HomePage from '../HomePage'
 import { useAuth } from '@/stores/authStore'
 import { UserRole } from '@/types'
 
-// Mock the auth store
+// 将模块 mock 放在组件导入之前，确保在加载组件前已生效
 jest.mock('@/stores/authStore', () => ({
   useAuth: jest.fn(),
 }))
+
+// 模拟 useNavigate
+const mockNavigate = jest.fn()
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => mockNavigate,
+}))
+
+import HomePage from '../HomePage'
 
 // 测试工具函数
 const renderWithRouter = (component: React.ReactElement) => {
@@ -22,13 +30,6 @@ const renderWithRouter = (component: React.ReactElement) => {
     </BrowserRouter>
   )
 }
-
-// 模拟 useAuth hook
-const mockNavigate = jest.fn()
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useNavigate: () => mockNavigate,
-}))
 
 describe('HomePage Component', () => {
   beforeEach(() => {
