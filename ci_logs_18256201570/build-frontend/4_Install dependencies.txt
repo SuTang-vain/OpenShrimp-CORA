@@ -1,0 +1,24 @@
+﻿2025-10-05T08:21:00.4121559Z ##[group]Run npm ci
+2025-10-05T08:21:00.4122027Z [36;1mnpm ci[0m
+2025-10-05T08:21:00.4165411Z shell: /usr/bin/bash -e {0}
+2025-10-05T08:21:00.4165836Z ##[endgroup]
+2025-10-05T08:21:07.3706095Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2025-10-05T08:21:08.4316953Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2025-10-05T08:21:08.6338559Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-10-05T08:21:08.9206669Z npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+2025-10-05T08:21:09.3697949Z npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+2025-10-05T08:21:09.7719034Z npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2025-10-05T08:21:09.8079309Z npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2025-10-05T08:21:12.6685768Z npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2025-10-05T08:21:17.5677128Z 
+2025-10-05T08:21:17.5677936Z added 955 packages, and audited 956 packages in 17s
+2025-10-05T08:21:17.5678593Z 
+2025-10-05T08:21:17.5678870Z 271 packages are looking for funding
+2025-10-05T08:21:17.5679347Z   run `npm fund` for details
+2025-10-05T08:21:17.5799414Z 
+2025-10-05T08:21:17.5799862Z 5 moderate severity vulnerabilities
+2025-10-05T08:21:17.5800234Z 
+2025-10-05T08:21:17.5800617Z To address all issues (including breaking changes), run:
+2025-10-05T08:21:17.5801141Z   npm audit fix --force
+2025-10-05T08:21:17.5801366Z 
+2025-10-05T08:21:17.5801578Z Run `npm audit` for details.

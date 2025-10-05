@@ -5,6 +5,7 @@
 import * as React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
+import { useAuth } from '@/stores/authStore'
 
 // 在导入组件前为认证模块提供默认 mock，避免 useAuth 未定义
 jest.mock('@/stores/authStore', () => ({
@@ -143,6 +144,10 @@ describe('Layout Component', () => {
   })
 
   it('应该正确处理响应式设计', () => {
+    // 在该用例中确保认证为 true，保证侧边栏渲染
+    const mockUseAuth = jest.mocked(useAuth)
+    mockUseAuth.mockReturnValue({ isAuthenticated: true, user: null })
+
     // 测试不同屏幕尺寸
     const testSizes = [
       { width: 320, height: 568 }, // 移动端
