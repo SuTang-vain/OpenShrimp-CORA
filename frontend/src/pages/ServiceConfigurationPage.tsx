@@ -3,7 +3,6 @@ import { useState, useMemo } from 'react'
 import { Helmet } from 'react-helmet-async'
 import {
   Settings,
-  Plus,
   Download,
   Upload,
   RotateCcw,
@@ -11,11 +10,7 @@ import {
   Search,
   CheckCircle,
   XCircle,
-    AlertCircle,
-  Zap,
-  Globe,
-  Database,
-  Server,
+  AlertCircle,
 } from 'lucide-react'
 import { cn } from '@/utils/cn'
 import { ServiceType, ServiceStatus } from '@/types/services'
