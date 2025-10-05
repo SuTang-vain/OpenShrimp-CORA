@@ -3,8 +3,24 @@ from pydantic import BaseModel
 import os
 
 
-router = APIRouter(prefix="/mcp", tags=["MCP"])
+# 分层引入已实现的 MCP 子路由
+try:
+    from backend.api.routes.mcp_rag import router as mcp_rag_router
+    router.include_router(mcp_rag_router)
+except Exception:
+    pass
 
+try:
+    from backend.api.routes.mcp_graph import router as mcp_graph_router
+    router.include_router(mcp_graph_router)
+except Exception:
+    pass
+
+try:
+    from backend.api.routes.mcp_adapter import router as mcp_services_router
+    router.include_router(mcp_services_router)
+except Exception:
+    pass
 
 class MCPInfo(BaseModel):
     service_name: str
