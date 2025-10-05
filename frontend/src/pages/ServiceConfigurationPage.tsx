@@ -11,8 +11,7 @@ import {
   Search,
   CheckCircle,
   XCircle,
-  Clock,
-  AlertCircle,
+    AlertCircle,
   Zap,
   Globe,
   Database,
@@ -26,14 +25,7 @@ import ServiceConfigCard from '@/components/services/ServiceConfigCard'
 /**
  * 服务类型图标映射
  */
-const serviceTypeIcons = {
-  [ServiceType.LLM]: Zap,
-  [ServiceType.WEB_CRAWLER]: Globe,
-  [ServiceType.KNOWLEDGE_GRAPH]: Database,
-  [ServiceType.LOCAL_MODEL]: Server,
-}
-
-/**
+// 注：原 serviceTypeIcons 未使用，移除以避免 TS6133 编译错误\r\n/**
  * 服务类型标签映射
  */
 const serviceTypeLabels = {
