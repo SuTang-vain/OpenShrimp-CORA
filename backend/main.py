@@ -30,7 +30,7 @@ from backend.api.routes.admin import router as admin_router
 from backend.api.routes.auth import router as auth_router
 from backend.api.routes.embedding import router as embedding_router
 from backend.api.routes.mcp import router as mcp_router
-from backend.api.routes.graph import router as graph_router
+from backend.api.routes.mcp_rag import router as mcp_rag_router`nfrom backend.api.routes.graph import router as graph_router
 from backend.api.routes.services import router as services_router
 from backend.api.routes.debug import router as debug_router
 from backend.infrastructure.graph.neo4j_client import Neo4jClient
@@ -378,7 +378,7 @@ app.include_router(
     prefix="/api",
     tags=["MCP"]
 )
-
+`n`napp.include_router(`n    mcp_rag_router,`n    prefix="/api",`n    tags=["MCP-RAG"]`n)`n
 app.include_router(
     graph_router,
     prefix="/api",
