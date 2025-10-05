@@ -103,7 +103,7 @@ const ServiceConfigCard: React.FC<ServiceConfigCardProps> = ({
   onDelete,
   className
 }) => {
-  const { testService, updateService, removeService } = useConfigStore()
+  const { updateService, removeService } = useConfigStore()
   
   // 状态管理
   const [isExpanded, setIsExpanded] = useState(false)
