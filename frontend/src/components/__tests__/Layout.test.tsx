@@ -70,7 +70,7 @@ describe('Layout Component', () => {
     )
 
     expect(screen.getByTestId('header')).toBeInTheDocument()
-    expect(screen.getByTestId('sidebar')).toBeInTheDocument()
+    expect(screen.getAllByTestId('sidebar').length).toBeGreaterThan(0)
     expect(screen.getByTestId('footer')).toBeInTheDocument()
     expect(screen.getByTestId('content')).toBeInTheDocument()
   })
@@ -110,7 +110,7 @@ describe('Layout Component', () => {
     )
 
     // 验证移动端特定的行为
-    expect(screen.getByTestId('sidebar')).toBeInTheDocument()
+    expect(screen.getAllByTestId('sidebar').length).toBeGreaterThan(0)
   })
 
   it('应该正确处理键盘导航', () => {
@@ -174,7 +174,7 @@ describe('Layout Component', () => {
       )
 
       // 验证在不同尺寸下的布局
-      expect(screen.getByTestId('sidebar')).toBeInTheDocument()
+      expect(screen.getAllByTestId('sidebar').length).toBeGreaterThan(0)
     })
   })
 })

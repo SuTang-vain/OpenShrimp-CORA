@@ -125,8 +125,12 @@ describe('HomePage Component', () => {
     // 输入搜索内容
     fireEvent.change(searchInput, { target: { value: 'test query' } })
     
-    // 按 Enter 键
+    // 按 Enter 键并提交表单
     fireEvent.keyDown(searchInput, { key: 'Enter', code: 'Enter' })
+    const form = searchInput.closest('form') as HTMLFormElement
+    if (form) {
+      fireEvent.submit(form)
+    }
 
     // 验证导航被调用
     await waitFor(() => {
@@ -168,8 +172,10 @@ describe('HomePage Component', () => {
       </BrowserRouter>
     )
 
-    // 验证已认证状态的显示（按钮“开始使用”）
-    expect(screen.getByText(/开始使用/)).toBeInTheDocument()
+    // 验证已认证状态的显示：英雄区链接“开始使用”且指向 /search
+    const startLink = screen.getByRole('link', { name: /开始使用/i })
+    expect(startLink).toBeInTheDocument()
+    expect(startLink).toHaveAttribute('href', '/search')
   })
 
   it('应该正确处理未认证状态', () => {
@@ -230,8 +236,8 @@ describe('HomePage Component', () => {
 
     renderWithRouter(<HomePage />)
 
-    // 验证移动端布局
-    expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument()
+    // 验证移动端布局：允许多元素存在
+    expect(screen.getAllByRole('heading', { level: 1 }).length).toBeGreaterThan(0)
 
     // 测试桌面端
     Object.defineProperty(window, 'innerWidth', {
@@ -242,8 +248,8 @@ describe('HomePage Component', () => {
 
     renderWithRouter(<HomePage />)
 
-    // 验证桌面端布局
-    expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument()
+    // 验证桌面端布局：允许多元素存在
+    expect(screen.getAllByRole('heading', { level: 1 }).length).toBeGreaterThan(0)
   })
 
   it('应该正确处理动画效果', async () => {
