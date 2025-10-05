@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
-// import { motion, AnimatePresence } from 'framer-motion'
 
 // 页面组件
 import Layout from '@/components/layout/Layout'
@@ -50,27 +49,7 @@ function App() {
     initApp()
   }, [initializeAuth, initializeTheme])
 
-  // 页面过渡动画配置
-  const pageVariants = {
-    initial: {
-      opacity: 0,
-      y: 20,
-    },
-    in: {
-      opacity: 1,
-      y: 0,
-    },
-    out: {
-      opacity: 0,
-      y: -20,
-    },
-  }
-
-  const pageTransition = {
-    type: 'tween',
-    ease: 'anticipate',
-    duration: 0.3,
-  }
+  // 已移除未使用的页面过渡动画配置，避免 TS6133 未使用变量错误
 
   return (
     <div className={cn('min-h-screen bg-background text-foreground', theme)}>
