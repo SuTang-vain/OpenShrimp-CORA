@@ -25,7 +25,8 @@ import ServiceConfigCard from '@/components/services/ServiceConfigCard'
 /**
  * 服务类型图标映射
  */
-// 注：原 serviceTypeIcons 未使用，移除以避免 TS6133 编译错误\r\n/**
+// 注：原 serviceTypeIcons 未使用，移除以避免 TS6133 编译错误
+/**
  * 服务类型标签映射
  */
 const serviceTypeLabels = {
@@ -419,3 +420,4 @@ const ServiceConfigurationPage: React.FC = () => {
 }
 
 export default ServiceConfigurationPage
+
