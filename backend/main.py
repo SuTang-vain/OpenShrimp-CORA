@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Shrimp Agent v2 FastAPI主应用
-现代化的智能搜索和RAG系统后端
+ CORA FastAPI 主应用
+OpenShrimp 的智能搜索与 RAG 系统后端
 
 运行环境: Python 3.11+
 依赖: fastapi, uvicorn, pydantic, asyncio
@@ -32,7 +32,9 @@ from backend.api.routes.embedding import router as embedding_router
 from backend.api.routes.mcp import router as mcp_router
 from backend.api.routes.mcp_graph import router as mcp_graph_router`nfrom backend.api.routes.graph import router as graph_router
 from backend.api.routes.services import router as services_router
+from backend.api.routes.debug import router as debug_router
 from backend.infrastructure.graph.neo4j_client import Neo4jClient
+from backend.infrastructure.graph.memory_graph import MemoryGraphStore
 
 # 导入中间件
 from backend.api.middleware.auth import AuthMiddleware
@@ -63,9 +65,10 @@ services: Dict[str, Any] = {}
 async def lifespan(app: FastAPI):
     """应用生命周期管理"""
     # 启动时初始化
-    logger.info("正在启动 Shrimp Agent v2...")
+    logger.info("正在启动 CORA...")
     
     try:
+
         # 加载配置
         settings = get_settings()
         
@@ -93,6 +96,14 @@ async def lifespan(app: FastAPI):
                 logger.info("Neo4j 凭据未配置或连接失败，跳过图数据库客户端初始化")
         except Exception as e:
             logger.warning(f"Neo4j 客户端初始化异常: {e}")
+
+        # 初始化内存图谱（ContextGraph MCP 的内存实现）
+        try:
+            context_graph = MemoryGraphStore()
+            services['context_graph'] = context_graph
+            logger.info("内存图谱（ContextGraph）已初始化")
+        except Exception as e:
+            logger.warning(f"内存图谱初始化异常: {e}")
         
         # 初始化服务管理器
         agent_manager = AgentServiceManager()
@@ -138,7 +149,7 @@ async def lifespan(app: FastAPI):
         if not all(health_checks.values()):
             logger.warning(f"部分服务健康检查失败: {health_checks}")
         
-        logger.info("Shrimp Agent v2 启动完成")
+        logger.info("CORA 启动完成")
         
         yield
         
@@ -148,7 +159,7 @@ async def lifespan(app: FastAPI):
     
     finally:
         # 关闭时清理
-        logger.info("正在关闭 Shrimp Agent v2...")
+        logger.info("正在关闭 CORA...")
         
         # 清理服务（兼容同步/异步 close 方法）
         for service_name, service in services.items():
@@ -164,13 +175,13 @@ async def lifespan(app: FastAPI):
                 logger.error(f"关闭服务 {service_name} 失败: {e}")
         
         services.clear()
-        logger.info("Shrimp Agent v2 已关闭")
+        logger.info("CORA 已关闭")
 
 
 async def perform_health_checks() -> Dict[str, bool]:
     """执行健康检查"""
-    health_status = {}
-    
+    health_status: Dict[str, bool] = {}
+
     # 检查LLM管理器
     if 'llm_manager' in services:
         try:
@@ -179,7 +190,7 @@ async def perform_health_checks() -> Dict[str, bool]:
         except Exception as e:
             logger.error(f"LLM管理器健康检查失败: {e}")
             health_status['llm_manager'] = False
-    
+
     # 检查RAG引擎
     if 'rag_engine' in services:
         try:
@@ -188,14 +199,14 @@ async def perform_health_checks() -> Dict[str, bool]:
         except Exception as e:
             logger.error(f"RAG引擎健康检查失败: {e}")
             health_status['rag_engine'] = False
-    
+
     return health_status
 
 
 # 创建FastAPI应用
 app = FastAPI(
-    title="Shrimp Agent v2 API",
-    description="现代化的智能搜索和RAG系统",
+    title="CORA API",
+    description="OpenShrimp 的智能搜索与 RAG 系统",
     version="2.0.0",
     docs_url=None,  # 禁用默认文档
     redoc_url=None,  # 禁用默认ReDoc
@@ -384,6 +395,12 @@ app.include_router(
     documents_router,
     prefix="/api",
     tags=["文档管理"]
+)
+
+app.include_router(
+    debug_router,
+    prefix="/api",
+    tags=["调试"]
 )
 
 app.include_router(

@@ -45,8 +45,8 @@ def get_mcp_capabilities() -> CapabilitiesResponse:
         Capability(key="documents.upload", description="文档上传接口 /api/documents/upload", available=True),
         Capability(key="rag.embedding.switch", description="嵌入模型热切换 /api/rag/embedding/switch", available=True),
         Capability(key="rag.stats", description="RAG 统计查看 /api/rag/stats", available=True),
-        Capability(key="graph.build", description="构建知识图谱（计划）", available=False),
-        Capability(key="graph.query", description="图查询（计划）", available=False),
+        Capability(key="graph.build", description="构建知识图谱 /api/graph/build（内存/Neo4j）", available=True),
+        Capability(key="graph.query", description="图查询 /api/graph/query（邻居/最短路径/术语子图）", available=True),
         Capability(key="services.credentials", description="服务密钥管理（计划）", available=False),
     ]
     return CapabilitiesResponse(service=info, capabilities=capabilities)

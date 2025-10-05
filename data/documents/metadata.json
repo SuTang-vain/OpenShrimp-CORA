@@ -46,7 +46,7 @@
       "upload_time": "2025-10-03T00:52:10.507824",
       "user_id": null,
       "status": "processed",
-      "processing_attempts": 2,
+      "processing_attempts": 5,
       "chunks_count": 1,
       "metadata": {
         "author": "测试用户",
@@ -66,25 +66,29 @@
         "搜索"
       ],
       "language": "zh-CN",
-      "processing_time": 0.203463,
+      "processing_time": 0.202248,
       "chunking_strategy": "sentence",
-      "chunk_size": 1000,
-      "chunk_overlap": 200,
-      "processed_time": "2025-10-03T16:08:52.338417"
+      "chunk_size": 500,
+      "chunk_overlap": 50,
+      "processed_time": "2025-10-04T12:47:38.566889",
+      "error_message": "添加文档失败: 增强型文档处理失败: 文档处理失败: 'TextDocumentProcessor' object has no attribute '_preprocess_text'",
+      "failed_time": "2025-10-04T12:44:42.649589",
+      "adapter_used": false,
+      "adapter_enabled": false
     }
   },
   "stats": {
     "total_documents": 2,
-    "total_chunks": 3,
+    "total_chunks": 4,
     "total_size": 1436,
-    "processing_success": 3,
-    "processing_failed": 0,
+    "processing_success": 4,
+    "processing_failed": 2,
     "format_distribution": {
       ".md": 2
     },
     "processing_time": {
-      "text": 0.617666
+      "text": 0.819914
     }
   },
-  "last_updated": "2025-10-03T16:08:52.338417"
+  "last_updated": "2025-10-04T12:47:38.566889"
 }

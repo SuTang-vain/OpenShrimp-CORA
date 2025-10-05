@@ -1,420 +1,161 @@
-# Shrimp Agent V2
+# OpenShrimp CORA
 
-🦐 **智能搜索与文档管理平台** - 基于先进 AI 技术的下一代知识管理解决方案
+全新一代智能搜索与知识管理平台（MCP 集成 + RAG + 图检索）
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![Node.js 18+](https://img.shields.io/badge/node.js-18+-green.svg)](https://nodejs.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-00a393.svg)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/React-18+-61dafb.svg)](https://reactjs.org/)
+[![Node.js 20+](https://img.shields.io/badge/node.js-20+-green.svg)](https://nodejs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-00a393.svg)](https://fastapi.tiangolo.com/)
+[![Vite+React](https://img.shields.io/badge/Vite%2BReact-18+-61dafb.svg)](https://vitejs.dev/)
 
-## ✨ 特性
+## 项目概述
 
-### 🔍 智能搜索
-- **语义搜索**: 基于 AI 的自然语言理解
-- **多策略搜索**: 相似度、混合、MMR、关键词等多种搜索策略
-- **实时建议**: 智能搜索建议和自动补全
-- **搜索历史**: 个性化搜索记录和分析
+- 目标：以 CAMEL 框架为基底，构建“多代理协作 + Graphic RAG + 提示词可视化”的白盒交互系统，支持用户通过可视化工作流补齐工程所需材料，并由系统自动完成“Define（合理定义与定位）→ 构建工作流 → 执行”的闭环。
+- 核心思想：以工具化视角把 RAG、知识图谱、提示词工程、服务适配和多代理编排拆解为可插拔的 MCP 子系统，既能独立演化，又能统一编排。
+- 可行性：后端 API 已运行稳定，RAG 基础链路可用；前端存在资源报错但不影响 API 验证，可在迭代中修复。中文语义检索需优化嵌入模型与分块策略，属于可控工程问题。
 
-### 📄 文档管理
-- **多格式支持**: PDF, Word, TXT, Markdown, HTML, JSON, CSV
-- **智能分块**: 多种分块策略优化检索效果
-- **批量处理**: 高效的文档批量上传和处理
-- **版本控制**: 文档版本管理和变更追踪
+## 愿景与未来目标（Roadmap）
 
-### 🤖 RAG 引擎
-- **模块化设计**: 可插拔的组件架构
-- **多向量数据库**: 支持 FAISS, Chroma, 内存存储
-- **多嵌入模型**: OpenAI, Sentence Transformers, BGE
-- **智能检索**: 高精度的文档片段检索
+- MCP 集成增量（`feature/mcp-rag`）：统一工具/能力暴露，RAG 流水线接入 MCP 客户端。
+- 图搜索（`feature/mcp-graph`）：对接 Neo4j，支持图查询与实体-关系检索，提供图接口网关。
+- Prompt 体系（`feature/mcp-prompt`）：可组合提示模块与模板库，针对检索/生成优化与复用。
+- Adapter 生态（`feature/mcp-adapter`）：对接不同模型/服务（LLM、Embedding、Search），实现能力适配。
+- 网关增强：健康检查、服务发现、统一鉴权（JWT/Key）、跨服务路由与接口聚合。
+- 前端生产化：构建优化、环境隔离（可选 `env/staging`/`env/prod`）、部署清单与灰度发布。
+- 性能与可观测性：缓存与并发优化、指标采集（Prometheus）、统一日志与追踪。
+- 测试与质量：后端 `pytest`、前端 `jest`，提升覆盖率与端到端联测。
+- 发布与版本：`release/<version>` + Tag（如 `v2.1.0`），自动生成变更日志与发布说明。
 
-### 🎨 现代化界面
-- **响应式设计**: 完美适配桌面和移动设备
-- **暗色模式**: 护眼的深色主题支持
-- **实时交互**: 流畅的用户体验
-- **无障碍访问**: 符合 WCAG 标准
+## 开发阶段（Milestones）
 
-## 🏗️ 技术架构
+- M1（本周）：服务适配页后端接口打底（保存/连接测试）；中文友好嵌入切换与重新索引；强化 `rag/stats` 指标（embedding cache 命中率、查询延时 p50/p95、索引规模）。
+- M2（下周）：Prompt Lab 与模板库上线；支持变量注入与评估；CAMEL 多代理最小闭环（Define → Retrieve → Draft → Evaluate）。
+- M3（2–3 周）：GraphRAG 基础版（构建/查询/解释），图谱页面联动；工作流画布初版（节点配置与持久化）。
+- M4（4 周）：全局观测与审计；权限与密钥管理完善；性能优化与中文检索全量验证（similarity/MMR/semantic_hybrid）。
 
-### 后端技术栈
-- **框架**: FastAPI + Python 3.11
-- **数据库**: PostgreSQL + Redis
-- **向量数据库**: FAISS / Chroma
-- **AI 模型**: OpenAI GPT, Sentence Transformers
-- **任务队列**: Celery + Redis
-- **监控**: Prometheus + Grafana
+## 子系统划分与 MCP 设计（摘要）
 
-### 前端技术栈
-- **框架**: React 18 + TypeScript
-- **构建工具**: Vite
-- **样式**: Tailwind CSS
-- **状态管理**: Zustand
-- **路由**: React Router
-- **UI 组件**: 自定义组件库
+- Context Engineering MCP（上下文工程）
+  - 职责：提示词模板管理、变量注入、策略（few-shot、cot、plan→solve）、对话记忆聚合与个性化偏好。
+  - 接口：`GET /api/prompts/templates`、`POST /api/prompts/render`、`POST /api/prompts/evaluate`、`POST /api/context/profile`。
 
-### 部署架构
-- **容器化**: Docker + Docker Compose
-- **反向代理**: Nginx
-- **CI/CD**: GitHub Actions
-- **云平台**: 支持 AWS, GCP, Azure
+- Multimodal RAG MCP（多模态检索）
+  - 职责：文档/图片/PDF/OCR/网页快照的切片、索引、重排与生成；支持 `semantic_hybrid`、`mmr`。
+  - 接口：`POST /api/documents/upload`（已有）、`POST /api/rag/index`、`POST /api/query`（已有）、`GET /api/rag/stats`（建议强化）。
 
-## 🚀 快速开始
+- GraphicRAG MCP（图谱增强检索）
+  - 职责：实体/关系抽取、Neo4j 存储、图检索与边解释、图+文本融合（GraphRAG）。
+  - 接口：`POST /api/graph/build`、`GET /api/graph/nodes|edges`、`POST /api/graph/query`（自然语言→Cypher）、`POST /api/graph/explain`。
 
-### 环境要求
+- Agent Orchestrator MCP（CAMEL 多代理编排）
+  - 职责：Planner / PromptEngineer / Retriever / GraphBuilder / Executor / Evaluator 协作，定义与执行工作流。
+  - 接口：`POST /api/agents/workflow/define`、`POST /api/agents/workflow/execute`、`GET /api/agents/workflow/status`。
 
-- **Python**: 3.11+
-- **Node.js**: 18+
-- **Docker**: 20.10+ (可选)
-- **PostgreSQL**: 13+ (可选，可使用 SQLite)
-- **Redis**: 6+ (可选)
+- Service Adapter MCP（服务适配）
+  - 职责：统一管理第三方服务配置与连通性测试（LLM、Firecrawl、Neo4j、Ollama/LM Studio）。
+  - 接口：`GET /api/services/providers`、`POST /api/services/credentials`、`GET /api/services/status|test`。
 
-### 1. 克隆项目
+- Observability MCP（观测与度量）
+  - 职责：检索链路时延、缓存命中率（embedding cache）、索引规模、图查询耗时、代理对话步数与失败率。
+  - 接口：`GET /api/rag/stats`（继续完善）、`GET /api/agents/stats`、`GET /api/graph/stats`。
 
-```bash
-git clone https://github.com/shrimp-team/shrimp-agent-v2.git
-cd shrimp-agent-v2
+完整设计详见 `docs/MCP.md`。
+
+## 仓库与分支策略
+
+- 主分支：`main`（稳定可发布，集成已验证能力与文档）
+- 集成分支：`develop`（跨服务联调、接口对齐与前后端联测）
+- 功能分支：`feature/mcp-rag`、`feature/mcp-graph`、`feature/mcp-prompt`、`feature/mcp-adapter`
+- 发布分支：`release/<version>` 配合 Tag（示例：`v2.1.0`）
+- 环境分支（可选）：`env/staging`、`env/prod`
+- 详细流程与保护规则见：`docs/BRANCHING.md`
+
+## 目录结构（简）
+
+```
+shrimp-agent-v2/
+├── backend/         # FastAPI 后端
+├── frontend/        # Vite + React 前端
+├── docs/            # 项目文档（API/架构/分支策略等）
+├── config/          # 配置与模板
+├── data/            # 数据与示例（不提交敏感/大文件）
+├── docker/          # 镜像与部署相关
+├── docker-compose.yml
+└── README.md
 ```
 
-### 2. 环境配置
+## 快速开始
 
-```bash
-# 复制环境变量模板
-cp .env.example .env
+### 本地开发（推荐）
 
-# 编辑环境变量
-vim .env
-```
-
-### 3. 使用 Docker 部署（推荐）
-
-```bash
-# 启动所有服务
-docker-compose up -d
-
-# 查看服务状态
-docker-compose ps
-
-# 查看日志
-docker-compose logs -f app
-```
-
-### 4. 本地开发部署
-
-#### 后端设置
+后端（FastAPI）：
 
 ```bash
 cd backend
-
-# 创建虚拟环境
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# 安装依赖
 pip install -r requirements.txt
-
-# 运行数据库迁移
-alembic upgrade head
-
-# 启动后端服务
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-#### 前端设置
+前端（Vite + React）：
 
 ```bash
 cd frontend
-
-# 安装依赖
-npm install
-
-# 启动开发服务器
+npm ci
 npm run dev
+# 访问 http://localhost:3000
 ```
 
-### 5. 访问应用
-
-- **前端应用**: http://localhost:3000
-- **后端 API**: http://localhost:8000
-- **API 文档**: http://localhost:8000/docs
-- **监控面板**: http://localhost:3001 (如果启用)
-
-## 📖 使用指南
-
-### 基础使用
-
-1. **注册账户**: 访问应用并创建新账户
-2. **上传文档**: 在文档管理页面上传您的文档
-3. **等待处理**: 系统自动分析和索引文档
-4. **开始搜索**: 使用自然语言搜索您的内容
-
-### 高级功能
-
-#### 搜索策略配置
-
-```python
-# 相似度搜索
-strategy = "similarity"
-top_k = 5
-threshold = 0.7
-
-# 混合搜索
-strategy = "hybrid"
-alpha = 0.7  # 语义权重
-
-# MMR 搜索
-strategy = "mmr"
-lambda_mult = 0.5  # 多样性参数
-```
-
-#### API 使用示例
-
-```python
-import httpx
-
-# 搜索文档
-response = httpx.post(
-    "http://localhost:8000/api/search/query",
-    json={
-        "query": "人工智能的发展趋势",
-        "strategy": "similarity",
-        "top_k": 10
-    }
-)
-
-results = response.json()
-```
-
-## 🔧 配置说明
-
-### 环境变量
-
-| 变量名 | 描述 | 默认值 |
-|--------|------|--------|
-| `OPENAI_API_KEY` | OpenAI API 密钥 | - |
-| `DATABASE_URL` | 数据库连接字符串 | `sqlite:///./data/app.db` |
-| `REDIS_URL` | Redis 连接字符串 | `redis://localhost:6379/0` |
-| `JWT_SECRET_KEY` | JWT 签名密钥 | - |
-| `MAX_FILE_SIZE` | 最大文件大小 | `50MB` |
-
-### 功能开关
-
-```env
-# 启用/禁用功能
-ENABLE_USER_REGISTRATION=true
-ENABLE_DOCUMENT_UPLOAD=true
-ENABLE_RAG_SEARCH=true
-ENABLE_WEB_SEARCH=false
-```
-
-## 🧪 测试
-
-### 运行测试
+### Docker Compose（一键启动）
 
 ```bash
-# 后端测试
-cd backend
-pytest tests/ -v --cov=.
-
-# 前端测试
-cd frontend
-npm test
+docker compose up -d --build
+docker compose ps
 ```
 
-### 测试覆盖率
+服务默认端口：
+- 后端 API：`http://localhost:8000`
+- 前端开发：`http://localhost:3000`
 
-```bash
-# 生成覆盖率报告
-pytest --cov=. --cov-report=html
-```
+## CI 与质量保障
 
-## 📊 监控和日志
+GitHub Actions 已启用：
+- Backend CI：安装 `backend/requirements.txt` 并运行 `pytest`
+- Frontend CI：Node 20，`npm ci`、`npm run build`、`npm test -- --passWithNoTests`
 
-### 应用监控
+分支保护建议（在 GitHub Settings → Branches 配置）：
+- `main`、`develop` 通过 PR 合并，禁止直接 push；至少 1–2 位评审；状态检查（Backend/Frontend CI）必须通过；合并前需 up-to-date；建议 `Squash merge`。
 
-- **健康检查**: `/api/health`
-- **指标端点**: `/metrics`
-- **Grafana 面板**: http://localhost:3001
+## 开发流程（摘要）
 
-### 日志管理
+1) 从 `develop` 切出 `feature/*` 开发；
+2) 本地/容器联测，提交 PR 回 `develop`；
+3) 集成验证后合并 `main`；
+4) 发布时从 `develop` 切 `release/<version>` 并打 Tag；完成回归与文档后合并 `main`。
 
-```bash
-# 查看应用日志
-tail -f logs/shrimp_agent.log
+## 配置与环境
 
-# 查看 Docker 日志
-docker-compose logs -f app
-```
+- 使用 `.env.example` 复制生成 `.env`；敏感信息勿提交。
+- 前后端支持本地与容器两种模式；生产部署建议开启统一鉴权与反向代理。
 
-## 🚀 部署指南
+## 贡献指南（PR Checklist）
 
-### 生产环境部署
+- 提交信息遵循 `feat/fix/docs/refactor/test/chore` 前缀。
+- 本地通过：后端 `pytest`、前端 `npm test`、必要的构建检查。
+- 更新相关文档（README、`docs/BRANCHING.md`）。
+- 提供变更说明、影响范围、验证要点与截图（如有）。
 
-1. **环境准备**
-   ```bash
-   # 设置生产环境变量
-   export ENVIRONMENT=production
-   export DEBUG=false
-   ```
+## 发布与版本
 
-2. **数据库设置**
-   ```bash
-   # 运行数据库迁移
-   alembic upgrade head
-   ```
+- 发布分支：`release/<version>`；示例：`release/v2.1.0`
+- 合并 `main` 后创建 Tag（如 `v2.1.0`），生成发布说明（建议启用 Release Drafter）。
 
-3. **启动服务**
-   ```bash
-   # 使用生产配置
-   docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
-   ```
+## 致谢与许可证
 
-### 扩展部署
-
-```yaml
-# docker-compose.scale.yml
-services:
-  app:
-    deploy:
-      replicas: 3
-  
-  nginx:
-    deploy:
-      replicas: 2
-```
-
-## 🤝 贡献指南
-
-我们欢迎所有形式的贡献！
-
-### 开发流程
-
-1. **Fork 项目**
-2. **创建特性分支**: `git checkout -b feature/amazing-feature`
-3. **提交更改**: `git commit -m 'Add amazing feature'`
-4. **推送分支**: `git push origin feature/amazing-feature`
-5. **创建 Pull Request**
-
-### 代码规范
-
-```bash
-# 后端代码格式化
-black backend/
-isort backend/
-flake8 backend/
-
-# 前端代码格式化
-npm run lint
-npm run format
-```
-
-### 提交规范
-
-```
-feat: 添加新功能
-fix: 修复 bug
-docs: 更新文档
-style: 代码格式调整
-refactor: 代码重构
-test: 添加测试
-chore: 构建过程或辅助工具的变动
-```
-
-## 📝 更新日志
-
-### v2.0.0 (2024-01-15)
-
-#### 🎉 新功能
-- 全新的模块化架构设计
-- React + TypeScript 前端重构
-- 增强的 RAG 引擎
-- 多策略搜索支持
-- 现代化 UI/UX 设计
-
-#### 🐛 修复
-- 修复文档处理的内存泄漏问题
-- 优化搜索性能
-- 改进错误处理机制
-
-#### 💥 破坏性变更
-- API 端点重新设计
-- 数据库架构更新
-- 配置文件格式变更
-
-## 🆘 故障排除
-
-### 常见问题
-
-#### 1. 文档上传失败
-
-```bash
-# 检查文件大小限制
-echo $MAX_FILE_SIZE
-
-# 检查支持的文件格式
-echo $SUPPORTED_FILE_TYPES
-```
-
-#### 2. 搜索结果为空
-
-```bash
-# 检查文档是否已处理
-curl http://localhost:8000/api/documents/{doc_id}/status
-
-# 检查向量数据库
-curl http://localhost:8000/api/health/services
-```
-
-#### 3. 服务启动失败
-
-```bash
-# 检查端口占用
-lsof -i :8000
-
-# 检查环境变量
-env | grep SHRIMP
-```
-
-### 性能优化
-
-1. **数据库优化**
-   - 添加适当的索引
-   - 定期清理过期数据
-   - 使用连接池
-
-2. **缓存策略**
-   - 启用 Redis 缓存
-   - 配置适当的 TTL
-   - 使用 CDN 加速静态资源
-
-3. **搜索优化**
-   - 调整分块大小
-   - 优化嵌入模型
-   - 使用异步处理
-
-## 📄 许可证
-
-本项目采用 [MIT 许可证](LICENSE)。
-
-## 🙏 致谢
-
-感谢以下开源项目的支持：
-
-- [FastAPI](https://fastapi.tiangolo.com/) - 现代化的 Python Web 框架
-- [React](https://reactjs.org/) - 用户界面构建库
-- [Tailwind CSS](https://tailwindcss.com/) - 实用优先的 CSS 框架
-- [OpenAI](https://openai.com/) - AI 模型和 API
-- [Sentence Transformers](https://www.sbert.net/) - 语义文本嵌入
-
-## 📞 联系我们
-
-- **项目主页**: https://github.com/shrimp-team/shrimp-agent-v2
-- **问题反馈**: https://github.com/shrimp-team/shrimp-agent-v2/issues
-- **邮箱**: contact@shrimp-agent.com
-- **文档**: https://docs.shrimp-agent.com
+- 许可证：MIT（见 `LICENSE`）
+- 感谢 FastAPI、React、Tailwind 等开源生态
 
 ---
 
-<div align="center">
-  <p>Made with ❤️ by Shrimp Team</p>
-  <p>© 2024 Shrimp Agent. All rights reserved.</p>
-</div>
+Made with ❤ for better search & knowledge.

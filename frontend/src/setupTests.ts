@@ -250,6 +250,30 @@ afterEach(() => {
   return event
 }
 
+// 为认证模块提供一个安全的全局默认 mock；各测试可按需覆盖
+jest.mock('@/stores/authStore', () => {
+  const actual = jest.requireActual('@/stores/authStore')
+  return {
+    ...actual,
+    useAuth: jest.fn(() => ({
+      isAuthenticated: false,
+      user: null,
+      login: jest.fn(),
+      register: jest.fn(),
+      logout: jest.fn(),
+      updateUser: jest.fn(),
+      isLoggedIn: () => false,
+      getCurrentUser: () => null,
+      getCurrentUserId: () => null,
+      hasRole: () => false,
+      hasPermission: () => false,
+      getToken: () => null,
+      getAvatarUrl: () => null,
+      getDisplayName: () => '未知用户',
+    })),
+  }
+})
+
 // 模拟 Zustand stores
 jest.mock('@/stores/authStore', () => ({
   useAuthStore: jest.fn(() => ({

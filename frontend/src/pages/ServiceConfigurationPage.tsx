@@ -3,7 +3,6 @@ import { useState, useMemo } from 'react'
 import { Helmet } from 'react-helmet-async'
 import {
   Settings,
-  Plus,
   Download,
   Upload,
   RotateCcw,
@@ -11,12 +10,7 @@ import {
   Search,
   CheckCircle,
   XCircle,
-  Clock,
   AlertCircle,
-  Zap,
-  Globe,
-  Database,
-  Server,
 } from 'lucide-react'
 import { cn } from '@/utils/cn'
 import { ServiceType, ServiceStatus } from '@/types/services'
@@ -26,13 +20,7 @@ import ServiceConfigCard from '@/components/services/ServiceConfigCard'
 /**
  * 服务类型图标映射
  */
-const serviceTypeIcons = {
-  [ServiceType.LLM]: Zap,
-  [ServiceType.WEB_CRAWLER]: Globe,
-  [ServiceType.KNOWLEDGE_GRAPH]: Database,
-  [ServiceType.LOCAL_MODEL]: Server,
-}
-
+// 注：原 serviceTypeIcons 未使用，移除以避免 TS6133 编译错误
 /**
  * 服务类型标签映射
  */
@@ -192,7 +180,7 @@ const ServiceConfigurationPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>服务配置 - Shrimp Agent</title>
+  <title>服务配置 - CORA</title>
         <meta name="description" content="配置和管理外部服务集成" />
       </Helmet>
 
@@ -427,3 +415,5 @@ const ServiceConfigurationPage: React.FC = () => {
 }
 
 export default ServiceConfigurationPage
+
+

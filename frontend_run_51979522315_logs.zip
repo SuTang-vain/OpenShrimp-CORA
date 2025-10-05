@@ -1,0 +1,544 @@
+﻿2025-10-05T09:30:02.8285455Z Current runner version: '2.328.0'
+2025-10-05T09:30:02.8311498Z ##[group]Runner Image Provisioner
+2025-10-05T09:30:02.8312632Z Hosted Compute Agent
+2025-10-05T09:30:02.8313141Z Version: 20250912.392
+2025-10-05T09:30:02.8313855Z Commit: d921fda672a98b64f4f82364647e2f10b2267d0b
+2025-10-05T09:30:02.8314508Z Build Date: 2025-09-12T15:23:14Z
+2025-10-05T09:30:02.8315094Z ##[endgroup]
+2025-10-05T09:30:02.8315742Z ##[group]Operating System
+2025-10-05T09:30:02.8316277Z Ubuntu
+2025-10-05T09:30:02.8316803Z 24.04.3
+2025-10-05T09:30:02.8317256Z LTS
+2025-10-05T09:30:02.8317730Z ##[endgroup]
+2025-10-05T09:30:02.8318177Z ##[group]Runner Image
+2025-10-05T09:30:02.8318828Z Image: ubuntu-24.04
+2025-10-05T09:30:02.8319309Z Version: 20250929.60.1
+2025-10-05T09:30:02.8320339Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250929.60/images/ubuntu/Ubuntu2404-Readme.md
+2025-10-05T09:30:02.8321943Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250929.60
+2025-10-05T09:30:02.8323181Z ##[endgroup]
+2025-10-05T09:30:02.8324269Z ##[group]GITHUB_TOKEN Permissions
+2025-10-05T09:30:02.8326123Z Contents: read
+2025-10-05T09:30:02.8326808Z Metadata: read
+2025-10-05T09:30:02.8327308Z Packages: read
+2025-10-05T09:30:02.8327770Z ##[endgroup]
+2025-10-05T09:30:02.8330394Z Secret source: Actions
+2025-10-05T09:30:02.8331069Z Prepare workflow directory
+2025-10-05T09:30:02.8725638Z Prepare all required actions
+2025-10-05T09:30:02.8763762Z Getting action download info
+2025-10-05T09:30:03.1106113Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-10-05T09:30:03.3111514Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2025-10-05T09:30:03.4843706Z Complete job name: build-frontend
+2025-10-05T09:30:03.5564850Z ##[group]Run actions/checkout@v4
+2025-10-05T09:30:03.5565758Z with:
+2025-10-05T09:30:03.5566218Z   repository: SuTang-vain/OpenShrimp-CORA
+2025-10-05T09:30:03.5566968Z   token: ***
+2025-10-05T09:30:03.5567390Z   ssh-strict: true
+2025-10-05T09:30:03.5567807Z   ssh-user: git
+2025-10-05T09:30:03.5568351Z   persist-credentials: true
+2025-10-05T09:30:03.5568839Z   clean: true
+2025-10-05T09:30:03.5569251Z   sparse-checkout-cone-mode: true
+2025-10-05T09:30:03.5569767Z   fetch-depth: 1
+2025-10-05T09:30:03.5570173Z   fetch-tags: false
+2025-10-05T09:30:03.5570605Z   show-progress: true
+2025-10-05T09:30:03.5571056Z   lfs: false
+2025-10-05T09:30:03.5571449Z   submodules: false
+2025-10-05T09:30:03.5571880Z   set-safe-directory: true
+2025-10-05T09:30:03.5572799Z ##[endgroup]
+2025-10-05T09:30:03.6657838Z Syncing repository: SuTang-vain/OpenShrimp-CORA
+2025-10-05T09:30:03.6660075Z ##[group]Getting Git version info
+2025-10-05T09:30:03.6661060Z Working directory is '/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA'
+2025-10-05T09:30:03.6662445Z [command]/usr/bin/git version
+2025-10-05T09:30:03.6734261Z git version 2.51.0
+2025-10-05T09:30:03.6761241Z ##[endgroup]
+2025-10-05T09:30:03.6776121Z Temporarily overriding HOME='/home/runner/work/_temp/e7e7109c-8fd1-4566-930c-092fceb6d2ad' before making global git config changes
+2025-10-05T09:30:03.6777635Z Adding repository directory to the temporary git global config as a safe directory
+2025-10-05T09:30:03.6789672Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA
+2025-10-05T09:30:03.6828068Z Deleting the contents of '/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA'
+2025-10-05T09:30:03.6831775Z ##[group]Initializing the repository
+2025-10-05T09:30:03.6836136Z [command]/usr/bin/git init /home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA
+2025-10-05T09:30:03.6951286Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-10-05T09:30:03.6952978Z hint: is subject to change. To configure the initial branch name to use in all
+2025-10-05T09:30:03.6953951Z hint: of your new repositories, which will suppress this warning, call:
+2025-10-05T09:30:03.6955305Z hint:
+2025-10-05T09:30:03.6956134Z hint: 	git config --global init.defaultBranch <name>
+2025-10-05T09:30:03.6958056Z hint:
+2025-10-05T09:30:03.6959235Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-10-05T09:30:03.6961059Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-10-05T09:30:03.6962764Z hint:
+2025-10-05T09:30:03.6963592Z hint: 	git branch -m <name>
+2025-10-05T09:30:03.6964490Z hint:
+2025-10-05T09:30:03.6965616Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-10-05T09:30:03.6967653Z Initialized empty Git repository in /home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/.git/
+2025-10-05T09:30:03.6971217Z [command]/usr/bin/git remote add origin https://github.com/SuTang-vain/OpenShrimp-CORA
+2025-10-05T09:30:03.7010781Z ##[endgroup]
+2025-10-05T09:30:03.7012369Z ##[group]Disabling automatic garbage collection
+2025-10-05T09:30:03.7016033Z [command]/usr/bin/git config --local gc.auto 0
+2025-10-05T09:30:03.7046504Z ##[endgroup]
+2025-10-05T09:30:03.7047925Z ##[group]Setting up auth
+2025-10-05T09:30:03.7054820Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-10-05T09:30:03.7086895Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-10-05T09:30:03.7440989Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-10-05T09:30:03.7471817Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-10-05T09:30:03.7699671Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-10-05T09:30:03.7735700Z ##[endgroup]
+2025-10-05T09:30:03.7736517Z ##[group]Fetching the repository
+2025-10-05T09:30:03.7754601Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ba1ef2d801ca1b646795c9b7836ff86eb1ced3f8:refs/remotes/origin/main
+2025-10-05T09:30:04.0570055Z From https://github.com/SuTang-vain/OpenShrimp-CORA
+2025-10-05T09:30:04.0571592Z  * [new ref]         ba1ef2d801ca1b646795c9b7836ff86eb1ced3f8 -> origin/main
+2025-10-05T09:30:04.0603489Z ##[endgroup]
+2025-10-05T09:30:04.0604236Z ##[group]Determining the checkout info
+2025-10-05T09:30:04.0605590Z ##[endgroup]
+2025-10-05T09:30:04.0610417Z [command]/usr/bin/git sparse-checkout disable
+2025-10-05T09:30:04.0650821Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-10-05T09:30:04.0677774Z ##[group]Checking out the ref
+2025-10-05T09:30:04.0681361Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-10-05T09:30:04.0931582Z Switched to a new branch 'main'
+2025-10-05T09:30:04.0933937Z branch 'main' set up to track 'origin/main'.
+2025-10-05T09:30:04.0940409Z ##[endgroup]
+2025-10-05T09:30:04.0974870Z [command]/usr/bin/git log -1 --format=%H
+2025-10-05T09:30:04.0997325Z ba1ef2d801ca1b646795c9b7836ff86eb1ced3f8
+2025-10-05T09:30:04.1238381Z ##[group]Run actions/setup-node@v4
+2025-10-05T09:30:04.1238941Z with:
+2025-10-05T09:30:04.1239322Z   node-version: 20
+2025-10-05T09:30:04.1239722Z   cache: npm
+2025-10-05T09:30:04.1240203Z   cache-dependency-path: frontend/package-lock.json
+2025-10-05T09:30:04.1240800Z   always-auth: false
+2025-10-05T09:30:04.1241235Z   check-latest: false
+2025-10-05T09:30:04.1241813Z   token: ***
+2025-10-05T09:30:04.1242340Z ##[endgroup]
+2025-10-05T09:30:04.3022253Z Found in cache @ /opt/hostedtoolcache/node/20.19.5/x64
+2025-10-05T09:30:04.3027842Z ##[group]Environment details
+2025-10-05T09:30:06.8492279Z node: v20.19.5
+2025-10-05T09:30:06.8492827Z npm: 10.8.2
+2025-10-05T09:30:06.8493172Z yarn: 1.22.22
+2025-10-05T09:30:06.8494451Z ##[endgroup]
+2025-10-05T09:30:06.8516536Z [command]/opt/hostedtoolcache/node/20.19.5/x64/bin/npm config get cache
+2025-10-05T09:30:07.1727988Z /home/runner/.npm
+2025-10-05T09:30:07.2953064Z npm cache is not found
+2025-10-05T09:30:07.3106413Z ##[group]Run npm ci
+2025-10-05T09:30:07.3106743Z [36;1mnpm ci[0m
+2025-10-05T09:30:07.3219314Z shell: /usr/bin/bash -e {0}
+2025-10-05T09:30:07.3219628Z ##[endgroup]
+2025-10-05T09:30:14.0790871Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2025-10-05T09:30:15.1809130Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2025-10-05T09:30:15.2947731Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-10-05T09:30:15.6798716Z npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+2025-10-05T09:30:16.1234081Z npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+2025-10-05T09:30:16.5172827Z npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2025-10-05T09:30:16.6148171Z npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2025-10-05T09:30:19.6564264Z npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2025-10-05T09:30:24.4840835Z 
+2025-10-05T09:30:24.4841836Z added 955 packages, and audited 956 packages in 17s
+2025-10-05T09:30:24.4842628Z 
+2025-10-05T09:30:24.4842931Z 271 packages are looking for funding
+2025-10-05T09:30:24.4843341Z   run `npm fund` for details
+2025-10-05T09:30:24.4928566Z 
+2025-10-05T09:30:24.4928992Z 5 moderate severity vulnerabilities
+2025-10-05T09:30:24.4929346Z 
+2025-10-05T09:30:24.4929851Z To address all issues (including breaking changes), run:
+2025-10-05T09:30:24.4930416Z   npm audit fix --force
+2025-10-05T09:30:24.4930685Z 
+2025-10-05T09:30:24.4930930Z Run `npm audit` for details.
+2025-10-05T09:30:24.5285427Z ##[group]Run npm test -- --coverage=false --passWithNoTests
+2025-10-05T09:30:24.5285999Z [36;1mnpm test -- --coverage=false --passWithNoTests[0m
+2025-10-05T09:30:24.5320088Z shell: /usr/bin/bash -e {0}
+2025-10-05T09:30:24.5320316Z env:
+2025-10-05T09:30:24.5320483Z   CI: true
+2025-10-05T09:30:24.5320635Z ##[endgroup]
+2025-10-05T09:30:24.6584086Z 
+2025-10-05T09:30:24.6584776Z > shrimp-agent-frontend@2.0.0 test
+2025-10-05T09:30:24.6585347Z > jest --coverage=false --passWithNoTests
+2025-10-05T09:30:24.6585595Z 
+2025-10-05T09:30:27.5085875Z ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+2025-10-05T09:30:27.5088617Z transform: {
+2025-10-05T09:30:27.5089225Z     <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+2025-10-05T09:30:27.5089847Z },
+2025-10-05T09:30:27.5090685Z See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+2025-10-05T09:30:27.5260556Z ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+2025-10-05T09:30:27.5263853Z transform: {
+2025-10-05T09:30:27.5264520Z     <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+2025-10-05T09:30:27.5265135Z },
+2025-10-05T09:30:27.5265910Z See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+2025-10-05T09:30:29.4529602Z   console.warn
+2025-10-05T09:30:29.4532567Z     ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+2025-10-05T09:30:29.4534239Z 
+2025-10-05T09:30:29.4574326Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T09:30:29.4575740Z      [90m 225 |[39m     }
+2025-10-05T09:30:29.4582494Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:30:29.4625628Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T09:30:29.4626395Z      [90m 227 |[39m   }
+2025-10-05T09:30:29.4627375Z      [90m 228 |[39m })
+2025-10-05T09:30:29.4628144Z      [90m 229 |[39m[0m
+2025-10-05T09:30:29.4628413Z 
+2025-10-05T09:30:29.4628673Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T09:30:29.4629344Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T09:30:29.4630104Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T09:30:29.4631236Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:26:5)
+2025-10-05T09:30:29.4632700Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T09:30:29.4633772Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T09:30:29.4634962Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T09:30:29.4636233Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T09:30:29.4637444Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T09:30:29.4638637Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T09:30:29.4639794Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T09:30:29.4640897Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T09:30:29.4641754Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T09:30:29.4642932Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T09:30:29.4643800Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T09:30:29.4645166Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T09:30:29.4646181Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T09:30:29.4647068Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T09:30:29.4647924Z       at renderWithRouter (src/pages/__tests__/LoginPage.test.tsx:53:16)
+2025-10-05T09:30:29.4648791Z       at Object.<anonymous> (src/pages/__tests__/LoginPage.test.tsx:63:5)
+2025-10-05T09:30:29.4649248Z 
+2025-10-05T09:30:29.4741182Z   console.warn
+2025-10-05T09:30:29.4743683Z     ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+2025-10-05T09:30:29.4745180Z 
+2025-10-05T09:30:29.4745514Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T09:30:29.4746031Z      [90m 225 |[39m     }
+2025-10-05T09:30:29.4746889Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:30:29.4747786Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T09:30:29.4748289Z      [90m 227 |[39m   }
+2025-10-05T09:30:29.4748669Z      [90m 228 |[39m })
+2025-10-05T09:30:29.4749055Z      [90m 229 |[39m[0m
+2025-10-05T09:30:29.4749262Z 
+2025-10-05T09:30:29.4749504Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T09:30:29.4750127Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T09:30:29.4750851Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T09:30:29.4752166Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:37:5)
+2025-10-05T09:30:29.4753412Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T09:30:29.4754558Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T09:30:29.4756105Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T09:30:29.4847465Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T09:30:29.4848900Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T09:30:29.4850138Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T09:30:29.4851339Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T09:30:29.4852851Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T09:30:29.4853808Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T09:30:29.4854701Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T09:30:29.4855502Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T09:30:29.4856485Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T09:30:29.4857519Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T09:30:29.4858417Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T09:30:29.4859315Z       at renderWithRouter (src/pages/__tests__/LoginPage.test.tsx:53:16)
+2025-10-05T09:30:29.4860186Z       at Object.<anonymous> (src/pages/__tests__/LoginPage.test.tsx:63:5)
+2025-10-05T09:30:29.4860626Z 
+2025-10-05T09:30:29.5120736Z   console.warn
+2025-10-05T09:30:29.5124100Z     ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+2025-10-05T09:30:29.5125724Z 
+2025-10-05T09:30:29.5126085Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T09:30:29.5127141Z      [90m 225 |[39m     }
+2025-10-05T09:30:29.5128048Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:30:29.5128931Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T09:30:29.5129497Z      [90m 227 |[39m   }
+2025-10-05T09:30:29.5129961Z      [90m 228 |[39m })
+2025-10-05T09:30:29.5130782Z      [90m 229 |[39m[0m
+2025-10-05T09:30:29.5131164Z 
+2025-10-05T09:30:29.5131681Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T09:30:29.5132553Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T09:30:29.5133322Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T09:30:29.5134487Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:26:5)
+2025-10-05T09:30:29.5135707Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T09:30:29.5136796Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T09:30:29.5137969Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T09:30:29.5139215Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T09:30:29.5140465Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T09:30:29.5141686Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T09:30:29.5143090Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T09:30:29.5144262Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T09:30:29.5145203Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T09:30:29.5146468Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T09:30:29.5147299Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T09:30:29.5148207Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T09:30:29.5149173Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T09:30:29.5150042Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T09:30:29.5150902Z       at renderWithRouter (src/pages/__tests__/HomePage.test.tsx:27:16)
+2025-10-05T09:30:29.5151790Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:42:5)
+2025-10-05T09:30:29.5152463Z 
+2025-10-05T09:30:29.5270086Z   console.warn
+2025-10-05T09:30:29.5272636Z     ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+2025-10-05T09:30:29.5274209Z 
+2025-10-05T09:30:29.5274602Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T09:30:29.5275215Z      [90m 225 |[39m     }
+2025-10-05T09:30:29.5276138Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:30:29.5277057Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T09:30:29.5277621Z      [90m 227 |[39m   }
+2025-10-05T09:30:29.5278044Z      [90m 228 |[39m })
+2025-10-05T09:30:29.5278465Z      [90m 229 |[39m[0m
+2025-10-05T09:30:29.5278692Z 
+2025-10-05T09:30:29.5278969Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T09:30:29.5279649Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T09:30:29.5280809Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T09:30:29.5282283Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:37:5)
+2025-10-05T09:30:29.5283518Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T09:30:29.5284627Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T09:30:29.5285835Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T09:30:29.5287061Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T09:30:29.5288321Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T09:30:29.5289516Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T09:30:29.5290635Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T09:30:29.5291738Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T09:30:29.5303231Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T09:30:29.5304122Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T09:30:29.5304960Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T09:30:29.5305891Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T09:30:29.5306879Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T09:30:29.5307766Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T09:30:29.5308644Z       at renderWithRouter (src/pages/__tests__/HomePage.test.tsx:27:16)
+2025-10-05T09:30:29.5309501Z       at Object.<anonymous> (src/pages/__tests__/HomePage.test.tsx:42:5)
+2025-10-05T09:30:29.5309962Z 
+2025-10-05T09:30:29.7782962Z PASS src/pages/__tests__/LoginPage.test.tsx
+2025-10-05T09:30:29.7785266Z   LoginPage Component
+2025-10-05T09:30:29.7796071Z     ✓ 应该正确渲染基本元素 (217 ms)
+2025-10-05T09:30:29.7821479Z     ✓ 应该进行表单校验并提示错误 (63 ms)
+2025-10-05T09:30:29.7822186Z     ✓ 应该支持显示/隐藏密码 (24 ms)
+2025-10-05T09:30:29.7822670Z     ✓ 应该支持记住我切换 (28 ms)
+2025-10-05T09:30:29.7823181Z     ✓ 登录成功后应导航到 /dashboard (40 ms)
+2025-10-05T09:30:29.7823722Z     ✓ 登录失败时应显示错误反馈且不导航 (51 ms)
+2025-10-05T09:30:29.7823981Z 
+2025-10-05T09:30:30.0224482Z   console.error
+2025-10-05T09:30:30.0225501Z     登录失败: Error: 网络错误
+2025-10-05T09:30:30.0226717Z         at Object.<anonymous> (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/src/api/__tests__/authApi.test.ts:50:19)
+2025-10-05T09:30:30.0228794Z         at Promise.then.completed (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/utils.js:298:28)
+2025-10-05T09:30:30.0230074Z         at new Promise (<anonymous>)
+2025-10-05T09:30:30.0231458Z         at callAsyncCircusFn (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/utils.js:231:10)
+2025-10-05T09:30:30.0233583Z         at _callCircusTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:316:40)
+2025-10-05T09:30:30.0235005Z         at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-05T09:30:30.0236361Z         at _runTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:252:3)
+2025-10-05T09:30:30.0238226Z         at _runTestsForDescribeBlock (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:126:9)
+2025-10-05T09:30:30.0240226Z         at _runTestsForDescribeBlock (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:121:9)
+2025-10-05T09:30:30.0242249Z         at run (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:71:3)
+2025-10-05T09:30:30.0247651Z         at runAndTransformResultsToJestFormat (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+2025-10-05T09:30:30.0250012Z         at jestAdapter (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+2025-10-05T09:30:30.0251898Z         at runTestInternal (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/runTest.js:367:16)
+2025-10-05T09:30:30.0253735Z         at runTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/runTest.js:444:34)
+2025-10-05T09:30:30.0255396Z         at Object.worker (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/testWorker.js:106:12)
+2025-10-05T09:30:30.0256268Z 
+2025-10-05T09:30:30.0256638Z     [0m [90m 214 |[39m       [36mreturn[39m
+2025-10-05T09:30:30.0257162Z      [90m 215 |[39m     }
+2025-10-05T09:30:30.0258107Z     [31m[1m>[22m[39m[90m 216 |[39m     originalError[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:30:30.0258983Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T09:30:30.0259510Z      [90m 217 |[39m   }
+2025-10-05T09:30:30.0259906Z      [90m 218 |[39m
+2025-10-05T09:30:30.0260752Z      [90m 219 |[39m   console[33m.[39mwarn [33m=[39m ([33m...[39margs[33m:[39m any[]) [33m=>[39m {[0m
+2025-10-05T09:30:30.0261306Z 
+2025-10-05T09:30:30.0261569Z       at console.error (src/setupTests.ts:216:19)
+2025-10-05T09:30:30.0262415Z       at AuthApi.login (src/api/auth.ts:51:15)
+2025-10-05T09:30:30.0263102Z       at Object.<anonymous> (src/api/__tests__/authApi.test.ts:53:5)
+2025-10-05T09:30:30.0263557Z 
+2025-10-05T09:30:30.0308580Z   console.error
+2025-10-05T09:30:30.0309177Z     登出失败: Error: 服务器错误
+2025-10-05T09:30:30.0310220Z         at Object.<anonymous> (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/src/api/__tests__/authApi.test.ts:92:19)
+2025-10-05T09:30:30.0312591Z         at Promise.then.completed (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/utils.js:298:28)
+2025-10-05T09:30:30.0313741Z         at new Promise (<anonymous>)
+2025-10-05T09:30:30.0314870Z         at callAsyncCircusFn (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/utils.js:231:10)
+2025-10-05T09:30:30.0316539Z         at _callCircusTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:316:40)
+2025-10-05T09:30:30.0317792Z         at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-05T09:30:30.0319020Z         at _runTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:252:3)
+2025-10-05T09:30:30.0320638Z         at _runTestsForDescribeBlock (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:126:9)
+2025-10-05T09:30:30.0322632Z         at _runTestsForDescribeBlock (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:121:9)
+2025-10-05T09:30:30.0324254Z         at run (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/run.js:71:3)
+2025-10-05T09:30:30.0326319Z         at runAndTransformResultsToJestFormat (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+2025-10-05T09:30:30.0328705Z         at jestAdapter (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+2025-10-05T09:30:30.0330615Z         at runTestInternal (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/runTest.js:367:16)
+2025-10-05T09:30:30.0332722Z         at runTest (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/runTest.js:444:34)
+2025-10-05T09:30:30.0334403Z         at Object.worker (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/node_modules/jest-runner/build/testWorker.js:106:12)
+2025-10-05T09:30:30.0335268Z 
+2025-10-05T09:30:30.0335628Z     [0m [90m 214 |[39m       [36mreturn[39m
+2025-10-05T09:30:30.0336127Z      [90m 215 |[39m     }
+2025-10-05T09:30:30.0336998Z     [31m[1m>[22m[39m[90m 216 |[39m     originalError[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:30:30.0337855Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T09:30:30.0338361Z      [90m 217 |[39m   }
+2025-10-05T09:30:30.0338738Z      [90m 218 |[39m
+2025-10-05T09:30:30.0339556Z      [90m 219 |[39m   console[33m.[39mwarn [33m=[39m ([33m...[39margs[33m:[39m any[]) [33m=>[39m {[0m
+2025-10-05T09:30:30.0340096Z 
+2025-10-05T09:30:30.0340329Z       at console.error (src/setupTests.ts:216:19)
+2025-10-05T09:30:30.0340892Z       at AuthApi.logout (src/api/auth.ts:94:15)
+2025-10-05T09:30:30.0341551Z       at Object.<anonymous> (src/api/__tests__/authApi.test.ts:95:5)
+2025-10-05T09:30:30.0341960Z 
+2025-10-05T09:30:30.0462954Z   console.error
+2025-10-05T09:30:30.0464056Z     获取用户信息失败: Error: 401 Unauthorized
+2025-10-05T09:30:30.0465343Z         at Object.<anonymous> (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/src/api/__tests__/authApi.test.ts:130:21)
+2025-10-05T09:30:30.0466952Z         at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-05T09:30:30.0467659Z 
+2025-10-05T09:30:30.0468124Z     [0m [90m 214 |[39m       [36mreturn[39m
+2025-10-05T09:30:30.0468778Z      [90m 215 |[39m     }
+2025-10-05T09:30:30.0469774Z     [31m[1m>[22m[39m[90m 216 |[39m     originalError[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:30:30.0470914Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T09:30:30.0471586Z      [90m 217 |[39m   }
+2025-10-05T09:30:30.0472327Z      [90m 218 |[39m
+2025-10-05T09:30:30.0473823Z      [90m 219 |[39m   console[33m.[39mwarn [33m=[39m ([33m...[39margs[33m:[39m any[]) [33m=>[39m {[0m
+2025-10-05T09:30:30.0474633Z 
+2025-10-05T09:30:30.0475036Z       at console.error (src/setupTests.ts:216:19)
+2025-10-05T09:30:30.0475759Z       at AuthApi.getCurrentUser (src/api/auth.ts:130:15)
+2025-10-05T09:30:30.0476496Z       at AuthApi.validateToken (src/api/auth.ts:357:24)
+2025-10-05T09:30:30.0477313Z       at Object.<anonymous> (src/api/__tests__/authApi.test.ts:133:5)
+2025-10-05T09:30:30.0477835Z 
+2025-10-05T09:30:30.0478122Z   console.error
+2025-10-05T09:30:30.0478788Z     检查权限失败: Error: network error
+2025-10-05T09:30:30.0479975Z         at Object.<anonymous> (/home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA/frontend/src/api/__tests__/authApi.test.ts:146:20)
+2025-10-05T09:30:30.0481261Z         at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-05T09:30:30.0481901Z 
+2025-10-05T09:30:30.0482493Z     [0m [90m 214 |[39m       [36mreturn[39m
+2025-10-05T09:30:30.0483106Z      [90m 215 |[39m     }
+2025-10-05T09:30:30.0484084Z     [31m[1m>[22m[39m[90m 216 |[39m     originalError[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:30:30.0485128Z      [90m     |[39m                   [31m[1m^[22m[39m
+2025-10-05T09:30:30.0485873Z      [90m 217 |[39m   }
+2025-10-05T09:30:30.0486401Z      [90m 218 |[39m
+2025-10-05T09:30:30.0487528Z      [90m 219 |[39m   console[33m.[39mwarn [33m=[39m ([33m...[39margs[33m:[39m any[]) [33m=>[39m {[0m
+2025-10-05T09:30:30.0497616Z 
+2025-10-05T09:30:30.0498092Z       at console.error (src/setupTests.ts:216:19)
+2025-10-05T09:30:30.0498894Z       at AuthApi.hasPermission (src/api/auth.ts:386:15)
+2025-10-05T09:30:30.0499777Z       at Object.<anonymous> (src/api/__tests__/authApi.test.ts:148:5)
+2025-10-05T09:30:30.0500315Z 
+2025-10-05T09:30:30.0516472Z PASS src/api/__tests__/authApi.test.ts
+2025-10-05T09:30:30.0517154Z   AuthApi
+2025-10-05T09:30:30.0518157Z     ✓ login 成功时设置 token 并返回响应 (1 ms)
+2025-10-05T09:30:30.0518923Z     ✓ login 失败时抛出错误，不崩溃 (28 ms)
+2025-10-05T09:30:30.0519576Z     ✓ register 成功时设置 token (1 ms)
+2025-10-05T09:30:30.0520198Z     ✓ logout 成功时清除 token
+2025-10-05T09:30:30.0520884Z     ✓ logout 失败时也应清除 token 并抛错 (6 ms)
+2025-10-05T09:30:30.0521606Z     ✓ refreshToken 成功时更新 token (5 ms)
+2025-10-05T09:30:30.0522552Z     ✓ getCurrentUser 应调用 /auth/me (1 ms)
+2025-10-05T09:30:30.0523626Z     ✓ validateToken 在成功时返回 true，失败返回 false (6 ms)
+2025-10-05T09:30:30.0524486Z     ✓ hasPermission 正确返回布尔值 (5 ms)
+2025-10-05T09:30:30.0524861Z 
+2025-10-05T09:30:30.0622876Z PASS src/pages/__tests__/HomePage.test.tsx
+2025-10-05T09:30:30.0625534Z   HomePage Component
+2025-10-05T09:30:30.0626114Z     ✓ 应该正确渲染首页内容 (208 ms)
+2025-10-05T09:30:30.0626504Z     ✓ 应该显示统计数据 (27 ms)
+2025-10-05T09:30:30.0626744Z     ✓ 应该显示功能特性 (32 ms)
+2025-10-05T09:30:30.0626973Z     ✓ 应该显示快速开始步骤 (24 ms)
+2025-10-05T09:30:30.0627212Z     ✓ 应该处理搜索表单提交 (61 ms)
+2025-10-05T09:30:30.0627479Z     ✓ 应该处理空搜索提交 (42 ms)
+2025-10-05T09:30:30.0627717Z     ✓ 应该处理键盘事件 (19 ms)
+2025-10-05T09:30:30.0627929Z     ✓ 应该正确处理认证状态 (25 ms)
+2025-10-05T09:30:30.0628154Z     ✓ 应该正确处理未认证状态 (28 ms)
+2025-10-05T09:30:30.0628387Z     ✓ 应该支持无障碍访问 (56 ms)
+2025-10-05T09:30:30.0628610Z     ✓ 应该正确处理响应式设计 (80 ms)
+2025-10-05T09:30:30.0628830Z     ✓ 应该正确处理动画效果 (31 ms)
+2025-10-05T09:30:30.0629044Z     ✓ 应该处理错误状态 (25 ms)
+2025-10-05T09:30:30.0629156Z 
+2025-10-05T09:30:30.2033318Z   console.warn
+2025-10-05T09:30:30.2035995Z     ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+2025-10-05T09:30:30.2037721Z 
+2025-10-05T09:30:30.2038084Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T09:30:30.2038598Z      [90m 225 |[39m     }
+2025-10-05T09:30:30.2039523Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:30:30.2040797Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T09:30:30.2041308Z      [90m 227 |[39m   }
+2025-10-05T09:30:30.2041705Z      [90m 228 |[39m })
+2025-10-05T09:30:30.2042312Z      [90m 229 |[39m[0m
+2025-10-05T09:30:30.2042541Z 
+2025-10-05T09:30:30.2042781Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T09:30:30.2043430Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T09:30:30.2044199Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T09:30:30.2045344Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:26:5)
+2025-10-05T09:30:30.2046551Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T09:30:30.2047628Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T09:30:30.2048836Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T09:30:30.2050083Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T09:30:30.2051369Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T09:30:30.2052768Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T09:30:30.2053949Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T09:30:30.2055036Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T09:30:30.2055822Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T09:30:30.2056509Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T09:30:30.2057338Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T09:30:30.2058208Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T09:30:30.2059121Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T09:30:30.2059923Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T09:30:30.2060696Z       at renderWithRouter (src/components/__tests__/Layout.test.tsx:19:16)
+2025-10-05T09:30:30.2061494Z       at Object.<anonymous> (src/components/__tests__/Layout.test.tsx:66:5)
+2025-10-05T09:30:30.2061923Z 
+2025-10-05T09:30:30.2133653Z   console.warn
+2025-10-05T09:30:30.2135935Z     ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+2025-10-05T09:30:30.2137393Z 
+2025-10-05T09:30:30.2137757Z     [0m [90m 224 |[39m       [36mreturn[39m
+2025-10-05T09:30:30.2138309Z      [90m 225 |[39m     }
+2025-10-05T09:30:30.2139145Z     [31m[1m>[22m[39m[90m 226 |[39m     originalWarn[33m.[39mcall(console[33m,[39m [33m...[39margs)
+2025-10-05T09:30:30.2140045Z      [90m     |[39m                  [31m[1m^[22m[39m
+2025-10-05T09:30:30.2140599Z      [90m 227 |[39m   }
+2025-10-05T09:30:30.2140996Z      [90m 228 |[39m })
+2025-10-05T09:30:30.2141399Z      [90m 229 |[39m[0m
+2025-10-05T09:30:30.2141617Z 
+2025-10-05T09:30:30.2141870Z       at console.warn (src/setupTests.ts:226:18)
+2025-10-05T09:30:30.2142766Z       at warn (node_modules/react-router/lib/deprecations.ts:9:13)
+2025-10-05T09:30:30.2143525Z       at warnOnce (node_modules/react-router/lib/deprecations.ts:14:3)
+2025-10-05T09:30:30.2144659Z       at Object.logDeprecation [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:37:5)
+2025-10-05T09:30:30.2145893Z       at logV6DeprecationWarnings (node_modules/react-router-dom/index.tsx:816:25)
+2025-10-05T09:30:30.2147394Z       at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+2025-10-05T09:30:30.2148544Z       at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+2025-10-05T09:30:30.2149809Z       at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+2025-10-05T09:30:30.2151135Z       at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+2025-10-05T09:30:30.2152571Z       at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+2025-10-05T09:30:30.2153746Z       at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+2025-10-05T09:30:30.2154905Z       at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+2025-10-05T09:30:30.2155876Z       at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+2025-10-05T09:30:30.2156716Z       at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+2025-10-05T09:30:30.2157543Z       at act (node_modules/react/cjs/react.development.js:2582:11)
+2025-10-05T09:30:30.2158473Z       at actImplementation (node_modules/@testing-library/react/dist/act-compat.js:47:25)
+2025-10-05T09:30:30.2159429Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:25)
+2025-10-05T09:30:30.2160272Z       at renderRoot (node_modules/@testing-library/react/dist/pure.js:292:10)
+2025-10-05T09:30:30.2161099Z       at renderWithRouter (src/components/__tests__/Layout.test.tsx:19:16)
+2025-10-05T09:30:30.2161968Z       at Object.<anonymous> (src/components/__tests__/Layout.test.tsx:66:5)
+2025-10-05T09:30:30.2162637Z 
+2025-10-05T09:30:30.2437289Z PASS src/components/__tests__/Layout.test.tsx
+2025-10-05T09:30:30.2437998Z   Layout Component
+2025-10-05T09:30:30.2438788Z     ✓ 应该正确渲染布局组件 (25 ms)
+2025-10-05T09:30:30.2439273Z     ✓ 应该能够切换侧边栏状态 (6 ms)
+2025-10-05T09:30:30.2440206Z     ✓ 应该在移动端正确处理侧边栏 (2 ms)
+2025-10-05T09:30:30.2440769Z     ✓ 应该正确处理键盘导航 (3 ms)
+2025-10-05T09:30:30.2441236Z     ✓ 应该支持无障碍访问 (7 ms)
+2025-10-05T09:30:30.2441671Z     ✓ 应该正确处理响应式设计 (7 ms)
+2025-10-05T09:30:30.2441874Z 
+2025-10-05T09:30:30.2755633Z Test Suites: 4 passed, 4 total
+2025-10-05T09:30:30.2756226Z Tests:       34 passed, 34 total
+2025-10-05T09:30:30.2756666Z Snapshots:   0 total
+2025-10-05T09:30:30.2757025Z Time:        3.728 s
+2025-10-05T09:30:30.2757390Z Ran all test suites.
+2025-10-05T09:30:30.3502647Z ##[group]Run npm run build
+2025-10-05T09:30:30.3502929Z [36;1mnpm run build[0m
+2025-10-05T09:30:30.3535575Z shell: /usr/bin/bash -e {0}
+2025-10-05T09:30:30.3535809Z ##[endgroup]
+2025-10-05T09:30:30.4681766Z 
+2025-10-05T09:30:30.4682389Z > shrimp-agent-frontend@2.0.0 build
+2025-10-05T09:30:30.4682708Z > tsc && vite build
+2025-10-05T09:30:30.4682870Z 
+2025-10-05T09:30:35.2270255Z ##[error]src/App.tsx(54,9): error TS6133: 'pageVariants' is declared but its value is never read.
+2025-10-05T09:30:35.2281401Z ##[error]src/App.tsx(69,9): error TS6133: 'pageTransition' is declared but its value is never read.
+2025-10-05T09:30:35.2286576Z ##[error]src/components/__tests__/Layout.test.tsx(149,33): error TS2345: Argument of type '{ isAuthenticated: true; user: null; }' is not assignable to parameter of type '{ isLoggedIn: () => boolean; getCurrentUser: () => User | null; getCurrentUserId: () => string | null; hasRole: (role: string) => boolean; hasPermission: (_permission: string) => boolean; ... 8 more ...; updateUser: (userData: Partial<User>) => void; }'.
+2025-10-05T09:30:35.2289504Z   Type '{ isAuthenticated: true; user: null; }' is missing the following properties from type '{ isLoggedIn: () => boolean; getCurrentUser: () => User | null; getCurrentUserId: () => string | null; hasRole: (role: string) => boolean; hasPermission: (_permission: string) => boolean; ... 8 more ...; updateUser: (userData: Partial<...>) => void; }': isLoggedIn, getCurrentUser, getCurrentUserId, hasRole, and 8 more.
+2025-10-05T09:30:35.2291271Z ##[error]src/components/search/SearchHistory.tsx(386,8): error TS2304: Cannot find name 'AnimatePresence'.
+2025-10-05T09:30:35.2293384Z ##[error]src/components/search/SearchHistory.tsx(388,12): error TS2304: Cannot find name 'motion'.
+2025-10-05T09:30:35.2294601Z ##[error]src/components/search/SearchHistory.tsx(452,13): error TS2304: Cannot find name 'motion'.
+2025-10-05T09:30:35.2295868Z ##[error]src/components/search/SearchHistory.tsx(454,9): error TS2304: Cannot find name 'AnimatePresence'.
+2025-10-05T09:30:35.2297071Z ##[error]src/components/search/SearchHistory.tsx(530,16): error TS2304: Cannot find name 'motion'.
+2025-10-05T09:30:35.2298275Z ##[error]src/components/search/SearchHistory.tsx(609,17): error TS2304: Cannot find name 'motion'.
+2025-10-05T09:30:35.2299558Z ##[error]src/components/search/SearchMonitoring.tsx(183,6): error TS2304: Cannot find name 'AnimatePresence'.
+2025-10-05T09:30:35.2300920Z ##[error]src/components/search/SearchMonitoring.tsx(184,8): error TS2552: Cannot find name 'motion'. Did you mean 'Option'?
+2025-10-05T09:30:35.2302560Z ##[error]src/components/search/SearchMonitoring.tsx(236,14): error TS2552: Cannot find name 'motion'. Did you mean 'Option'?
+2025-10-05T09:30:35.2304073Z ##[error]src/components/search/SearchMonitoring.tsx(266,18): error TS2552: Cannot find name 'motion'. Did you mean 'Option'?
+2025-10-05T09:30:35.2305552Z ##[error]src/components/search/SearchMonitoring.tsx(311,28): error TS2552: Cannot find name 'motion'. Did you mean 'Option'?
+2025-10-05T09:30:35.2306955Z ##[error]src/components/search/SearchMonitoring.tsx(333,19): error TS2552: Cannot find name 'motion'. Did you mean 'Option'?
+2025-10-05T09:30:35.2308313Z ##[error]src/components/search/SearchMonitoring.tsx(394,9): error TS2552: Cannot find name 'motion'. Did you mean 'Option'?
+2025-10-05T09:30:35.2309607Z ##[error]src/components/search/SearchMonitoring.tsx(395,7): error TS2304: Cannot find name 'AnimatePresence'.
+2025-10-05T09:30:35.2310901Z ##[error]src/components/search/VoiceInput.tsx(358,16): error TS2552: Cannot find name 'motion'. Did you mean 'Option'?
+2025-10-05T09:30:35.2312533Z ##[error]src/components/services/ServiceConfigCard.tsx(106,11): error TS6133: 'testService' is declared but its value is never read.
+2025-10-05T09:30:35.2314015Z ##[error]src/pages/ServiceConfigurationPage.tsx(6,3): error TS6133: 'Plus' is declared but its value is never read.
+2025-10-05T09:30:35.2315658Z ##[error]src/pages/ServiceConfigurationPage.tsx(14,3): error TS6133: 'Clock' is declared but its value is never read.
+2025-10-05T09:30:35.2317188Z ##[error]src/pages/ServiceConfigurationPage.tsx(29,7): error TS6133: 'serviceTypeIcons' is declared but its value is never read.
+2025-10-05T09:30:35.2657267Z ##[error]Process completed with exit code 2.
+2025-10-05T09:30:35.2743487Z Post job cleanup.
+2025-10-05T09:30:35.3683464Z [command]/usr/bin/git version
+2025-10-05T09:30:35.3721533Z git version 2.51.0
+2025-10-05T09:30:35.3765096Z Temporarily overriding HOME='/home/runner/work/_temp/a434b44f-4273-478c-a426-12055ee89578' before making global git config changes
+2025-10-05T09:30:35.3765958Z Adding repository directory to the temporary git global config as a safe directory
+2025-10-05T09:30:35.3770585Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/OpenShrimp-CORA/OpenShrimp-CORA
+2025-10-05T09:30:35.3810382Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-10-05T09:30:35.3842866Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-10-05T09:30:35.4072255Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-10-05T09:30:35.4093273Z http.https://github.com/.extraheader
+2025-10-05T09:30:35.4106519Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-10-05T09:30:35.4137231Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-10-05T09:30:35.4463002Z Cleaning up orphan processes

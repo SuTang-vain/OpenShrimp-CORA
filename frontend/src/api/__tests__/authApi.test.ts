@@ -71,7 +71,7 @@ describe('AuthApi', () => {
     const res = await authApi.register({ username: 'u', email: 'e', password: 'p', confirmPassword: 'p' })
 
     expect(apiClient.post).toHaveBeenCalledWith('/auth/register', {
-      username: 'u', email: 'e', password: 'p', confirmPassword: 'p'
+      username: 'u', email: 'e', password: 'p', confirm_password: 'p'
     })
     expect(apiClient.setAuthToken).toHaveBeenCalledWith('tkn2')
     expect(res).toBe(mockResponse)

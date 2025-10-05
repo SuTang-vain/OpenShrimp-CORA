@@ -5,6 +5,32 @@
 import * as React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
+import { useAuth } from '@/stores/authStore'
+
+// 在导入组件前为认证模块提供默认 mock，避免 useAuth 未定义
+// 提供完整的 useAuth 返回对象的 mock，满足类型要求
+const createMockAuth = (overrides: Partial<ReturnType<typeof useAuth>> = {}): ReturnType<typeof useAuth> => ({
+  isAuthenticated: false,
+  user: null,
+  login: jest.fn(),
+  register: jest.fn(),
+  logout: jest.fn(),
+  updateUser: jest.fn(),
+  isLoggedIn: jest.fn(() => false),
+  getCurrentUser: jest.fn(() => null),
+  getCurrentUserId: jest.fn(() => null),
+  hasRole: jest.fn(() => false),
+  hasPermission: jest.fn(() => false),
+  getToken: jest.fn(() => null),
+  getAvatarUrl: jest.fn(() => null),
+  getDisplayName: jest.fn(() => '未知用户'),
+  ...overrides,
+})
+
+jest.mock('@/stores/authStore', () => ({
+  useAuth: jest.fn(() => createMockAuth()),
+}))
+
 import Layout from '../layout/Layout'
 
 // 测试工具函数
@@ -63,7 +89,7 @@ describe('Layout Component', () => {
     )
 
     expect(screen.getByTestId('header')).toBeInTheDocument()
-    expect(screen.getByTestId('sidebar')).toBeInTheDocument()
+    expect(screen.getAllByTestId('sidebar').length).toBeGreaterThan(0)
     expect(screen.getByTestId('footer')).toBeInTheDocument()
     expect(screen.getByTestId('content')).toBeInTheDocument()
   })
@@ -103,7 +129,7 @@ describe('Layout Component', () => {
     )
 
     // 验证移动端特定的行为
-    expect(screen.getByTestId('sidebar')).toBeInTheDocument()
+    expect(screen.getAllByTestId('sidebar').length).toBeGreaterThan(0)
   })
 
   it('应该正确处理键盘导航', () => {
@@ -137,6 +163,10 @@ describe('Layout Component', () => {
   })
 
   it('应该正确处理响应式设计', () => {
+    // 在该用例中确保认证为 true，保证侧边栏渲染
+    const mockUseAuth = jest.mocked(useAuth)
+    mockUseAuth.mockReturnValue(createMockAuth({ isAuthenticated: true }))
+
     // 测试不同屏幕尺寸
     const testSizes = [
       { width: 320, height: 568 }, // 移动端
@@ -163,7 +193,7 @@ describe('Layout Component', () => {
       )
 
       // 验证在不同尺寸下的布局
-      expect(screen.getByTestId('sidebar')).toBeInTheDocument()
+      expect(screen.getAllByTestId('sidebar').length).toBeGreaterThan(0)
     })
   })
 })
