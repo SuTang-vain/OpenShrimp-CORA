@@ -33,6 +33,8 @@ jest.mock('react-router-dom', () => ({
 describe('HomePage Component', () => {
   beforeEach(() => {
     jest.clearAllMocks()
+    // 为 useAuth 提供默认返回，避免未定义导致的结构错误
+    ;(useAuth as jest.Mock).mockReturnValue({ isAuthenticated: false })
   })
 
   it('应该正确渲染首页内容', () => {
