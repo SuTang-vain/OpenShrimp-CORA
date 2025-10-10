@@ -1,5 +1,6 @@
 # OpenShrimp CORA
-<img src="https://github.com/user-attachments/assets/4c77b644-d3ea-4ff0-9619-1c3a9dbfd832" alt="OpenShrimp CORA 截图 1" width="280"><img src="https://github.com/user-attachments/assets/1c5fdca7-ee37-42ba-9fd8-fd8a71871df3" alt="OpenShrimp CORA 截图 2" width="280">
+
+<img src="https://github.com/user-attachments/assets/4c77b644-d3ea-4ff0-9619-1c3a9dbfd832" alt="OpenShrimp CORA 截图 1" width="200"><img src="https://github.com/user-attachments/assets/1c5fdca7-ee37-42ba-9fd8-fd8a71871df3" alt="OpenShrimp CORA 截图 2" width="200">
 
 全新一代智能搜索与知识管理平台（MCP 集成 + RAG + 图检索）
 
