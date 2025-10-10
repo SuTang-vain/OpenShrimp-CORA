@@ -1,0 +1,32 @@
+tools:
+  - name: "rag_query"
+    description: "Semantic search over indexed documents"
+    url: "http://mcp-rag:8001/mcp/invoke"
+    schema:
+      type: object
+      properties:
+        query:
+          type: string
+          description: "用户查询"
+        top_k:
+          type: integer
+          description: "返回片段数量"
+          default: 5
+      required: [query]
+  - name: "graph_explain"
+    description: "Explain relationships in knowledge graph"
+    url: "http://mcp-graph:8002/mcp/invoke"
+    schema:
+      type: object
+      properties:
+        query:
+          type: string
+          description: "图查询关键词"
+        mode:
+          type: string
+          enum: [neighbors, shortest]
+          default: neighbors
+        depth:
+          type: integer
+          default: 2
+      required: [query]
