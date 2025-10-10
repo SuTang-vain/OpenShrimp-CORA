@@ -13,6 +13,7 @@ const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'))
 const LoginPage = lazy(() => import('@/pages/LoginPage'))
 const DashboardPage = lazy(() => import('@/pages/DashboardPage'))
 const GraphWorkbenchPage = lazy(() => import('@/pages/GraphWorkbenchPage'))
+const ToolsConsolePage = lazy(() => import('@/pages/ToolsConsolePage'))
 
 // Hooks
 import { useThemeStore } from '@/stores/themeStore'
@@ -71,6 +72,9 @@ function App() {
 
           {/* 服务配置页面 */}
           <Route path="/services" element={<ServiceConfigurationPage />} />
+
+          {/* Strata 工具控制台 */}
+          <Route path="/tools" element={<ToolsConsolePage />} />
 
           {/* 控制台页面（需鉴权） */}
           <Route path="/dashboard" element={<DashboardPage />} />
