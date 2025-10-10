@@ -69,6 +69,13 @@ const navigationItems: NavItem[] = [
     requireAuth: true,
   },
   {
+    id: 'orchestrator',
+    label: '编排器',
+    icon: Network,
+    href: '/orchestrator',
+    requireAuth: true,
+  },
+  {
     id: 'documents',
     label: '文档管理',
     icon: FileText,

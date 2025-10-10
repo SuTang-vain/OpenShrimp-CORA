@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { getTools, invokeTool, StrataToolDef } from '@/api/strata'
 import { SchemaFormRenderer } from '@/lib/schema-form'
 import { generateTraceId, nowIso } from '@/lib/trace'
+import RagResultsPanel from '@/components/rag/RagResultsPanel'
+import GraphStatsPanel from '@/components/graph/GraphStatsPanel'
 
 interface InvocationResult {
   tool: string
@@ -86,9 +88,27 @@ export const ToolDiscoveryPanel: React.FC = () => {
           {!invocationResult.success ? (
             <div className="text-sm text-destructive">{invocationResult.error}</div>
           ) : (
-            <pre className="text-xs border rounded p-3 overflow-auto max-h-96 bg-muted">
-              {JSON.stringify(invocationResult.result, null, 2)}
-            </pre>
+            <>
+              <pre className="text-xs border rounded p-3 overflow-auto max-h-96 bg-muted">
+                {JSON.stringify(invocationResult.result, null, 2)}
+              </pre>
+              {selected?.name?.toLowerCase().includes('rag') && (
+                <div className="mt-4">
+                  <RagResultsPanel
+                    result={invocationResult.result}
+                    query={(() => {
+                      const p: any = (invocationResult as any)?.payload || {}
+                      return p.query || p.q || p.text || ''
+                    })()}
+                  />
+                </div>
+              )}
+              {selected?.name?.toLowerCase().includes('graph') && (
+                <div className="mt-4">
+                  <GraphStatsPanel result={invocationResult.result} />
+                </div>
+              )}
+            </>
           )}
         </div>
       )}

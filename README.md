@@ -1,5 +1,7 @@
 # OpenShrimp CORA
 
+<img src="https://github.com/user-attachments/assets/4c77b644-d3ea-4ff0-9619-1c3a9dbfd832" alt="OpenShrimp CORA 截图 1" width="200"><img src="https://github.com/user-attachments/assets/1c5fdca7-ee37-42ba-9fd8-fd8a71871df3" alt="OpenShrimp CORA 截图 2" width="200">
+
 全新一代智能搜索与知识管理平台（MCP 集成 + RAG + 图检索）
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -176,27 +178,6 @@ GitHub Actions 已启用：
 - 前后端支持本地与容器两种模式；生产部署建议开启统一鉴权与反向代理。
 - Windows 环境提示：如需将 pip 缓存迁移至数据盘，可设置 `PIP_CACHE_DIR` 指向如 `G:\Python_ai_project\pip-cache`，以减少系统盘占用。
 
-## 贡献指南（PR Checklist）
-
-- 提交信息遵循 `feat/fix/docs/refactor/test/chore` 前缀。
-- 本地通过：后端 `pytest`、前端 `npm test`、必要的构建检查。
-- 更新相关文档（README、`docs/BRANCHING.md`）。
-- 提供变更说明、影响范围、验证要点与截图（如有）。
-
-## 发布与版本
-
-- 发布分支：`release/<version>`；示例：`release/v2.1.0`
-- 合并 `main` 后创建 Tag（如 `v2.1.0`），生成发布说明（建议启用 Release Drafter）。
-
-## 致谢与许可证
-
-- 许可证：MIT（见 `LICENSE`）
-- 感谢 FastAPI、React、Tailwind 等开源生态
-
----
-
-Made with ❤ for better search & knowledge.
-
 ## API 快速示例（Strata MCP）
 
 - 列出工具
@@ -217,3 +198,24 @@ Made with ❤ for better search & knowledge.
   - 返回：由 MCP-Graph 代理到主应用图接口的解释与路径结果。
 
 更多细节与扩展方式请参阅 `docs/STRATA_INTEGRATION.md`。
+
+## 贡献指南（PR Checklist）
+
+- 提交信息遵循 `feat/fix/docs/refactor/test/chore` 前缀。
+- 本地通过：后端 `pytest`、前端 `npm test`、必要的构建检查。
+- 更新相关文档（README、`docs/BRANCHING.md`）。
+- 提供变更说明、影响范围、验证要点与截图（如有）。
+
+## 发布与版本
+
+- 发布分支：`release/<version>`；示例：`release/v2.1.0`
+- 合并 `main` 后创建 Tag（如 `v2.1.0`），生成发布说明（建议启用 Release Drafter）。
+
+## 致谢与许可证
+
+- 许可证：MIT（见 `LICENSE`）
+- 感谢 FastAPI、React、Tailwind 等开源生态
+
+---
+
+Made with ❤ for better search & knowledge.
