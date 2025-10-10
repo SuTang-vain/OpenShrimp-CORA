@@ -13,6 +13,9 @@ const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'))
 const LoginPage = lazy(() => import('@/pages/LoginPage'))
 const DashboardPage = lazy(() => import('@/pages/DashboardPage'))
 const GraphWorkbenchPage = lazy(() => import('@/pages/GraphWorkbenchPage'))
+const ToolsConsolePage = lazy(() => import('@/pages/ToolsConsolePage'))
+const OrchestratorPage = lazy(() => import('@/pages/OrchestratorPage'))
+const GraphWorkspacePage = lazy(() => import('@/pages/GraphWorkspacePage'))
 
 // Hooks
 import { useThemeStore } from '@/stores/themeStore'
@@ -72,11 +75,19 @@ function App() {
           {/* 服务配置页面 */}
           <Route path="/services" element={<ServiceConfigurationPage />} />
 
+          {/* Strata 工具控制台 */}
+          <Route path="/tools" element={<ToolsConsolePage />} />
+
+          {/* Orchestrator 控制台页面 */}
+          <Route path="/orchestrator" element={<OrchestratorPage />} />
+
           {/* 控制台页面（需鉴权） */}
           <Route path="/dashboard" element={<DashboardPage />} />
 
-          {/* 图谱工作台页面 */}
+          {/* 图谱工作台页面（完整工作台） */}
           <Route path="/graph" element={<GraphWorkbenchPage />} />
+          {/* 最小工作台保留在 /graph/min */}
+          <Route path="/graph/min" element={<GraphWorkspacePage />} />
 
           {/* 404 页面 */}
           <Route path="/404" element={<NotFoundPage />} />
