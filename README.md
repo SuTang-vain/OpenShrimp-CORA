@@ -13,6 +13,26 @@
 - 目标：以 CAMEL 框架为基底，构建“多代理协作 + Graphic RAG + 提示词可视化”的白盒交互系统，支持用户通过可视化工作流补齐工程所需材料，并由系统自动完成“Define（合理定义与定位）→ 构建工作流 → 执行”的闭环。
 - 核心思想：以工具化视角把 RAG、知识图谱、提示词工程、服务适配和多代理编排拆解为可插拔的 MCP 子系统，既能独立演化，又能统一编排。
 - 可行性：后端 API 已运行稳定，RAG 基础链路可用；前端存在资源报错但不影响 API 验证，可在迭代中修复。中文语义检索需优化嵌入模型与分块策略，属于可控工程问题。
+- 架构更新：引入 Strata MCP Server（统一工具注册/聚合/路由）与 MCP 子服务（RAG、Graph），通过 `strata/config.yaml` 配置工具，统一暴露 `/tools` 与 `/invoke` 端点。
+
+## 最新进展与架构更新（Strata + MCP）
+
+- 新增组件
+  - `strata/`：Strata MCP Server（端口 `8080`），统一列出工具（`GET /tools`）与转发调用（`POST /invoke`）。
+  - `backend/mcp/rag`：RAG 子服务（内部端口 `8001`），暴露 `GET /mcp/tools` 与 `POST /mcp/invoke`，代理到主应用 `app:8000` 的 `/api/rag`。
+  - `backend/mcp/graph`：Graph 子服务（内部端口 `8002`），暴露 `GET /mcp/tools` 与 `POST /mcp/invoke`，代理到主应用 `app:8000` 的 `/api/graph/query` 等。
+- 端口与路由
+  - 主应用（FastAPI）：`http://localhost:8000`
+  - Strata MCP：`http://localhost:8080`
+  - MCP-RAG：容器内 `http://mcp-rag:8001`（通过 Strata 路由）
+  - MCP-Graph：容器内 `http://mcp-graph:8002`（通过 Strata 路由）
+- 工具注册（示例）
+  - 在 `strata/config.yaml` 中声明工具：
+    - `rag_query` → `POST http://mcp-rag:8001/mcp/invoke`
+    - `graph_explain` → `POST http://mcp-graph:8002/mcp/invoke`
+- 统一端点示例（Strata）
+  - 列出工具：`GET http://localhost:8080/tools`
+  - 调用工具：`POST http://localhost:8080/invoke`，请求体示例见下文“API 快速示例”。
 
 ## 愿景与未来目标（Roadmap）
 
@@ -81,7 +101,9 @@ shrimp-agent-v2/
 ├── data/            # 数据与示例（不提交敏感/大文件）
 ├── docker/          # 镜像与部署相关
 ├── docker-compose.yml
-└── README.md
+├── strata/          # Strata MCP Server（/tools, /invoke, config.yaml）
+└── backend/mcp/     # MCP 子服务（rag/graph 等）
+README.md
 ```
 
 ## 快速开始
@@ -117,6 +139,20 @@ docker compose ps
 服务默认端口：
 - 后端 API：`http://localhost:8000`
 - 前端开发：`http://localhost:3000`
+- Strata MCP：`http://localhost:8080`
+
+健康检查与快速验证：
+- 列出工具（Strata）：`curl http://localhost:8080/tools`
+- 代理调用示例（RAG，通过 Strata）：
+  ```bash
+  curl -X POST http://localhost:8080/invoke \
+    -H "Content-Type: application/json" \
+    -d '{
+      "tool": "rag_query",
+      "input": {"query": "Explain vector databases", "top_k": 5}
+    }'
+  ```
+  预期返回：来自 RAG 子服务代理到主应用 `/api/rag` 的结果。
 
 ## CI 与质量保障
 
@@ -138,6 +174,7 @@ GitHub Actions 已启用：
 
 - 使用 `.env.example` 复制生成 `.env`；敏感信息勿提交。
 - 前后端支持本地与容器两种模式；生产部署建议开启统一鉴权与反向代理。
+- Windows 环境提示：如需将 pip 缓存迁移至数据盘，可设置 `PIP_CACHE_DIR` 指向如 `G:\Python_ai_project\pip-cache`，以减少系统盘占用。
 
 ## 贡献指南（PR Checklist）
 
@@ -159,3 +196,24 @@ GitHub Actions 已启用：
 ---
 
 Made with ❤ for better search & knowledge.
+
+## API 快速示例（Strata MCP）
+
+- 列出工具
+  - `GET /tools`
+  - 响应：注册于 `strata/config.yaml` 的工具列表（示例：`rag_query`, `graph_explain`）。
+- 调用工具
+  - `POST /invoke`
+  - 示例：调用 `graph_explain`
+    ```json
+    {
+      "tool": "graph_explain",
+      "input": {
+        "query": "Find connection between OpenAI and Microsoft in the graph",
+        "limit": 10
+      }
+    }
+    ```
+  - 返回：由 MCP-Graph 代理到主应用图接口的解释与路径结果。
+
+更多细节与扩展方式请参阅 `docs/STRATA_INTEGRATION.md`。
