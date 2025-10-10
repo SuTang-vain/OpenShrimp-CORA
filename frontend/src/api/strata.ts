@@ -26,3 +26,9 @@ export async function invokeTool(params: { tool: string; input: any; trace_id?: 
   if (res.success) return res.data
   throw new Error(res.error || '调用工具失败')
 }
+
+export async function getMetrics(): Promise<any> {
+  const res = await strataClient.get('/metrics')
+  if (res.success) return res.data
+  throw new Error(res.error || '获取指标失败')
+}

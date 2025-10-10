@@ -1,5 +1,6 @@
 import React from 'react'
 import ToolDiscoveryPanel from '@/components/mcp/ToolDiscoveryPanel'
+import MetricsDashboard from '@/components/console/MetricsDashboard'
 
 const ToolsConsolePage: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const ToolsConsolePage: React.FC = () => {
           通过 Strata 自动发现工具、按 Schema 配置参数并直接调用，结果可追踪。
         </p>
       </div>
+      <MetricsDashboard />
       <ToolDiscoveryPanel />
     </div>
   )
