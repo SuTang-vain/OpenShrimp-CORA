@@ -36,6 +36,55 @@ services:
       retries: 3
       start_period: 40s
 
+  # Strata MCP Server（统一工具注册与路由）
+  strata:
+    build:
+      context: ./strata
+      dockerfile: Dockerfile
+    container_name: strata-mcp-server
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mcp-rag
+      - mcp-graph
+    restart: unless-stopped
+    networks:
+      - shrimp-network
+
+  # MCP 子服务：RAG
+  mcp-rag:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mcp-rag-service
+    command: uvicorn backend.mcp.rag.main:app --host 0.0.0.0 --port 8001
+    expose:
+      - "8001"
+    environment:
+      - CORA_URL=http://app:8000
+    depends_on:
+      - app
+    restart: unless-stopped
+    networks:
+      - shrimp-network
+
+  # MCP 子服务：Graph
+  mcp-graph:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mcp-graph-service
+    command: uvicorn backend.mcp.graph.main:app --host 0.0.0.0 --port 8002
+    expose:
+      - "8002"
+    environment:
+      - CORA_URL=http://app:8000
+    depends_on:
+      - app
+    restart: unless-stopped
+    networks:
+      - shrimp-network
+
   # PostgreSQL 数据库
   postgres:
     image: postgres:15-alpine
