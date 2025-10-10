@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 
 type JSONSchema = {
   type: string
@@ -47,10 +47,6 @@ export const SchemaFormRenderer: React.FC<SchemaFormRendererProps> = ({
   }, [properties, defaultValues])
 
   const [values, setValues] = useState<Record<string, any>>(initialValues)
-
-  const updateValue = (key: string, val: any) => {
-    setValues((prev) => ({ ...prev, [key]: val }))
-  }
 
   const renderObject = (key: string, fieldSchema: any) => {
     const subs: Record<string, any> = fieldSchema?.properties || {}

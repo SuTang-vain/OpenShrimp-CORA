@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useRef, useEffect } from 'react'
+import { useMemo, useState, useRef } from 'react'
 import GraphStatsPanel from '@/components/graph/GraphStatsPanel'
 
 type NodeLike = { id?: string | number; label?: string; [k: string]: any }
@@ -47,7 +47,6 @@ function computeCircularLayout(nodes: NodeLike[], edges: EdgeLike[], width = 800
 
 function computeHierarchicalLayout(nodes: NodeLike[], edges: EdgeLike[], width = 900, height = 520): LayoutResult {
   const ids = nodes.map((n, i) => (n.id ?? i))
-  const idToIndex = new Map(ids.map((id, i) => [id, i]))
   const indeg = new Map<any, number>(ids.map((id) => [id, 0]))
   const adj = new Map<any, any[]>()
   for (const id of ids) adj.set(id, [])
@@ -168,7 +167,7 @@ function computeForceLayout(nodes: NodeLike[], edges: EdgeLike[], width = 900, h
   return { width, height, positions, lines }
 }
 
-const GraphWorkspacePage: React.FC = () => {
+const GraphWorkspacePage = () => {
   const [jsonText, setJsonText] = useState('')
   const data = useMemo(() => {
     try {

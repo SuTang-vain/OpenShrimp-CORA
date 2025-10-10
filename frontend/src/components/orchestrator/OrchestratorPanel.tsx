@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { startTask, getTaskStatus, getTaskArtifact, getTasks } from '@/api/orchestrator'
 
 type EventItem = { ts?: number; stage?: string; msg?: string; raw?: string }

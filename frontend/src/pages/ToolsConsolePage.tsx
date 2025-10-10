@@ -1,8 +1,8 @@
-import React from 'react'
+// no default React import needed
 import ToolDiscoveryPanel from '@/components/mcp/ToolDiscoveryPanel'
 import MetricsDashboard from '@/components/console/MetricsDashboard'
 
-const ToolsConsolePage: React.FC = () => {
+const ToolsConsolePage = () => {
   return (
     <div className="max-w-6xl mx-auto">
       <div className="py-4">

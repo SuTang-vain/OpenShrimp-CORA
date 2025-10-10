@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getTools, invokeTool, StrataToolDef } from '@/api/strata'
 import { SchemaFormRenderer } from '@/lib/schema-form'
 import { generateTraceId, nowIso } from '@/lib/trace'
@@ -12,7 +12,7 @@ interface InvocationResult {
   error?: string
 }
 
-export const ToolDiscoveryPanel: React.FC = () => {
+export const ToolDiscoveryPanel = () => {
   const [tools, setTools] = useState<StrataToolDef[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
